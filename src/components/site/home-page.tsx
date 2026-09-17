@@ -3,10 +3,10 @@ import { ArrowRight, ArrowUpRight, Check, Mail, Menu, Moon, Send, Sun, X } from 
 import { useEffect, useState, type CSSProperties, type FormEvent } from "react";
 import basariBookImage from "@/assets/basari-muhendisligi-4k.webp";
 import sirBookImage from "@/assets/size-bir-sir-4k.webp";
-import tedxToplulukAsset from "@/assets/tedx-topluluk.jpg.asset.json";
-import tedxEtkilesimAsset from "@/assets/tedx-etkilesim.jpg.asset.json";
+import tedxTopluluk from "@/assets/tedx-topluluk.jpg";
+import tedxEtkilesim from "@/assets/tedx-etkilesim.jpg";
 
-const portraitAsset = tedxToplulukAsset.url;
+const portraitAsset = tedxTopluluk;
 import { Button } from "@/components/ui/button";
 import {
   INSTAGRAM_URL,
@@ -22,7 +22,7 @@ import {
 } from "@/lib/site-content";
 
 const bookImages = [basariBookImage, sirBookImage];
-const talkImages = [tedxToplulukAsset.url, tedxEtkilesimAsset.url];
+const talkImages = [tedxTopluluk, tedxEtkilesim];
 
 type Theme = "light" | "dark";
 

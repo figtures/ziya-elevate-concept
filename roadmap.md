@@ -2,7 +2,7 @@
 
 - [x] Kitap kapaklarını AI ile iyileştirip 4K çıktılara yükselt
 - [x] Kitap kapaklarına daha akıcı hover yakınlaşması uygula
-- [ ] GitHub bağlantısını doğrula ve güncel çalışmayı senkronize et — GitHub deposu henüz bağlı değil
+- [x] GitHub bağlantısı kuruldu ve 105 dosya main dalına gönderildi
 - [x] SEO/GEO uygulamalarını denetleyip kapsamı raporla
 - [x] Mutlak canonical, hreflang ve sosyal paylaşım meta verilerini tamamla
 - [x] 1200×630 gerçek TEDx sosyal paylaşım görselini ekle

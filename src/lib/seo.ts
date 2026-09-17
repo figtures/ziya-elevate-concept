@@ -1,5 +1,5 @@
 import { INSTAGRAM_URL, LINKEDIN_URL, ORDER_URL, SITE_URL, copy, shared, type Locale } from "./site-content";
-import shareImageAsset from "@/assets/ziya-sakir-yilmaz-og.jpg.asset.json";
+import shareImage from "@/assets/ziya-sakir-yilmaz-og.jpg";
 
 export function createHomeHead(locale: Locale) {
   const c = copy[locale];
@@ -7,7 +7,7 @@ export function createHomeHead(locale: Locale) {
   const pageUrl = new URL(path, SITE_URL).href;
   const trUrl = new URL("/", SITE_URL).href;
   const enUrl = new URL("/en", SITE_URL).href;
-  const shareImageUrl = new URL(shareImageAsset.url, SITE_URL).href;
+  const shareImageUrl = new URL(shareImage, SITE_URL).href;
   const personId = `${SITE_URL}/#person`;
   const websiteId = `${SITE_URL}/#website`;
   const pageId = `${pageUrl}#webpage`;

@@ -1,0 +1,292 @@
+{
+  "checkedAt": "2026-10-12",
+  "scope": "bibliographic-identity-only",
+  "sources": [
+    {
+      "id": "lally-2010",
+      "title": "How are habits formed: Modelling habit formation in the real world",
+      "url": "https://doi.org/10.1002/ejsp.674",
+      "evidence": "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674",
+      "year": "2010",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Lally[\\s\\S]*(?:2009|2010)|(?:2009|2010)[\\s\\S]*Lally",
+      "anchorPattern": "(?:Phillippa )?Lally(?: ve (?:arkadaşları|ekibi))?|How are habits formed: Modelling habit formation in the real world"
+    },
+    {
+      "id": "yeager-2019",
+      "title": "A national experiment reveals where a growth mindset improves achievement",
+      "url": "https://doi.org/10.1038/s41586-019-1466-y",
+      "evidence": "https://www.nature.com/articles/s41586-019-1466-y",
+      "year": "2019",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Yeager[\\s\\S]*2019|2019[\\s\\S]*Yeager",
+      "anchorPattern": "Yeager(?: ve arkadaşları)?"
+    },
+    {
+      "id": "sisk-2018",
+      "title": "To What Extent and Under Which Circumstances Are Growth Mind-Sets Important to Academic Achievement? Two Meta-Analyses",
+      "url": "https://doi.org/10.1177/0956797617739704",
+      "evidence": "https://journals.sagepub.com/doi/10.1177/0956797617739704",
+      "year": "2018",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Sisk[\\s\\S]*2018|2018[\\s\\S]*Sisk",
+      "anchorPattern": "Sisk(?: ve arkadaşları)?"
+    },
+    {
+      "id": "gollwitzer-sheeran-2006",
+      "title": "Implementation Intentions and Goal Achievement: A Meta-analysis of Effects and Processes",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0065260106380021",
+      "evidence": "https://www.sciencedirect.com/science/article/abs/pii/S0065260106380021",
+      "year": "2006",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Gollwitzer[\\s\\S]*Sheeran[\\s\\S]*2006|2006[\\s\\S]*Gollwitzer[\\s\\S]*Sheeran",
+      "anchorPattern": "(?:Peter )?Gollwitzer(?: ve (?:Paschal )?Sheeran)?"
+    },
+    {
+      "id": "locke-latham-2002",
+      "title": "Building a practically useful theory of goal setting and task motivation: A 35-year odyssey",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12237980/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/12237980/",
+      "year": "2002",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Locke[\\s\\S]*Latham[\\s\\S]*2002|2002[\\s\\S]*Locke[\\s\\S]*Latham",
+      "anchorPattern": "(?:Edwin )?Locke(?: ve (?:Gary )?Latham)?"
+    },
+    {
+      "id": "macnamara-2014",
+      "title": "Deliberate practice and performance in music, games, sports, education, and professions: a meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24986855/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/24986855/",
+      "year": "2014",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Macnamara[\\s\\S]*2014|2014[\\s\\S]*Macnamara",
+      "anchorPattern": "(?:Brooke )?Macnamara(?: ve ekibi)?"
+    },
+    {
+      "id": "mueller-dweck-1998",
+      "title": "Praise for intelligence can undermine children's motivation and performance",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9686450/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/9686450/",
+      "year": "1998",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Mueller[\\s\\S]*1998|1998[\\s\\S]*Mueller",
+      "anchorPattern": "(?:Claudia )?Mueller"
+    },
+    {
+      "id": "blackwell-2007",
+      "title": "Implicit theories of intelligence predict achievement across an adolescent transition: a longitudinal study and an intervention",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17328703/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/17328703/",
+      "year": "2007",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Blackwell[\\s\\S]*2007|2007[\\s\\S]*Blackwell",
+      "anchorPattern": "Blackwell, Trzesniewski ve Dweck|Blackwell"
+    },
+    {
+      "id": "harkin-2016",
+      "title": "Does monitoring goal progress promote goal attainment? A meta-analysis of the experimental evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26479070/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/26479070/",
+      "year": "2016",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Harkin[\\s\\S]*2016|2016[\\s\\S]*Harkin",
+      "anchorPattern": "(?:Benjamin )?Harkin(?: ve arkadaşları)?"
+    },
+    {
+      "id": "hagger-2016",
+      "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
+      "url": "https://doi.org/10.1177/1745691616652873",
+      "evidence": "https://doi.org/10.1177/1745691616652873",
+      "year": "2016",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Hagger[\\s\\S]*2016|2016[\\s\\S]*Hagger",
+      "anchorPattern": "(?:Martin )?Hagger(?: ve arkadaşları)?"
+    },
+    {
+      "id": "wood-2002",
+      "title": "Habits in everyday life: thought, emotion, and action",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12500811/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/12500811/",
+      "year": "2002",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Wood[\\s\\S]*2002|2002[\\s\\S]*Wood",
+      "anchorPattern": "(?:Wendy )?Wood(?:, Jeffrey Quinn ve Deborah Kashy| ve arkadaşları)?"
+    },
+    {
+      "id": "crede-2017",
+      "title": "Much ado about grit: A meta-analytic synthesis of the grit literature",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27845531/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/27845531/",
+      "year": "2017",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Credé[\\s\\S]*2017|2017[\\s\\S]*Credé",
+      "anchorPattern": "Credé(?: ve arkadaşları)?"
+    },
+    {
+      "id": "gallup-manager-2015",
+      "title": "State of the American Manager: Analytics and Advice for Leaders",
+      "url": "https://news.gallup.com/businessjournal/182792/employees-really-want-boss.aspx",
+      "evidence": "https://news.gallup.com/businessjournal/182792/employees-really-want-boss.aspx",
+      "year": "2015",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "State of the American Manager[\\s\\S]*2015|2015[\\s\\S]*State of the American Manager",
+      "anchorPattern": "State of the American Manager"
+    },
+    {
+      "id": "gallup-delegation-2015",
+      "title": "Delegating: A Huge Management Challenge for Entrepreneurs",
+      "url": "https://news.gallup.com/businessjournal/182414/delegating-huge-management-challenge-entrepreneurs.aspx",
+      "evidence": "https://news.gallup.com/businessjournal/182414/delegating-huge-management-challenge-entrepreneurs.aspx",
+      "year": "2015",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Badal ve Ott[\\s\\S]*2015",
+      "anchorPattern": "Badal ve Ott"
+    },
+    {
+      "id": "goleman-2000",
+      "title": "Leadership That Gets Results",
+      "url": "https://hbr.org/2000/03/leadership-that-gets-results",
+      "evidence": "https://hbr.org/2000/03/leadership-that-gets-results",
+      "year": "2000",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Leadership That Gets Results[\\s\\S]*2000|2000[\\s\\S]*Leadership That Gets Results",
+      "anchorPattern": "Leadership That Gets Results"
+    },
+    {
+      "id": "oncken-wass-1974",
+      "title": "Management Time: Who’s Got the Monkey?",
+      "url": "https://hbr.org/1999/11/management-time-whos-got-the-monkey",
+      "evidence": "https://store.hbr.org/product/management-time-who-s-got-the-monkey/99609",
+      "year": "1974",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Management Time: Who.s Got the Monkey[\\s\\S]*1974|1974[\\s\\S]*Management Time: Who.s Got the Monkey",
+      "anchorPattern": "Management Time: Who.s Got the Monkey\\?"
+    },
+    {
+      "id": "kotter-1990",
+      "title": "What Leaders Really Do",
+      "url": "https://hbr.org/2001/12/what-leaders-really-do",
+      "evidence": "https://store.hbr.org/product/what-leaders-really-do/r0111f",
+      "year": "1990",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "What Leaders Really Do[\\s\\S]*1990|1990[\\s\\S]*What Leaders Really Do",
+      "anchorPattern": "What Leaders Really Do"
+    },
+    {
+      "id": "zenger-folkman-2014",
+      "title": "Your Employees Want the Negative Feedback You Hate to Give",
+      "url": "https://hbr.org/2014/01/your-employees-want-the-negative-feedback-you-hate-to-give",
+      "evidence": "https://hbr.org/2014/01/your-employees-want-the-negative-feedback-you-hate-to-give",
+      "year": "2014",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Zenger[\\s\\S]*Folkman[\\s\\S]*2014|2014[\\s\\S]*Zenger[\\s\\S]*Folkman",
+      "anchorPattern": "(?:Jack )?Zenger ve (?:Joseph )?Folkman"
+    },
+    {
+      "id": "seligman-schulman-1986",
+      "title": "Explanatory Style as a Predictor of Productivity and Quitting Among Life Insurance Sales Agents",
+      "url": "https://ppc.sas.upenn.edu/sites/default/files/predictproductivity.pdf",
+      "evidence": "https://ppc.sas.upenn.edu/sites/default/files/predictproductivity.pdf",
+      "year": "1986",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Seligman[\\s\\S]*Schulman[\\s\\S]*1986|1986[\\s\\S]*Seligman[\\s\\S]*Schulman",
+      "anchorPattern": "(?:Martin )?Seligman ile (?:Peter )?Schulman"
+    },
+    {
+      "id": "rackham-1988",
+      "title": "SPIN Selling",
+      "url": "https://www.mheducation.com/highered/mhp/product/spin-selling.html",
+      "evidence": "https://www.mheducation.com/highered/mhp/product/spin-selling.html",
+      "year": "1988",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Rackham[\\s\\S]*(?:SPIN|1988)|(?:SPIN|1988)[\\s\\S]*Rackham",
+      "anchorPattern": "SPIN(?: Selling)?|Neil Rackham"
+    },
+    {
+      "id": "eisenberger-2003",
+      "title": "Does rejection hurt? An FMRI study of social exclusion",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14551436/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/14551436/",
+      "year": "2003",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Eisenberger[\\s\\S]*2003|2003[\\s\\S]*Eisenberger",
+      "anchorPattern": "(?:Naomi )?Eisenberger(?: ve arkadaşları)?"
+    },
+    {
+      "id": "dewall-2010",
+      "title": "Acetaminophen reduces social pain: behavioral and neural evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20548058/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/20548058/",
+      "year": "2010",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "DeWall[\\s\\S]*2010|2010[\\s\\S]*DeWall",
+      "anchorPattern": "DeWall(?: ve arkadaşları)?"
+    },
+    {
+      "id": "marchant-2009",
+      "title": "Mental toughness: Managerial and age differences",
+      "url": "https://pure.hud.ac.uk/en/publications/mental-toughness-managerial-and-age-differences/",
+      "evidence": "https://pure.hud.ac.uk/en/publications/mental-toughness-managerial-and-age-differences/",
+      "year": "2009",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Marchant[\\s\\S]*2009|2009[\\s\\S]*Marchant",
+      "anchorPattern": "Marchant(?: ve arkadaşları)?"
+    },
+    {
+      "id": "maguire-2000",
+      "title": "Navigation-related structural change in the hippocampi of taxi drivers",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10716738/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/10716738/",
+      "year": "2000",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Maguire[\\s\\S]*2000|2000[\\s\\S]*Maguire",
+      "anchorPattern": "(?:Eleanor )?Maguire(?: ve ekibi)?"
+    },
+    {
+      "id": "woollett-maguire-2011",
+      "title": "Acquiring the Knowledge of London’s layout drives structural brain changes",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22169537/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/22169537/",
+      "year": "2011",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Woollett[\\s\\S]*Maguire[\\s\\S]*2011|2011[\\s\\S]*Woollett[\\s\\S]*Maguire",
+      "anchorPattern": "Woollett ve Maguire"
+    },
+    {
+      "id": "draganski-2004",
+      "title": "Neuroplasticity: changes in grey matter induced by training",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14737157/",
+      "evidence": "https://pubmed.ncbi.nlm.nih.gov/14737157/",
+      "year": "2004",
+      "checkedAt": "2026-10-12",
+      "verificationScope": "bibliographic-identity",
+      "contextPattern": "Draganski[\\s\\S]*2004|2004[\\s\\S]*Draganski",
+      "anchorPattern": "Draganski(?: ve arkadaşları)?"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import {templates} from '../../../../cms/server';
+export function GET(request:Request){const id=new URL(request.url).searchParams.get('id')||'/';const html=(templates as any)[id];return new Response(html||'Not found',{status:html?200:404,headers:{'Content-Type':'text/plain; charset=utf-8','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow, noarchive','Cache-Control':'no-store'}});}

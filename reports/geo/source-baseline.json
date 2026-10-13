@@ -1,0 +1,3531 @@
+{
+  "auditDate": "2026-10-12",
+  "capturedAt": "2026-10-12T00:04:31.470Z",
+  "baselineCommit": "59aebdfd4dd439e5d9c7999624f6073e5df1bb38",
+  "scope": "source HTML and CMS seed; not browser, HTTP, production or external validator",
+  "summary": {
+    "routes": 63,
+    "articleRoutes": 30,
+    "noteRoutes": 9,
+    "schemaParseErrors": 0,
+    "singleH1Routes": 63,
+    "faqCount": 120,
+    "faqQuestionsAbsent": 0,
+    "faqAnswerExactTextAbsent": 22,
+    "articleDates": [
+      {
+        "route": "/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/b2b-satis/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/basari-nedir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/basari-ogrenilebilir-mi/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/delegasyon/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/disiplin-nasil-kazanilir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/geri-bildirim-nasil-verilir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/growth-mindset-nedir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/hedef-nasil-belirlenir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/itiraz-karsilama/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/kafa-yapisi-degisir-mi/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/kafa-yapisi-nasil-degisir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/kafa-yapisi-nedir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/kapanis-teknikleri/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/kriz-doneminde-liderlik/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/lider-yetistirmek/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/lider-yonetici-farki/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/liderlik-nedir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/liderlik-stilleri/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/mindset-nedir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/motivasyon-mu-disiplin-mi/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/nasil-basarili-olunur/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/neden-hedefler-yarim-kalir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/pahali-itirazi/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/reddedilme-korkusu/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/satis-egitimi-nasil-secilir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/satis-nedir/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/satis-teknikleri/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/satisci-kafa-yapisi/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      },
+      {
+        "route": "/makaleler/zihinsel-dayaniklilik/",
+        "schema": [
+          {
+            "type": "Article",
+            "published": "2026-09-29",
+            "modified": "2026-09-30"
+          }
+        ],
+        "visible": [
+          "Yayın: 29 Eylül 2026",
+          "Son güncelleme: 29 Eylül 2026"
+        ]
+      }
+    ],
+    "allMediaDecorativeCaveat": "Background video without track is not proof of accessibility failure; informative talk video needs accurate transcript/caption audit",
+    "missingAlt": 0,
+    "checklistControls": 196,
+    "notionPages": 11
+  },
+  "records": [
+    {
+      "route": "/arastirmalar/",
+      "kind": "page",
+      "filename": "website/arastirmalar/index.html",
+      "sourceSha256": "3677bba59092514375ffb8eab2f0a101f61fb666be1ba7142db52e66ff4d8e7f",
+      "title": "Araştırmalar: Türkiye Kafa Yapısı Araştırması | Ziya Şakir Yılmaz",
+      "description": "Türkiye Kafa Yapısı Araştırması: Türkiye'nin zihinsel dayanıklılık haritasını çıkaran ilk birincil veri çalışması. Yıllık araştırma programı ve metodoloji.",
+      "canonical": "https://ziyasakiryilmaz.com/arastirmalar",
+      "lang": "tr",
+      "h1": [
+        "Araştırmalar"
+      ],
+      "schemaTypes": [
+        "ResearchProject"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/basari/",
+      "kind": "page",
+      "filename": "website/basari/index.html",
+      "sourceSha256": "56875ad61cb7146ed2f11cf68fcfc23f9128e79104e789dfdf1816f8425c1f63",
+      "title": "Başarı Nedir? Başarının Mühendislik Rehberi | Başarı; Ziya Şakir Yılmaz",
+      "description": "Başarı nedir, nasıl başarılı olunur? Başarı: hedef belirleme, disiplin, motivasyon, özgüven ve yüksek performans üzerine kanıta dayalı Türkçe rehberler. Başarı Mühendisliği™ yaklaşımıyla.",
+      "canonical": "https://ziyasakiryilmaz.com/basari",
+      "lang": "tr",
+      "h1": [
+        "Başarınınmühendisliği vardır."
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/basari-muhendisligi/",
+      "kind": "page",
+      "filename": "website/basari-muhendisligi/index.html",
+      "sourceSha256": "801121bba820e36ac6e9ca9905219cc5fc6c3ecbce9bb18fb307140738d7c976",
+      "title": "Başarı Mühendisliği™ Nedir? | Ziya Şakir Yılmaz",
+      "description": "Başarı Mühendisliği™: başarıyı şans konusu olmaktan çıkarıp hedef, sistem, alışkanlık ve ölçüm üzerine kurulan tasarlanabilir bir sürece dönüştüren yaklaşım. Kavram Ziya Şakir Yılmaz'a aittir; 2020 tarihli aynı adlı kitapta ortaya konmuştur.",
+      "canonical": "https://ziyasakiryilmaz.com/basari-muhendisligi",
+      "lang": "tr",
+      "h1": [
+        "Başarı Mühendisliği™"
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/bulten/",
+      "kind": "page",
+      "filename": "website/bulten/index.html",
+      "sourceSha256": "eb534c6d66145010c73bbc147869d2bde2e63e5edc9c2993bf52fd5984ac28e0",
+      "title": "Mühendislik Notları | Ziya Şakir Yılmaz",
+      "description": "Başarı Mühendisliği, Kafa Yapısı, Satış ve Liderlik üzerine Mühendislik Notları.",
+      "canonical": "https://ziyasakiryilmaz.com/bulten",
+      "lang": "tr",
+      "h1": [
+        "Bir fikir.Yeni bir bakış."
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://t.me/ziyasakiryilmaz",
+        "https://wa.me/905326467755"
+      ],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/buradan-basla/",
+      "kind": "page",
+      "filename": "website/buradan-basla/index.html",
+      "sourceSha256": "a44644c8761cecc643a81083de20deca2b8e755519408724d316bfcb3c9af944",
+      "title": "Buradan Başla; Site Rehberi | Ziya Şakir Yılmaz",
+      "description": "ziyasakiryilmaz.com'a yeni misin? Üç adımda başla: kendini ölç, rehberini seç, sistemini kur. Dört bilgi rehberi, Kafa Yapısı Testi ve iki imza sistemin haritası.",
+      "canonical": "https://ziyasakiryilmaz.com/buradan-basla",
+      "lang": "tr",
+      "h1": [
+        "Buradan başla"
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/egitimler/",
+      "kind": "page",
+      "filename": "website/egitimler/index.html",
+      "sourceSha256": "489c2b37db508dcaeb3bfa06bfc1d36a708fe4d22336c73dcd6b1b47b03301d3",
+      "title": "Kurumsal Eğitimler: Satış, Liderlik ve Kafa Yapısı | Ziya Şakir Yılmaz",
+      "description": "Satış eğitimi, liderlik eğitimi ve Kurşun Geçirmez Kafa Yapısı kurumsal atölyeleri. Ölçüm öncesi ve sonrasıyla, ekibinizin gerçek vakalarıyla tasarlanan programlar.",
+      "canonical": "https://ziyasakiryilmaz.com/egitimler",
+      "lang": "tr",
+      "h1": [
+        "Bilgiyi, davranışadönüştürmek için."
+      ],
+      "schemaTypes": [
+        "ItemList",
+        "Course",
+        "Person"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/hayattan-notlar/",
+      "kind": "page",
+      "filename": "website/hayattan-notlar/index.html",
+      "sourceSha256": "0460403af4b54524584cd38e54e5e1b1b58b9fddfc2669b0ec94308d0f4bb512",
+      "title": "Hayattan Notlar | Ziya Şakir Yılmaz",
+      "description": "Ziya Şakir Yılmaz'dan kısa, kişisel notlar: sahadan, sahneden ve hayattan damıtılmış gözlemler. Her hafta yeni not.",
+      "canonical": "https://ziyasakiryilmaz.com/hayattan-notlar",
+      "lang": "tr",
+      "h1": [
+        "Hayattan notlar"
+      ],
+      "schemaTypes": [
+        "Blog"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://t.me/ziyasakiryilmaz",
+        "https://wa.me/905326467755"
+      ],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/iletisim/",
+      "kind": "page",
+      "filename": "website/iletisim/index.html",
+      "sourceSha256": "9574cda2be041c8fdd7954dad0a7700d299a85e98d858de2a4d260b38c0f1ec3",
+      "title": "İletişim | Ziya Şakir Yılmaz",
+      "description": "Kurumsal eğitim teklifi, konuşmacı daveti, mentorluk başvurusu ve basın talepleri için iletişim.",
+      "canonical": "https://ziyasakiryilmaz.com/iletisim",
+      "lang": "tr",
+      "h1": [
+        "Birlikte başlayalım."
+      ],
+      "schemaTypes": [
+        "ContactPage"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/",
+      "kind": "page",
+      "filename": "website/index.html",
+      "sourceSha256": "3ad70c9043aba534537a7416730ac5b1a1d2e875e13a67327f0bbd17b36513de",
+      "title": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+      "description": "Ziya Şakir Yılmaz ile keynote konuşmaları, kurumsal eğitim, bireysel eğitim ve mentorluk. Başarı, kafa yapısı, satış ve liderlik üzerine birlikte çalışın.",
+      "canonical": "https://ziyasakiryilmaz.com/",
+      "lang": "tr",
+      "h1": [
+        "Başarınınmühendisliğivardır."
+      ],
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "Book"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Book",
+          "published": "2020",
+          "modified": null
+        },
+        {
+          "type": "Book",
+          "published": "2016",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz#person"
+      ],
+      "externalContentLinks": [
+        "https://www.youtube.com/watch?v=u-p2y6JH3aA"
+      ],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 2,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/kafa-yapisi/",
+      "kind": "page",
+      "filename": "website/kafa-yapisi/index.html",
+      "sourceSha256": "520dd45ce5dce29b02779c3c4e1c3905b4ec145877f47ee253aec9ffcd72d3d9",
+      "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi | Kafa Yapısı; Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı nedir, nasıl değişir? Mindset, growth mindset, zihinsel dayanıklılık ve Kurşun Geçirmez Kafa Yapısı™. Türkiye'nin kafa yapısı bilgi rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/kafa-yapisi",
+      "lang": "tr",
+      "h1": [
+        "Hayat değişirkenkendine dayan."
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/kitaplar/",
+      "kind": "page",
+      "filename": "website/kitaplar/index.html",
+      "sourceSha256": "0cb0320550167134bccfd178ddeb3423ed41f6386854973a487a0ad71b448837",
+      "title": "Kitaplar | Ziya Şakir Yılmaz",
+      "description": "Ziya Şakir Yılmaz'ın kitapları: Kurşun Geçirmez Kafa Yapısı (2026), Başarı Mühendisliği (2020), İlk 72 Saat (Emre Topçu ile) ve Size Bir Sır Vereyim mi? (2016). Fikir → kitap → araç → içerik → eğitim zinciri.",
+      "canonical": "https://ziyasakiryilmaz.com/kitaplar",
+      "lang": "tr",
+      "h1": [
+        "Bir fikir,sayfalar boyunca."
+      ],
+      "schemaTypes": [
+        "ItemList",
+        "Book",
+        "Person"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Book",
+          "published": "2026-10",
+          "modified": null
+        },
+        {
+          "type": "Book",
+          "published": "2020",
+          "modified": null
+        },
+        {
+          "type": "Book",
+          "published": "2016",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://www.kitapyurdu.com/kitap/basari-muhendisligi/564766.html",
+        "https://www.kitapyurdu.com/yazar/ziya-sakir-yilmaz/203025.html"
+      ],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/konusmaci/",
+      "kind": "page",
+      "filename": "website/konusmaci/index.html",
+      "sourceSha256": "45b3003585407ea481f6e7a7c4101bdd317784da6d4e64cc869c449a2e38dda4",
+      "title": "Konuşmacı: Ziya Şakir Yılmaz'ı Etkinliğinize Davet Edin",
+      "description": "Kurumsal zirveler, bayi toplantıları ve özel etkinlikler için konuşmacı: Başarı Tesadüf Değildir, Kurşun Geçirmez Kafa Yapısı, Satışın Mühendisliği, Liderlik.",
+      "canonical": "https://ziyasakiryilmaz.com/konusmaci",
+      "lang": "tr",
+      "h1": [
+        "Bir salonda başlar.İnsanlarla devam eder."
+      ],
+      "schemaTypes": [
+        "Service",
+        "ItemList",
+        "ListItem",
+        "VideoObject"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://www.youtube.com/watch?v=u-p2y6JH3aA",
+        "https://www.youtube.com/watch?v=NTmsBaoUm5s",
+        "https://www.youtube.com/watch?v=e-dhvob8d-w",
+        "https://www.youtube.com/watch?v=4UikrLPd5-U"
+      ],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/kursun-gecirmez-kafa-yapisi/",
+      "kind": "page",
+      "filename": "website/kursun-gecirmez-kafa-yapisi/index.html",
+      "sourceSha256": "652fdfa24422fdc266cacf59a660242691ceee063d333cbee2e6b71b02ae8b9a",
+      "title": "Kurşun Geçirmez Kafa Yapısı™ Nedir? | Ziya Şakir Yılmaz",
+      "description": "Kurşun Geçirmez Kafa Yapısı™: reddedilme, başarısızlık ve belirsizlik karşısında dağılmayan zihinsel dayanıklılık sistemi. 5 zırh katmanı, ücretsiz test ve 66 Günlük Oyun Planı. Kavram Ziya Şakir Yılmaz'a aittir.",
+      "canonical": "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi",
+      "lang": "tr",
+      "h1": [
+        "Kurşun Geçirmez Kafa Yapısı™"
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/kurumsal/kafa-yapisi-atolyesi/",
+      "kind": "page",
+      "filename": "website/kurumsal/kafa-yapisi-atolyesi/index.html",
+      "sourceSha256": "4be0f2f99e75c36df6d398056a7209fb8f85b99c7d8fe2f415dfbe6c43ddc818",
+      "title": "Kurşun Geçirmez Kafa Yapısı Kurumsal Atölyesi | Ziya Şakir Yılmaz",
+      "description": "Ekipler için zihinsel dayanıklılık atölyesi: reddedilme yönetimi, baskı altında performans, belirsizlik toleransı, toparlanma. Kurşun Geçirmez Kafa Yapısı Skoru ile ölçüm; satış ekipleri için özel sürüm.",
+      "canonical": "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi",
+      "lang": "tr",
+      "h1": [
+        "Kurşun GeçirmezKafa Yapısı™"
+      ],
+      "schemaTypes": [
+        "Course",
+        "Organization",
+        "CourseInstance",
+        "Place"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/kurumsal/liderlik-egitimi/",
+      "kind": "page",
+      "filename": "website/kurumsal/liderlik-egitimi/index.html",
+      "sourceSha256": "6909f44423dadba53a65545b3a31a82e166977dd311ec12fafcbbac505fc3f3d",
+      "title": "Kurumsal Liderlik Eğitimi: Etkiyi Çoğaltmak | Ziya Şakir Yılmaz",
+      "description": "Yönetici kadroları için kurumsal liderlik eğitimi: delegasyon, geri bildirim, kriz liderliği, lider yetiştirme. 70.000 kişilik ekip ve Bayer Country Manager deneyiminden çoğaltma modeli. Teklif alın.",
+      "canonical": "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi",
+      "lang": "tr",
+      "h1": [
+        "Liderlik: Etkiyi Çoğaltmak"
+      ],
+      "schemaTypes": [
+        "Course",
+        "Organization",
+        "CourseInstance",
+        "Place"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/kurumsal/satis-egitimi/",
+      "kind": "page",
+      "filename": "website/kurumsal/satis-egitimi/index.html",
+      "sourceSha256": "fec04800f64a81920c357bf469d55042544f6b601996dd3045f36ec2640fe971",
+      "title": "Kurumsal Satış Eğitimi: Satışın Mühendisliği | Ziya Şakir Yılmaz",
+      "description": "Satış ekipleri için kurumsal satış eğitimi: itiraz karşılama, kapanış, takip, satışçı kafa yapısı. Ölçüm öncesi ve sonrası, gerçek diyaloglar, 84 ülkelik saha deneyimi. Teklif ve 30 dakikalık ücretsiz tanı görüşmesi.",
+      "canonical": "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi",
+      "lang": "tr",
+      "h1": [
+        "Satışın Mühendisliği"
+      ],
+      "schemaTypes": [
+        "Course",
+        "Organization",
+        "CourseInstance",
+        "Place"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/liderlik/",
+      "kind": "page",
+      "filename": "website/liderlik/index.html",
+      "sourceSha256": "06f15da6fb5a7c5f4b86ffeabd2f251e74b8568a5cf543d160e9f4681e9c2461",
+      "title": "Liderlik Nedir? Liderliğin Mühendislik Rehberi | Liderlik; Ziya Şakir Yılmaz",
+      "description": "Liderlik nedir, lider ve yönetici farkı, delegasyon, geri bildirim, takım yönetimi ve kriz liderliği. Ansiklopedik tanım değil; karar anlarının pratiği.",
+      "canonical": "https://ziyasakiryilmaz.com/liderlik",
+      "lang": "tr",
+      "h1": [
+        "Etkiniz, siz odadayokken de sürsün."
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "kind": "article",
+      "filename": "website/makaleler/aliskanlik-kazanmak-kac-gun-surer/index.html",
+      "sourceSha256": "06e350b49e74439cdc9aff33220e38f3b97faed9f513c65562092e9e8c6adb1b",
+      "title": "Alışkanlık Kazanmak Kaç Gün Sürer? 66 Gün Gerçeği | Ziya Şakir Yılmaz",
+      "description": "Alışkanlık kazanmak 21 gün mü sürer? Bilim ortalama 66 gün diyor (18 ile 254 gün arası). Başarı Mühendisliği bakışıyla alışkanlık tasarımı, 5 adım ve 66 Günlük Oyun Planı.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer",
+      "lang": "tr",
+      "h1": [
+        "Alışkanlık Kazanmak Kaç Gün Sürer? 21 Gün Efsanesi, 66 Gün Gerçeği"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Alışkanlık 21 günde oturur mu?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Bir gün kaçırırsam baştan mı başlamalıyım?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Neden 66 gün, neden 60 veya 90 değil?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Aynı anda kaç alışkanlık kurabilirim?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/b2b-satis/",
+      "kind": "article",
+      "filename": "website/makaleler/b2b-satis/index.html",
+      "sourceSha256": "e71fbb9ecf50416b100dc3020a25071c4a2f6678a12bc92704529bb27158d9f9",
+      "title": "B2B Satış: Kurumsal Satışın Yol Haritası | Ziya Şakir Yılmaz",
+      "description": "B2B satış rehberi: kurumsal satışın B2C'den farkları, 6-10 kişilik karar komitesi, uzun satış döngüsü yönetimi, şampiyon bulma ve RFP tuzakları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/b2b-satis",
+      "lang": "tr",
+      "h1": [
+        "B2B Satış: Kurumsal Satışın Yol Haritası"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "B2B satış döngüsü neden bu kadar uzun sürer?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Şampiyon kimdir ve neden gerekir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Her RFP davetine katılmalı mıyım?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "B2C tecrübem B2B satışta işime yarar mı?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/basari-nedir/",
+      "kind": "article",
+      "filename": "website/makaleler/basari-nedir/index.html",
+      "sourceSha256": "6ec064c25240e3cc66ff5c73a7214ade9b64bb6e233a94bf401730daee1137b7",
+      "title": "Başarı Nedir? Ölçülebilir Bir Tanım | Ziya Şakir Yılmaz",
+      "description": "Başarı nedir? Ziya Şakir Yılmaz'a göre ölçülebilir tanım: hedef, sistem, alışkanlık ve ölçümle tasarlanan süreç. Bilimsel veriler ve 5 adımlık protokol.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/basari-nedir",
+      "lang": "tr",
+      "h1": [
+        "Başarı Nedir? Ölçülebilir Bir Tanım"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Başarının bilimsel bir tanımı var mı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Başarı Mühendisliği ne demek?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Başarılı olmak için yetenek şart mı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Başarı ile mutluluk arasında nasıl bir ilişki var?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/basari-ogrenilebilir-mi/",
+      "kind": "article",
+      "filename": "website/makaleler/basari-ogrenilebilir-mi/index.html",
+      "sourceSha256": "4fafc45465a7f5f4cf1c70d8642efe78c3dd08c83a72d88c714a5f33b11e4d49",
+      "title": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor? | Ziya Şakir Yılmaz",
+      "description": "Başarı öğrenilebilir mi? Ericsson'ın bilinçli pratik araştırması, Macnamara 2014 meta-analizinin dürüst sınırları ve öğrenilebilir dört başarı bileşeni.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi",
+      "lang": "tr",
+      "h1": [
+        "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor?"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Başarı doğuştan gelen bir özellik mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "10.000 saat kuralı doğru mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Macnamara meta-analizi pratiği çürüttü mü?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Başarının hangi bileşenleri öğrenilebilir?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/delegasyon/",
+      "kind": "article",
+      "filename": "website/makaleler/delegasyon/index.html",
+      "sourceSha256": "018e7df507f295a21e5826dbac3e9d5e6159def7c0a2660487a4dcbd58b23f01",
+      "title": "Delegasyon: Yetki Devrinin Mühendisliği | Ziya Şakir Yılmaz",
+      "description": "Delegasyon nasıl yapılır? Bırakamama psikolojisi, 5 seviyeli merdiven, maymun yönetimi ve Gallup verileri. 70.000 kişilik ekipten saha dersleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/delegasyon",
+      "lang": "tr",
+      "h1": [
+        "Delegasyon: Yetki Devrinin Mühendisliği"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Delegasyon nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Neden delege edemiyorum?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Hangi işler delege edilmez?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Maymun yönetimi ne demek?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/disiplin-nasil-kazanilir/",
+      "kind": "article",
+      "filename": "website/makaleler/disiplin-nasil-kazanilir/index.html",
+      "sourceSha256": "d6e9e19f69d8c334a1e85e34235bca974565a463cac2f0c29092eb7217ce8f71",
+      "title": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler | Ziya Şakir Yılmaz",
+      "description": "Disiplin nasıl kazanılır? 21 gün efsanesinin düzeltilmesi, Lally'nin 66 gün bulgusu, grit ve irade gücü araştırmalarıyla kanıta dayalı 5 adımlık yöntem.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir",
+      "lang": "tr",
+      "h1": [
+        "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Alışkanlık gerçekten 21 günde mi oluşur?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Bir gün aksatırsam her şey sıfırlanır mı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Disiplin doğuştan mı gelir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Motivasyon olmadan disiplin mümkün mü?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/geri-bildirim-nasil-verilir/",
+      "kind": "article",
+      "filename": "website/makaleler/geri-bildirim-nasil-verilir/index.html",
+      "sourceSha256": "cac60a6e1e42815f4cceb64d28de2d8740c04418bd6b32a7fa4392aafcee52a8",
+      "title": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler | Ziya Şakir Yılmaz",
+      "description": "Geri bildirim nasıl verilir? SBI modeli, sandviç yönteminin sorunları, kötü ve iyi versiyonuyla 10 örnek cümle ve geri bildirim alma becerisi rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir",
+      "lang": "tr",
+      "h1": [
+        "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "SBI modeli nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Sandviç yöntemi neden önerilmiyor?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Çalışanlar olumsuz geri bildirim ister mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Geri bildirimi ne zaman vermeliyim?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/growth-mindset-nedir/",
+      "kind": "article",
+      "filename": "website/makaleler/growth-mindset-nedir/index.html",
+      "sourceSha256": "a51424d150e53401ec0fa16ee9170e3894ed662ad2cb0d2b251b9a9f3dba8426",
+      "title": "Growth Mindset (Gelişim Zihniyeti) Nedir? | Ziya Şakir Yılmaz",
+      "description": "Growth mindset (gelişim zihniyeti) nedir? Dweck'in çalışmaları, Yeager'ın Nature deneyi ve Sisk meta-analizi ışığında dürüst rehber, pratik adımlar.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir",
+      "lang": "tr",
+      "h1": [
+        "Growth Mindset (Gelişim Zihniyeti) Nedir?"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Growth mindset ne demek?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Growth mindset bilimsel olarak kanıtlandı mı?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Henüz kelimesi neden bu kadar önemli?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Sahte growth mindset nedir?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/hedef-nasil-belirlenir/",
+      "kind": "article",
+      "filename": "website/makaleler/hedef-nasil-belirlenir/index.html",
+      "sourceSha256": "19708a5001c98c779f679c65a41722d20a0cc65a8b2da557b2e6fa0e08dc246c",
+      "title": "Hedef Nasıl Belirlenir? SMART'tan Sisteme | Ziya Şakir Yılmaz",
+      "description": "Hedef nasıl belirlenir? Locke ve Latham'ın hedef koyma teorisi, SMART modelinin eksikleri ve hedefi haftalık davranışa çeviren Tasarım aşaması bu yazıda.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir",
+      "lang": "tr",
+      "h1": [
+        "Hedef Nasıl Belirlenir? SMART'tan Sisteme"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Hedef kolay mı olmalı, zor mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "SMART hedef modeli yeterli mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Kaç hedef belirlemek doğru?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Hedefimi başkalarına söylemeli miyim?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/",
+      "kind": "page",
+      "filename": "website/makaleler/index.html",
+      "sourceSha256": "86fc9ab57667fff55e0870fac369b46d30c8d840a80be283daba22b02f6be820",
+      "title": "Makaleler: 30 Cornerstone Rehber | Ziya Şakir Yılmaz",
+      "description": "Başarı, kafa yapısı, satış ve liderlik üzerine 30 derin Türkçe rehber: her biri 30 Saniyede Cevap ile açılır, doğrulanmış araştırmalarla ilerler, testle kapanır.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/",
+      "lang": "tr",
+      "h1": [
+        "30 cornerstone rehber"
+      ],
+      "schemaTypes": [
+        "CollectionPage"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/itiraz-karsilama/",
+      "kind": "article",
+      "filename": "website/makaleler/itiraz-karsilama/index.html",
+      "sourceSha256": "988bae02be044aff45afdd1c144732bc1cf774ef40f4656e1f67e72380551978",
+      "title": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap) | Ziya Şakir Yılmaz",
+      "description": "Satışta itiraz karşılama rehberi: mazeret ve itiraz farkı, dört adımlı karşılama akışı ve en sık duyulan 12 itiraza profesyonel cevap örnekleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama",
+      "lang": "tr",
+      "h1": [
+        "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap)"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "İtiraz gelmesi kötü bir işaret mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "İtiraza hemen cevap vermeli miyim?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "En sık duyulan satış itirazı hangisi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "İtiraz cevapları ezberlenir mi?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-degisir-mi/",
+      "kind": "article",
+      "filename": "website/makaleler/kafa-yapisi-degisir-mi/index.html",
+      "sourceSha256": "36c7d050f21f098e8133a52d3bbfe237af6d804c1edfc40c98342162f586a8b9",
+      "title": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı | Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı değişir mi? Londra taksi şoförleri, jonglörlük deneyi ve yetişkin nöroplastisitesi net cevap veriyor: değişir ama tekrarla. Kanıtlar burada.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi",
+      "lang": "tr",
+      "h1": [
+        "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Kafa yapısı belli bir yaştan sonra değişir mi?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Kafa yapısı kendiliğinden değişir mi?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Beyindeki değişim ne kadar sürede başlar?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Nöroplastisite ne demek?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-nasil-degisir/",
+      "kind": "article",
+      "filename": "website/makaleler/kafa-yapisi-nasil-degisir/index.html",
+      "sourceSha256": "8d2f6f841b4863f7d40ecbaa4e9f1deb861310efe0706cbbc3b508875d44ea93",
+      "title": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası | Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı nasıl değişir? Nöroplastisite araştırmaları beynin deneyimle fiziksel olarak değiştiğini gösteriyor. Bilimsel yol haritası bu makalede.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir",
+      "lang": "tr",
+      "h1": [
+        "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Kafa yapısı gerçekten değişir mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Kafa yapısı ne kadar sürede değişir?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Nöroplastisite nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Kafa yapısını değiştirmek için nereden başlamalıyım?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-nedir/",
+      "kind": "article",
+      "filename": "website/makaleler/kafa-yapisi-nedir/index.html",
+      "sourceSha256": "26fe902df8b673cb2e97deacfde71bea10d7df1bb0e98009a2472c02748809e1",
+      "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi | Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı nedir? Mindset kavramının Türkçe karşılığı, Carol Dweck'in zihniyet araştırmaları ve bu yapının değişip değişmediğinin bilimsel cevabı burada.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir",
+      "lang": "tr",
+      "h1": [
+        "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Kafa yapısı ne demek?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Mindset ile kafa yapısı aynı şey mi?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Kafa yapısı doğuştan mı gelir?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Sabit zihniyet ile gelişen zihniyet arasındaki fark nedir?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/kapanis-teknikleri/",
+      "kind": "article",
+      "filename": "website/makaleler/kapanis-teknikleri/index.html",
+      "sourceSha256": "5dcc99e454d04e57da925aaa1ff55ee4f2c5f738a0501fec0000a1edd9a7c2b8",
+      "title": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk | Ziya Şakir Yılmaz",
+      "description": "Satışta kapanış teknikleri rehberi: 10 yöntem, her birinin ne zaman çalıştığı ve ne zaman geri teptiği, kapanış sinyalleri ve dürüst kullanım uyarıları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri",
+      "lang": "tr",
+      "h1": [
+        "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Kapanış teknikleri hâlâ işe yarıyor mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Kapanışı ne zaman denemeliyim?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Müşteri kapanışta hayır derse ne yapmalıyım?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Aciliyet yaratmak etik mi?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/kriz-doneminde-liderlik/",
+      "kind": "article",
+      "filename": "website/makaleler/kriz-doneminde-liderlik/index.html",
+      "sourceSha256": "66ac8815af53e7a612299040a5048dac792990c62b34e33a5b658e1b97d19721",
+      "title": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak | Ziya Şakir Yılmaz",
+      "description": "Kriz döneminde liderlik: iletişim ritmi, karar hızı ile doğruluk dengesi, sakinliğin bulaşıcılığı ve 5 adımlı kriz protokolü. Gallup ve Kahneman bulguları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik",
+      "lang": "tr",
+      "h1": [
+        "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Krizde lider ilk ne yapmalı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Krizde hızlı mı karar vermeliyim, doğru mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Ekibe kötü haberi nasıl veririm?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Kriz ne zaman biter, normale nasıl dönülür?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/lider-yetistirmek/",
+      "kind": "article",
+      "filename": "website/makaleler/lider-yetistirmek/index.html",
+      "sourceSha256": "43bdec912a2a3468a8404045273f563974bd98207a47c3d0b8171b856143417d",
+      "title": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi | Ziya Şakir Yılmaz",
+      "description": "Lider yetiştirmek etkiyi çoğaltmanın son seviyesi. Maxwell'in 5 seviye modeli, yetki ve güven merdiveni, halefiyet planı ve 70.000 kişilik ekipten dersler.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek",
+      "lang": "tr",
+      "h1": [
+        "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Lider yetiştirmek neden bu kadar önemli?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Maxwell'in 5 seviye modeli nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Halefiyet planı nedir, nasıl yapılır?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Yetiştirdiğim lider beni geçerse ne olur?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/lider-yonetici-farki/",
+      "kind": "article",
+      "filename": "website/makaleler/lider-yonetici-farki/index.html",
+      "sourceSha256": "a46b9a79fbe51e31d989d2229fde3683605fd6d3f5e0385986793ce23ad7c592",
+      "title": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum | Ziya Şakir Yılmaz",
+      "description": "Lider ve yönetici farkı nedir? Klişe tablolar yerine 20 gerçek iş durumu üzerinden karşılaştırma: hata anı, terfi, kriz. Kotter ve Gallup verileriyle.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki",
+      "lang": "tr",
+      "h1": [
+        "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Lider ve yönetici arasındaki temel fark nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Yöneticilik kötü bir şey mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Unvanım yokken lider olabilir miyim?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Yönetici olarak liderlik kasımı nasıl geliştiririm?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/liderlik-nedir/",
+      "kind": "article",
+      "filename": "website/makaleler/liderlik-nedir/index.html",
+      "sourceSha256": "8da1db9633f559547aa918c023f8e4c238767deddc340fe81bfa16fc4c5c1766",
+      "title": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi | Ziya Şakir Yılmaz",
+      "description": "Liderlik nedir? Etkiyi çoğaltma becerisi olarak liderlik: karar anları, Maxwell ve Kotter, Gallup verileri ve 70.000 kişilik ekipten saha dersleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir",
+      "lang": "tr",
+      "h1": [
+        "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Liderlik tek cümleyle nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Liderlik doğuştan mı gelir, sonradan mı öğrenilir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Liderlik ile yöneticilik aynı şey mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Ekibimde lider olup olmadığımı nasıl anlarım?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/liderlik-stilleri/",
+      "kind": "article",
+      "filename": "website/makaleler/liderlik-stilleri/index.html",
+      "sourceSha256": "e35a1295d1f9d6f4b037dcd6e733f8f37a4babd8fe8b9718d7a293ab63d221a6",
+      "title": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman? | Ziya Şakir Yılmaz",
+      "description": "Goleman'ın 6 liderlik stili: zorlayıcı, vizyoner, ilişkisel, demokratik, öncü ve koç. 3.871 yönetici araştırması, iklim etkileri ve durumsal geçiş rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri",
+      "lang": "tr",
+      "h1": [
+        "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman?"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Kaç liderlik stili vardır?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "En iyi liderlik stili hangisi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Zorlayıcı stil hiç mi kullanılmaz?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Liderlik stilimi nasıl değiştiririm?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/mindset-nedir/",
+      "kind": "article",
+      "filename": "website/makaleler/mindset-nedir/index.html",
+      "sourceSha256": "f94af937ceae08fe785785195ab8ac5882bf3f489243c10865c760c67cc383b9",
+      "title": "Mindset Nedir? Türkçe Kapsamlı Rehber | Ziya Şakir Yılmaz",
+      "description": "Mindset nedir, ne demek? Kavramın 1909'a uzanan kökeni, Carol Dweck'in çerçevesi, iş dünyasındaki kullanımı ve Türkçedeki karşılığı bu kapsamlı rehberde.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/mindset-nedir",
+      "lang": "tr",
+      "h1": [
+        "Mindset Nedir? Türkçe Kapsamlı Rehber"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Mindset ne demek, Türkçesi nedir?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Mindset kavramını kim buldu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Mindset iş hayatında neden bu kadar konuşuluyor?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Mindset değişir mi?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/motivasyon-mu-disiplin-mi/",
+      "kind": "article",
+      "filename": "website/makaleler/motivasyon-mu-disiplin-mi/index.html",
+      "sourceSha256": "2a4eed759150a1904327615e74e2370c0e9e22ed691529978ce088740cc5060a",
+      "title": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür | Ziya Şakir Yılmaz",
+      "description": "Motivasyon mu disiplin mi? Ego depletion tartışması, alışkanlık araştırmaları ve ikisinden güçlü olan sistem: ortam tasarımı, uygulama niyeti ve ritüel.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi",
+      "lang": "tr",
+      "h1": [
+        "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Motivasyon olmadan başlanabilir mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "İrade bir kas gibi tükenir mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Disiplinli biri değilim, ne yapmalıyım?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Sistem tam olarak ne demek?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/nasil-basarili-olunur/",
+      "kind": "article",
+      "filename": "website/makaleler/nasil-basarili-olunur/index.html",
+      "sourceSha256": "65c304c7a9adaddb9d3bcbdb42f9cd008e9594138506dc879edc4299c7342e55",
+      "title": "Nasıl Başarılı Olunur? Sistem Yaklaşımı | Ziya Şakir Yılmaz",
+      "description": "Nasıl başarılı olunur? Hedef koymak yetmez, sistem gerekir. Başarı Mühendisliği'nin 5 aşaması ve Gollwitzer'in uygulama niyetleri araştırmasıyla somut yol.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur",
+      "lang": "tr",
+      "h1": [
+        "Nasıl Başarılı Olunur? Sistem Yaklaşımı"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Başarılı olmak için önce ne yapmalıyım?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Hedef koymak yeterli mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Uygulama niyeti (implementation intention) nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Sonuçlar ne kadar sürede gelir?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/neden-hedefler-yarim-kalir/",
+      "kind": "article",
+      "filename": "website/makaleler/neden-hedefler-yarim-kalir/index.html",
+      "sourceSha256": "ae21d0933a74a297cfe9b8d476b316794365e445c41f9c6cb9eeacd244250f53",
+      "title": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden | Ziya Şakir Yılmaz",
+      "description": "Neden hedefler yarım kalır? Norcross'un yeni yıl kararı araştırmaları, planlama yanılgısı ve hedefleri yarıda bırakan 7 gerçek neden ile panzehirleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir",
+      "lang": "tr",
+      "h1": [
+        "Neden Hedefler Yarım Kalır? 7 Gerçek Neden"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Yeni yıl kararları gerçekten işe yaramıyor mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Hedefe ulaşamamak irade zayıflığı mı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Planlama yanılgısı nasıl aşılır?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Yarım kalan hedefe geri dönülebilir mi?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/pahali-itirazi/",
+      "kind": "article",
+      "filename": "website/makaleler/pahali-itirazi/index.html",
+      "sourceSha256": "7d6ad279b1efabe2854767610bddb4cd08482bb72a65289f219a78f3ae7016ad",
+      "title": "'Pahalı' İtirazına 9 Profesyonel Cevap | Ziya Şakir Yılmaz",
+      "description": "Pahalı itirazına 9 profesyonel cevap: fiyat ve değer ayrımı, örnek cümlelerle 9 numaralı teknik ve fiyat görüşmesinde yapılmaması gereken hatalar.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi",
+      "lang": "tr",
+      "h1": [
+        "'Pahalı' İtirazına 9 Profesyonel Cevap"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Pahalı diyen müşteriye hemen indirim yapmalı mıyım?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Fiyatı görüşmenin başında mı sonunda mı söylemeliyim?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Pahalı itirazı gerçek bir itiraz mı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Rakip daha ucuzsa ne söylemeliyim?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 5,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/reddedilme-korkusu/",
+      "kind": "article",
+      "filename": "website/makaleler/reddedilme-korkusu/index.html",
+      "sourceSha256": "b5c01e81dd4def2e9e42658cc58ab5695a18f6baa41155e2fa3d99802fe9da2e",
+      "title": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları | Ziya Şakir Yılmaz",
+      "description": "Reddedilme korkusu neden bu kadar güçlü? Beyindeki karşılığı, evrimsel kökü ve kademeli maruz kalma protokolüyle bu korkuyu aşmanın somut yolları burada.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu",
+      "lang": "tr",
+      "h1": [
+        "Reddedilme Korkusu: Nedenleri ve Aşma Yolları"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Reddedilme korkusu neden bu kadar güçlü?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Reddedilme korkusu nasıl yenilir?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Reddedilmek neden fiziksel acı gibi hissettirir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Reddedilme korkusu satış işini yapmaya engel mi?",
+          "questionFound": true,
+          "answerFound": false
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/satis-egitimi-nasil-secilir/",
+      "kind": "article",
+      "filename": "website/makaleler/satis-egitimi-nasil-secilir/index.html",
+      "sourceSha256": "89e69efea43af1c2d9adbb13a5bf81f24a3ea06f415ec8429121f56b5ebd0c67",
+      "title": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter | Ziya Şakir Yılmaz",
+      "description": "Satış eğitimi nasıl seçilir? İK ve yöneticiler için 10 seçim kriteri, eğitmene sorulacak sorular ve kırmızı bayraklar. Dürüst bir satın alma rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir",
+      "lang": "tr",
+      "h1": [
+        "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Satış eğitimi gerçekten işe yarıyor mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "İyi bir satış eğitimi ne kadar sürmeli?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Eğitimin getirisini nasıl ölçerim?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Online satış eğitimi sınıf eğitiminin yerini tutar mı?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/satis-nedir/",
+      "kind": "article",
+      "filename": "website/makaleler/satis-nedir/index.html",
+      "sourceSha256": "f6f2c08f532dce8ce2ad175d07ce0df203f6f0d642e90470159fcac8dd5d5c22",
+      "title": "Satış Nedir? Mühendislik Bakışıyla Satış | Ziya Şakir Yılmaz",
+      "description": "Satış nedir? Dürüst tanım: değer aktarımı ve karar kolaylaştırma. Satışın kötü şöhretinin kaynağı ve beş halkalı satış zinciri modeli bu rehberde.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satis-nedir",
+      "lang": "tr",
+      "h1": [
+        "Satış Nedir? Mühendislik Bakışıyla Satış"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Satış herkes için öğrenilebilir bir beceri mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Satış ile pazarlama arasındaki fark nedir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Satışın en zor aşaması hangisidir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "İçe dönük biri iyi satışçı olabilir mi?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/satis-teknikleri/",
+      "kind": "article",
+      "filename": "website/makaleler/satis-teknikleri/index.html",
+      "sourceSha256": "6fd717441aca9ac8006a1ee5932f572ea1d70c0b2dcb455fcae185ed05125105",
+      "title": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem | Ziya Şakir Yılmaz",
+      "description": "Sahada kanıtlanmış 12 satış tekniği: SPIN soruları, sosyal kanıt, kontrast, susma ve daha fazlası. Her teknik için örnek Türkçe cümleler bu rehberde.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri",
+      "lang": "tr",
+      "h1": [
+        "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "En etkili satış tekniği hangisidir?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Satış teknikleri manipülasyon mudur?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Bu teknikler telefonda da işe yarar mı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "12 tekniği aynı anda mı öğrenmeliyim?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/satisci-kafa-yapisi/",
+      "kind": "article",
+      "filename": "website/makaleler/satisci-kafa-yapisi/index.html",
+      "sourceSha256": "5b3b71f1fc026de0d3624c599f1874fe221f1dd7d15d17c610319da9fdb4c097",
+      "title": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur? | Ziya Şakir Yılmaz",
+      "description": "Satışçı kafa yapısı rehberi: reddedilmeye dayanıklı zihin kurma, Seligman'ın iyimserlik araştırması ve Kurşun Geçirmez Kafa Yapısı ile toparlanma hızı.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi",
+      "lang": "tr",
+      "h1": [
+        "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur?"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Satışçı doğulur mu, olunur mu?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Reddedilme korkusu nasıl azalır?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Kaç hayırdan sonra ısrar bırakılmalı?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Kurşun Geçirmez Kafa Yapısı satışçıya ne katar?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 4,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/makaleler/zihinsel-dayaniklilik/",
+      "kind": "article",
+      "filename": "website/makaleler/zihinsel-dayaniklilik/index.html",
+      "sourceSha256": "5557c014e204dc0fe8b12b7c491d1cd0c5d32d67a593c9769fb6bb15c01d09d0",
+      "title": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir? | Ziya Şakir Yılmaz",
+      "description": "Zihinsel dayanıklılık nedir, nasıl geliştirilir? Spor psikolojisinden iş hayatına bilimsel bulgular ve Kurşun Geçirmez Kafa Yapısı zırh katmanları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik",
+      "lang": "tr",
+      "h1": [
+        "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir?"
+      ],
+      "schemaTypes": [
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "parseErrors": [],
+      "faq": [
+        {
+          "question": "Zihinsel dayanıklılık ne demek?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Zihinsel dayanıklılık doğuştan mı?",
+          "questionFound": true,
+          "answerFound": false
+        },
+        {
+          "question": "Zihinsel dayanıklılık ile rezilyans aynı şey mi?",
+          "questionFound": true,
+          "answerFound": true
+        },
+        {
+          "question": "Zihinsel dayanıklılık iş hayatında neden önemli?",
+          "questionFound": true,
+          "answerFound": true
+        }
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": "2026-09-30"
+        }
+      ],
+      "visibleDates": [
+        "Yayın: 29 Eylül 2026",
+        "Son güncelleme: 29 Eylül 2026"
+      ],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/mentorluk/",
+      "kind": "page",
+      "filename": "website/mentorluk/index.html",
+      "sourceSha256": "7cfea638814b40562dace8bf2a544037c0707733dc433e99dabeedf8c36c5927",
+      "title": "Mentorluk; Girişimci ve Yöneticiler için Birebir Çalışma | Ziya Şakir Yılmaz",
+      "description": "Ziya Şakir Yılmaz ile birebir mentorluk: hedef, ekip, kişisel marka ve büyüme odağında sınırlı kontenjanlı program. Girişimciler ve yöneticiler için başvuru sayfası.",
+      "canonical": "https://ziyasakiryilmaz.com/mentorluk",
+      "lang": "tr",
+      "h1": [
+        "Kendi yolunuz.Birlikte düşünelim."
+      ],
+      "schemaTypes": [
+        "Service"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-001/",
+      "kind": "note",
+      "filename": "website/notlar/not-001/index.html",
+      "sourceSha256": "7dbf0f787abc84fc699aa8792069f32fd435e2027b411bca6ca6755ddd46fed5",
+      "title": "Sakin kalan kazanır; Hayattan Notlar NOT 001 | Ziya Şakir Yılmaz",
+      "description": "Hayattan Notlar 001: İnsan sakin kaldığı her şeyin galibidir. Baskı anında zihnin nasıl çalıştığı üzerine kısa bir not.",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-001",
+      "lang": "tr",
+      "h1": [
+        "Sakin kalan kazanır"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-21",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://t.me/ziyasakiryilmaz"
+      ],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-002/",
+      "kind": "note",
+      "filename": "website/notlar/not-002/index.html",
+      "sourceSha256": "2e90e9f7bc7307846d688ce817e8902bfed21ef8a6ca6485b4c0c966cb4caef0",
+      "title": "Potansiyel kurtarmaz, sistem kurtarır; Hayattan Notlar NOT 002 | Ziya Şakir Yılmaz",
+      "description": "Hayattan Notlar 002: Potansiyel bir vaat, sistem bir garantidir. Yetenekli insanların neden yarı yolda kaldığı üzerine.",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-002",
+      "lang": "tr",
+      "h1": [
+        "Potansiyel kurtarmaz, sistem kurtarır"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-22",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://t.me/ziyasakiryilmaz"
+      ],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-003/",
+      "kind": "note",
+      "filename": "website/notlar/not-003/index.html",
+      "sourceSha256": "27d704d5e64924ae0e6f0313b7fa6e27ec53a812832833147ad3457c600632b5",
+      "title": "Hazır olmanı bekleme; Hayattan Notlar NOT 003 | Ziya Şakir Yılmaz",
+      "description": "Hayattan Notlar 003: Hazırlık hissi başlangıçtan önce gelmez, sonra gelir. Başlamak üzerine kısa bir not.",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-003",
+      "lang": "tr",
+      "h1": [
+        "Hazır olmanı bekleme"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-23",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [
+        "https://t.me/ziyasakiryilmaz"
+      ],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-004/",
+      "kind": "note",
+      "filename": "website/notlar/not-004/index.html",
+      "sourceSha256": "66a7559533e39bcc7764118e46a5d6c3970287a48ade694bff0e176a7da3b9e6",
+      "title": "Hayır, bir veridir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Bir arkadaşım dün beşinci \"hayır\"ı aldı ve bana yazdı: \"Bu iş bana göre değilmiş.\" Ona şunu sordum: beş hayırın ortak noktası ne? Düşündü. Hepsi fiyat…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-004",
+      "lang": "tr",
+      "h1": [
+        "Hayır, bir veridir"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-24",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-005/",
+      "kind": "note",
+      "filename": "website/notlar/not-005/index.html",
+      "sourceSha256": "0520d514338be572cebfc5943e93851b3fb4b0959539549d849a31193cacd0b5",
+      "title": "Henüz | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Kızık köyünde büyürken en sık duyduğum cümlelerden biri şuydu: \"Bizden bir şey olmaz.\" Kimse kötü niyetle söylemiyordu; bir tespit gibi söyleniyordu. …",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-005",
+      "lang": "tr",
+      "h1": [
+        "Henüz"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-25",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-006/",
+      "kind": "note",
+      "filename": "website/notlar/not-006/index.html",
+      "sourceSha256": "6ac0a3295693a9f36c5965faead394c418320c9c8b7e3adf8865ae68ee5f4ad7",
+      "title": "Kültür, en kötü gününde tolere ettiğin şeydir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Bir yönetici bana ekibinin kültürünü anlatıyordu: dürüstlük, saygı, sorumluluk. Duvarda da yazıyordu. Sonra en iyi satışçısının müşteriye yalan söyled…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-006",
+      "lang": "tr",
+      "h1": [
+        "Kültür, en kötü gününde tolere ettiğin şeydir"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-26",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-007/",
+      "kind": "note",
+      "filename": "website/notlar/not-007/index.html",
+      "sourceSha256": "f27709ff429d4c6ee585f7da4eb2be3b79c1dd9ddbc1e31194b66a73218f2b17",
+      "title": "Sabah dokuzda ne yapıyorsun? | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Yetmiş bin kişilik bir ekipte kimin büyüyeceğini hedeflerinden anlayamazsın; herkesin hedefi büyüktür. Kimin büyüyeceğini sabah dokuzda ne yaptığından…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-007",
+      "lang": "tr",
+      "h1": [
+        "Sabah dokuzda ne yapıyorsun?"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-27",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-008/",
+      "kind": "note",
+      "filename": "website/notlar/not-008/index.html",
+      "sourceSha256": "2b42f46b9a5b594da387e594bd1b0bd465343ff66bc89beda7ce3d5c74a24195",
+      "title": "Güvenlik görevlisini işten çıkarma | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "İçimizdeki alarm sistemini, amigdalayı, düşman gibi görmeyi öğretiyorlar. Oysa o görevli seni hayatta tuttu; karanlık sokakta, hızlı arabada, kötü niy…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-008",
+      "lang": "tr",
+      "h1": [
+        "Güvenlik görevlisini işten çıkarma"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-28",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/notlar/not-009/",
+      "kind": "note",
+      "filename": "website/notlar/not-009/index.html",
+      "sourceSha256": "5abe22e9578cd40370c1648d09ad50c1d7be57881996c08eb85308ff758b8fc6",
+      "title": "Üç saniye sessizlik | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Satış eğitimlerinde en zor öğrettiğim teknik bir cümle olmaktan çok bir boşluk. Müşteri \"pahalı\" der; satışçı hemen konuşur. Savunur ya da indirir. İk…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-009",
+      "lang": "tr",
+      "h1": [
+        "Üç saniye sessizlik"
+      ],
+      "schemaTypes": [
+        "Article",
+        "CreativeWorkSeries"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "Article",
+          "published": "2026-09-29",
+          "modified": null
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/satis/",
+      "kind": "page",
+      "filename": "website/satis/index.html",
+      "sourceSha256": "6b7c4f124ac858c018068236d2360d95504ddd1a93167d0b4880a2089664d8de",
+      "title": "Satış Nedir? Satışın Mühendislik Rehberi | Satış; Ziya Şakir Yılmaz",
+      "description": "Satış teknikleri, itiraz karşılama, kapanış, B2B satış ve satış psikolojisi. Teoriden değil sahadan: Satış, Türkçe'nin uygulayıcı satış kütüphanesi.",
+      "canonical": "https://ziyasakiryilmaz.com/satis",
+      "lang": "tr",
+      "h1": [
+        "Güven kur.Değer yarat."
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/sozluk/",
+      "kind": "page",
+      "filename": "website/sozluk/index.html",
+      "sourceSha256": "9fb448f9bca5d598cd709702346d546d274c278056adf205f7c77bd8036ea5ee",
+      "title": "Başarı Mühendisliği Sözlüğü: Kafa Yapısı, Satış, Liderlik Kavramları | Ziya Şakir Yılmaz",
+      "description": "Başarı, kafa yapısı, satış ve liderlik kavramlarının net Türkçe tanımları: mindset, growth mindset, zihinsel dayanıklılık, grit, delegasyon ve daha fazlası.",
+      "canonical": "https://ziyasakiryilmaz.com/sozluk",
+      "lang": "tr",
+      "h1": [
+        "Başarı mühendisliği sözlüğü"
+      ],
+      "schemaTypes": [
+        "DefinedTermSet",
+        "DefinedTerm"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/testler/",
+      "kind": "page",
+      "filename": "website/testler/index.html",
+      "sourceSha256": "9341858097c319c4bbec356f8b660a614b21f022bf962a43a28a2c2640b41a37",
+      "title": "Kurşun Geçirmez Kafa Yapısı Testi | Ziya Şakir Yılmaz",
+      "description": "Kurşun Geçirmez Kafa Yapısı Testi: 20 soru, 5 katman, ücretsiz kişisel öz değerlendirme.",
+      "canonical": "https://ziyasakiryilmaz.com/testler/",
+      "lang": "tr",
+      "h1": [
+        "Kafa yapın kurşun geçirmez mi?"
+      ],
+      "schemaTypes": [],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 1,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/testler/kafa-yapisi-testi/",
+      "kind": "test",
+      "filename": "website/testler/kafa-yapisi-testi/index.html",
+      "sourceSha256": "93bc1551ec60616f070b06381d103136c68547f22a868faefe32be8ba0c63068",
+      "title": "Kurşun Geçirmez Kafa Yapısı Testi™; 3 Dakikada Zihinsel Zırh Skorun | Ziya Şakir Yılmaz",
+      "description": "Kafa yapın kurşun geçirmez mi? 20 soru, 5 zırh katmanı, 3 dakika. Ücretsiz Kurşun Geçirmez Kafa Yapısı Testi ile zihinsel dayanıklılık skorunu ve katman profilini öğren.",
+      "canonical": "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi",
+      "lang": "tr",
+      "h1": [
+        "Kafa yapın kurşun geçirmez mi?"
+      ],
+      "schemaTypes": [
+        "Quiz"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [],
+      "externalContentLinks": [],
+      "answerCapsules": 3,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    },
+    {
+      "route": "/ziya-sakir-yilmaz/",
+      "kind": "page",
+      "filename": "website/ziya-sakir-yilmaz/index.html",
+      "sourceSha256": "3c8996a7e39127659be5e89d3bf4a5949c52a565f3ece4d0c9ecf3eb4e2729af",
+      "title": "Ziya Şakir Yılmaz Kimdir? | Başarı Mühendisi",
+      "description": "Ziya Şakir Yılmaz: Başarı Mühendisliği™ ve Kurşun Geçirmez Kafa Yapısı™ sistemlerinin kurucusu; yazar, eğitmen, konuşmacı. 600.000'den fazla insana eğitim, 84 ülkede iş ve sahne deneyimi, 5 TEDx konuşması, üç kitap; dördüncüsü ekimde.",
+      "canonical": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz",
+      "lang": "tr",
+      "h1": [
+        "Ziya ŞakirYılmaz."
+      ],
+      "schemaTypes": [
+        "ProfilePage",
+        "Person",
+        "Place",
+        "CollegeOrUniversity",
+        "Organization"
+      ],
+      "parseErrors": [],
+      "faq": [],
+      "dates": [
+        {
+          "type": "ProfilePage",
+          "published": null,
+          "modified": "2026-09-18"
+        }
+      ],
+      "visibleDates": [],
+      "articleAuthor": "",
+      "schemaIds": [
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz#person"
+      ],
+      "externalContentLinks": [
+        "https://tr.linkedin.com/in/ziyayilmaz",
+        "https://www.instagram.com/ziyasakir/",
+        "https://www.youtube.com/@ZiyaSakirYlmaz",
+        "https://www.kitapyurdu.com/yazar/ziya-sakir-yilmaz/203025.html"
+      ],
+      "answerCapsules": 0,
+      "media": {
+        "videos": 1,
+        "tracks": 0
+      },
+      "missingAlt": 0
+    }
+  ],
+  "entitySnapshots": [
+    {
+      "route": "/egitimler/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/egitimler/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/egitimler/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/",
+      "@type": "Person",
+      "@id": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz#person",
+      "name": "Ziya Şakir Yılmaz",
+      "jobTitle": "Başarı Mühendisi",
+      "description": "Başarı Mühendisliği ve Kurşun Geçirmez Kafa Yapısı sistemlerinin kurucusu; yazar, eğitmen, konuşmacı ve mentor. Başarı, kafa yapısı, satış ve liderlik alanlarında eğitimler verir. Misyonu bir milyon insanın hayatına dokunmaktır.",
+      "url": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz",
+      "knowsAbout": [
+        "Başarı",
+        "Kafa yapısı",
+        "Mindset",
+        "Zihinsel dayanıklılık",
+        "Satış",
+        "Satış eğitimi",
+        "Liderlik",
+        "Liderlik eğitimi",
+        "Motivasyon",
+        "Kişisel gelişim"
+      ],
+      "sameAs": [
+        "https://tr.linkedin.com/in/ziyayilmaz",
+        "https://www.instagram.com/ziyasakir/",
+        "https://www.youtube.com/@ZiyaSakirYlmaz",
+        "https://www.facebook.com/ziyasakiryilmaz/",
+        "https://x.com/zsyilmaz",
+        "https://www.kitapyurdu.com/yazar/ziya-sakir-yilmaz/203025.html"
+      ],
+      "author": [
+        {
+          "@type": "Book",
+          "name": "Başarı Mühendisliği",
+          "datePublished": "2020"
+        },
+        {
+          "@type": "Book",
+          "name": "Size Bir Sır Vereyim mi?",
+          "datePublished": "2016"
+        },
+        {
+          "@type": "Book",
+          "name": "İlk 72 Saat",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Emre Topçu"
+            },
+            {
+              "@id": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz#person"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/kitaplar/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/kitaplar/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/kitaplar/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/kitaplar/",
+      "@type": "Person",
+      "name": "Ziya Şakir Yılmaz"
+    },
+    {
+      "route": "/ziya-sakir-yilmaz/",
+      "@type": "Person",
+      "@id": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz#person",
+      "name": "Ziya Şakir Yılmaz",
+      "jobTitle": "Başarı Mühendisi; Eğitmen, Yazar, Konuşmacı",
+      "alternateName": "Başarı Mühendisi",
+      "birthDate": "1972-04-17",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Malatya, Türkiye"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Orta Doğu Teknik Üniversitesi",
+          "description": "Ekonomi"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Maxwell Leadership Certified Team"
+      },
+      "description": "Başarı Mühendisliği ve Kurşun Geçirmez Kafa Yapısı sistemlerinin kurucusu; yazar, eğitmen, konuşmacı ve mentor.",
+      "url": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz",
+      "knowsAbout": [
+        "Başarı",
+        "Kafa yapısı",
+        "Mindset",
+        "Zihinsel dayanıklılık",
+        "Satış",
+        "Satış eğitimi",
+        "Liderlik",
+        "Liderlik eğitimi",
+        "Motivasyon",
+        "Kişisel gelişim"
+      ],
+      "sameAs": [
+        "https://tr.linkedin.com/in/ziyayilmaz",
+        "https://www.instagram.com/ziyasakir/",
+        "https://www.youtube.com/@ZiyaSakirYlmaz",
+        "https://www.facebook.com/ziyasakiryilmaz/",
+        "https://x.com/zsyilmaz",
+        "https://www.kitapyurdu.com/yazar/ziya-sakir-yilmaz/203025.html"
+      ]
+    }
+  ]
+}

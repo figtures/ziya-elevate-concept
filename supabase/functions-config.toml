@@ -1,0 +1,6 @@
+# Merge these entries into the CLI-generated supabase/config.toml.
+[functions.admin-users]
+verify_jwt = true
+
+[functions.submit-lead]
+verify_jwt = false

@@ -1,0 +1,380 @@
+{
+  "/assets/og/home.png": {
+    "alt": "Bir fikir. Hayata geçen değişim. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/arastirmalar.png": {
+    "alt": "Türkiye Kafa Yapısı Araştırması — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/basari-muhendisligi.png": {
+    "alt": "Başarı Mühendisliği — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/basari.png": {
+    "alt": "Hedefi, çalışan bir sisteme dönüştürün. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/bulten.png": {
+    "alt": "Bir fikir. Yeni bir bakış. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/buradan-basla.png": {
+    "alt": "Size uygun başlangıcı bulun. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/egitimler.png": {
+    "alt": "Bilgiyi, davranışa dönüştürmek için. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/hayattan-notlar.png": {
+    "alt": "Hayattan kalan küçük dersler. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/iletisim.png": {
+    "alt": "Birlikte başlayalım. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/kafa-yapisi.png": {
+    "alt": "Hayat değişirken kendine dayan. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/kitaplar.png": {
+    "alt": "Bir fikir, sayfalar boyunca. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/konusmaci.png": {
+    "alt": "Bir salonda başlar. İnsanlarla devam eder. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/kursun-gecirmez-kafa-yapisi.png": {
+    "alt": "Kurşun Geçirmez Kafa Yapısı — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/kurumsal-kafa-yapisi-atolyesi.png": {
+    "alt": "Zor anlara, birlikte hazırlanın. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/kurumsal-liderlik-egitimi.png": {
+    "alt": "Liderlik: Etkiyi Çoğaltmak — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/kurumsal-satis-egitimi.png": {
+    "alt": "Satışın Mühendisliği — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/liderlik.png": {
+    "alt": "Etkiniz, siz yokken de sürsün. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler.png": {
+    "alt": "Bir sorudan, yeni bir bakışa. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-aliskanlik-kazanmak-kac-gun-surer.png": {
+    "alt": "“Alışkanlık Kazanmak Kaç Gün Sürer?” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-b2b-satis.png": {
+    "alt": "“B2B Satış: Karar Süreci ve Kurumsal Satış” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-basari-nedir.png": {
+    "alt": "“Başarı Nedir? Kendi Ölçütünüzü Belirleyin” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-basari-ogrenilebilir-mi.png": {
+    "alt": "“Başarı Öğrenilebilir mi? Yetenek ve Pratik” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-delegasyon.png": {
+    "alt": "“Delegasyon Nedir? 5 Seviyede Yetki Devri” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-disiplin-nasil-kazanilir.png": {
+    "alt": "“Disiplin Nasıl Kazanılır? 5 Adımlı Plan” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-geri-bildirim-nasil-verilir.png": {
+    "alt": "“Geri Bildirim Nasıl Verilir? 10 Örnek” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-growth-mindset-nedir.png": {
+    "alt": "“Growth Mindset Nedir? Gelişim Zihniyeti” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-hedef-nasil-belirlenir.png": {
+    "alt": "“Hedef Nasıl Belirlenir? SMART ve Eylem Planı” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-itiraz-karsilama.png": {
+    "alt": "“Satışta İtiraz Karşılama: 12 Örnek Cevap” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-kafa-yapisi-degisir-mi.png": {
+    "alt": "“Kafa Yapısı Değişir mi? Beyin ve Öğrenme” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-kafa-yapisi-nasil-degisir.png": {
+    "alt": "“Kafa Yapısı Nasıl Değişir? 5 Adımlı Plan” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-kafa-yapisi-nedir.png": {
+    "alt": "“Kafa Yapısı Nedir? Düşünce ve Tepki İlişkisi” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-kapanis-teknikleri.png": {
+    "alt": "“Satışta Kapanış Teknikleri: 10 Yöntem” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-kriz-doneminde-liderlik.png": {
+    "alt": "“Kriz Döneminde Liderlik: 5 Adımlı Plan” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-lider-yetistirmek.png": {
+    "alt": "“Lider Yetiştirmek: Yetki ve Halefiyet” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-lider-yonetici-farki.png": {
+    "alt": "“Lider ve Yönetici Farkı: 20 İş Durumu” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-liderlik-nedir.png": {
+    "alt": "“Liderlik Nedir? Etki ve Ekip Gelişimi” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-liderlik-stilleri.png": {
+    "alt": "“Liderlik Stilleri: 6 Stil, Hangi Durumda?” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-mindset-nedir.png": {
+    "alt": "“Mindset Nedir? Türkçe Anlamı ve İş Hayatı” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-motivasyon-mu-disiplin-mi.png": {
+    "alt": "“Motivasyon mu Disiplin mi? Sistem Kurmak” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-nasil-basarili-olunur.png": {
+    "alt": "“Nasıl Başarılı Olunur? 5 Adımda Sistem” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-neden-hedefler-yarim-kalir.png": {
+    "alt": "“Hedefler Neden Yarım Kalır? 7 Neden” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-pahali-itirazi.png": {
+    "alt": "““Pahalı” İtirazına 9 Profesyonel Cevap” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-reddedilme-korkusu.png": {
+    "alt": "“Reddedilme Korkusu: Nedenleri ve İlk Adımlar” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-satis-egitimi-nasil-secilir.png": {
+    "alt": "“Satış Eğitimi Nasıl Seçilir? 10 Kriter” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-satis-nedir.png": {
+    "alt": "“Satış Nedir? Değer Aktarımı ve 5 Aşama” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-satis-teknikleri.png": {
+    "alt": "“Satış Teknikleri: 12 Yöntem ve Örnek Cümle” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-satisci-kafa-yapisi.png": {
+    "alt": "“Satışçı Kafa Yapısı: Hayır Sonrası Devam” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/makaleler-zihinsel-dayaniklilik.png": {
+    "alt": "“Zihinsel Dayanıklılık Nasıl Geliştirilir?” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/mentorluk.png": {
+    "alt": "Kendi yolunuz. Birlikte düşünelim. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-001.png": {
+    "alt": "“Sakin kalan kazanır” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-002.png": {
+    "alt": "“Potansiyel kurtarmaz, sistem kurtarır” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-003.png": {
+    "alt": "“Hazır olmanı bekleme” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-004.png": {
+    "alt": "“Hayır, bir veridir” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-005.png": {
+    "alt": "“Henüz” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-006.png": {
+    "alt": "“Kültür, tolere ettiğin şeydir” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-007.png": {
+    "alt": "“Sabah dokuzda ne yapıyorsun?” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-008.png": {
+    "alt": "“Güvenlik görevlisini işten çıkarma” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/notlar-not-009.png": {
+    "alt": "“Üç saniye sessizlik” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/satis.png": {
+    "alt": "Güven kur. Değer yarat. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/sozluk.png": {
+    "alt": "Kavramları netleştirin. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/testler.png": {
+    "alt": "Kendinizi daha yakından tanıyın. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/testler-kafa-yapisi-testi.png": {
+    "alt": "Kafa yapın kurşun geçirmez mi? — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  },
+  "/assets/og/ziya-sakir-yilmaz.png": {
+    "alt": "Yaşamak. Anlamak. Paylaşmak. — Ziya Şakir Yılmaz adını içeren paylaşım görseli.",
+    "width": 1200,
+    "height": 630,
+    "type": "image/png"
+  }
+}

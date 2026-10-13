@@ -1,0 +1,12 @@
+/* Cover the entire hero at every aspect ratio; native footage covers failures. */
+.hero-vid[data-tedx-hero]{container-type:size}
+[data-tedx-hero] video[data-hero-clip]{opacity:0!important;transition:opacity .45s ease}
+[data-tedx-hero] video[data-hero-clip].is-active{opacity:1!important}
+[data-tedx-hero] iframe{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:max(100cqw,177.778cqh);height:max(100cqh,56.25cqw);
+  max-width:none;border:0;pointer-events:none;opacity:0;
+  transition:opacity .25s ease;
+}
+[data-tedx-hero].tedx-playing iframe{opacity:1}
+@media(prefers-reduced-motion:reduce){[data-tedx-hero] iframe,[data-tedx-hero] video[data-hero-clip]{transition:none}}

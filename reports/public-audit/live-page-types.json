@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-10-12T00:53:50.778Z",
+  "method": "Four new anonymous GET requests confirm valid multi-type WebPage schema; previous verifier only accepted string @type and produced false positives.",
+  "records": [
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/",
+      "status": 200,
+      "schemaPage": {
+        "@type": [
+          "WebPage",
+          "CollectionPage"
+        ],
+        "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/#webpage",
+        "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/",
+        "name": "Bilgiyi, davranışa dönüştürmek için.",
+        "description": "Satış eğitimi, liderlik eğitimi ve Kurşun Geçirmez Kafa Yapısı kurumsal atölyeleri. Ölçüm öncesi ve sonrasıyla, ekibinizin gerçek vakalarıyla tasarlanan programlar.",
+        "inLanguage": "tr",
+        "isPartOf": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/#website"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/assets/og-default.jpg"
+        },
+        "breadcrumb": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/#programs"
+        }
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/",
+      "status": 200,
+      "schemaPage": {
+        "@type": [
+          "WebPage",
+          "CollectionPage"
+        ],
+        "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/#webpage",
+        "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/",
+        "name": "Hayattan notlar",
+        "description": "Ziya Şakir Yılmaz'dan kısa, kişisel notlar: sahadan, sahneden ve hayattan damıtılmış gözlemler. Her hafta yeni not.",
+        "inLanguage": "tr",
+        "isPartOf": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/#website"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/assets/og-default.jpg"
+        },
+        "breadcrumb": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/#writing"
+        }
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/",
+      "status": 200,
+      "schemaPage": {
+        "@type": [
+          "WebPage",
+          "CollectionPage"
+        ],
+        "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/#webpage",
+        "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/",
+        "name": "30 cornerstone rehber",
+        "description": "Başarı, kafa yapısı, satış ve liderlik üzerine 30 derin Türkçe rehber: her biri 30 Saniyede Cevap ile açılır, doğrulanmış araştırmalarla ilerler, testle kapanır.",
+        "inLanguage": "tr",
+        "isPartOf": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/#website"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/assets/og-default.jpg"
+        },
+        "breadcrumb": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/#writing"
+        }
+      },
+      "passed": true
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/",
+      "status": 200,
+      "schemaPage": {
+        "@type": [
+          "WebPage",
+          "ProfilePage"
+        ],
+        "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/#webpage",
+        "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/",
+        "name": "Ziya Şakir Yılmaz.",
+        "description": "Ziya Şakir Yılmaz: Başarı Mühendisliği™ ve Kurşun Geçirmez Kafa Yapısı™ sistemlerinin kurucusu; yazar, eğitmen, konuşmacı. 600.000'den fazla insana eğitim, 84 ülkede iş ve sahne deneyimi, 5 TEDx konuşması, üç kitap; dördüncüsü ekimde.",
+        "inLanguage": "tr",
+        "isPartOf": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/#website"
+        },
+        "mainEntity": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/#person"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/assets/og-default.jpg"
+        },
+        "breadcrumb": {
+          "@id": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/#breadcrumb"
+        }
+      },
+      "passed": true
+    }
+  ]
+}

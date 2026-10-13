@@ -1,0 +1,436 @@
+[
+  {
+    "route": "/arastirmalar/",
+    "theme": "bilgi",
+    "composition": "blueprint",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "ARAŞTIRMALAR"
+  },
+  {
+    "route": "/basari/",
+    "theme": "basari",
+    "composition": "blueprint",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "BAŞARI MERKEZİ"
+  },
+  {
+    "route": "/basari-muhendisligi/",
+    "theme": "basari",
+    "composition": "blueprint",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "BAŞARI MÜHENDİSLİĞİ™"
+  },
+  {
+    "route": "/bulten/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Bir fikir.Yeni bir bakış."
+  },
+  {
+    "route": "/buradan-basla/",
+    "theme": "egitim",
+    "composition": "studio",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "BURADAN BAŞLA"
+  },
+  {
+    "route": "/egitimler/",
+    "theme": "egitim",
+    "composition": "studio",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "EĞİTİMLER"
+  },
+  {
+    "route": "/hayattan-notlar/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "HAYATTAN NOTLAR"
+  },
+  {
+    "route": "/iletisim/",
+    "theme": "egitim",
+    "composition": "contact",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "İLETİŞİM"
+  },
+  {
+    "route": "/kafa-yapisi/",
+    "theme": "kafa",
+    "composition": "orbit",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "KAFA YAPISI MERKEZİ"
+  },
+  {
+    "route": "/kitaplar/",
+    "theme": "kitap",
+    "composition": "library",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "KİTAPLAR"
+  },
+  {
+    "route": "/konusmaci/",
+    "theme": "ziya",
+    "composition": "portrait",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "İNSANLAR BİR KONUŞMAYI UNUTABİLİR."
+  },
+  {
+    "route": "/kursun-gecirmez-kafa-yapisi/",
+    "theme": "kitap",
+    "composition": "library",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "KURŞUN GEÇİRMEZKAFA YAPISI™"
+  },
+  {
+    "route": "/kurumsal/kafa-yapisi-atolyesi/",
+    "theme": "kafa",
+    "composition": "workshop",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Ekibinizin zırhı ne kadar sağlam?"
+  },
+  {
+    "route": "/kurumsal/liderlik-egitimi/",
+    "theme": "liderlik",
+    "composition": "workshop",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Yöneticileriniz yönetiyor mu, çoğaltıyor mu?"
+  },
+  {
+    "route": "/kurumsal/satis-egitimi/",
+    "theme": "satis",
+    "composition": "workshop",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satış ekibiniz sorunun neresinde?"
+  },
+  {
+    "route": "/liderlik/",
+    "theme": "liderlik",
+    "composition": "panorama",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "LİDERLİK MERKEZİ"
+  },
+  {
+    "route": "/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+    "theme": "basari",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Alışkanlık Kazanmak Kaç Gün Sürer? 21 Gün Efsanesi, 66 Gün Gerçeği"
+  },
+  {
+    "route": "/makaleler/b2b-satis/",
+    "theme": "satis",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "B2B Satış: Kurumsal Satışın Yol Haritası"
+  },
+  {
+    "route": "/makaleler/basari-nedir/",
+    "theme": "basari",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Başarı Nedir? Ölçülebilir Bir Tanım"
+  },
+  {
+    "route": "/makaleler/basari-ogrenilebilir-mi/",
+    "theme": "basari",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor?"
+  },
+  {
+    "route": "/makaleler/delegasyon/",
+    "theme": "liderlik",
+    "composition": "focus",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Delegasyon: Yetki Devrinin Mühendisliği"
+  },
+  {
+    "route": "/makaleler/disiplin-nasil-kazanilir/",
+    "theme": "basari",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler"
+  },
+  {
+    "route": "/makaleler/geri-bildirim-nasil-verilir/",
+    "theme": "liderlik",
+    "composition": "offset",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler"
+  },
+  {
+    "route": "/makaleler/growth-mindset-nedir/",
+    "theme": "kafa",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Growth Mindset (Gelişim Zihniyeti) Nedir?"
+  },
+  {
+    "route": "/makaleler/hedef-nasil-belirlenir/",
+    "theme": "basari",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Hedef Nasıl Belirlenir? SMART'tan Sisteme"
+  },
+  {
+    "route": "/makaleler/",
+    "theme": "bilgi",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "30 CORNERSTONE REHBER"
+  },
+  {
+    "route": "/makaleler/itiraz-karsilama/",
+    "theme": "satis",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap)"
+  },
+  {
+    "route": "/makaleler/kafa-yapisi-degisir-mi/",
+    "theme": "kafa",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı"
+  },
+  {
+    "route": "/makaleler/kafa-yapisi-nasil-degisir/",
+    "theme": "kafa",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası"
+  },
+  {
+    "route": "/makaleler/kafa-yapisi-nedir/",
+    "theme": "kafa",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi"
+  },
+  {
+    "route": "/makaleler/kapanis-teknikleri/",
+    "theme": "satis",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk"
+  },
+  {
+    "route": "/makaleler/kriz-doneminde-liderlik/",
+    "theme": "liderlik",
+    "composition": "focus",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak"
+  },
+  {
+    "route": "/makaleler/lider-yetistirmek/",
+    "theme": "liderlik",
+    "composition": "offset",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi"
+  },
+  {
+    "route": "/makaleler/lider-yonetici-farki/",
+    "theme": "liderlik",
+    "composition": "editorial",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum"
+  },
+  {
+    "route": "/makaleler/liderlik-nedir/",
+    "theme": "liderlik",
+    "composition": "editorial",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi"
+  },
+  {
+    "route": "/makaleler/liderlik-stilleri/",
+    "theme": "liderlik",
+    "composition": "focus",
+    "video": "klip-uluslararasi-restored-1080.mp4",
+    "title": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman?"
+  },
+  {
+    "route": "/makaleler/mindset-nedir/",
+    "theme": "kafa",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Mindset Nedir? Türkçe Kapsamlı Rehber"
+  },
+  {
+    "route": "/makaleler/motivasyon-mu-disiplin-mi/",
+    "theme": "basari",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür"
+  },
+  {
+    "route": "/makaleler/nasil-basarili-olunur/",
+    "theme": "basari",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Nasıl Başarılı Olunur? Sistem Yaklaşımı"
+  },
+  {
+    "route": "/makaleler/neden-hedefler-yarim-kalir/",
+    "theme": "basari",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden"
+  },
+  {
+    "route": "/makaleler/pahali-itirazi/",
+    "theme": "basari",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "'Pahalı' İtirazına 9 Profesyonel Cevap"
+  },
+  {
+    "route": "/makaleler/reddedilme-korkusu/",
+    "theme": "kafa",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları"
+  },
+  {
+    "route": "/makaleler/satis-egitimi-nasil-secilir/",
+    "theme": "satis",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter"
+  },
+  {
+    "route": "/makaleler/satis-nedir/",
+    "theme": "satis",
+    "composition": "focus",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satış Nedir? Mühendislik Bakışıyla Satış"
+  },
+  {
+    "route": "/makaleler/satis-teknikleri/",
+    "theme": "satis",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem"
+  },
+  {
+    "route": "/makaleler/satisci-kafa-yapisi/",
+    "theme": "satis",
+    "composition": "editorial",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur?"
+  },
+  {
+    "route": "/makaleler/zihinsel-dayaniklilik/",
+    "theme": "kafa",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir?"
+  },
+  {
+    "route": "/mentorluk/",
+    "theme": "egitim",
+    "composition": "studio",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "MENTÖRLÜK: YOLU YÜRÜMÜŞ BİRİYLE YÜRÜMEK"
+  },
+  {
+    "route": "/notlar/not-001/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Sakin kalan kazanır"
+  },
+  {
+    "route": "/notlar/not-002/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Potansiyel kurtarmaz, sistem kurtarır"
+  },
+  {
+    "route": "/notlar/not-003/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Hazır olmanı bekleme"
+  },
+  {
+    "route": "/notlar/not-004/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Hayır, bir veridir"
+  },
+  {
+    "route": "/notlar/not-005/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Henüz"
+  },
+  {
+    "route": "/notlar/not-006/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Kültür, en kötü gününde tolere ettiğin şeydir"
+  },
+  {
+    "route": "/notlar/not-007/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Sabah dokuzda ne yapıyorsun?"
+  },
+  {
+    "route": "/notlar/not-008/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Güvenlik görevlisini işten çıkarma"
+  },
+  {
+    "route": "/notlar/not-009/",
+    "theme": "not",
+    "composition": "journal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Üç saniye sessizlik"
+  },
+  {
+    "route": "/satis/",
+    "theme": "satis",
+    "composition": "diagonal",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "SATIŞ MERKEZİ"
+  },
+  {
+    "route": "/sozluk/",
+    "theme": "bilgi",
+    "composition": "offset",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "BAŞARI MÜHENDİSLİĞİ SÖZLÜĞÜ"
+  },
+  {
+    "route": "/testler/",
+    "theme": "kafa",
+    "composition": "orbit",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "KAFA YAPIN KURŞUN GEÇİRMEZ Mİ?"
+  },
+  {
+    "route": "/testler/kafa-yapisi-testi/",
+    "theme": "kafa",
+    "composition": "assessment",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "Kafa yapın kurşun geçirmez mi?"
+  },
+  {
+    "route": "/ziya-sakir-yilmaz/",
+    "theme": "ziya",
+    "composition": "portrait",
+    "video": "hero-loop-restored-1440.mp4",
+    "title": "ZİYA ŞAKİR YILMAZ"
+  }
+]

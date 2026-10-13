@@ -1,0 +1,104 @@
+{
+  "/assets/tedx-oan-sahne-genis.jpg": {
+    "use": "image",
+    "width": 1920,
+    "height": 1080,
+    "fallback": "/assets/responsive/tedx-oan-sahne-genis-1280.webp",
+    "variants": [
+      {
+        "src": "/assets/responsive/tedx-oan-sahne-genis-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 7622
+      },
+      {
+        "src": "/assets/responsive/tedx-oan-sahne-genis-768.webp",
+        "width": 768,
+        "height": 432,
+        "bytes": 13102
+      },
+      {
+        "src": "/assets/responsive/tedx-oan-sahne-genis-1024.webp",
+        "width": 1024,
+        "height": 576,
+        "bytes": 18000
+      },
+      {
+        "src": "/assets/responsive/tedx-oan-sahne-genis-1280.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 23668
+      },
+      {
+        "src": "/assets/responsive/tedx-oan-sahne-genis-1600.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 30918
+      },
+      {
+        "src": "/assets/responsive/tedx-oan-sahne-genis-1920.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 39354
+      }
+    ]
+  },
+  "/assets/salon-genis.webp": {
+    "use": "image",
+    "width": 1800,
+    "height": 1013,
+    "fallback": "/assets/responsive/salon-genis-1280.webp",
+    "variants": [
+      {
+        "src": "/assets/responsive/salon-genis-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 23464
+      },
+      {
+        "src": "/assets/responsive/salon-genis-768.webp",
+        "width": 768,
+        "height": 432,
+        "bytes": 42274
+      },
+      {
+        "src": "/assets/responsive/salon-genis-1024.webp",
+        "width": 1024,
+        "height": 576,
+        "bytes": 60540
+      },
+      {
+        "src": "/assets/responsive/salon-genis-1280.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 76572
+      },
+      {
+        "src": "/assets/responsive/salon-genis-1600.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 99346
+      },
+      {
+        "src": "/assets/responsive/salon-genis-1800.webp",
+        "width": 1800,
+        "height": 1013,
+        "bytes": 114804
+      }
+    ]
+  },
+  "/assets/klip-uluslararasi-restored-poster.jpg": {
+    "use": "poster",
+    "width": 1920,
+    "height": 1080,
+    "fallback": "/assets/responsive/klip-uluslararasi-restored-poster-1920.webp",
+    "variants": [
+      {
+        "src": "/assets/responsive/klip-uluslararasi-restored-poster-1920.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 77292
+      }
+    ]
+  }
+}

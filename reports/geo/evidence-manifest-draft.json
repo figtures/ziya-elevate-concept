@@ -1,0 +1,76 @@
+{
+  "schema_version": "0.1.0",
+  "program_id": "zsy-geo",
+  "release_id": "audit-2026-10-12",
+  "environment": "owner-private-preview",
+  "generated_at": "2026-10-12T00:06:31.829Z",
+  "generated_by": "Codex audit",
+  "git_commit": null,
+  "manifest_sha256": null,
+  "gates": [
+    {
+      "gate_id": "GEO-01",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-02",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-03",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-04",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-05",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-06",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-07",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-08",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-09",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    },
+    {
+      "gate_id": "GEO-10",
+      "status": "BLOCKED",
+      "owner": null,
+      "control_ids": []
+    }
+  ],
+  "evidence": [],
+  "exceptions": [],
+  "signed_off_by": [],
+  "notice": "Audit draft only; not a release certificate. Parent task will bind final source commit and independently produced tests. No signature, retention or customer-access verification asserted."
+}

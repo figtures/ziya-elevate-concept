@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-10-12T00:56:04.302Z",
+  "deployedCommit": "8fc6e79d2e0e44b54ce5e2ca0c59e2c242379a62",
+  "scope": "Targeted real anonymous GET/HEAD after static header deployment; no credentials or browser used.",
+  "records": [
+    {
+      "route": "/admin/kurulum.sql",
+      "method": "GET",
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/admin/kurulum.sql",
+      "status": 200,
+      "finalUrl": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/admin/kurulum.sql",
+      "headers": {
+        "content-type": "application/octet-stream",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "bytes": 788880,
+      "bodySha256": "8e821b6ae6f66f6a54227fb3e33334f8946438add9a21e66b7bb7c80b658a801"
+    },
+    {
+      "route": "/admin/kurulum.sql",
+      "method": "HEAD",
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/admin/kurulum.sql",
+      "status": 200,
+      "finalUrl": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/admin/kurulum.sql",
+      "headers": {
+        "content-type": "application/octet-stream",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "bytes": 0
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+      "status": 200,
+      "finalUrl": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-cache",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 36413,
+      "bodySha256": "9f72f60c4858abee2a06f2fdc7513707de197c0c7a51c53ecc8e43f16077da52",
+      "title": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+      "robotsMeta": "index, follow, max-image-preview:large",
+      "h1": "Başarınınmühendisliğivardır."
+    },
+    {
+      "route": "/robots.txt",
+      "method": "GET",
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/robots.txt",
+      "status": 200,
+      "finalUrl": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/robots.txt",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "bytes": 131,
+      "bodySha256": "1d82928ae1193b3e0107e9a335d82f86137fb91f086e1a885c3ad151af37179d",
+      "body": "User-agent: *\nDisallow: /admin/\nDisallow: /api/\nSitemap: https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/sitemap.xml\n"
+    },
+    {
+      "route": "/api/cms/catalog",
+      "method": "GET",
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/api/cms/catalog",
+      "status": 200,
+      "finalUrl": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/api/cms/catalog",
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store",
+        "x-content-type-options": "nosniff",
+        "x-robots-tag": "noindex, nofollow, noarchive"
+      },
+      "bytes": 1520285,
+      "bodySha256": "a12f9257ae7900214fd58f350d8b8e7afd4679c2c034abbc6b03f1d44a699f40"
+    },
+    {
+      "route": "/api/cms/template?id=%2F",
+      "method": "GET",
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/api/cms/template?id=%2F",
+      "status": 200,
+      "finalUrl": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/api/cms/template?id=%2F",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "no-store",
+        "x-content-type-options": "nosniff",
+        "x-robots-tag": "noindex, nofollow, noarchive"
+      },
+      "bytes": 36427,
+      "bodySha256": "6124405e504e818ea34e6727ce66c0017e6a612b3a479db53e0d013ad6067748"
+    }
+  ],
+  "summary": {
+    "sqlHeadersPassed": false,
+    "homepageRobotsApiSanityPassed": true
+  }
+}

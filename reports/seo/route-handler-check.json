@@ -1,0 +1,173 @@
+{
+  "kind": "route-handler-logic-NOT-HTTP-browser",
+  "at": "2026-10-12T00:08:18.516Z",
+  "origin": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site",
+  "rows": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 34727
+    },
+    {
+      "path": "/konusmaci/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 33476
+    },
+    {
+      "path": "/egitimler/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 27934
+    },
+    {
+      "path": "/mentorluk/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 21829
+    },
+    {
+      "path": "/iletisim/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 20549
+    },
+    {
+      "path": "/makaleler/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 26631
+    },
+    {
+      "path": "/makaleler/zihinsel-dayaniklilik/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 39481
+    },
+    {
+      "path": "/kitaplar/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 27707
+    },
+    {
+      "path": "/kafa-yapisi/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 31598
+    },
+    {
+      "path": "/testler/kafa-yapisi-testi/",
+      "status": 200,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 28610
+    },
+    {
+      "path": "/does-not-exist/",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 160
+    },
+    {
+      "path": "/_global/",
+      "status": 404,
+      "location": null,
+      "contentType": "text/html; charset=utf-8",
+      "bodyBytes": 160
+    },
+    {
+      "path": "/konusmaci",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/konusmaci/",
+      "contentType": null,
+      "bodyBytes": 0
+    },
+    {
+      "path": "/testler/basari-muhendisligi-skoru/",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/",
+      "contentType": null,
+      "bodyBytes": 0
+    }
+  ],
+  "sitemap": {
+    "status": 200,
+    "locs": [
+      "https://ziyasakiryilmaz.com/",
+      "https://ziyasakiryilmaz.com/arastirmalar/",
+      "https://ziyasakiryilmaz.com/basari-muhendisligi/",
+      "https://ziyasakiryilmaz.com/basari/",
+      "https://ziyasakiryilmaz.com/bulten/",
+      "https://ziyasakiryilmaz.com/buradan-basla/",
+      "https://ziyasakiryilmaz.com/egitimler/",
+      "https://ziyasakiryilmaz.com/hayattan-notlar/",
+      "https://ziyasakiryilmaz.com/iletisim/",
+      "https://ziyasakiryilmaz.com/kafa-yapisi/",
+      "https://ziyasakiryilmaz.com/kitaplar/",
+      "https://ziyasakiryilmaz.com/konusmaci/",
+      "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/",
+      "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi/",
+      "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi/",
+      "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi/",
+      "https://ziyasakiryilmaz.com/liderlik/",
+      "https://ziyasakiryilmaz.com/makaleler/",
+      "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "https://ziyasakiryilmaz.com/makaleler/b2b-satis/",
+      "https://ziyasakiryilmaz.com/makaleler/basari-nedir/",
+      "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/",
+      "https://ziyasakiryilmaz.com/makaleler/delegasyon/",
+      "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/",
+      "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/",
+      "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/",
+      "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/",
+      "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/",
+      "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/",
+      "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/",
+      "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/",
+      "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/",
+      "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/",
+      "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/",
+      "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/",
+      "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/",
+      "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/",
+      "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/",
+      "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/",
+      "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/",
+      "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/",
+      "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/",
+      "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/",
+      "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/",
+      "https://ziyasakiryilmaz.com/makaleler/satis-nedir/",
+      "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/",
+      "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/",
+      "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/",
+      "https://ziyasakiryilmaz.com/mentorluk/",
+      "https://ziyasakiryilmaz.com/notlar/not-001/",
+      "https://ziyasakiryilmaz.com/notlar/not-002/",
+      "https://ziyasakiryilmaz.com/notlar/not-003/",
+      "https://ziyasakiryilmaz.com/notlar/not-004/",
+      "https://ziyasakiryilmaz.com/notlar/not-005/",
+      "https://ziyasakiryilmaz.com/notlar/not-006/",
+      "https://ziyasakiryilmaz.com/notlar/not-007/",
+      "https://ziyasakiryilmaz.com/notlar/not-008/",
+      "https://ziyasakiryilmaz.com/notlar/not-009/",
+      "https://ziyasakiryilmaz.com/satis/",
+      "https://ziyasakiryilmaz.com/sozluk/",
+      "https://ziyasakiryilmaz.com/testler/",
+      "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi/",
+      "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/"
+    ]
+  }
+}

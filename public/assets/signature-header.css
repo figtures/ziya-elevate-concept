@@ -1,0 +1,143 @@
+/* The navigation shares the page's charcoal, warm white and quiet type system. */
+body[data-editorial] header.signature-header,
+body[data-editorial] header.signature-header.scrolled,
+body[data-editorial] header.signature-header.menu-expanded{
+ --header-ink:#f5f3ee;--header-muted:#c4c8bf;
+ position:fixed;inset:0 0 auto;height:96px;padding:0;color:var(--header-ink);
+ background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+ transform:none;animation:none;z-index:100;
+}
+body[data-editorial] header.signature-header:before,
+body[data-editorial] header.signature-header.scrolled:before,
+body[data-editorial] header.signature-header.menu-expanded:before{
+ content:'';position:absolute;inset:0;z-index:-1;border-radius:0;border:0;pointer-events:none;
+ background:linear-gradient(180deg,#111712cf,#11171285 70%,#11171200);box-shadow:none;
+ backdrop-filter:none;-webkit-backdrop-filter:none;transition:background .3s,box-shadow .3s;
+}
+body[data-editorial] header.signature-header.scrolled:before,
+body[data-editorial] header.signature-header.menu-expanded:before{
+ background:#18201aee;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+ box-shadow:0 1px 0 #ffffff12,0 12px 32px -24px #0a110d88;
+}
+body[data-editorial] header.signature-header .nav{
+ height:100%;max-width:1328px;width:100%;padding:0 48px;gap:30px;min-width:0;
+ display:flex;align-items:center;justify-content:space-between;margin-inline:auto;
+}
+body[data-editorial] header.signature-header .ed-wordmark{gap:7px;flex:none;max-width:none;color:var(--header-ink)}
+body[data-editorial] header.signature-header .ed-wordmark>span{
+ font:700 1.25rem/1.2 var(--font-h);letter-spacing:-.035em;white-space:nowrap;
+}
+body[data-editorial] header.signature-header .ed-wordmark small{
+ display:block;font:450 .6875rem/1.3 var(--font-b);letter-spacing:.055em;color:var(--header-muted);
+}
+body[data-editorial] header.signature-header .main-navigation{
+ margin:0 0 0 auto;position:static;height:auto;padding:0;background:none;border:0;overflow:visible;display:block;
+}
+body[data-editorial] header.signature-header .nav-links{
+ display:flex;flex-direction:row;align-items:center;gap:22px;width:auto;margin:0;padding:0;list-style:none;
+}
+body[data-editorial] header.signature-header .nav-links li{border:0;margin:0;padding:0}
+body[data-editorial] header.signature-header .nav-links a{
+ position:relative;display:flex;align-items:center;min-height:48px;padding:10px 0;color:#e2e4dc;
+ font:500 1rem/1.4 var(--font-b);letter-spacing:-.025em;border:0;border-radius:0;white-space:nowrap;
+ background:transparent;transition:color .2s;
+}
+body[data-editorial] header.signature-header .nav-links a:before{display:none}
+body[data-editorial] header.signature-header .nav-links a:after{
+ content:'';display:block;position:absolute;inset:auto 0 5px;height:1px;background:#dfd1b5;
+ transform:scaleX(0);transform-origin:left;transition:transform .25s;
+}
+body[data-editorial] header.signature-header .nav-links a:hover,
+body[data-editorial] header.signature-header .nav-links a[aria-current]{color:#fff;background:transparent}
+body[data-editorial] header.signature-header .nav-links a:hover:after,
+body[data-editorial] header.signature-header .nav-links a[aria-current]:after{transform:scaleX(1)}
+body[data-editorial] header.signature-header .nav-cta{display:flex;align-items:center;gap:14px;flex:none;border:0;padding:0}
+body[data-editorial] header.signature-header .header-invite,
+body[data-editorial] header.signature-header .menu-invite{
+ display:flex;align-items:center;justify-content:center;gap:14px;min-height:50px;width:auto;
+ padding:12px 18px;border:1px solid #eee9dc;border-radius:14px;background:#eee9dc;color:#252920;
+ font:600 1.0625rem/1.4 var(--font-h);letter-spacing:-.025em;white-space:nowrap;box-shadow:none;
+ transition:background .2s,border-color .2s;
+}
+body[data-editorial] header.signature-header :is(.header-invite,.menu-invite):hover{background:#fffefa;border-color:#fffefa}
+body[data-editorial] header.signature-header :is(.header-invite,.menu-invite) .icon{width:19px;height:19px;display:block;flex:none;transition:transform .2s}
+body[data-editorial] header.signature-header :is(.header-invite,.menu-invite):hover .icon{transform:translate(2px,-2px)}
+body[data-editorial] header.signature-header .hamb{
+ display:none;align-items:center;justify-content:center;gap:10px;flex:none;width:auto;min-width:96px;height:48px;
+ padding:10px 13px;border:1px solid #ffffff26;border-radius:14px;background:#ffffff08;color:var(--header-ink);
+ font:500 1rem/1.4 var(--font-b);cursor:pointer;
+}
+body[data-editorial] header.signature-header .hamb .icon{width:21px;height:21px;flex:none}
+body[data-editorial] header.signature-header :is(a,button):focus-visible{outline:2px solid #dfd1b5;outline-offset:5px;border-radius:5px}
+body[data-editorial] header.signature-header :is(.mobile-nav-title,.mobile-nav-footer,.menu-backdrop){display:none}
+@media(max-width:1280px){
+ body[data-editorial].menu-open{overflow:hidden}
+ body[data-editorial] header.signature-header,
+ body[data-editorial] header.signature-header.scrolled,
+ body[data-editorial] header.signature-header.menu-expanded{height:88px}
+ body[data-editorial] header.signature-header .nav{padding:0 32px;gap:24px}
+ body[data-editorial] header.signature-header .nav-cta{margin-left:auto}
+ body[data-editorial] header.signature-header .hamb{display:flex}
+ body[data-editorial] header.signature-header .menu-backdrop:not([hidden]){
+  display:block;position:fixed;inset:0;width:100%;height:100%;border:0;padding:0;background:#09100be6;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:-2;cursor:default;
+ }
+ body[data-editorial] header.signature-header .main-navigation,
+ body[data-editorial] header.signature-header .main-navigation.open{
+  position:fixed;inset:100px 24px max(24px,env(safe-area-inset-bottom));height:auto;max-height:none;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:24px 8%;align-content:start;
+  margin:0;padding:36px 40px;background:#202a22;border:1px solid #ffffff10;border-radius:24px;
+  color:var(--header-ink);overflow-y:auto;overscroll-behavior:contain;z-index:1;
+  opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;
+  transition:opacity .25s,transform .25s,visibility .25s;
+ }
+ body[data-editorial] header.signature-header .main-navigation.open{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+ body[data-editorial] header.signature-header .mobile-nav-title{display:block;grid-column:1/-1;margin:0;padding:0;letter-spacing:.12em;font:500 .75rem/1.5 var(--font-b);color:#b7c0ae}
+ body[data-editorial] header.signature-header .nav-links{flex-direction:column;align-items:stretch;gap:0;width:100%}
+ body[data-editorial] header.signature-header .nav-links a{
+  min-height:66px;padding:14px 0;white-space:normal;border-bottom:1px solid #ffffff13;
+  font:500 clamp(1.5rem,3vw,2rem)/1.25 var(--font-h);letter-spacing:-.04em;
+ }
+ body[data-editorial] header.signature-header .nav-links a:after{display:none}
+ body[data-editorial] header.signature-header .nav-links a[aria-current]{color:#dfd1b5}
+ body[data-editorial] header.signature-header .mobile-nav-footer{
+  display:flex;flex-direction:column;align-items:stretch;align-self:center;gap:26px;margin:0;padding:0;
+  border:0;border-radius:0;background:none;
+ }
+ body[data-editorial] header.signature-header .mobile-nav-footer p{font:450 1.25rem/1.6 var(--font-h);color:#d0d6c8;margin:0}
+ body[data-editorial] header.signature-header .menu-invite{justify-content:space-between;min-height:54px}
+ body[data-editorial] header.signature-header .menu-audience{display:flex;flex-wrap:wrap;gap:12px 24px;padding-bottom:20px;border-bottom:1px solid #ffffff1a}
+ body[data-editorial] header.signature-header .menu-audience a{font:550 1rem/1.5 var(--font-b);color:#eeeade;padding:6px 0}
+ body[data-editorial] header.signature-header .menu-secondary{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+ body[data-editorial] header.signature-header .menu-secondary a{font:450 1rem/1.5 var(--font-b);color:#c5cebd;text-decoration:none;padding:5px 0}
+ body[data-editorial] header.signature-header :is(.menu-audience,.menu-secondary) a:hover{color:#fffefa}
+}
+@media(max-width:700px){
+ body[data-editorial] header.signature-header,
+ body[data-editorial] header.signature-header.scrolled,
+ body[data-editorial] header.signature-header.menu-expanded{height:80px}
+ body[data-editorial] header.signature-header .nav{padding:0 24px;gap:16px}
+ body[data-editorial] header.signature-header .ed-wordmark>span{font-size:1.125rem;letter-spacing:-.035em}
+ body[data-editorial] header.signature-header .ed-wordmark small{font-size:.625rem;letter-spacing:.025em}
+ body[data-editorial] header.signature-header .header-invite{display:none}
+ body[data-editorial] header.signature-header .hamb{min-width:90px;height:46px;padding-inline:12px;gap:8px}
+ body[data-editorial] header.signature-header .main-navigation,
+ body[data-editorial] header.signature-header .main-navigation.open{
+  inset:88px 12px max(12px,env(safe-area-inset-bottom));grid-template-columns:1fr;gap:24px;padding:26px 24px 30px;border-radius:20px;
+ }
+ body[data-editorial] header.signature-header .mobile-nav-title{display:none}
+ body[data-editorial] header.signature-header .nav-links a{min-height:56px;padding:12px 0;font-size:1.625rem}
+ body[data-editorial] header.signature-header .mobile-nav-footer{padding:12px 0 0;gap:22px;align-self:start}
+ body[data-editorial] header.signature-header .mobile-nav-footer p{display:none}
+}
+@media(max-width:359px){
+ body[data-editorial] header.signature-header .nav{padding-inline:18px;gap:10px}
+ body[data-editorial] header.signature-header .ed-wordmark>span{font-size:1.0625rem}
+ body[data-editorial] header.signature-header .ed-wordmark small{display:none}
+ body[data-editorial] header.signature-header .hamb{min-width:82px;padding-inline:10px;gap:6px}
+ body[data-editorial] header.signature-header .main-navigation{padding-inline:20px}
+}
+@media(prefers-reduced-motion:reduce){
+ body[data-editorial] header.signature-header *,body[data-editorial] header.signature-header:before{transition:none!important;animation:none!important}
+ body[data-editorial] header.signature-header .main-navigation{transform:none}
+}

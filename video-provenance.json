@@ -1,0 +1,116 @@
+{
+  "clips": [
+    {
+      "source": "hero-loop-v5.mp4",
+      "output": "hero-loop-ai-1440.mp4",
+      "method": "FSRCNN neural super-resolution",
+      "scale": 2,
+      "model_sha256": "366b33f0084c7b3f2bf6724f0a2c77bca94fcec9d7b6d72389d330073b380d5c",
+      "source_sha256": "f0d52f5ce300393523fd6937dd14aec507ce6cdaa500545ebe83a07ab12e1e36",
+      "output_sha256": "cc6cf9bdec106eab4b2e03a8b6e590b2bc994b9c6a9f54da671005b6c92577d8",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1440,
+            "r_frame_rate": "24/1",
+            "nb_frames": "264"
+          }
+        ],
+        "format": {
+          "duration": "11.000000",
+          "size": "11647660"
+        }
+      }
+    },
+    {
+      "source": "klip-uluslararasi.mp4",
+      "output": "klip-uluslararasi-ai-1080.mp4",
+      "method": "FSRCNN neural super-resolution",
+      "scale": 4,
+      "model_sha256": "5c68d18db561aed8ead4ffedf1b897ea615baaf60ebf6c35f8e641f8fa4a21bf",
+      "source_sha256": "96adee966babc4b9ed8b692a7aaeeb5f0415bdc8cdc0c188fbe7b7c87aa52e69",
+      "output_sha256": "a2e04e9f0cebcd8a1a080e0dfc4f08fbde16c1880ea61e00c3187a1005dd0cb4",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "29967/1000",
+            "nb_frames": "269"
+          }
+        ],
+        "format": {
+          "duration": "8.976541",
+          "size": "10546095"
+        }
+      }
+    },
+    {
+      "source": "hero-loop-v5.mp4",
+      "output": "hero-loop-restored-1440.mp4",
+      "method": "Real-ESRGAN realesr-general-x4v3; 85% restored image + 15% source texture; frame timing preserved",
+      "model_url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth",
+      "model_sha256": "8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292",
+      "source_sha256": "f0d52f5ce300393523fd6937dd14aec507ce6cdaa500545ebe83a07ab12e1e36",
+      "output_sha256": "29bfb276cac9b71052f945593846e92d3351bf183a7f401eb57d70889aa4d9c9",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 2560,
+            "height": 1440,
+            "r_frame_rate": "24/1",
+            "nb_frames": "264"
+          }
+        ],
+        "format": {
+          "duration": "11.000000",
+          "size": "13189706"
+        }
+      },
+      "limitation": "Estimated restoration, not a native HD or 8K camera master. Existing 270p source cannot supply fine detail that was never recorded."
+    },
+    {
+      "source": "klip-uluslararasi.mp4",
+      "output": "klip-uluslararasi-restored-1080.mp4",
+      "method": "Real-ESRGAN realesr-general-x4v3; 85% restored image + 15% source texture; frame timing preserved",
+      "model_url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth",
+      "model_sha256": "8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292",
+      "source_sha256": "96adee966babc4b9ed8b692a7aaeeb5f0415bdc8cdc0c188fbe7b7c87aa52e69",
+      "output_sha256": "6940582e903dd9a1d174acf02aa45659bff133aa05335958c37131ed3e755cd3",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "29967/1000",
+            "nb_frames": "269"
+          }
+        ],
+        "format": {
+          "duration": "8.976541",
+          "size": "11376989"
+        }
+      },
+      "limitation": "Estimated restoration, not a native HD or 8K camera master. Existing 270p source cannot supply fine detail that was never recorded."
+    }
+  ],
+  "requested_tedx_cut": {
+    "youtube_id": "u-p2y6JH3aA",
+    "source_page": "https://ziyasakiryilmaz.pages.dev/konusmaci",
+    "start_seconds": 31,
+    "end_seconds": 35,
+    "status": "one_time_intro_then_native_playlist",
+    "method": "Play source seconds 31–35 once per page opening; a permanent completion latch prevents replay on ended, scroll, pause or late readiness events.",
+    "fallback": "Skip unavailable intro and start the same native playlist",
+    "verification": "Regression checks cover one-time intro, multiple native rotations, late ready/ended events, pause/resume, viewport, menu, reduced motion. External YouTube stream imagery remains unavailable in the preview browser.",
+    "playlist": [
+      "hero-loop-restored-1440.mp4",
+      "klip-uluslararasi-restored-1080.mp4"
+    ]
+  }
+}

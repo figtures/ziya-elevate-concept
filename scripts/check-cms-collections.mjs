@@ -1,0 +1,85 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {buildSync} from 'esbuild';
+import {parseHTML} from 'linkedom';
+import {applyContent} from '../cms/render.mjs';
+import {deriveCollection,applyCollection,validateCollection} from '../cms/collections.mjs';
+import {renderCollectionEditor,wireCollectionEditor} from '../cms/admin-collections.mjs';
+const read=name=>JSON.parse(fs.readFileSync('cms/'+name+'.json'));
+const seed=read('seed'),templates=read('templates'),catalog=read('catalog');
+const source=buildSync({entryPoints:['cms/server.ts'],bundle:true,write:false,platform:'node',format:'cjs',packages:'external'}).outputFiles[0].text,module={exports:{}};
+vm.runInNewContext(source,{module,exports:module.exports,require:createRequire(import.meta.url),URL,AbortSignal,Response,console});
+const {render}=module.exports,shared=seed.find(p=>p.kind==='global');
+const dom=payload=>{const document=parseHTML(templates[payload.template]).document;applyContent(document,payload,catalog[payload.template]);return document;};
+const links=doc=>[...doc.querySelectorAll('.post-list > a')].map(a=>({route:a.getAttribute('href'),label:a.querySelector('span:not(.cat)').textContent,badge:a.querySelector('.cat').textContent}));
+let checks=0;
+const check=(condition,message)=>{assert(condition,message);checks++;};
+for(const [route,kind,prefix] of [['/makaleler/','article','/makaleler/'],['/hayattan-notlar/','note','/notlar/']]){
+  const payload=structuredClone(seed.find(p=>p.route===route)),original=dom(payload),model=deriveCollection(original,route),before=links(original);
+  check(!validateCollection(model,route).length,'Original archive derives a valid collection.');
+  const entries=seed.filter(p=>p.kind===kind).map(p=>({route:p.route,title:'Different SEO title | Brand',published:true}));
+  const defaultDOM=parseHTML(render(payload,shared,entries)).document;
+  assert.deepEqual(links(defaultDOM),before);checks++;
+  const newEntries=[{route:prefix+'zz-new/',title:'Last new title'},{route:prefix+'aa-new/',title:'First new title'}];
+  const automatic=dom(payload);applyCollection(automatic,undefined,[...entries,...newEntries],route);
+  const autoRows=links(automatic),firstCount=model.categories[0].items.length;
+  assert.deepEqual(autoRows.slice(firstCount,firstCount+2).map(x=>x.route),newEntries.map(x=>x.route).reverse());checks++;
+  assert.deepEqual(autoRows.filter(x=>!newEntries.some(e=>e.route===x.route)),before);checks++;
+  const moved=model.categories[0].items.pop();model.categories[0].items.unshift(moved);
+  model.categories[0].label='Editoryal seçki';model.categories[0].items[0].label='Listeye özel başlık <script>alert(1)</script>';
+  const hidden=model.categories[0].items[1];hidden.hidden=true;
+  const removed=model.categories[0].items.pop();model.excluded.push(removed.route);
+  const unpublished=model.categories[0].items[2].route;
+  if(model.categories.length>1){model.categories.reverse();model.categories[0].hidden=true;}
+  payload.collection=model;
+  const expected=model.categories.filter(c=>!c.hidden).flatMap(c=>c.items.filter(i=>!i.hidden&&i.route!==unpublished));
+  const finalEntries=entries.filter(e=>e.route!==unpublished);
+  const ssr=parseHTML(render(payload,shared,finalEntries)).document;
+  assert.deepEqual(links(ssr).map(x=>x.route),expected.map(x=>x.route));checks++;
+  check(!links(ssr).some(x=>x.route===hidden.route||x.route===removed.route||x.route===unpublished),'Hidden, removed and unpublished never return.');
+  check(ssr.querySelector('.post-list script')===null,'Labels are text, never HTML.');
+  const preview=dom(payload);applyCollection(preview,model,finalEntries,route);
+  assert.deepEqual(links(preview),links(ssr));checks++;
+  const graph=JSON.parse(ssr.querySelector('[data-cms-seo]').textContent)['@graph'],itemList=graph.find(x=>x['@type']==='ItemList');
+  assert.deepEqual(itemList.itemListElement.map(x=>x.item.name),links(ssr).map(x=>x.label));checks++;
+  assert.deepEqual(itemList.itemListElement.map(x=>x.position),expected.map((_,i)=>i+1));checks++;
+  const stable=JSON.stringify(model);applyCollection(preview,model,[...finalEntries,...newEntries],route);check(JSON.stringify(model)===stable,'Rendering never mutates saved collection.');
+  model.appendNew=false;const manual=dom(payload);applyCollection(manual,model,[...finalEntries,...newEntries],route);
+  check(!links(manual).some(x=>newEntries.some(e=>e.route===x.route)),'Automatic discovery can be disabled.');
+  const noLive=dom(payload);applyCollection(noLive,model,[],route);check(links(noLive).length===0,'No draft/unpublished entries leak.');
+  const repeat=dom(payload);applyCollection(repeat,model,finalEntries,route);const once=repeat.querySelector('.post-list').parentElement.innerHTML;applyCollection(repeat,model,finalEntries,route);check(repeat.querySelector('.post-list').parentElement.innerHTML===once,'Reapplying collections is stable.');
+  for(const mutate of [m=>m.categories[0].items.push({...m.categories[0].items[0]}),m=>m.categories[0].items[0].route='https://evil.example/',m=>m.categories[0].items[0].route=prefix+'../oops/',m=>m.categories[0].items[0].hidden='false',m=>m.categories[0].id=42,m=>m.categories[0].extra=true,m=>m.excluded.push(m.categories[0].items[0].route),m=>m.categories[0].label='x'.repeat(201)]){
+    const invalid=structuredClone(model);mutate(invalid);check(validateCollection(invalid,route).length>0,'Invalid collection rejected.');
+  }
+}
+// Real DOM listeners exercise editor changes and subsequent render, not only markup.
+const payload=structuredClone(seed.find(p=>p.route==='/makaleler/')),model=deriveCollection(dom(payload),payload.route);
+const entries=seed.filter(p=>p.kind==='article').map(p=>({route:p.route,title:p.title,published:true}));
+entries.push({route:'/makaleler/new-draft/',title:'New draft',published:false});
+let changes=0,renders=0,view;
+function draw(){view=parseHTML('<html><body>'+renderCollectionEditor(model,entries)+'</body></html>');wireCollectionEditor(view.document,model,entries,{onChange:()=>changes++,onRender:()=>{renders++;draw();},confirm:()=>true});}
+const click=selector=>view.document.querySelector(selector).dispatchEvent(new view.window.Event('click'));
+draw();const first=model.categories[0].items[0].route;
+click('[data-collection-action="item-down"][data-category="0"][data-item="0"]');
+check(model.categories[0].items[1].route===first,'Move down persists array order.');
+click('[data-collection-action="item-remove"][data-category="0"][data-item="1"]');
+check(model.excluded.includes(first),'Removed row gets a tombstone.');
+let add=view.document.querySelector('[data-collection-add-route="0"]');add.querySelector('option[value="'+first+'"]').selected=true;click('[data-collection-action="item-add"][data-category="0"]');
+check(model.categories[0].items.at(-1).route===first&&!model.excluded.includes(first),'Restoring a removed row clears its tombstone.');
+click('[data-collection-action="category-add"]');check(model.categories.length===5,'New categories supported.');
+let destination=view.document.querySelector('[data-collection-destination="0:0"]');destination.querySelector('option[value="4"]').selected=true;destination.dispatchEvent(new view.window.Event('change'));
+check(model.categories[4].items.length===1,'Category picker moves row.');
+let categoryLabel=view.document.querySelector('[data-collection-category-label="4"]');categoryLabel.value='Yeni seçki';categoryLabel.dispatchEvent(new view.window.Event('input'));
+check(model.categories[4].label==='Yeni seçki','Category labels persist.');
+const hidden=view.document.querySelector('[data-collection-visible="4:0"]');hidden.checked=false;hidden.dispatchEvent(new view.window.Event('change'));
+check(model.categories[4].items[0].hidden,'Visibility persists.');
+click('[data-collection-action="category-remove"][data-category="4"]');check(model.categories.length===4,'Category removal persists.');
+const keyboard=view.document.querySelector('[data-collection-drag-category="1"]'),old=model.categories[1].id,event=new view.window.Event('keydown');event.altKey=true;event.key='ArrowUp';keyboard.dispatchEvent(event);
+check(model.categories[0].id===old,'Keyboard category reordering works.');
+check(changes>=9&&renders>=7,'Editor changes notify save/refresh hooks.');
+check(!validateCollection(model,payload.route).length,'Edited model remains valid.');
+const rendered=parseHTML(render({...payload,collection:model},shared,entries.filter(e=>e.published))).document;
+check(!links(rendered).some(x=>x.route==='/makaleler/new-draft/'),'Draft picker options never become public content.');
+console.log(`PASS: ${checks} collection checks: authored labels, category and article ordering, automatic append, hidden/removal tombstones, unpublished filtering, live SSR and preview parity, ItemList parity, validation, real admin DOM events and keyboard moves.`);

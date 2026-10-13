@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "parts": [
+        "media/hero-loop-restored-1440.mp4.part-01",
+        "media/hero-loop-restored-1440.mp4.part-02"
+      ],
+      "sha256": "29bfb276cac9b71052f945593846e92d3351bf183a7f401eb57d70889aa4d9c9",
+      "size": 13189706,
+      "outputs": [
+        "website/assets/hero-loop-restored-1440.mp4",
+        "public/assets/hero-loop-restored-1440.mp4"
+      ]
+    }
+  ]
+}

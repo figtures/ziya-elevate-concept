@@ -1,0 +1,20 @@
+{
+  "status": "NOT_RUN",
+  "score": null,
+  "date": "2026-10-12",
+  "site": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site",
+  "reason": "Managed Linux environment has no authorized control-browser skill/capability. Sites instructions forbid alternate browser/preview fallback. Owner-private audience remains unchanged.",
+  "lighthouse": {
+    "performance": null,
+    "accessibility": null,
+    "bestPractices": null,
+    "seo": null
+  },
+  "coreWebVitals": {
+    "lcp": null,
+    "inp": null,
+    "cls": null,
+    "cruxStatus": "NOT_QUERIED"
+  },
+  "staticAuditIsLighthouse": false
+}

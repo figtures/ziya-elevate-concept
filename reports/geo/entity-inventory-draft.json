@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "DRAFT_NOT_APPROVED_NOT_EXECUTED",
+  "createdAt": "2026-10-12",
+  "environment": "owner-private-preview",
+  "owner": null,
+  "backupOwner": null,
+  "reviewer": null,
+  "approvals": [],
+  "productionDomain": null,
+  "inventoryId": "figtures:zsy:entities",
+  "sourceSystem": "Existing authored HTML/CMS imported from supplied demo",
+  "entities": [
+    {
+      "entityId": "figtures:zsy:person:ziya-sakir-yilmaz",
+      "entityType": "Person",
+      "lifecycleStatus": "draft",
+      "canonicalName": "Ziya Şakir Yılmaz",
+      "legalName": null,
+      "canonicalUrl": null,
+      "ownerPath": "/ziya-sakir-yilmaz/",
+      "alternateNames": [],
+      "previousNames": [],
+      "sameAsStatus": "Existing schema links need ownership and canonical verification",
+      "parentEntityId": null,
+      "dataOwner": null,
+      "reviewer": null,
+      "lastVerifiedAt": null,
+      "verificationSourceUrls": [
+        "https://ziyasakiryilmaz.pages.dev"
+      ],
+      "riskClass": "medium; biography claims and test bounds require editorial review",
+      "notes": "A personal speaker website does not establish a legal Organization. Do not invent company/legal name to satisfy a generic Organization template."
+    },
+    {
+      "entityId": "figtures:zsy:website:keynote",
+      "entityType": "Website",
+      "lifecycleStatus": "draft",
+      "canonicalName": "Ziya Şakir Yılmaz",
+      "canonicalUrl": null,
+      "ownerPath": "/",
+      "dataOwner": null,
+      "lastVerifiedAt": null
+    }
+  ],
+  "relationships": [
+    {
+      "type": "website-about-person",
+      "source": "figtures:zsy:website:keynote",
+      "target": "figtures:zsy:person:ziya-sakir-yilmaz",
+      "evidence": "Existing visible site identity",
+      "approval": null
+    }
+  ],
+  "pending": [
+    "Production canonical hostname and ownership",
+    "Official account IDs and access ownership",
+    "Book publisher/ISBN/authorship metadata",
+    "Corporate legal entity only if applicable",
+    "Author reviewer credentials, consent and claim provenance"
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "/": {
+    "title": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+    "description": "Etkinliğiniz için keynote konuşması, ekibiniz için kurumsal eğitim veya bireysel gelişiminiz için mentorluk. Ziya Şakir Yılmaz ile çalışma seçeneklerini keşfedin.",
+    "socialTitle": "Bir fikir. Hayata geçen değişim.",
+    "socialLabel": "KEYNOTE · EĞİTİM · MENTORLUK",
+    "imageAlt": "Bir fikir. Hayata geçen değişim. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/arastirmalar/": {
+    "title": "Türkiye Kafa Yapısı Araştırması | Ziya Şakir Yılmaz",
+    "description": "Türkiye Kafa Yapısı Araştırması projesinin kapsamını, planlanan metodolojisini ve yayın takvimini inceleyin. Akademik ve medya iş birliği için iletişime geçin.",
+    "socialTitle": "Türkiye Kafa Yapısı Araştırması",
+    "socialLabel": "ARAŞTIRMA PROGRAMI",
+    "imageAlt": "Türkiye Kafa Yapısı Araştırması — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/basari-muhendisligi/": {
+    "title": "Başarı Mühendisliği: 5 Aşamalı Yaklaşım | Ziya Şakir Yılmaz",
+    "description": "Başarı Mühendisliği yaklaşımını tanıyın: keşif, tasarım, inşa, test ve bakım. Hedefinizi günlük eyleme dönüştüren sistemi, kitabı ve uygulama adımlarını keşfedin.",
+    "socialTitle": "Başarı Mühendisliği",
+    "socialLabel": "YAKLAŞIM · KİTAP · UYGULAMA",
+    "imageAlt": "Başarı Mühendisliği — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/basari/": {
+    "title": "Başarı: Hedef, Sistem ve Alışkanlık | Ziya Şakir Yılmaz",
+    "description": "Hedeflerinizi sürdürülebilir alışkanlıklara nasıl dönüştürürsünüz? Ziya Şakir Yılmaz’ın başarı yaklaşımını, ilgili rehberleri ve çalışma seçeneklerini keşfedin.",
+    "socialTitle": "Hedefi, çalışan bir sisteme dönüştürün.",
+    "socialLabel": "BAŞARI",
+    "imageAlt": "Hedefi, çalışan bir sisteme dönüştürün. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/bulten/": {
+    "title": "Mühendislik Notları: E-posta Bülteni | Ziya Şakir Yılmaz",
+    "description": "Başarı, kafa yapısı, satış ve liderlik üzerine Mühendislik Notları bültenini tanıyın. Bir fikir, sahadan bir gözlem ve uygulanabilir bir araçla yeni bir bakış.",
+    "socialTitle": "Bir fikir. Yeni bir bakış.",
+    "socialLabel": "MÜHENDİSLİK NOTLARI",
+    "imageAlt": "Bir fikir. Yeni bir bakış. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/buradan-basla/": {
+    "title": "Nereden Başlamalı? Test ve Rehberler | Ziya Şakir Yılmaz",
+    "description": "İhtiyacınıza göre başlangıç seçin: Kafa Yapısı Testi, başarı, satış ve liderlik rehberleri. Yaklaşımları tanıyın; size uygun eğitim veya mentorluk yolunu bulun.",
+    "socialTitle": "Size uygun başlangıcı bulun.",
+    "socialLabel": "BURADAN BAŞLA",
+    "imageAlt": "Size uygun başlangıcı bulun. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/egitimler/": {
+    "title": "Kurumsal ve Bireysel Eğitimler | Ziya Şakir Yılmaz",
+    "description": "Ekibiniz veya kendiniz için eğitim seçeneklerini keşfedin. Satış, liderlik ve kafa yapısı programlarını inceleyin; hedeflerinize uygun çalışmayı birlikte planlayalım.",
+    "socialTitle": "Bilgiyi, davranışa dönüştürmek için.",
+    "socialLabel": "KURUMSAL VE BİREYSEL EĞİTİM",
+    "imageAlt": "Bilgiyi, davranışa dönüştürmek için. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/hayattan-notlar/": {
+    "title": "Hayattan Notlar: İş, İnsan ve Gelişim | Ziya Şakir Yılmaz",
+    "description": "Ziya Şakir Yılmaz’dan sahada, sahnede ve günlük hayatta kalan kısa notlar. Sakinlik, alışkanlıklar, liderlik ve satış üzerine kişisel gözlemleri okuyun.",
+    "socialTitle": "Hayattan kalan küçük dersler.",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "Hayattan kalan küçük dersler. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/iletisim/": {
+    "title": "Konuşmacı Daveti ve Eğitim Talepleri | Ziya Şakir Yılmaz",
+    "description": "Keynote daveti, kurumsal eğitim, bireysel eğitim veya mentorluk talebinizi iletin. Etkinliğinizi, ekibinizi ve gelişim hedefinizi Ziya Şakir Yılmaz ile paylaşın.",
+    "socialTitle": "Birlikte başlayalım.",
+    "socialLabel": "İLETİŞİM",
+    "imageAlt": "Birlikte başlayalım. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/kafa-yapisi/": {
+    "title": "Kafa Yapısı: Baskı, Tepki ve Gelişim | Ziya Şakir Yılmaz",
+    "description": "Baskı, reddedilme ve belirsizlik karşısındaki tepkilerinizi keşfedin. Kafa yapısı yaklaşımı, öz değerlendirme testi, ilgili yazılar ve atölye seçenekleri.",
+    "socialTitle": "Hayat değişirken kendine dayan.",
+    "socialLabel": "KAFA YAPISI",
+    "imageAlt": "Hayat değişirken kendine dayan. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/kitaplar/": {
+    "title": "Ziya Şakir Yılmaz’ın Kitapları | Başarı ve Kafa Yapısı",
+    "description": "Kurşun Geçirmez Kafa Yapısı, Başarı Mühendisliği, Size Bir Sır Vereyim mi? ve İlk 72 Saat. Ziya Şakir Yılmaz’ın dört kitabını ve konularını keşfedin.",
+    "socialTitle": "Bir fikir, sayfalar boyunca.",
+    "socialLabel": "KİTAPLAR",
+    "imageAlt": "Bir fikir, sayfalar boyunca. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/konusmaci/": {
+    "title": "Keynote Konuşmacısı Ziya Şakir Yılmaz | Etkinlik Daveti",
+    "description": "Zirveniz veya bayi toplantınız için keynote konuşmacısı mı arıyorsunuz? Ziya Şakir Yılmaz’ın konuşma konularını ve sahne kayıtlarını inceleyin, davet iletin.",
+    "socialTitle": "Bir salonda başlar. İnsanlarla devam eder.",
+    "socialLabel": "KEYNOTE KONUŞMALARI",
+    "imageAlt": "Bir salonda başlar. İnsanlarla devam eder. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/kursun-gecirmez-kafa-yapisi/": {
+    "title": "Kurşun Geçirmez Kafa Yapısı | Ziya Şakir Yılmaz",
+    "description": "Kurşun Geçirmez Kafa Yapısı yaklaşımını tanıyın. Beş katmanı, öz değerlendirme testini ve oyun planını keşfedin; zor anlarda vereceğiniz yanıt üzerine düşünün.",
+    "socialTitle": "Kurşun Geçirmez Kafa Yapısı",
+    "socialLabel": "YAKLAŞIM · TEST · UYGULAMA",
+    "imageAlt": "Kurşun Geçirmez Kafa Yapısı — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/kurumsal/kafa-yapisi-atolyesi/": {
+    "title": "Kurumsal Kafa Yapısı Atölyesi | Ziya Şakir Yılmaz",
+    "description": "Ekibiniz için Kurşun Geçirmez Kafa Yapısı atölyesi: baskı, reddedilme ve belirsizlikle baş etme üzerine uygulamalar. Programı inceleyin ve teklif isteyin.",
+    "socialTitle": "Zor anlara, birlikte hazırlanın.",
+    "socialLabel": "KURUMSAL KAFA YAPISI ATÖLYESİ",
+    "imageAlt": "Zor anlara, birlikte hazırlanın. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/kurumsal/liderlik-egitimi/": {
+    "title": "Kurumsal Liderlik Eğitimi | Ziya Şakir Yılmaz",
+    "description": "Yönetici ekibiniz için delegasyon, geri bildirim ve lider yetiştirme odaklı kurumsal liderlik eğitimi. İçeriği inceleyin; ihtiyacınıza uygun programı planlayalım.",
+    "socialTitle": "Liderlik: Etkiyi Çoğaltmak",
+    "socialLabel": "KURUMSAL EĞİTİM",
+    "imageAlt": "Liderlik: Etkiyi Çoğaltmak — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/kurumsal/satis-egitimi/": {
+    "title": "Kurumsal Satış Eğitimi | Ziya Şakir Yılmaz",
+    "description": "Satış ekibiniz için ihtiyaç analizi, itiraz karşılama, kapanış ve takip odaklı eğitim. Satışın Mühendisliği programını inceleyin; kurumunuza özel teklif isteyin.",
+    "socialTitle": "Satışın Mühendisliği",
+    "socialLabel": "KURUMSAL EĞİTİM",
+    "imageAlt": "Satışın Mühendisliği — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/liderlik/": {
+    "title": "Liderlik: Ekip, Güven ve Yetki Devri | Ziya Şakir Yılmaz",
+    "description": "İşi yönetmekten insan yetiştirmeye: ekipte güven, yetki devri ve karar alma üzerine Ziya Şakir Yılmaz’ın yaklaşımı. Yazıları ve eğitim seçeneklerini keşfedin.",
+    "socialTitle": "Etkiniz, siz yokken de sürsün.",
+    "socialLabel": "LİDERLİK",
+    "imageAlt": "Etkiniz, siz yokken de sürsün. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/": {
+    "title": "Başarı, Satış ve Liderlik Makaleleri | Ziya Şakir Yılmaz",
+    "description": "Başarı, kafa yapısı, satış ve liderlik üzerine Türkçe makaleler. Aradığınız konuyu seçin; kavramları, örnekleri ve uygulama adımlarını ilgili rehberde inceleyin.",
+    "socialTitle": "Bir sorudan, yeni bir bakışa.",
+    "socialLabel": "MAKALELER VE REHBERLER",
+    "imageAlt": "Bir sorudan, yeni bir bakışa. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/aliskanlik-kazanmak-kac-gun-surer/": {
+    "title": "Alışkanlık Kazanmak Kaç Gün Sürer? | Ziya Şakir Yılmaz",
+    "description": "Alışkanlık kazanmak için 21 ve 66 gün ne anlama geliyor? Süreyi etkileyen etkenleri, küçük adımlarla rutin kurmayı ve kaçırılan günlerde devam etmeyi öğrenin.",
+    "socialTitle": "Alışkanlık Kazanmak Kaç Gün Sürer?",
+    "socialLabel": "BAŞARI / REHBER",
+    "imageAlt": "“Alışkanlık Kazanmak Kaç Gün Sürer?” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/b2b-satis/": {
+    "title": "B2B Satış: Karar Süreci ve Kurumsal Satış | Ziya Şakir Yılmaz",
+    "description": "B2B satışta karar komitesi nasıl yönetilir? B2C farklarını, kurum içi destekçiyi, uzun satış döngüsünü ve teklif çağrılarındaki riskleri inceleyin.",
+    "socialTitle": "B2B Satış: Karar Süreci ve Kurumsal Satış",
+    "socialLabel": "SATIŞ / REHBER",
+    "imageAlt": "“B2B Satış: Karar Süreci ve Kurumsal Satış” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/basari-nedir/": {
+    "title": "Başarı Nedir? Kendi Ölçütünüzü Belirleyin | Ziya Şakir Yılmaz",
+    "description": "Başarı sizin için ne demek? Hedefinizi ölçülebilir bir tanıma dönüştürün; ilerlemeyi, günlük davranışları ve kişisel başarı ölçütlerini birlikte ele alın.",
+    "socialTitle": "Başarı Nedir? Kendi Ölçütünüzü Belirleyin",
+    "socialLabel": "BAŞARI / KAVRAMLAR",
+    "imageAlt": "“Başarı Nedir? Kendi Ölçütünüzü Belirleyin” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/basari-ogrenilebilir-mi/": {
+    "title": "Başarı Öğrenilebilir mi? Yetenek ve Pratik | Ziya Şakir Yılmaz",
+    "description": "Başarıda yetenek ve pratiğin payı nedir? Öğrenilebilir becerileri, bilinçli çalışmanın sınırlarını ve hedef, alışkanlık, sistem ilişkisini inceleyin.",
+    "socialTitle": "Başarı Öğrenilebilir mi? Yetenek ve Pratik",
+    "socialLabel": "BAŞARI / REHBER",
+    "imageAlt": "“Başarı Öğrenilebilir mi? Yetenek ve Pratik” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/delegasyon/": {
+    "title": "Delegasyon Nedir? 5 Seviyede Yetki Devri | Ziya Şakir Yılmaz",
+    "description": "Hangi işleri devretmeli, karar yetkisini nasıl paylaşmalısınız? Beş seviyeli delegasyon modeliyle görev, sorumluluk ve takip sınırlarını netleştirin.",
+    "socialTitle": "Delegasyon Nedir? 5 Seviyede Yetki Devri",
+    "socialLabel": "LİDERLİK / UYGULAMA",
+    "imageAlt": "“Delegasyon Nedir? 5 Seviyede Yetki Devri” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/disiplin-nasil-kazanilir/": {
+    "title": "Disiplin Nasıl Kazanılır? 5 Adımlı Plan | Ziya Şakir Yılmaz",
+    "description": "Disiplin kazanmak için nereden başlamalı? Ortamı düzenleme, davranışı küçültme ve tekrar planıyla günlük rutininizi beş adımda nasıl kuracağınızı öğrenin.",
+    "socialTitle": "Disiplin Nasıl Kazanılır? 5 Adımlı Plan",
+    "socialLabel": "BAŞARI / UYGULAMA",
+    "imageAlt": "“Disiplin Nasıl Kazanılır? 5 Adımlı Plan” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/geri-bildirim-nasil-verilir/": {
+    "title": "Geri Bildirim Nasıl Verilir? 10 Örnek | Ziya Şakir Yılmaz",
+    "description": "Kişiyi yargılamadan geri bildirim nasıl verilir? SBI modelini, on örnek cümleyi ve geri bildirim alırken uygulanabilecek yaklaşımları keşfedin.",
+    "socialTitle": "Geri Bildirim Nasıl Verilir? 10 Örnek",
+    "socialLabel": "LİDERLİK / UYGULAMA",
+    "imageAlt": "“Geri Bildirim Nasıl Verilir? 10 Örnek” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/growth-mindset-nedir/": {
+    "title": "Growth Mindset Nedir? Gelişim Zihniyeti | Ziya Şakir Yılmaz",
+    "description": "Growth mindset ne demek? Carol Dweck’in gelişim zihniyeti yaklaşımını, araştırmaların sınırlarını ve okulda, işte uygulanabilecek altı adımı inceleyin.",
+    "socialTitle": "Growth Mindset Nedir? Gelişim Zihniyeti",
+    "socialLabel": "KAFA YAPISI / KAVRAMLAR",
+    "imageAlt": "“Growth Mindset Nedir? Gelişim Zihniyeti” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/hedef-nasil-belirlenir/": {
+    "title": "Hedef Nasıl Belirlenir? SMART ve Eylem Planı | Ziya Şakir Yılmaz",
+    "description": "Hedefinizi nasıl netleştirirsiniz? SMART yaklaşımını, zorlayıcı ama belirli hedefleri ve hedefi haftalık davranışlara çeviren planlama adımlarını inceleyin.",
+    "socialTitle": "Hedef Nasıl Belirlenir? SMART ve Eylem Planı",
+    "socialLabel": "BAŞARI / UYGULAMA",
+    "imageAlt": "“Hedef Nasıl Belirlenir? SMART ve Eylem Planı” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/itiraz-karsilama/": {
+    "title": "Satışta İtiraz Karşılama: 12 Örnek Cevap | Ziya Şakir Yılmaz",
+    "description": "Müşteri “düşüneyim” ya da “güvenmiyorum” dediğinde ne söylersiniz? On iki satış itirazı için örnek cevapları ve dört adımlı karşılama akışını öğrenin.",
+    "socialTitle": "Satışta İtiraz Karşılama: 12 Örnek Cevap",
+    "socialLabel": "SATIŞ / UYGULAMA",
+    "imageAlt": "“Satışta İtiraz Karşılama: 12 Örnek Cevap” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/kafa-yapisi-degisir-mi/": {
+    "title": "Kafa Yapısı Değişir mi? Beyin ve Öğrenme | Ziya Şakir Yılmaz",
+    "description": "Kafa yapısı yetişkinlikte değişebilir mi? Nöroplastisite araştırmalarını, deneyim ve tekrarın rolünü, değişimi korumak için gereken koşulları inceleyin.",
+    "socialTitle": "Kafa Yapısı Değişir mi? Beyin ve Öğrenme",
+    "socialLabel": "KAFA YAPISI / REHBER",
+    "imageAlt": "“Kafa Yapısı Değişir mi? Beyin ve Öğrenme” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/kafa-yapisi-nasil-degisir/": {
+    "title": "Kafa Yapısı Nasıl Değişir? 5 Adımlı Plan | Ziya Şakir Yılmaz",
+    "description": "Düşünce kalıplarınızı değiştirmeye nereden başlamalısınız? Mevcut tepkiyi fark etme, tek davranış seçme ve yeni tepkiyi tekrarlama adımlarını öğrenin.",
+    "socialTitle": "Kafa Yapısı Nasıl Değişir? 5 Adımlı Plan",
+    "socialLabel": "KAFA YAPISI / UYGULAMA",
+    "imageAlt": "“Kafa Yapısı Nasıl Değişir? 5 Adımlı Plan” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/kafa-yapisi-nedir/": {
+    "title": "Kafa Yapısı Nedir? Düşünce ve Tepki İlişkisi | Ziya Şakir Yılmaz",
+    "description": "Kafa yapısı olayları yorumlama biçiminizi nasıl etkiler? Kişilikle arasındaki farkı, düşünce ve tepki ilişkisini, günlük hayattaki karşılıklarını keşfedin.",
+    "socialTitle": "Kafa Yapısı Nedir? Düşünce ve Tepki İlişkisi",
+    "socialLabel": "KAFA YAPISI / KAVRAMLAR",
+    "imageAlt": "“Kafa Yapısı Nedir? Düşünce ve Tepki İlişkisi” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/kapanis-teknikleri/": {
+    "title": "Satışta Kapanış Teknikleri: 10 Yöntem | Ziya Şakir Yılmaz",
+    "description": "Satışta hangi kapanış tekniği ne zaman kullanılır? On yöntemi örnekleri ve riskleriyle inceleyin; satın alma sinyallerini ve sonraki adımı netleştirin.",
+    "socialTitle": "Satışta Kapanış Teknikleri: 10 Yöntem",
+    "socialLabel": "SATIŞ / UYGULAMA",
+    "imageAlt": "“Satışta Kapanış Teknikleri: 10 Yöntem” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/kriz-doneminde-liderlik/": {
+    "title": "Kriz Döneminde Liderlik: 5 Adımlı Plan | Ziya Şakir Yılmaz",
+    "description": "Belirsizlikte ekibinize nasıl yön verirsiniz? Kriz iletişimini, karar hızı ve doğruluk dengesini, sorumlulukları belirleyen beş adımlı planı inceleyin.",
+    "socialTitle": "Kriz Döneminde Liderlik: 5 Adımlı Plan",
+    "socialLabel": "LİDERLİK / UYGULAMA",
+    "imageAlt": "“Kriz Döneminde Liderlik: 5 Adımlı Plan” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/lider-yetistirmek/": {
+    "title": "Lider Yetiştirmek: Yetki ve Halefiyet | Ziya Şakir Yılmaz",
+    "description": "Ekibinizde yeni liderler nasıl yetiştirirsiniz? Yetki ve güveni aşamalı devretmeyi, halefiyet planlamasını ve siz yokken karar alabilen ekipler kurmayı inceleyin.",
+    "socialTitle": "Lider Yetiştirmek: Yetki ve Halefiyet",
+    "socialLabel": "LİDERLİK / REHBER",
+    "imageAlt": "“Lider Yetiştirmek: Yetki ve Halefiyet” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/lider-yonetici-farki/": {
+    "title": "Lider ve Yönetici Farkı: 20 İş Durumu | Ziya Şakir Yılmaz",
+    "description": "Lider ile yönetici arasındaki fark günlük işte nasıl görünür? Hata, kriz, terfi ve toplantı gibi yirmi durumda verilen farklı tepkileri karşılaştırın.",
+    "socialTitle": "Lider ve Yönetici Farkı: 20 İş Durumu",
+    "socialLabel": "LİDERLİK / KARŞILAŞTIRMA",
+    "imageAlt": "“Lider ve Yönetici Farkı: 20 İş Durumu” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/liderlik-nedir/": {
+    "title": "Liderlik Nedir? Etki ve Ekip Gelişimi | Ziya Şakir Yılmaz",
+    "description": "Liderlik bir unvanın ötesinde ne ifade eder? Etki oluşturmayı, örnek davranışı ve insan yetiştirmeyi günlük karar anları üzerinden birlikte inceleyin.",
+    "socialTitle": "Liderlik Nedir? Etki ve Ekip Gelişimi",
+    "socialLabel": "LİDERLİK / KAVRAMLAR",
+    "imageAlt": "“Liderlik Nedir? Etki ve Ekip Gelişimi” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/liderlik-stilleri/": {
+    "title": "Liderlik Stilleri: 6 Stil, Hangi Durumda? | Ziya Şakir Yılmaz",
+    "description": "Altı liderlik stili arasındaki farklar neler? Goleman’ın modelini, ekip iklimine etkilerini ve duruma göre stil değiştirmeyi örneklerle karşılaştırın.",
+    "socialTitle": "Liderlik Stilleri: 6 Stil, Hangi Durumda?",
+    "socialLabel": "LİDERLİK / KARŞILAŞTIRMA",
+    "imageAlt": "“Liderlik Stilleri: 6 Stil, Hangi Durumda?” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/mindset-nedir/": {
+    "title": "Mindset Nedir? Türkçe Anlamı ve İş Hayatı | Ziya Şakir Yılmaz",
+    "description": "Mindset ne demek, Türkçesi nedir? Kavramın kökenini, Carol Dweck’in yaklaşımını, iş hayatındaki kullanımını ve kurum kültürüyle ilişkisini keşfedin.",
+    "socialTitle": "Mindset Nedir? Türkçe Anlamı ve İş Hayatı",
+    "socialLabel": "KAFA YAPISI / KAVRAMLAR",
+    "imageAlt": "“Mindset Nedir? Türkçe Anlamı ve İş Hayatı” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/motivasyon-mu-disiplin-mi/": {
+    "title": "Motivasyon mu Disiplin mi? Sistem Kurmak | Ziya Şakir Yılmaz",
+    "description": "Motivasyon ile disiplin arasındaki fark nedir? İstek azaldığında devam etmeyi destekleyen ortam tasarımı, rutinler ve haftalık ölçüm yaklaşımını inceleyin.",
+    "socialTitle": "Motivasyon mu Disiplin mi? Sistem Kurmak",
+    "socialLabel": "BAŞARI / KARŞILAŞTIRMA",
+    "imageAlt": "“Motivasyon mu Disiplin mi? Sistem Kurmak” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/nasil-basarili-olunur/": {
+    "title": "Nasıl Başarılı Olunur? 5 Adımda Sistem | Ziya Şakir Yılmaz",
+    "description": "Hedef koyduktan sonra ne yapmalısınız? Başarı Mühendisliği’nin keşif, tasarım, inşa, test ve bakım adımlarıyla hedefi günlük davranışlara çevirmeyi öğrenin.",
+    "socialTitle": "Nasıl Başarılı Olunur? 5 Adımda Sistem",
+    "socialLabel": "BAŞARI / UYGULAMA",
+    "imageAlt": "“Nasıl Başarılı Olunur? 5 Adımda Sistem” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/neden-hedefler-yarim-kalir/": {
+    "title": "Hedefler Neden Yarım Kalır? 7 Neden | Ziya Şakir Yılmaz",
+    "description": "Hedefinize başlayıp sürdüremiyor musunuz? Yarım kalan hedeflerdeki yedi tasarım hatasını, bunların nasıl fark edileceğini ve düzeltme yollarını inceleyin.",
+    "socialTitle": "Hedefler Neden Yarım Kalır? 7 Neden",
+    "socialLabel": "BAŞARI / REHBER",
+    "imageAlt": "“Hedefler Neden Yarım Kalır? 7 Neden” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/pahali-itirazi/": {
+    "title": "“Pahalı” İtirazına 9 Profesyonel Cevap | Ziya Şakir Yılmaz",
+    "description": "Müşteri “pahalı” dediğinde indirimden önce ne sormalısınız? Bütçe, değer ve pazarlık ayrımını, dokuz cevap tekniğini ve örnek cümleleri inceleyin.",
+    "socialTitle": "“Pahalı” İtirazına 9 Profesyonel Cevap",
+    "socialLabel": "SATIŞ / UYGULAMA",
+    "imageAlt": "““Pahalı” İtirazına 9 Profesyonel Cevap” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/reddedilme-korkusu/": {
+    "title": "Reddedilme Korkusu: Nedenleri ve İlk Adımlar | Ziya Şakir Yılmaz",
+    "description": "Reddedilme korkusu arama, teklif ve toplantıları nasıl etkiler? Korkunun nedenlerini, küçük adımlarla deneyim kazanmayı ve tepkiyi yeniden yorumlamayı keşfedin.",
+    "socialTitle": "Reddedilme Korkusu: Nedenleri ve İlk Adımlar",
+    "socialLabel": "KAFA YAPISI / REHBER",
+    "imageAlt": "“Reddedilme Korkusu: Nedenleri ve İlk Adımlar” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/satis-egitimi-nasil-secilir/": {
+    "title": "Satış Eğitimi Nasıl Seçilir? 10 Kriter | Ziya Şakir Yılmaz",
+    "description": "Ekibiniz için satış eğitimi mi seçiyorsunuz? İK ve satış yöneticileri için on seçim kriterini, eğitmene sorulacak soruları ve takip planını inceleyin.",
+    "socialTitle": "Satış Eğitimi Nasıl Seçilir? 10 Kriter",
+    "socialLabel": "SATIŞ / SEÇİM REHBERİ",
+    "imageAlt": "“Satış Eğitimi Nasıl Seçilir? 10 Kriter” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/satis-nedir/": {
+    "title": "Satış Nedir? Değer Aktarımı ve 5 Aşama | Ziya Şakir Yılmaz",
+    "description": "Satış yalnızca ikna etmek midir? Değer aktarımı, ihtiyaç teşhisi, kanıt, karar ve takip adımlarıyla satışın tanımını ve işleyişini birlikte inceleyin.",
+    "socialTitle": "Satış Nedir? Değer Aktarımı ve 5 Aşama",
+    "socialLabel": "SATIŞ / KAVRAMLAR",
+    "imageAlt": "“Satış Nedir? Değer Aktarımı ve 5 Aşama” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/satis-teknikleri/": {
+    "title": "Satış Teknikleri: 12 Yöntem ve Örnek Cümle | Ziya Şakir Yılmaz",
+    "description": "SPIN soruları, dinleme, sosyal kanıt ve takip satışta nasıl kullanılır? On iki satış tekniğini Türkçe örnek cümleler ve uygulama noktalarıyla keşfedin.",
+    "socialTitle": "Satış Teknikleri: 12 Yöntem ve Örnek Cümle",
+    "socialLabel": "SATIŞ / UYGULAMA",
+    "imageAlt": "“Satış Teknikleri: 12 Yöntem ve Örnek Cümle” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/satisci-kafa-yapisi/": {
+    "title": "Satışçı Kafa Yapısı: Hayır Sonrası Devam | Ziya Şakir Yılmaz",
+    "description": "Satışta reddedilmeyi kişisel almadan nasıl devam edersiniz? Dönüşüm oranı, yorumlama, toparlanma ritüeli ve günlük temas planını beş adımda inceleyin.",
+    "socialTitle": "Satışçı Kafa Yapısı: Hayır Sonrası Devam",
+    "socialLabel": "SATIŞ / KAFA YAPISI",
+    "imageAlt": "“Satışçı Kafa Yapısı: Hayır Sonrası Devam” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/makaleler/zihinsel-dayaniklilik/": {
+    "title": "Zihinsel Dayanıklılık Nasıl Geliştirilir? | Ziya Şakir Yılmaz",
+    "description": "Baskı altında zihinsel dayanıklılık ne anlama gelir? İş hayatında zorlanma, toparlanma ve günlük rutinleri kapsayan beş uygulama adımını inceleyin.",
+    "socialTitle": "Zihinsel Dayanıklılık Nasıl Geliştirilir?",
+    "socialLabel": "KAFA YAPISI / UYGULAMA",
+    "imageAlt": "“Zihinsel Dayanıklılık Nasıl Geliştirilir?” başlığını ve Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/mentorluk/": {
+    "title": "Girişimci ve Yöneticilere Mentorluk | Ziya Şakir Yılmaz",
+    "description": "Girişimciler ve yöneticiler için Ziya Şakir Yılmaz ile bire bir mentorluk. Hedef, karar ve gelişim alanlarınızı birlikte ele almak için çalışma sürecini inceleyin.",
+    "socialTitle": "Kendi yolunuz. Birlikte düşünelim.",
+    "socialLabel": "BİRE BİR MENTORLUK",
+    "imageAlt": "Kendi yolunuz. Birlikte düşünelim. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/notlar/not-001/": {
+    "title": "Baskı Altında Sakin Kalmak | Ziya Şakir Yılmaz",
+    "description": "Ziya Şakir Yılmaz, zor bir toplantı örneğiyle baskı altında sakin kalmayı ve bildiklerini uygulayabilmek için görüşmeye hazırlanmayı anlatıyor.",
+    "socialTitle": "Sakin kalan kazanır",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Sakin kalan kazanır” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-002/": {
+    "title": "Potansiyeli Sonuca Dönüştürmek: Sistem | Ziya Şakir Yılmaz",
+    "description": "Yetenek neden tek başına yetmez? Ziya Şakir Yılmaz, motivasyonun düştüğü günlerde çalışmayı sürdüren takvim, takip ve günlük ritüeller üzerine yazıyor.",
+    "socialTitle": "Potansiyel kurtarmaz, sistem kurtarır",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Potansiyel kurtarmaz, sistem kurtarır” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-003/": {
+    "title": "Hazır Hissetmeden Başlamak | Ziya Şakir Yılmaz",
+    "description": "Hazır hissetmeyi beklemek başlangıcı geciktirebilir. Ziya Şakir Yılmaz, kendi yolculuğundan örneklerle cesaretin ve hazırlığın işin içinde gelişmesini anlatıyor.",
+    "socialTitle": "Hazır olmanı bekleme",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Hazır olmanı bekleme” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-004/": {
+    "title": "Satışta Hayır: Reddedilmeyi Okumak | Ziya Şakir Yılmaz",
+    "description": "Satışta duyduğunuz hayır ne söylüyor? Ziya Şakir Yılmaz, reddedilmeyi kişisel bir hüküm yerine geri bildirim olarak okumak için üç soru öneriyor.",
+    "socialTitle": "Hayır, bir veridir",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Hayır, bir veridir” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-005/": {
+    "title": "Henüz: Gelişime Açık Bir Kafa Yapısı | Ziya Şakir Yılmaz",
+    "description": "Kendiniz hakkında kurduğunuz bir cümleye henüz eklemek neyi değiştirir? Ziya Şakir Yılmaz’dan sabit ve gelişime açık kafa yapısı üzerine kişisel bir not.",
+    "socialTitle": "Henüz",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Henüz” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-006/": {
+    "title": "Kurum Kültürü ve Liderin Sorumluluğu | Ziya Şakir Yılmaz",
+    "description": "Kurum kültürü değerler listesinde mi, günlük kararlarda mı görünür? Ziya Şakir Yılmaz, liderin göz yumduğu davranışların ekibe verdiği mesajı ele alıyor.",
+    "socialTitle": "Kültür, tolere ettiğin şeydir",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Kültür, tolere ettiğin şeydir” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-007/": {
+    "title": "Sabah Rutini: Üç Aramayla Başlamak | Ziya Şakir Yılmaz",
+    "description": "Büyük hedefler günlük alışkanlıklara nasıl dönüşür? Ziya Şakir Yılmaz, her sabah üç aramayla başladığı iş rutinini ve devamlılık üzerine deneyimini paylaşıyor.",
+    "socialTitle": "Sabah dokuzda ne yapıyorsun?",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Sabah dokuzda ne yapıyorsun?” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-008/": {
+    "title": "Korkuyu Tanımak: İçimizdeki Alarm | Ziya Şakir Yılmaz",
+    "description": "Ziya Şakir Yılmaz, içimizdeki güvenlik görevlisi benzetmesiyle korkuyu yok etmek yerine tanımayı, tehdit ile hazırlık gerektiren durumu ayırmayı ele alıyor.",
+    "socialTitle": "Güvenlik görevlisini işten çıkarma",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Güvenlik görevlisini işten çıkarma” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/notlar/not-009/": {
+    "title": "Satışta Sessizlik: Üç Saniye Beklemek | Ziya Şakir Yılmaz",
+    "description": "Müşteri pahalı dediğinde hemen yanıt vermek yerine beklemek ne sağlar? Ziya Şakir Yılmaz, itirazın arkasındaki nedeni dinlemek için sessizliğin rolünü anlatıyor.",
+    "socialTitle": "Üç saniye sessizlik",
+    "socialLabel": "HAYATTAN NOTLAR",
+    "imageAlt": "“Üç saniye sessizlik” başlığı ve Ziya Şakir Yılmaz adıyla Hayattan Notlar paylaşım kartı."
+  },
+  "/satis/": {
+    "title": "Satış: Güven, Değer ve Müşteri İlişkisi | Ziya Şakir Yılmaz",
+    "description": "Müşteriyi anlamaktan doğru teklife: Ziya Şakir Yılmaz’ın satış yaklaşımını keşfedin. Ekibinizin gündemine uygun rehberlere ve kurumsal satış eğitimine ulaşın.",
+    "socialTitle": "Güven kur. Değer yarat.",
+    "socialLabel": "SATIŞ",
+    "imageAlt": "Güven kur. Değer yarat. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/sozluk/": {
+    "title": "Başarı ve Kafa Yapısı Sözlüğü | Ziya Şakir Yılmaz",
+    "description": "Mindset, gelişim zihniyeti, zihinsel dayanıklılık ve delegasyon ne demek? Başarı, kafa yapısı, satış ve liderlik kavramlarının Türkçe tanımlarını inceleyin.",
+    "socialTitle": "Kavramları netleştirin.",
+    "socialLabel": "BAŞARI MÜHENDİSLİĞİ SÖZLÜĞÜ",
+    "imageAlt": "Kavramları netleştirin. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/testler/": {
+    "title": "Kafa Yapısı Testi Hakkında | Ziya Şakir Yılmaz",
+    "description": "Kurşun Geçirmez Kafa Yapısı Testi nasıl işliyor? Yirmi soru ve beş katmandan oluşan ücretsiz öz değerlendirmeyi tanıyın; kayıt olmadan teste başlayın.",
+    "socialTitle": "Kendinizi daha yakından tanıyın.",
+    "socialLabel": "TEST HAKKINDA",
+    "imageAlt": "Kendinizi daha yakından tanıyın. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/testler/kafa-yapisi-testi/": {
+    "title": "Ücretsiz Kafa Yapısı Testi: 20 Soru | Ziya Şakir Yılmaz",
+    "description": "Yaklaşık üç dakikalık Kafa Yapısı Testi’ni çözün. Yirmi soruyla beş katmandaki kişisel öz değerlendirme skorunuzu ve gelişim alanlarınızı kayıt olmadan görün.",
+    "socialTitle": "Kafa yapın kurşun geçirmez mi?",
+    "socialLabel": "20 SORU · 5 KATMAN",
+    "imageAlt": "Kafa yapın kurşun geçirmez mi? — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  },
+  "/ziya-sakir-yilmaz/": {
+    "title": "Ziya Şakir Yılmaz Kimdir? | Konuşmacı, Yazar ve Eğitmen",
+    "description": "Konuşmacı, yazar ve eğitmen Ziya Şakir Yılmaz’ı tanıyın. Yaşam öyküsünü, saha deneyimini, kitaplarını ve başarı, kafa yapısı, satış, liderlik çalışmalarını keşfedin.",
+    "socialTitle": "Yaşamak. Anlamak. Paylaşmak.",
+    "socialLabel": "ZİYA ŞAKİR YILMAZ",
+    "imageAlt": "Yaşamak. Anlamak. Paylaşmak. — Ziya Şakir Yılmaz adını içeren paylaşım görseli."
+  }
+}

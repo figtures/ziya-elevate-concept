@@ -1,0 +1,657 @@
+{
+  "version": "1.0.0",
+  "checkedAt": "2026-10-12T00:46:13.633Z",
+  "checks": 877,
+  "routes": 63,
+  "articles": 30,
+  "directAnswers": 30,
+  "answerUnits": 133,
+  "sourceLinks": 62,
+  "articlesWithSourceLinks": 23,
+  "bibliographicRecords": 26,
+  "limitations": [
+    "Checks run against final CMS DOM, not browser layout or live crawler rendering.",
+    "Source records validate identity of named scholarly works; they do not certify all prose or quantitative claims.",
+    "No human review dates, transcripts, third-party authority, or AI citations were invented."
+  ],
+  "routesDetail": [
+    {
+      "route": "/arastirmalar/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/basari/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/basari-muhendisligi/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/bulten/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/buradan-basla/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/egitimler/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/hayattan-notlar/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/iletisim/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/kafa-yapisi/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/kitaplar/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/konusmaci/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/kursun-gecirmez-kafa-yapisi/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/kurumsal/kafa-yapisi-atolyesi/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/kurumsal/liderlik-egitimi/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/kurumsal/satis-egitimi/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/liderlik/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 2,
+      "tocLinks": 8,
+      "sources": [
+        "lally-2010"
+      ]
+    },
+    {
+      "route": "/makaleler/b2b-satis/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 10,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/basari-nedir/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 3,
+      "tocLinks": 5,
+      "sources": [
+        "gollwitzer-sheeran-2006",
+        "lally-2010"
+      ]
+    },
+    {
+      "route": "/makaleler/basari-ogrenilebilir-mi/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "macnamara-2014",
+        "locke-latham-2002",
+        "gollwitzer-sheeran-2006"
+      ]
+    },
+    {
+      "route": "/makaleler/delegasyon/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 7,
+      "sources": [
+        "gallup-delegation-2015",
+        "oncken-wass-1974",
+        "gallup-manager-2015"
+      ]
+    },
+    {
+      "route": "/makaleler/disiplin-nasil-kazanilir/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "lally-2010",
+        "crede-2017",
+        "hagger-2016"
+      ]
+    },
+    {
+      "route": "/makaleler/geri-bildirim-nasil-verilir/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 1,
+      "tocLinks": 7,
+      "sources": [
+        "zenger-folkman-2014"
+      ]
+    },
+    {
+      "route": "/makaleler/growth-mindset-nedir/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 6,
+      "tocLinks": 5,
+      "sources": [
+        "mueller-dweck-1998",
+        "blackwell-2007",
+        "yeager-2019",
+        "sisk-2018"
+      ]
+    },
+    {
+      "route": "/makaleler/hedef-nasil-belirlenir/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 3,
+      "tocLinks": 5,
+      "sources": [
+        "locke-latham-2002",
+        "gollwitzer-sheeran-2006",
+        "harkin-2016"
+      ]
+    },
+    {
+      "route": "/makaleler/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/itiraz-karsilama/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 8,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-degisir-mi/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "maguire-2000",
+        "woollett-maguire-2011",
+        "draganski-2004"
+      ]
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-nasil-degisir/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "maguire-2000",
+        "draganski-2004",
+        "yeager-2019"
+      ]
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-nedir/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 2,
+      "tocLinks": 5,
+      "sources": [
+        "sisk-2018",
+        "yeager-2019"
+      ]
+    },
+    {
+      "route": "/makaleler/kapanis-teknikleri/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 7,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/kriz-doneminde-liderlik/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 8,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/lider-yetistirmek/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 1,
+      "tocLinks": 6,
+      "sources": [
+        "gallup-manager-2015"
+      ]
+    },
+    {
+      "route": "/makaleler/lider-yonetici-farki/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 2,
+      "tocLinks": 5,
+      "sources": [
+        "kotter-1990",
+        "gallup-manager-2015"
+      ]
+    },
+    {
+      "route": "/makaleler/liderlik-nedir/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 2,
+      "tocLinks": 5,
+      "sources": [
+        "gallup-manager-2015",
+        "kotter-1990"
+      ]
+    },
+    {
+      "route": "/makaleler/liderlik-stilleri/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 2,
+      "tocLinks": 7,
+      "sources": [
+        "goleman-2000"
+      ]
+    },
+    {
+      "route": "/makaleler/mindset-nedir/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "mueller-dweck-1998",
+        "blackwell-2007",
+        "sisk-2018",
+        "yeager-2019"
+      ]
+    },
+    {
+      "route": "/makaleler/motivasyon-mu-disiplin-mi/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "hagger-2016",
+        "wood-2002",
+        "gollwitzer-sheeran-2006"
+      ]
+    },
+    {
+      "route": "/makaleler/nasil-basarili-olunur/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 2,
+      "tocLinks": 5,
+      "sources": [
+        "gollwitzer-sheeran-2006"
+      ]
+    },
+    {
+      "route": "/makaleler/neden-hedefler-yarim-kalir/",
+      "kind": "article",
+      "answerUnits": 1,
+      "directAnswers": 1,
+      "sourceLinks": 1,
+      "tocLinks": 5,
+      "sources": [
+        "wood-2002"
+      ]
+    },
+    {
+      "route": "/makaleler/pahali-itirazi/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 7,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/reddedilme-korkusu/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 4,
+      "tocLinks": 5,
+      "sources": [
+        "eisenberger-2003",
+        "dewall-2010"
+      ]
+    },
+    {
+      "route": "/makaleler/satis-egitimi-nasil-secilir/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 10,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/satis-nedir/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 0,
+      "tocLinks": 8,
+      "sources": []
+    },
+    {
+      "route": "/makaleler/satis-teknikleri/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 1,
+      "tocLinks": 7,
+      "sources": [
+        "rackham-1988"
+      ]
+    },
+    {
+      "route": "/makaleler/satisci-kafa-yapisi/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 1,
+      "tocLinks": 6,
+      "sources": [
+        "seligman-schulman-1986"
+      ]
+    },
+    {
+      "route": "/makaleler/zihinsel-dayaniklilik/",
+      "kind": "article",
+      "answerUnits": 5,
+      "directAnswers": 1,
+      "sourceLinks": 1,
+      "tocLinks": 5,
+      "sources": [
+        "marchant-2009"
+      ]
+    },
+    {
+      "route": "/mentorluk/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-001/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-002/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-003/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-004/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-005/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-006/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-007/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-008/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/notlar/not-009/",
+      "kind": "note",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/satis/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/sozluk/",
+      "kind": "page",
+      "answerUnits": 39,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/testler/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/testler/kafa-yapisi-testi/",
+      "kind": "test",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    },
+    {
+      "route": "/ziya-sakir-yilmaz/",
+      "kind": "page",
+      "answerUnits": 0,
+      "directAnswers": 0,
+      "sourceLinks": 0,
+      "tocLinks": 0,
+      "sources": []
+    }
+  ]
+}

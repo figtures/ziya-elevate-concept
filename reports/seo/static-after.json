@@ -1,0 +1,4397 @@
+{
+  "kind": "static-SSR-audit-NOT-Lighthouse",
+  "at": "2026-10-12T00:11:38.022Z",
+  "routes": 63,
+  "counts": {
+    "missingDescription": 0,
+    "missingOgSiteName": 0,
+    "missingTwitterTitle": 0,
+    "missingTwitterDescription": 0,
+    "missingMain": 0,
+    "wrongH1": 0,
+    "headingSkips": 0,
+    "missingAlt": 0,
+    "noImageDimensions": 0,
+    "noSrcset": 22,
+    "maxJsGzip": 7392,
+    "maxCssGzip": 26397
+  },
+  "duplicates": {
+    "titles": [],
+    "descriptions": []
+  },
+  "assets": [
+    {
+      "url": "/assets/main.js",
+      "type": "js",
+      "bytes": 5771,
+      "gzip": 1983
+    },
+    {
+      "url": "/assets/refinements.js",
+      "type": "js",
+      "bytes": 5501,
+      "gzip": 2005
+    },
+    {
+      "url": "/assets/editorial-motion.js",
+      "type": "js",
+      "bytes": 2628,
+      "gzip": 1063
+    },
+    {
+      "url": "/assets/style.css",
+      "type": "css",
+      "bytes": 34050,
+      "gzip": 8172
+    },
+    {
+      "url": "/assets/refinements.css",
+      "type": "css",
+      "bytes": 10776,
+      "gzip": 3320
+    },
+    {
+      "url": "/assets/fonts.css",
+      "type": "css",
+      "bytes": 1758,
+      "gzip": 448
+    },
+    {
+      "url": "/assets/editorial.css",
+      "type": "css",
+      "bytes": 37704,
+      "gzip": 8745
+    },
+    {
+      "url": "/assets/signature-header.css",
+      "type": "css",
+      "bytes": 10306,
+      "gzip": 2297
+    },
+    {
+      "url": "/assets/site-footer.css",
+      "type": "css",
+      "bytes": 4563,
+      "gzip": 1234
+    },
+    {
+      "url": "/assets/content-depth.css",
+      "type": "css",
+      "bytes": 5534,
+      "gzip": 1809
+    },
+    {
+      "url": "/assets/tedx-hero.js",
+      "type": "js",
+      "bytes": 6839,
+      "gzip": 2341
+    },
+    {
+      "url": "/assets/tedx-hero.css",
+      "type": "css",
+      "bytes": 701,
+      "gzip": 372
+    },
+    {
+      "url": "/assets/test-engine.js",
+      "type": "js",
+      "bytes": 4568,
+      "gzip": 1946
+    }
+  ],
+  "rows": [
+    {
+      "route": "/arastirmalar/",
+      "kind": "page",
+      "title": "Araştırmalar: Türkiye Kafa Yapısı Araştırması | Ziya Şakir Yılmaz",
+      "description": "Türkiye Kafa Yapısı Araştırması: Türkiye'nin zihinsel dayanıklılık haritasını çıkaran ilk birincil veri çalışması. Yıllık araştırma programı ve metodoloji.",
+      "canonical": "https://ziyasakiryilmaz.com/arastirmalar/",
+      "ogURL": "https://ziyasakiryilmaz.com/arastirmalar/",
+      "ogTitle": "Araştırmalar: Türkiye Kafa Yapısı Araştırması | Ziya Şakir Yılmaz",
+      "ogDescription": "Türkiye Kafa Yapısı Araştırması: Türkiye'nin zihinsel dayanıklılık haritasını çıkaran ilk birincil veri çalışması. Yıllık araştırma programı ve metodoloji.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Araştırmalar: Türkiye Kafa Yapısı Araştırması | Ziya Şakir Yılmaz",
+      "twitterDescription": "Türkiye Kafa Yapısı Araştırması: Türkiye'nin zihinsel dayanıklılık haritasını çıkaran ilk birincil veri çalışması. Yıllık araştırma programı ve metodoloji.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Araştırmalar",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/arastirmalar/",
+        "https://ziyasakiryilmaz.com/arastirmalar/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/arastirmalar/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18036
+    },
+    {
+      "route": "/basari/",
+      "kind": "page",
+      "title": "Başarı Nedir? Başarının Mühendislik Rehberi | Başarı; Ziya Şakir Yılmaz",
+      "description": "Başarı nedir, nasıl başarılı olunur? Başarı: hedef belirleme, disiplin, motivasyon, özgüven ve yüksek performans üzerine kanıta dayalı Türkçe rehberler. Başarı Mühendisliği™ yaklaşımıyla.",
+      "canonical": "https://ziyasakiryilmaz.com/basari/",
+      "ogURL": "https://ziyasakiryilmaz.com/basari/",
+      "ogTitle": "Başarı Nedir? Başarının Mühendislik Rehberi | Başarı; Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı nedir, nasıl başarılı olunur? Başarı: hedef belirleme, disiplin, motivasyon, özgüven ve yüksek performans üzerine kanıta dayalı Türkçe rehberler. Başarı Mühendisliği™ yaklaşımıyla.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Başarı Nedir? Başarının Mühendislik Rehberi | Başarı; Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı nedir, nasıl başarılı olunur? Başarı: hedef belirleme, disiplin, motivasyon, özgüven ve yüksek performans üzerine kanıta dayalı Türkçe rehberler. Başarı Mühendisliği™ yaklaşımıyla.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Başarınınmühendisliği vardır.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/basari/",
+        "https://ziyasakiryilmaz.com/basari/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/basari/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/kapi-basari.webp",
+          "alt": "Ziya Şakir Yılmaz sahnede elini kaldırarak katılımcılara sesleniyor.",
+          "width": "900",
+          "height": "1200",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 32910
+    },
+    {
+      "route": "/basari-muhendisligi/",
+      "kind": "page",
+      "title": "Başarı Mühendisliği™ Nedir? | Ziya Şakir Yılmaz",
+      "description": "Başarı Mühendisliği™: başarıyı şans konusu olmaktan çıkarıp hedef, sistem, alışkanlık ve ölçüm üzerine kurulan tasarlanabilir bir sürece dönüştüren yaklaşım. Kavram Ziya Şakir Yılmaz'a aittir; 2020 tarihli aynı adlı kitapta ortaya konmuştur.",
+      "canonical": "https://ziyasakiryilmaz.com/basari-muhendisligi/",
+      "ogURL": "https://ziyasakiryilmaz.com/basari-muhendisligi/",
+      "ogTitle": "Başarı Mühendisliği™ Nedir? | Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı Mühendisliği™: başarıyı şans konusu olmaktan çıkarıp hedef, sistem, alışkanlık ve ölçüm üzerine kurulan tasarlanabilir bir sürece dönüştüren yaklaşım. Kavram Ziya Şakir Yılmaz'a aittir; 2020 tarihli aynı adlı kitapta ortaya konmuştur.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Başarı Mühendisliği™ Nedir? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı Mühendisliği™: başarıyı şans konusu olmaktan çıkarıp hedef, sistem, alışkanlık ve ölçüm üzerine kurulan tasarlanabilir bir sürece dönüştüren yaklaşım. Kavram Ziya Şakir Yılmaz'a aittir; 2020 tarihli aynı adlı kitapta ortaya konmuştur.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Başarı Mühendisliği™",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "ItemList",
+        "Book"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/basari-muhendisligi/",
+        "https://ziyasakiryilmaz.com/basari-muhendisligi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/basari-muhendisligi/#breadcrumb",
+        "https://ziyasakiryilmaz.com/basari-muhendisligi/#books",
+        "https://ziyasakiryilmaz.com/kitaplar/"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/kapak-bm.webp",
+          "alt": "Başarı Mühendisliği kitap kapağı",
+          "width": "293",
+          "height": "416",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "book-cover"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 28958
+    },
+    {
+      "route": "/bulten/",
+      "kind": "page",
+      "title": "Mühendislik Notları | Ziya Şakir Yılmaz",
+      "description": "Başarı Mühendisliği, Kafa Yapısı, Satış ve Liderlik üzerine Mühendislik Notları.",
+      "canonical": "https://ziyasakiryilmaz.com/bulten/",
+      "ogURL": "https://ziyasakiryilmaz.com/bulten/",
+      "ogTitle": "Mühendislik Notları | Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı Mühendisliği, Kafa Yapısı, Satış ve Liderlik üzerine Mühendislik Notları.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Mühendislik Notları | Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı Mühendisliği, Kafa Yapısı, Satış ve Liderlik üzerine Mühendislik Notları.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Bir fikir.Yeni bir bakış.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/bulten/",
+        "https://ziyasakiryilmaz.com/bulten/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/bulten/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/kitaplik.webp",
+          "alt": "",
+          "width": "1200",
+          "height": "900",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "shelf"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 17963
+    },
+    {
+      "route": "/buradan-basla/",
+      "kind": "page",
+      "title": "Buradan Başla; Site Rehberi | Ziya Şakir Yılmaz",
+      "description": "ziyasakiryilmaz.com'a yeni misin? Üç adımda başla: kendini ölç, rehberini seç, sistemini kur. Dört bilgi rehberi, Kafa Yapısı Testi ve iki imza sistemin haritası.",
+      "canonical": "https://ziyasakiryilmaz.com/buradan-basla/",
+      "ogURL": "https://ziyasakiryilmaz.com/buradan-basla/",
+      "ogTitle": "Buradan Başla; Site Rehberi | Ziya Şakir Yılmaz",
+      "ogDescription": "ziyasakiryilmaz.com'a yeni misin? Üç adımda başla: kendini ölç, rehberini seç, sistemini kur. Dört bilgi rehberi, Kafa Yapısı Testi ve iki imza sistemin haritası.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Buradan Başla; Site Rehberi | Ziya Şakir Yılmaz",
+      "twitterDescription": "ziyasakiryilmaz.com'a yeni misin? Üç adımda başla: kendini ölç, rehberini seç, sistemini kur. Dört bilgi rehberi, Kafa Yapısı Testi ve iki imza sistemin haritası.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Buradan başla",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/buradan-basla/",
+        "https://ziyasakiryilmaz.com/buradan-basla/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/buradan-basla/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18373
+    },
+    {
+      "route": "/egitimler/",
+      "kind": "page",
+      "title": "Kurumsal Eğitimler: Satış, Liderlik ve Kafa Yapısı | Ziya Şakir Yılmaz",
+      "description": "Satış eğitimi, liderlik eğitimi ve Kurşun Geçirmez Kafa Yapısı kurumsal atölyeleri. Ölçüm öncesi ve sonrasıyla, ekibinizin gerçek vakalarıyla tasarlanan programlar.",
+      "canonical": "https://ziyasakiryilmaz.com/egitimler/",
+      "ogURL": "https://ziyasakiryilmaz.com/egitimler/",
+      "ogTitle": "Kurumsal Eğitimler: Satış, Liderlik ve Kafa Yapısı | Ziya Şakir Yılmaz",
+      "ogDescription": "Satış eğitimi, liderlik eğitimi ve Kurşun Geçirmez Kafa Yapısı kurumsal atölyeleri. Ölçüm öncesi ve sonrasıyla, ekibinizin gerçek vakalarıyla tasarlanan programlar.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurumsal Eğitimler: Satış, Liderlik ve Kafa Yapısı | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satış eğitimi, liderlik eğitimi ve Kurşun Geçirmez Kafa Yapısı kurumsal atölyeleri. Ölçüm öncesi ve sonrasıyla, ekibinizin gerçek vakalarıyla tasarlanan programlar.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Bilgiyi, davranışadönüştürmek için.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/egitimler/",
+        "https://ziyasakiryilmaz.com/egitimler/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/egitimler/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/salon-genis.webp",
+          "alt": "Eğitim sırasında katılımcılarla buluşan Ziya Şakir Yılmaz.",
+          "width": "1800",
+          "height": "1013",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 28415
+    },
+    {
+      "route": "/hayattan-notlar/",
+      "kind": "page",
+      "title": "Hayattan Notlar | Ziya Şakir Yılmaz",
+      "description": "Ziya Şakir Yılmaz'dan kısa, kişisel notlar: sahadan, sahneden ve hayattan damıtılmış gözlemler. Her hafta yeni not.",
+      "canonical": "https://ziyasakiryilmaz.com/hayattan-notlar/",
+      "ogURL": "https://ziyasakiryilmaz.com/hayattan-notlar/",
+      "ogTitle": "Hayattan Notlar | Ziya Şakir Yılmaz",
+      "ogDescription": "Ziya Şakir Yılmaz'dan kısa, kişisel notlar: sahadan, sahneden ve hayattan damıtılmış gözlemler. Her hafta yeni not.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Hayattan Notlar | Ziya Şakir Yılmaz",
+      "twitterDescription": "Ziya Şakir Yılmaz'dan kısa, kişisel notlar: sahadan, sahneden ve hayattan damıtılmış gözlemler. Her hafta yeni not.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Hayattan notlar",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/hayattan-notlar/",
+        "https://ziyasakiryilmaz.com/hayattan-notlar/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/hayattan-notlar/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 19078
+    },
+    {
+      "route": "/iletisim/",
+      "kind": "page",
+      "title": "İletişim | Ziya Şakir Yılmaz",
+      "description": "Kurumsal eğitim teklifi, konuşmacı daveti, mentorluk başvurusu ve basın talepleri için iletişim.",
+      "canonical": "https://ziyasakiryilmaz.com/iletisim/",
+      "ogURL": "https://ziyasakiryilmaz.com/iletisim/",
+      "ogTitle": "İletişim | Ziya Şakir Yılmaz",
+      "ogDescription": "Kurumsal eğitim teklifi, konuşmacı daveti, mentorluk başvurusu ve basın talepleri için iletişim.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "İletişim | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kurumsal eğitim teklifi, konuşmacı daveti, mentorluk başvurusu ve basın talepleri için iletişim.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Birlikte başlayalım.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/iletisim/",
+        "https://ziyasakiryilmaz.com/iletisim/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/iletisim/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 20798
+    },
+    {
+      "route": "/",
+      "kind": "page",
+      "title": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+      "description": "Ziya Şakir Yılmaz ile keynote konuşmaları, kurumsal eğitim, bireysel eğitim ve mentorluk. Başarı, kafa yapısı, satış ve liderlik üzerine birlikte çalışın.",
+      "canonical": "https://ziyasakiryilmaz.com/",
+      "ogURL": "https://ziyasakiryilmaz.com/",
+      "ogTitle": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+      "ogDescription": "Ziya Şakir Yılmaz ile keynote konuşmaları, kurumsal eğitim, bireysel eğitim ve mentorluk. Başarı, kafa yapısı, satış ve liderlik üzerine birlikte çalışın.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+      "twitterDescription": "Ziya Şakir Yılmaz ile keynote konuşmaları, kurumsal eğitim, bireysel eğitim ve mentorluk. Başarı, kafa yapısı, satış ve liderlik üzerine birlikte çalışın.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Başarınınmühendisliğivardır.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/hero-poster.jpg",
+          "alt": "",
+          "width": "1600",
+          "height": "900",
+          "loading": null,
+          "srcset": null,
+          "parent": ""
+        },
+        {
+          "src": "/assets/salon-genis.webp",
+          "alt": "Ziya Şakir Yılmaz, katılımcılarla dolu bir salonda konuşuyor.",
+          "width": "1800",
+          "height": "1013",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        },
+        {
+          "src": "/assets/tedx-oan-sahne-genis.jpg",
+          "alt": "Ziya Şakir Yılmaz TEDxReset sahnesinde.",
+          "width": "1920",
+          "height": "1080",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/tedx-hero.js?v=1bc51976751e",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/tedx-hero.css?v=3b5b8372ba8b",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 7392,
+      "cssGzip": 26397,
+      "htmlBytes": 35902
+    },
+    {
+      "route": "/kafa-yapisi/",
+      "kind": "page",
+      "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi | Kafa Yapısı; Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı nedir, nasıl değişir? Mindset, growth mindset, zihinsel dayanıklılık ve Kurşun Geçirmez Kafa Yapısı™. Türkiye'nin kafa yapısı bilgi rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/kafa-yapisi/",
+      "ogURL": "https://ziyasakiryilmaz.com/kafa-yapisi/",
+      "ogTitle": "Kafa Yapısı Nedir? Mindset'in Türkçesi | Kafa Yapısı; Ziya Şakir Yılmaz",
+      "ogDescription": "Kafa yapısı nedir, nasıl değişir? Mindset, growth mindset, zihinsel dayanıklılık ve Kurşun Geçirmez Kafa Yapısı™. Türkiye'nin kafa yapısı bilgi rehberi.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kafa Yapısı Nedir? Mindset'in Türkçesi | Kafa Yapısı; Ziya Şakir Yılmaz",
+      "twitterDescription": "Kafa yapısı nedir, nasıl değişir? Mindset, growth mindset, zihinsel dayanıklılık ve Kurşun Geçirmez Kafa Yapısı™. Türkiye'nin kafa yapısı bilgi rehberi.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Hayat değişirkenkendine dayan.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/kafa-yapisi/",
+        "https://ziyasakiryilmaz.com/kafa-yapisi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/kafa-yapisi/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 32327
+    },
+    {
+      "route": "/kitaplar/",
+      "kind": "page",
+      "title": "Kitaplar | Ziya Şakir Yılmaz",
+      "description": "Ziya Şakir Yılmaz'ın kitapları: Kurşun Geçirmez Kafa Yapısı (2026), Başarı Mühendisliği (2020), İlk 72 Saat (Emre Topçu ile) ve Size Bir Sır Vereyim mi? (2016). Fikir → kitap → araç → içerik → eğitim zinciri.",
+      "canonical": "https://ziyasakiryilmaz.com/kitaplar/",
+      "ogURL": "https://ziyasakiryilmaz.com/kitaplar/",
+      "ogTitle": "Kitaplar | Ziya Şakir Yılmaz",
+      "ogDescription": "Ziya Şakir Yılmaz'ın kitapları: Kurşun Geçirmez Kafa Yapısı (2026), Başarı Mühendisliği (2020), İlk 72 Saat (Emre Topçu ile) ve Size Bir Sır Vereyim mi? (2016). Fikir → kitap → araç → içerik → eğitim zinciri.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kitaplar | Ziya Şakir Yılmaz",
+      "twitterDescription": "Ziya Şakir Yılmaz'ın kitapları: Kurşun Geçirmez Kafa Yapısı (2026), Başarı Mühendisliği (2020), İlk 72 Saat (Emre Topçu ile) ve Size Bir Sır Vereyim mi? (2016). Fikir → kitap → araç → içerik → eğitim zinciri.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Bir fikir,sayfalar boyunca.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "ItemList",
+        "Book"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/kitaplar/",
+        "https://ziyasakiryilmaz.com/kitaplar/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/kitaplar/#breadcrumb",
+        "https://ziyasakiryilmaz.com/kitaplar/#books",
+        "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/"
+      ],
+      "dates": [
+        {
+          "type": "Book",
+          "name": "Başarı Mühendisliği",
+          "datePublished": "2020"
+        },
+        {
+          "type": "Book",
+          "name": "Size Bir Sır Vereyim mi?",
+          "datePublished": "2016"
+        }
+      ],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/kapak-bm.webp",
+          "alt": "Başarı Mühendisliği kitap kapağı",
+          "width": "293",
+          "height": "416",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "book-cover"
+        },
+        {
+          "src": "/assets/kapak-sir.webp",
+          "alt": "Size Bir Sır Vereyim mi? kitap kapağı",
+          "width": "291",
+          "height": "409",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "book-cover"
+        },
+        {
+          "src": "/assets/kapak-72.webp",
+          "alt": "İlk 72 Saat kitap kapağı",
+          "width": "400",
+          "height": "593",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "book-cover"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 28260
+    },
+    {
+      "route": "/konusmaci/",
+      "kind": "page",
+      "title": "Konuşmacı: Ziya Şakir Yılmaz'ı Etkinliğinize Davet Edin",
+      "description": "Kurumsal zirveler, bayi toplantıları ve özel etkinlikler için konuşmacı: Başarı Tesadüf Değildir, Kurşun Geçirmez Kafa Yapısı, Satışın Mühendisliği, Liderlik.",
+      "canonical": "https://ziyasakiryilmaz.com/konusmaci/",
+      "ogURL": "https://ziyasakiryilmaz.com/konusmaci/",
+      "ogTitle": "Konuşmacı: Ziya Şakir Yılmaz'ı Etkinliğinize Davet Edin",
+      "ogDescription": "Kurumsal zirveler, bayi toplantıları ve özel etkinlikler için konuşmacı: Başarı Tesadüf Değildir, Kurşun Geçirmez Kafa Yapısı, Satışın Mühendisliği, Liderlik.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Konuşmacı: Ziya Şakir Yılmaz'ı Etkinliğinize Davet Edin",
+      "twitterDescription": "Kurumsal zirveler, bayi toplantıları ve özel etkinlikler için konuşmacı: Başarı Tesadüf Değildir, Kurşun Geçirmez Kafa Yapısı, Satışın Mühendisliği, Liderlik.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Bir salonda başlar.İnsanlarla devam eder.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "ItemList",
+        "CreativeWork"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/konusmaci/",
+        "https://ziyasakiryilmaz.com/konusmaci/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/konusmaci/#breadcrumb",
+        "https://ziyasakiryilmaz.com/konusmaci/#talks"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/tedx-oan-sahne-genis.jpg",
+          "alt": "Ziya Şakir Yılmaz TEDxReset konuşması sırasında.",
+          "width": "1920",
+          "height": "1080",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        },
+        {
+          "src": "/assets/tedx-oan-sahne-genis.jpg",
+          "alt": "TEDxReset sahnesinde Ziya Şakir Yılmaz",
+          "width": "1920",
+          "height": "1080",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": ""
+        },
+        {
+          "src": "/assets/sahne-bmc.webp",
+          "alt": "TEDxYouth@BMC sahnesinde Ziya Şakir Yılmaz",
+          "width": "800",
+          "height": "450",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": ""
+        },
+        {
+          "src": "/assets/sahne-yakin.webp",
+          "alt": "Ziya Şakir Yılmaz sahnede konuşuyor.",
+          "width": "800",
+          "height": "450",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": ""
+        },
+        {
+          "src": "/assets/tedx-erciyes-thumb.jpg",
+          "alt": "Ziya Şakir Yılmaz · TEDxErciyesKoleji",
+          "width": "1280",
+          "height": "720",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": ""
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 34003
+    },
+    {
+      "route": "/kursun-gecirmez-kafa-yapisi/",
+      "kind": "page",
+      "title": "Kurşun Geçirmez Kafa Yapısı™ Nedir? | Ziya Şakir Yılmaz",
+      "description": "Kurşun Geçirmez Kafa Yapısı™: reddedilme, başarısızlık ve belirsizlik karşısında dağılmayan zihinsel dayanıklılık sistemi. 5 zırh katmanı, ücretsiz test ve 66 Günlük Oyun Planı. Kavram Ziya Şakir Yılmaz'a aittir.",
+      "canonical": "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/",
+      "ogURL": "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/",
+      "ogTitle": "Kurşun Geçirmez Kafa Yapısı™ Nedir? | Ziya Şakir Yılmaz",
+      "ogDescription": "Kurşun Geçirmez Kafa Yapısı™: reddedilme, başarısızlık ve belirsizlik karşısında dağılmayan zihinsel dayanıklılık sistemi. 5 zırh katmanı, ücretsiz test ve 66 Günlük Oyun Planı. Kavram Ziya Şakir Yılmaz'a aittir.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurşun Geçirmez Kafa Yapısı™ Nedir? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kurşun Geçirmez Kafa Yapısı™: reddedilme, başarısızlık ve belirsizlik karşısında dağılmayan zihinsel dayanıklılık sistemi. 5 zırh katmanı, ücretsiz test ve 66 Günlük Oyun Planı. Kavram Ziya Şakir Yılmaz'a aittir.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kurşun Geçirmez Kafa Yapısı™",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/",
+        "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/kursun-gecirmez-kafa-yapisi/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 29356
+    },
+    {
+      "route": "/kurumsal/kafa-yapisi-atolyesi/",
+      "kind": "page",
+      "title": "Kurşun Geçirmez Kafa Yapısı Kurumsal Atölyesi | Ziya Şakir Yılmaz",
+      "description": "Ekipler için zihinsel dayanıklılık atölyesi: reddedilme yönetimi, baskı altında performans, belirsizlik toleransı, toparlanma. Kurşun Geçirmez Kafa Yapısı Skoru ile ölçüm; satış ekipleri için özel sürüm.",
+      "canonical": "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi/",
+      "ogURL": "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi/",
+      "ogTitle": "Kurşun Geçirmez Kafa Yapısı Kurumsal Atölyesi | Ziya Şakir Yılmaz",
+      "ogDescription": "Ekipler için zihinsel dayanıklılık atölyesi: reddedilme yönetimi, baskı altında performans, belirsizlik toleransı, toparlanma. Kurşun Geçirmez Kafa Yapısı Skoru ile ölçüm; satış ekipleri için özel sürüm.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurşun Geçirmez Kafa Yapısı Kurumsal Atölyesi | Ziya Şakir Yılmaz",
+      "twitterDescription": "Ekipler için zihinsel dayanıklılık atölyesi: reddedilme yönetimi, baskı altında performans, belirsizlik toleransı, toparlanma. Kurşun Geçirmez Kafa Yapısı Skoru ile ölçüm; satış ekipleri için özel sürüm.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kurşun GeçirmezKafa Yapısı™",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi/",
+        "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/kurumsal/kafa-yapisi-atolyesi/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/tedx-oan-sahne-genis.jpg",
+          "alt": "Ziya Şakir Yılmaz, sahnede katılımcılarla buluşuyor.",
+          "width": "1920",
+          "height": "1080",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 30538
+    },
+    {
+      "route": "/kurumsal/liderlik-egitimi/",
+      "kind": "page",
+      "title": "Kurumsal Liderlik Eğitimi: Etkiyi Çoğaltmak | Ziya Şakir Yılmaz",
+      "description": "Yönetici kadroları için kurumsal liderlik eğitimi: delegasyon, geri bildirim, kriz liderliği, lider yetiştirme. 70.000 kişilik ekip ve Bayer Country Manager deneyiminden çoğaltma modeli. Teklif alın.",
+      "canonical": "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi/",
+      "ogURL": "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi/",
+      "ogTitle": "Kurumsal Liderlik Eğitimi: Etkiyi Çoğaltmak | Ziya Şakir Yılmaz",
+      "ogDescription": "Yönetici kadroları için kurumsal liderlik eğitimi: delegasyon, geri bildirim, kriz liderliği, lider yetiştirme. 70.000 kişilik ekip ve Bayer Country Manager deneyiminden çoğaltma modeli. Teklif alın.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurumsal Liderlik Eğitimi: Etkiyi Çoğaltmak | Ziya Şakir Yılmaz",
+      "twitterDescription": "Yönetici kadroları için kurumsal liderlik eğitimi: delegasyon, geri bildirim, kriz liderliği, lider yetiştirme. 70.000 kişilik ekip ve Bayer Country Manager deneyiminden çoğaltma modeli. Teklif alın.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Liderlik: Etkiyi Çoğaltmak",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi/",
+        "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/kurumsal/liderlik-egitimi/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/salon-genis.webp",
+          "alt": "Ziya Şakir Yılmaz, sahnede katılımcılarla buluşuyor.",
+          "width": "1800",
+          "height": "1013",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 30359
+    },
+    {
+      "route": "/kurumsal/satis-egitimi/",
+      "kind": "page",
+      "title": "Kurumsal Satış Eğitimi: Satışın Mühendisliği | Ziya Şakir Yılmaz",
+      "description": "Satış ekipleri için kurumsal satış eğitimi: itiraz karşılama, kapanış, takip, satışçı kafa yapısı. Ölçüm öncesi ve sonrası, gerçek diyaloglar, 84 ülkelik saha deneyimi. Teklif ve 30 dakikalık ücretsiz tanı görüşmesi.",
+      "canonical": "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi/",
+      "ogURL": "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi/",
+      "ogTitle": "Kurumsal Satış Eğitimi: Satışın Mühendisliği | Ziya Şakir Yılmaz",
+      "ogDescription": "Satış ekipleri için kurumsal satış eğitimi: itiraz karşılama, kapanış, takip, satışçı kafa yapısı. Ölçüm öncesi ve sonrası, gerçek diyaloglar, 84 ülkelik saha deneyimi. Teklif ve 30 dakikalık ücretsiz tanı görüşmesi.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurumsal Satış Eğitimi: Satışın Mühendisliği | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satış ekipleri için kurumsal satış eğitimi: itiraz karşılama, kapanış, takip, satışçı kafa yapısı. Ölçüm öncesi ve sonrası, gerçek diyaloglar, 84 ülkelik saha deneyimi. Teklif ve 30 dakikalık ücretsiz tanı görüşmesi.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satışın Mühendisliği",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi/",
+        "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/kurumsal/satis-egitimi/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/salon-genis.webp",
+          "alt": "Ziya Şakir Yılmaz, sahnede katılımcılarla buluşuyor.",
+          "width": "1800",
+          "height": "1013",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 30795
+    },
+    {
+      "route": "/liderlik/",
+      "kind": "page",
+      "title": "Liderlik Nedir? Liderliğin Mühendislik Rehberi | Liderlik; Ziya Şakir Yılmaz",
+      "description": "Liderlik nedir, lider ve yönetici farkı, delegasyon, geri bildirim, takım yönetimi ve kriz liderliği. Ansiklopedik tanım değil; karar anlarının pratiği.",
+      "canonical": "https://ziyasakiryilmaz.com/liderlik/",
+      "ogURL": "https://ziyasakiryilmaz.com/liderlik/",
+      "ogTitle": "Liderlik Nedir? Liderliğin Mühendislik Rehberi | Liderlik; Ziya Şakir Yılmaz",
+      "ogDescription": "Liderlik nedir, lider ve yönetici farkı, delegasyon, geri bildirim, takım yönetimi ve kriz liderliği. Ansiklopedik tanım değil; karar anlarının pratiği.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Liderlik Nedir? Liderliğin Mühendislik Rehberi | Liderlik; Ziya Şakir Yılmaz",
+      "twitterDescription": "Liderlik nedir, lider ve yönetici farkı, delegasyon, geri bildirim, takım yönetimi ve kriz liderliği. Ansiklopedik tanım değil; karar anlarının pratiği.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Etkiniz, siz odadayokken de sürsün.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/liderlik/",
+        "https://ziyasakiryilmaz.com/liderlik/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/liderlik/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/salon-genis.webp",
+          "alt": "Katılımcıların Ziya Şakir Yılmaz’ı dinlediği geniş salon.",
+          "width": "1800",
+          "height": "1013",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 32011
+    },
+    {
+      "route": "/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "kind": "article",
+      "title": "Alışkanlık Kazanmak Kaç Gün Sürer? 66 Gün Gerçeği | Ziya Şakir Yılmaz",
+      "description": "Alışkanlık kazanmak 21 gün mü sürer? Bilim ortalama 66 gün diyor (18 ile 254 gün arası). Başarı Mühendisliği bakışıyla alışkanlık tasarımı, 5 adım ve 66 Günlük Oyun Planı.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "ogTitle": "Alışkanlık Kazanmak Kaç Gün Sürer? 66 Gün Gerçeği | Ziya Şakir Yılmaz",
+      "ogDescription": "Alışkanlık kazanmak 21 gün mü sürer? Bilim ortalama 66 gün diyor (18 ile 254 gün arası). Başarı Mühendisliği bakışıyla alışkanlık tasarımı, 5 adım ve 66 Günlük Oyun Planı.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Alışkanlık Kazanmak Kaç Gün Sürer? 66 Gün Gerçeği | Ziya Şakir Yılmaz",
+      "twitterDescription": "Alışkanlık kazanmak 21 gün mü sürer? Bilim ortalama 66 gün diyor (18 ile 254 gün arası). Başarı Mühendisliği bakışıyla alışkanlık tasarımı, 5 adım ve 66 Günlük Oyun Planı.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Alışkanlık Kazanmak Kaç Gün Sürer? 21 Gün Efsanesi, 66 Gün Gerçeği",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+        "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+        "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/#article",
+        "https://ziyasakiryilmaz.com/makaleler/aliskanlik-kazanmak-kac-gun-surer/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Alışkanlık Kazanmak Kaç Gün Sürer? 21 Gün Efsanesi, 66 Gün Gerçeği",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 35138
+    },
+    {
+      "route": "/makaleler/b2b-satis/",
+      "kind": "article",
+      "title": "B2B Satış: Kurumsal Satışın Yol Haritası | Ziya Şakir Yılmaz",
+      "description": "B2B satış rehberi: kurumsal satışın B2C'den farkları, 6-10 kişilik karar komitesi, uzun satış döngüsü yönetimi, şampiyon bulma ve RFP tuzakları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/b2b-satis/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/b2b-satis/",
+      "ogTitle": "B2B Satış: Kurumsal Satışın Yol Haritası | Ziya Şakir Yılmaz",
+      "ogDescription": "B2B satış rehberi: kurumsal satışın B2C'den farkları, 6-10 kişilik karar komitesi, uzun satış döngüsü yönetimi, şampiyon bulma ve RFP tuzakları.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "B2B Satış: Kurumsal Satışın Yol Haritası | Ziya Şakir Yılmaz",
+      "twitterDescription": "B2B satış rehberi: kurumsal satışın B2C'den farkları, 6-10 kişilik karar komitesi, uzun satış döngüsü yönetimi, şampiyon bulma ve RFP tuzakları.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "B2B Satış: Kurumsal Satışın Yol Haritası",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/b2b-satis/",
+        "https://ziyasakiryilmaz.com/makaleler/b2b-satis/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/b2b-satis/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/b2b-satis/",
+        "https://ziyasakiryilmaz.com/makaleler/b2b-satis/#article",
+        "https://ziyasakiryilmaz.com/makaleler/b2b-satis/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "B2B Satış: Kurumsal Satışın Yol Haritası",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 41314
+    },
+    {
+      "route": "/makaleler/basari-nedir/",
+      "kind": "article",
+      "title": "Başarı Nedir? Ölçülebilir Bir Tanım | Ziya Şakir Yılmaz",
+      "description": "Başarı nedir? Ziya Şakir Yılmaz'a göre ölçülebilir tanım: hedef, sistem, alışkanlık ve ölçümle tasarlanan süreç. Bilimsel veriler ve 5 adımlık protokol.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/basari-nedir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/basari-nedir/",
+      "ogTitle": "Başarı Nedir? Ölçülebilir Bir Tanım | Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı nedir? Ziya Şakir Yılmaz'a göre ölçülebilir tanım: hedef, sistem, alışkanlık ve ölçümle tasarlanan süreç. Bilimsel veriler ve 5 adımlık protokol.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Başarı Nedir? Ölçülebilir Bir Tanım | Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı nedir? Ziya Şakir Yılmaz'a göre ölçülebilir tanım: hedef, sistem, alışkanlık ve ölçümle tasarlanan süreç. Bilimsel veriler ve 5 adımlık protokol.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Başarı Nedir? Ölçülebilir Bir Tanım",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/basari-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/basari-nedir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/basari-nedir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/basari-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/basari-nedir/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Başarı Nedir? Ölçülebilir Bir Tanım",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36866
+    },
+    {
+      "route": "/makaleler/basari-ogrenilebilir-mi/",
+      "kind": "article",
+      "title": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor? | Ziya Şakir Yılmaz",
+      "description": "Başarı öğrenilebilir mi? Ericsson'ın bilinçli pratik araştırması, Macnamara 2014 meta-analizinin dürüst sınırları ve öğrenilebilir dört başarı bileşeni.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/",
+      "ogTitle": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor? | Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı öğrenilebilir mi? Ericsson'ın bilinçli pratik araştırması, Macnamara 2014 meta-analizinin dürüst sınırları ve öğrenilebilir dört başarı bileşeni.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı öğrenilebilir mi? Ericsson'ın bilinçli pratik araştırması, Macnamara 2014 meta-analizinin dürüst sınırları ve öğrenilebilir dört başarı bileşeni.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/",
+        "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/",
+        "https://ziyasakiryilmaz.com/makaleler/basari-ogrenilebilir-mi/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor?",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36286
+    },
+    {
+      "route": "/makaleler/delegasyon/",
+      "kind": "article",
+      "title": "Delegasyon: Yetki Devrinin Mühendisliği | Ziya Şakir Yılmaz",
+      "description": "Delegasyon nasıl yapılır? Bırakamama psikolojisi, 5 seviyeli merdiven, maymun yönetimi ve Gallup verileri. 70.000 kişilik ekipten saha dersleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/delegasyon/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/delegasyon/",
+      "ogTitle": "Delegasyon: Yetki Devrinin Mühendisliği | Ziya Şakir Yılmaz",
+      "ogDescription": "Delegasyon nasıl yapılır? Bırakamama psikolojisi, 5 seviyeli merdiven, maymun yönetimi ve Gallup verileri. 70.000 kişilik ekipten saha dersleri.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Delegasyon: Yetki Devrinin Mühendisliği | Ziya Şakir Yılmaz",
+      "twitterDescription": "Delegasyon nasıl yapılır? Bırakamama psikolojisi, 5 seviyeli merdiven, maymun yönetimi ve Gallup verileri. 70.000 kişilik ekipten saha dersleri.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Delegasyon: Yetki Devrinin Mühendisliği",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/delegasyon/",
+        "https://ziyasakiryilmaz.com/makaleler/delegasyon/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/delegasyon/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/delegasyon/",
+        "https://ziyasakiryilmaz.com/makaleler/delegasyon/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Delegasyon: Yetki Devrinin Mühendisliği",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 37741
+    },
+    {
+      "route": "/makaleler/disiplin-nasil-kazanilir/",
+      "kind": "article",
+      "title": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler | Ziya Şakir Yılmaz",
+      "description": "Disiplin nasıl kazanılır? 21 gün efsanesinin düzeltilmesi, Lally'nin 66 gün bulgusu, grit ve irade gücü araştırmalarıyla kanıta dayalı 5 adımlık yöntem.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/",
+      "ogTitle": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler | Ziya Şakir Yılmaz",
+      "ogDescription": "Disiplin nasıl kazanılır? 21 gün efsanesinin düzeltilmesi, Lally'nin 66 gün bulgusu, grit ve irade gücü araştırmalarıyla kanıta dayalı 5 adımlık yöntem.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler | Ziya Şakir Yılmaz",
+      "twitterDescription": "Disiplin nasıl kazanılır? 21 gün efsanesinin düzeltilmesi, Lally'nin 66 gün bulgusu, grit ve irade gücü araştırmalarıyla kanıta dayalı 5 adımlık yöntem.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/",
+        "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/",
+        "https://ziyasakiryilmaz.com/makaleler/disiplin-nasil-kazanilir/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36854
+    },
+    {
+      "route": "/makaleler/geri-bildirim-nasil-verilir/",
+      "kind": "article",
+      "title": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler | Ziya Şakir Yılmaz",
+      "description": "Geri bildirim nasıl verilir? SBI modeli, sandviç yönteminin sorunları, kötü ve iyi versiyonuyla 10 örnek cümle ve geri bildirim alma becerisi rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/",
+      "ogTitle": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler | Ziya Şakir Yılmaz",
+      "ogDescription": "Geri bildirim nasıl verilir? SBI modeli, sandviç yönteminin sorunları, kötü ve iyi versiyonuyla 10 örnek cümle ve geri bildirim alma becerisi rehberi.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler | Ziya Şakir Yılmaz",
+      "twitterDescription": "Geri bildirim nasıl verilir? SBI modeli, sandviç yönteminin sorunları, kötü ve iyi versiyonuyla 10 örnek cümle ve geri bildirim alma becerisi rehberi.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/",
+        "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/",
+        "https://ziyasakiryilmaz.com/makaleler/geri-bildirim-nasil-verilir/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 39656
+    },
+    {
+      "route": "/makaleler/growth-mindset-nedir/",
+      "kind": "article",
+      "title": "Growth Mindset (Gelişim Zihniyeti) Nedir? | Ziya Şakir Yılmaz",
+      "description": "Growth mindset (gelişim zihniyeti) nedir? Dweck'in çalışmaları, Yeager'ın Nature deneyi ve Sisk meta-analizi ışığında dürüst rehber, pratik adımlar.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/",
+      "ogTitle": "Growth Mindset (Gelişim Zihniyeti) Nedir? | Ziya Şakir Yılmaz",
+      "ogDescription": "Growth mindset (gelişim zihniyeti) nedir? Dweck'in çalışmaları, Yeager'ın Nature deneyi ve Sisk meta-analizi ışığında dürüst rehber, pratik adımlar.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Growth Mindset (Gelişim Zihniyeti) Nedir? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Growth mindset (gelişim zihniyeti) nedir? Dweck'in çalışmaları, Yeager'ın Nature deneyi ve Sisk meta-analizi ışığında dürüst rehber, pratik adımlar.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Growth Mindset (Gelişim Zihniyeti) Nedir?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/#article",
+        "https://ziyasakiryilmaz.com/makaleler/growth-mindset-nedir/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Growth Mindset (Gelişim Zihniyeti) Nedir?",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 40060
+    },
+    {
+      "route": "/makaleler/hedef-nasil-belirlenir/",
+      "kind": "article",
+      "title": "Hedef Nasıl Belirlenir? SMART'tan Sisteme | Ziya Şakir Yılmaz",
+      "description": "Hedef nasıl belirlenir? Locke ve Latham'ın hedef koyma teorisi, SMART modelinin eksikleri ve hedefi haftalık davranışa çeviren Tasarım aşaması bu yazıda.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/",
+      "ogTitle": "Hedef Nasıl Belirlenir? SMART'tan Sisteme | Ziya Şakir Yılmaz",
+      "ogDescription": "Hedef nasıl belirlenir? Locke ve Latham'ın hedef koyma teorisi, SMART modelinin eksikleri ve hedefi haftalık davranışa çeviren Tasarım aşaması bu yazıda.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Hedef Nasıl Belirlenir? SMART'tan Sisteme | Ziya Şakir Yılmaz",
+      "twitterDescription": "Hedef nasıl belirlenir? Locke ve Latham'ın hedef koyma teorisi, SMART modelinin eksikleri ve hedefi haftalık davranışa çeviren Tasarım aşaması bu yazıda.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Hedef Nasıl Belirlenir? SMART'tan Sisteme",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/",
+        "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/",
+        "https://ziyasakiryilmaz.com/makaleler/hedef-nasil-belirlenir/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Hedef Nasıl Belirlenir? SMART'tan Sisteme",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36933
+    },
+    {
+      "route": "/makaleler/",
+      "kind": "page",
+      "title": "Makaleler: 30 Cornerstone Rehber | Ziya Şakir Yılmaz",
+      "description": "Başarı, kafa yapısı, satış ve liderlik üzerine 30 derin Türkçe rehber: her biri 30 Saniyede Cevap ile açılır, doğrulanmış araştırmalarla ilerler, testle kapanır.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/",
+      "ogTitle": "Makaleler: 30 Cornerstone Rehber | Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı, kafa yapısı, satış ve liderlik üzerine 30 derin Türkçe rehber: her biri 30 Saniyede Cevap ile açılır, doğrulanmış araştırmalarla ilerler, testle kapanır.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Makaleler: 30 Cornerstone Rehber | Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı, kafa yapısı, satış ve liderlik üzerine 30 derin Türkçe rehber: her biri 30 Saniyede Cevap ile açılır, doğrulanmış araştırmalarla ilerler, testle kapanır.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "30 cornerstone rehber",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/",
+        "https://ziyasakiryilmaz.com/makaleler/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 24016
+    },
+    {
+      "route": "/makaleler/itiraz-karsilama/",
+      "kind": "article",
+      "title": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap) | Ziya Şakir Yılmaz",
+      "description": "Satışta itiraz karşılama rehberi: mazeret ve itiraz farkı, dört adımlı karşılama akışı ve en sık duyulan 12 itiraza profesyonel cevap örnekleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/",
+      "ogTitle": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap) | Ziya Şakir Yılmaz",
+      "ogDescription": "Satışta itiraz karşılama rehberi: mazeret ve itiraz farkı, dört adımlı karşılama akışı ve en sık duyulan 12 itiraza profesyonel cevap örnekleri.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap) | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satışta itiraz karşılama rehberi: mazeret ve itiraz farkı, dört adımlı karşılama akışı ve en sık duyulan 12 itiraza profesyonel cevap örnekleri.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap)",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/",
+        "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/",
+        "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/#article",
+        "https://ziyasakiryilmaz.com/makaleler/itiraz-karsilama/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap)",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 42907
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-degisir-mi/",
+      "kind": "article",
+      "title": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı | Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı değişir mi? Londra taksi şoförleri, jonglörlük deneyi ve yetişkin nöroplastisitesi net cevap veriyor: değişir ama tekrarla. Kanıtlar burada.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/",
+      "ogTitle": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı | Ziya Şakir Yılmaz",
+      "ogDescription": "Kafa yapısı değişir mi? Londra taksi şoförleri, jonglörlük deneyi ve yetişkin nöroplastisitesi net cevap veriyor: değişir ama tekrarla. Kanıtlar burada.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kafa yapısı değişir mi? Londra taksi şoförleri, jonglörlük deneyi ve yetişkin nöroplastisitesi net cevap veriyor: değişir ama tekrarla. Kanıtlar burada.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/#article",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-degisir-mi/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 39665
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-nasil-degisir/",
+      "kind": "article",
+      "title": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası | Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı nasıl değişir? Nöroplastisite araştırmaları beynin deneyimle fiziksel olarak değiştiğini gösteriyor. Bilimsel yol haritası bu makalede.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/",
+      "ogTitle": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası | Ziya Şakir Yılmaz",
+      "ogDescription": "Kafa yapısı nasıl değişir? Nöroplastisite araştırmaları beynin deneyimle fiziksel olarak değiştiğini gösteriyor. Bilimsel yol haritası bu makalede.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kafa yapısı nasıl değişir? Nöroplastisite araştırmaları beynin deneyimle fiziksel olarak değiştiğini gösteriyor. Bilimsel yol haritası bu makalede.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/#article",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nasil-degisir/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 41181
+    },
+    {
+      "route": "/makaleler/kafa-yapisi-nedir/",
+      "kind": "article",
+      "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi | Ziya Şakir Yılmaz",
+      "description": "Kafa yapısı nedir? Mindset kavramının Türkçe karşılığı, Carol Dweck'in zihniyet araştırmaları ve bu yapının değişip değişmediğinin bilimsel cevabı burada.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/",
+      "ogTitle": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi | Ziya Şakir Yılmaz",
+      "ogDescription": "Kafa yapısı nedir? Mindset kavramının Türkçe karşılığı, Carol Dweck'in zihniyet araştırmaları ve bu yapının değişip değişmediğinin bilimsel cevabı burada.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kafa yapısı nedir? Mindset kavramının Türkçe karşılığı, Carol Dweck'in zihniyet araştırmaları ve bu yapının değişip değişmediğinin bilimsel cevabı burada.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/#article",
+        "https://ziyasakiryilmaz.com/makaleler/kafa-yapisi-nedir/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 40324
+    },
+    {
+      "route": "/makaleler/kapanis-teknikleri/",
+      "kind": "article",
+      "title": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk | Ziya Şakir Yılmaz",
+      "description": "Satışta kapanış teknikleri rehberi: 10 yöntem, her birinin ne zaman çalıştığı ve ne zaman geri teptiği, kapanış sinyalleri ve dürüst kullanım uyarıları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/",
+      "ogTitle": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk | Ziya Şakir Yılmaz",
+      "ogDescription": "Satışta kapanış teknikleri rehberi: 10 yöntem, her birinin ne zaman çalıştığı ve ne zaman geri teptiği, kapanış sinyalleri ve dürüst kullanım uyarıları.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satışta kapanış teknikleri rehberi: 10 yöntem, her birinin ne zaman çalıştığı ve ne zaman geri teptiği, kapanış sinyalleri ve dürüst kullanım uyarıları.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/",
+        "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/",
+        "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/#article",
+        "https://ziyasakiryilmaz.com/makaleler/kapanis-teknikleri/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 42299
+    },
+    {
+      "route": "/makaleler/kriz-doneminde-liderlik/",
+      "kind": "article",
+      "title": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak | Ziya Şakir Yılmaz",
+      "description": "Kriz döneminde liderlik: iletişim ritmi, karar hızı ile doğruluk dengesi, sakinliğin bulaşıcılığı ve 5 adımlı kriz protokolü. Gallup ve Kahneman bulguları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/",
+      "ogTitle": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak | Ziya Şakir Yılmaz",
+      "ogDescription": "Kriz döneminde liderlik: iletişim ritmi, karar hızı ile doğruluk dengesi, sakinliğin bulaşıcılığı ve 5 adımlı kriz protokolü. Gallup ve Kahneman bulguları.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kriz döneminde liderlik: iletişim ritmi, karar hızı ile doğruluk dengesi, sakinliğin bulaşıcılığı ve 5 adımlı kriz protokolü. Gallup ve Kahneman bulguları.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/",
+        "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/",
+        "https://ziyasakiryilmaz.com/makaleler/kriz-doneminde-liderlik/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 38137
+    },
+    {
+      "route": "/makaleler/lider-yetistirmek/",
+      "kind": "article",
+      "title": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi | Ziya Şakir Yılmaz",
+      "description": "Lider yetiştirmek etkiyi çoğaltmanın son seviyesi. Maxwell'in 5 seviye modeli, yetki ve güven merdiveni, halefiyet planı ve 70.000 kişilik ekipten dersler.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/",
+      "ogTitle": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi | Ziya Şakir Yılmaz",
+      "ogDescription": "Lider yetiştirmek etkiyi çoğaltmanın son seviyesi. Maxwell'in 5 seviye modeli, yetki ve güven merdiveni, halefiyet planı ve 70.000 kişilik ekipten dersler.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi | Ziya Şakir Yılmaz",
+      "twitterDescription": "Lider yetiştirmek etkiyi çoğaltmanın son seviyesi. Maxwell'in 5 seviye modeli, yetki ve güven merdiveni, halefiyet planı ve 70.000 kişilik ekipten dersler.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yetistirmek/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36655
+    },
+    {
+      "route": "/makaleler/lider-yonetici-farki/",
+      "kind": "article",
+      "title": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum | Ziya Şakir Yılmaz",
+      "description": "Lider ve yönetici farkı nedir? Klişe tablolar yerine 20 gerçek iş durumu üzerinden karşılaştırma: hata anı, terfi, kriz. Kotter ve Gallup verileriyle.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/",
+      "ogTitle": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum | Ziya Şakir Yılmaz",
+      "ogDescription": "Lider ve yönetici farkı nedir? Klişe tablolar yerine 20 gerçek iş durumu üzerinden karşılaştırma: hata anı, terfi, kriz. Kotter ve Gallup verileriyle.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum | Ziya Şakir Yılmaz",
+      "twitterDescription": "Lider ve yönetici farkı nedir? Klişe tablolar yerine 20 gerçek iş durumu üzerinden karşılaştırma: hata anı, terfi, kriz. Kotter ve Gallup verileriyle.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/",
+        "https://ziyasakiryilmaz.com/makaleler/lider-yonetici-farki/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 37305
+    },
+    {
+      "route": "/makaleler/liderlik-nedir/",
+      "kind": "article",
+      "title": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi | Ziya Şakir Yılmaz",
+      "description": "Liderlik nedir? Etkiyi çoğaltma becerisi olarak liderlik: karar anları, Maxwell ve Kotter, Gallup verileri ve 70.000 kişilik ekipten saha dersleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/",
+      "ogTitle": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi | Ziya Şakir Yılmaz",
+      "ogDescription": "Liderlik nedir? Etkiyi çoğaltma becerisi olarak liderlik: karar anları, Maxwell ve Kotter, Gallup verileri ve 70.000 kişilik ekipten saha dersleri.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi | Ziya Şakir Yılmaz",
+      "twitterDescription": "Liderlik nedir? Etkiyi çoğaltma becerisi olarak liderlik: karar anları, Maxwell ve Kotter, Gallup verileri ve 70.000 kişilik ekipten saha dersleri.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-nedir/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36393
+    },
+    {
+      "route": "/makaleler/liderlik-stilleri/",
+      "kind": "article",
+      "title": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman? | Ziya Şakir Yılmaz",
+      "description": "Goleman'ın 6 liderlik stili: zorlayıcı, vizyoner, ilişkisel, demokratik, öncü ve koç. 3.871 yönetici araştırması, iklim etkileri ve durumsal geçiş rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/",
+      "ogTitle": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman? | Ziya Şakir Yılmaz",
+      "ogDescription": "Goleman'ın 6 liderlik stili: zorlayıcı, vizyoner, ilişkisel, demokratik, öncü ve koç. 3.871 yönetici araştırması, iklim etkileri ve durumsal geçiş rehberi.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Goleman'ın 6 liderlik stili: zorlayıcı, vizyoner, ilişkisel, demokratik, öncü ve koç. 3.871 yönetici araştırması, iklim etkileri ve durumsal geçiş rehberi.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/",
+        "https://ziyasakiryilmaz.com/makaleler/liderlik-stilleri/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman?",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 37502
+    },
+    {
+      "route": "/makaleler/mindset-nedir/",
+      "kind": "article",
+      "title": "Mindset Nedir? Türkçe Kapsamlı Rehber | Ziya Şakir Yılmaz",
+      "description": "Mindset nedir, ne demek? Kavramın 1909'a uzanan kökeni, Carol Dweck'in çerçevesi, iş dünyasındaki kullanımı ve Türkçedeki karşılığı bu kapsamlı rehberde.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/",
+      "ogTitle": "Mindset Nedir? Türkçe Kapsamlı Rehber | Ziya Şakir Yılmaz",
+      "ogDescription": "Mindset nedir, ne demek? Kavramın 1909'a uzanan kökeni, Carol Dweck'in çerçevesi, iş dünyasındaki kullanımı ve Türkçedeki karşılığı bu kapsamlı rehberde.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Mindset Nedir? Türkçe Kapsamlı Rehber | Ziya Şakir Yılmaz",
+      "twitterDescription": "Mindset nedir, ne demek? Kavramın 1909'a uzanan kökeni, Carol Dweck'in çerçevesi, iş dünyasındaki kullanımı ve Türkçedeki karşılığı bu kapsamlı rehberde.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Mindset Nedir? Türkçe Kapsamlı Rehber",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/#article",
+        "https://ziyasakiryilmaz.com/makaleler/mindset-nedir/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Mindset Nedir? Türkçe Kapsamlı Rehber",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 42019
+    },
+    {
+      "route": "/makaleler/motivasyon-mu-disiplin-mi/",
+      "kind": "article",
+      "title": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür | Ziya Şakir Yılmaz",
+      "description": "Motivasyon mu disiplin mi? Ego depletion tartışması, alışkanlık araştırmaları ve ikisinden güçlü olan sistem: ortam tasarımı, uygulama niyeti ve ritüel.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/",
+      "ogTitle": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür | Ziya Şakir Yılmaz",
+      "ogDescription": "Motivasyon mu disiplin mi? Ego depletion tartışması, alışkanlık araştırmaları ve ikisinden güçlü olan sistem: ortam tasarımı, uygulama niyeti ve ritüel.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür | Ziya Şakir Yılmaz",
+      "twitterDescription": "Motivasyon mu disiplin mi? Ego depletion tartışması, alışkanlık araştırmaları ve ikisinden güçlü olan sistem: ortam tasarımı, uygulama niyeti ve ritüel.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/",
+        "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/",
+        "https://ziyasakiryilmaz.com/makaleler/motivasyon-mu-disiplin-mi/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36636
+    },
+    {
+      "route": "/makaleler/nasil-basarili-olunur/",
+      "kind": "article",
+      "title": "Nasıl Başarılı Olunur? Sistem Yaklaşımı | Ziya Şakir Yılmaz",
+      "description": "Nasıl başarılı olunur? Hedef koymak yetmez, sistem gerekir. Başarı Mühendisliği'nin 5 aşaması ve Gollwitzer'in uygulama niyetleri araştırmasıyla somut yol.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/",
+      "ogTitle": "Nasıl Başarılı Olunur? Sistem Yaklaşımı | Ziya Şakir Yılmaz",
+      "ogDescription": "Nasıl başarılı olunur? Hedef koymak yetmez, sistem gerekir. Başarı Mühendisliği'nin 5 aşaması ve Gollwitzer'in uygulama niyetleri araştırmasıyla somut yol.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Nasıl Başarılı Olunur? Sistem Yaklaşımı | Ziya Şakir Yılmaz",
+      "twitterDescription": "Nasıl başarılı olunur? Hedef koymak yetmez, sistem gerekir. Başarı Mühendisliği'nin 5 aşaması ve Gollwitzer'in uygulama niyetleri araştırmasıyla somut yol.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Nasıl Başarılı Olunur? Sistem Yaklaşımı",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/",
+        "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/",
+        "https://ziyasakiryilmaz.com/makaleler/nasil-basarili-olunur/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Nasıl Başarılı Olunur? Sistem Yaklaşımı",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36383
+    },
+    {
+      "route": "/makaleler/neden-hedefler-yarim-kalir/",
+      "kind": "article",
+      "title": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden | Ziya Şakir Yılmaz",
+      "description": "Neden hedefler yarım kalır? Norcross'un yeni yıl kararı araştırmaları, planlama yanılgısı ve hedefleri yarıda bırakan 7 gerçek neden ile panzehirleri.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/",
+      "ogTitle": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden | Ziya Şakir Yılmaz",
+      "ogDescription": "Neden hedefler yarım kalır? Norcross'un yeni yıl kararı araştırmaları, planlama yanılgısı ve hedefleri yarıda bırakan 7 gerçek neden ile panzehirleri.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden | Ziya Şakir Yılmaz",
+      "twitterDescription": "Neden hedefler yarım kalır? Norcross'un yeni yıl kararı araştırmaları, planlama yanılgısı ve hedefleri yarıda bırakan 7 gerçek neden ile panzehirleri.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/",
+        "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/",
+        "https://ziyasakiryilmaz.com/makaleler/neden-hedefler-yarim-kalir/#article"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 36883
+    },
+    {
+      "route": "/makaleler/pahali-itirazi/",
+      "kind": "article",
+      "title": "'Pahalı' İtirazına 9 Profesyonel Cevap | Ziya Şakir Yılmaz",
+      "description": "Pahalı itirazına 9 profesyonel cevap: fiyat ve değer ayrımı, örnek cümlelerle 9 numaralı teknik ve fiyat görüşmesinde yapılmaması gereken hatalar.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/",
+      "ogTitle": "'Pahalı' İtirazına 9 Profesyonel Cevap | Ziya Şakir Yılmaz",
+      "ogDescription": "Pahalı itirazına 9 profesyonel cevap: fiyat ve değer ayrımı, örnek cümlelerle 9 numaralı teknik ve fiyat görüşmesinde yapılmaması gereken hatalar.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "'Pahalı' İtirazına 9 Profesyonel Cevap | Ziya Şakir Yılmaz",
+      "twitterDescription": "Pahalı itirazına 9 profesyonel cevap: fiyat ve değer ayrımı, örnek cümlelerle 9 numaralı teknik ve fiyat görüşmesinde yapılmaması gereken hatalar.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "'Pahalı' İtirazına 9 Profesyonel Cevap",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/",
+        "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/",
+        "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/#article",
+        "https://ziyasakiryilmaz.com/makaleler/pahali-itirazi/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "'Pahalı' İtirazına 9 Profesyonel Cevap",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 41493
+    },
+    {
+      "route": "/makaleler/reddedilme-korkusu/",
+      "kind": "article",
+      "title": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları | Ziya Şakir Yılmaz",
+      "description": "Reddedilme korkusu neden bu kadar güçlü? Beyindeki karşılığı, evrimsel kökü ve kademeli maruz kalma protokolüyle bu korkuyu aşmanın somut yolları burada.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/",
+      "ogTitle": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları | Ziya Şakir Yılmaz",
+      "ogDescription": "Reddedilme korkusu neden bu kadar güçlü? Beyindeki karşılığı, evrimsel kökü ve kademeli maruz kalma protokolüyle bu korkuyu aşmanın somut yolları burada.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları | Ziya Şakir Yılmaz",
+      "twitterDescription": "Reddedilme korkusu neden bu kadar güçlü? Beyindeki karşılığı, evrimsel kökü ve kademeli maruz kalma protokolüyle bu korkuyu aşmanın somut yolları burada.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/",
+        "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/",
+        "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/#article",
+        "https://ziyasakiryilmaz.com/makaleler/reddedilme-korkusu/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 40774
+    },
+    {
+      "route": "/makaleler/satis-egitimi-nasil-secilir/",
+      "kind": "article",
+      "title": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter | Ziya Şakir Yılmaz",
+      "description": "Satış eğitimi nasıl seçilir? İK ve yöneticiler için 10 seçim kriteri, eğitmene sorulacak sorular ve kırmızı bayraklar. Dürüst bir satın alma rehberi.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/",
+      "ogTitle": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter | Ziya Şakir Yılmaz",
+      "ogDescription": "Satış eğitimi nasıl seçilir? İK ve yöneticiler için 10 seçim kriteri, eğitmene sorulacak sorular ve kırmızı bayraklar. Dürüst bir satın alma rehberi.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satış eğitimi nasıl seçilir? İK ve yöneticiler için 10 seçim kriteri, eğitmene sorulacak sorular ve kırmızı bayraklar. Dürüst bir satın alma rehberi.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/",
+        "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/",
+        "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/#article",
+        "https://ziyasakiryilmaz.com/makaleler/satis-egitimi-nasil-secilir/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 42824
+    },
+    {
+      "route": "/makaleler/satis-nedir/",
+      "kind": "article",
+      "title": "Satış Nedir? Mühendislik Bakışıyla Satış | Ziya Şakir Yılmaz",
+      "description": "Satış nedir? Dürüst tanım: değer aktarımı ve karar kolaylaştırma. Satışın kötü şöhretinin kaynağı ve beş halkalı satış zinciri modeli bu rehberde.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satis-nedir/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/satis-nedir/",
+      "ogTitle": "Satış Nedir? Mühendislik Bakışıyla Satış | Ziya Şakir Yılmaz",
+      "ogDescription": "Satış nedir? Dürüst tanım: değer aktarımı ve karar kolaylaştırma. Satışın kötü şöhretinin kaynağı ve beş halkalı satış zinciri modeli bu rehberde.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satış Nedir? Mühendislik Bakışıyla Satış | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satış nedir? Dürüst tanım: değer aktarımı ve karar kolaylaştırma. Satışın kötü şöhretinin kaynağı ve beş halkalı satış zinciri modeli bu rehberde.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satış Nedir? Mühendislik Bakışıyla Satış",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/satis-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/satis-nedir/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/satis-nedir/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/satis-nedir/",
+        "https://ziyasakiryilmaz.com/makaleler/satis-nedir/#article",
+        "https://ziyasakiryilmaz.com/makaleler/satis-nedir/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Satış Nedir? Mühendislik Bakışıyla Satış",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 40702
+    },
+    {
+      "route": "/makaleler/satis-teknikleri/",
+      "kind": "article",
+      "title": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem | Ziya Şakir Yılmaz",
+      "description": "Sahada kanıtlanmış 12 satış tekniği: SPIN soruları, sosyal kanıt, kontrast, susma ve daha fazlası. Her teknik için örnek Türkçe cümleler bu rehberde.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/",
+      "ogTitle": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem | Ziya Şakir Yılmaz",
+      "ogDescription": "Sahada kanıtlanmış 12 satış tekniği: SPIN soruları, sosyal kanıt, kontrast, susma ve daha fazlası. Her teknik için örnek Türkçe cümleler bu rehberde.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem | Ziya Şakir Yılmaz",
+      "twitterDescription": "Sahada kanıtlanmış 12 satış tekniği: SPIN soruları, sosyal kanıt, kontrast, susma ve daha fazlası. Her teknik için örnek Türkçe cümleler bu rehberde.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/",
+        "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/",
+        "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/#article",
+        "https://ziyasakiryilmaz.com/makaleler/satis-teknikleri/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 40511
+    },
+    {
+      "route": "/makaleler/satisci-kafa-yapisi/",
+      "kind": "article",
+      "title": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur? | Ziya Şakir Yılmaz",
+      "description": "Satışçı kafa yapısı rehberi: reddedilmeye dayanıklı zihin kurma, Seligman'ın iyimserlik araştırması ve Kurşun Geçirmez Kafa Yapısı ile toparlanma hızı.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/",
+      "ogTitle": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur? | Ziya Şakir Yılmaz",
+      "ogDescription": "Satışçı kafa yapısı rehberi: reddedilmeye dayanıklı zihin kurma, Seligman'ın iyimserlik araştırması ve Kurşun Geçirmez Kafa Yapısı ile toparlanma hızı.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Satışçı kafa yapısı rehberi: reddedilmeye dayanıklı zihin kurma, Seligman'ın iyimserlik araştırması ve Kurşun Geçirmez Kafa Yapısı ile toparlanma hızı.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/",
+        "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/",
+        "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/#article",
+        "https://ziyasakiryilmaz.com/makaleler/satisci-kafa-yapisi/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur?",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 40328
+    },
+    {
+      "route": "/makaleler/zihinsel-dayaniklilik/",
+      "kind": "article",
+      "title": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir? | Ziya Şakir Yılmaz",
+      "description": "Zihinsel dayanıklılık nedir, nasıl geliştirilir? Spor psikolojisinden iş hayatına bilimsel bulgular ve Kurşun Geçirmez Kafa Yapısı zırh katmanları.",
+      "canonical": "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/",
+      "ogURL": "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/",
+      "ogTitle": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir? | Ziya Şakir Yılmaz",
+      "ogDescription": "Zihinsel dayanıklılık nedir, nasıl geliştirilir? Spor psikolojisinden iş hayatına bilimsel bulgular ve Kurşun Geçirmez Kafa Yapısı zırh katmanları.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir? | Ziya Şakir Yılmaz",
+      "twitterDescription": "Zihinsel dayanıklılık nedir, nasıl geliştirilir? Spor psikolojisinden iş hayatına bilimsel bulgular ve Kurşun Geçirmez Kafa Yapısı zırh katmanları.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Article",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/",
+        "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/#breadcrumb",
+        "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/",
+        "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/#article",
+        "https://ziyasakiryilmaz.com/makaleler/zihinsel-dayaniklilik/#faq"
+      ],
+      "dates": [
+        {
+          "type": "Article",
+          "name": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir?",
+          "datePublished": "2026-09-29",
+          "dateModified": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 41418
+    },
+    {
+      "route": "/mentorluk/",
+      "kind": "page",
+      "title": "Mentorluk; Girişimci ve Yöneticiler için Birebir Çalışma | Ziya Şakir Yılmaz",
+      "description": "Ziya Şakir Yılmaz ile birebir mentorluk: hedef, ekip, kişisel marka ve büyüme odağında sınırlı kontenjanlı program. Girişimciler ve yöneticiler için başvuru sayfası.",
+      "canonical": "https://ziyasakiryilmaz.com/mentorluk/",
+      "ogURL": "https://ziyasakiryilmaz.com/mentorluk/",
+      "ogTitle": "Mentorluk; Girişimci ve Yöneticiler için Birebir Çalışma | Ziya Şakir Yılmaz",
+      "ogDescription": "Ziya Şakir Yılmaz ile birebir mentorluk: hedef, ekip, kişisel marka ve büyüme odağında sınırlı kontenjanlı program. Girişimciler ve yöneticiler için başvuru sayfası.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Mentorluk; Girişimci ve Yöneticiler için Birebir Çalışma | Ziya Şakir Yılmaz",
+      "twitterDescription": "Ziya Şakir Yılmaz ile birebir mentorluk: hedef, ekip, kişisel marka ve büyüme odağında sınırlı kontenjanlı program. Girişimciler ve yöneticiler için başvuru sayfası.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kendi yolunuz.Birlikte düşünelim.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/mentorluk/",
+        "https://ziyasakiryilmaz.com/mentorluk/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/mentorluk/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/kapi-satis2.webp",
+          "alt": "Ziya Şakir Yılmaz’ın iş portresi.",
+          "width": "900",
+          "height": "1200",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 22200
+    },
+    {
+      "route": "/notlar/not-001/",
+      "kind": "note",
+      "title": "Sakin kalan kazanır; Hayattan Notlar NOT 001 | Ziya Şakir Yılmaz",
+      "description": "Hayattan Notlar 001: İnsan sakin kaldığı her şeyin galibidir. Baskı anında zihnin nasıl çalıştığı üzerine kısa bir not.",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-001/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-001/",
+      "ogTitle": "Sakin kalan kazanır; Hayattan Notlar NOT 001 | Ziya Şakir Yılmaz",
+      "ogDescription": "Hayattan Notlar 001: İnsan sakin kaldığı her şeyin galibidir. Baskı anında zihnin nasıl çalıştığı üzerine kısa bir not.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Sakin kalan kazanır; Hayattan Notlar NOT 001 | Ziya Şakir Yılmaz",
+      "twitterDescription": "Hayattan Notlar 001: İnsan sakin kaldığı her şeyin galibidir. Baskı anında zihnin nasıl çalıştığı üzerine kısa bir not.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Sakin kalan kazanır",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-001/",
+        "https://ziyasakiryilmaz.com/notlar/not-001/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-001/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-001/",
+        "https://ziyasakiryilmaz.com/notlar/not-001/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Sakin kalan kazanır",
+          "datePublished": "2026-09-21"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 19033
+    },
+    {
+      "route": "/notlar/not-002/",
+      "kind": "note",
+      "title": "Potansiyel kurtarmaz, sistem kurtarır; Hayattan Notlar NOT 002 | Ziya Şakir Yılmaz",
+      "description": "Hayattan Notlar 002: Potansiyel bir vaat, sistem bir garantidir. Yetenekli insanların neden yarı yolda kaldığı üzerine.",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-002/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-002/",
+      "ogTitle": "Potansiyel kurtarmaz, sistem kurtarır; Hayattan Notlar NOT 002 | Ziya Şakir Yılmaz",
+      "ogDescription": "Hayattan Notlar 002: Potansiyel bir vaat, sistem bir garantidir. Yetenekli insanların neden yarı yolda kaldığı üzerine.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Potansiyel kurtarmaz, sistem kurtarır; Hayattan Notlar NOT 002 | Ziya Şakir Yılmaz",
+      "twitterDescription": "Hayattan Notlar 002: Potansiyel bir vaat, sistem bir garantidir. Yetenekli insanların neden yarı yolda kaldığı üzerine.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Potansiyel kurtarmaz, sistem kurtarır",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-002/",
+        "https://ziyasakiryilmaz.com/notlar/not-002/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-002/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-002/",
+        "https://ziyasakiryilmaz.com/notlar/not-002/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Potansiyel kurtarmaz, sistem kurtarır",
+          "datePublished": "2026-09-22"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 19035
+    },
+    {
+      "route": "/notlar/not-003/",
+      "kind": "note",
+      "title": "Hazır olmanı bekleme; Hayattan Notlar NOT 003 | Ziya Şakir Yılmaz",
+      "description": "Hayattan Notlar 003: Hazırlık hissi başlangıçtan önce gelmez, sonra gelir. Başlamak üzerine kısa bir not.",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-003/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-003/",
+      "ogTitle": "Hazır olmanı bekleme; Hayattan Notlar NOT 003 | Ziya Şakir Yılmaz",
+      "ogDescription": "Hayattan Notlar 003: Hazırlık hissi başlangıçtan önce gelmez, sonra gelir. Başlamak üzerine kısa bir not.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Hazır olmanı bekleme; Hayattan Notlar NOT 003 | Ziya Şakir Yılmaz",
+      "twitterDescription": "Hayattan Notlar 003: Hazırlık hissi başlangıçtan önce gelmez, sonra gelir. Başlamak üzerine kısa bir not.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Hazır olmanı bekleme",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-003/",
+        "https://ziyasakiryilmaz.com/notlar/not-003/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-003/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-003/",
+        "https://ziyasakiryilmaz.com/notlar/not-003/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Hazır olmanı bekleme",
+          "datePublished": "2026-09-23"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18723
+    },
+    {
+      "route": "/notlar/not-004/",
+      "kind": "note",
+      "title": "Hayır, bir veridir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Bir arkadaşım dün beşinci \"hayır\"ı aldı ve bana yazdı: \"Bu iş bana göre değilmiş.\" Ona şunu sordum: beş hayırın ortak noktası ne? Düşündü. Hepsi fiyat…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-004/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-004/",
+      "ogTitle": "Hayır, bir veridir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "ogDescription": "Bir arkadaşım dün beşinci \"hayır\"ı aldı ve bana yazdı: \"Bu iş bana göre değilmiş.\" Ona şunu sordum: beş hayırın ortak noktası ne? Düşündü. Hepsi fiyat…",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Hayır, bir veridir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "twitterDescription": "Bir arkadaşım dün beşinci \"hayır\"ı aldı ve bana yazdı: \"Bu iş bana göre değilmiş.\" Ona şunu sordum: beş hayırın ortak noktası ne? Düşündü. Hepsi fiyat…",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Hayır, bir veridir",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-004/",
+        "https://ziyasakiryilmaz.com/notlar/not-004/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-004/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-004/",
+        "https://ziyasakiryilmaz.com/notlar/not-004/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Hayır, bir veridir",
+          "datePublished": "2026-09-24"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18423
+    },
+    {
+      "route": "/notlar/not-005/",
+      "kind": "note",
+      "title": "Henüz | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Kızık köyünde büyürken en sık duyduğum cümlelerden biri şuydu: \"Bizden bir şey olmaz.\" Kimse kötü niyetle söylemiyordu; bir tespit gibi söyleniyordu. …",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-005/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-005/",
+      "ogTitle": "Henüz | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "ogDescription": "Kızık köyünde büyürken en sık duyduğum cümlelerden biri şuydu: \"Bizden bir şey olmaz.\" Kimse kötü niyetle söylemiyordu; bir tespit gibi söyleniyordu. …",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Henüz | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "twitterDescription": "Kızık köyünde büyürken en sık duyduğum cümlelerden biri şuydu: \"Bizden bir şey olmaz.\" Kimse kötü niyetle söylemiyordu; bir tespit gibi söyleniyordu. …",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Henüz",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-005/",
+        "https://ziyasakiryilmaz.com/notlar/not-005/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-005/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-005/",
+        "https://ziyasakiryilmaz.com/notlar/not-005/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Henüz",
+          "datePublished": "2026-09-25"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18280
+    },
+    {
+      "route": "/notlar/not-006/",
+      "kind": "note",
+      "title": "Kültür, en kötü gününde tolere ettiğin şeydir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Bir yönetici bana ekibinin kültürünü anlatıyordu: dürüstlük, saygı, sorumluluk. Duvarda da yazıyordu. Sonra en iyi satışçısının müşteriye yalan söyled…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-006/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-006/",
+      "ogTitle": "Kültür, en kötü gününde tolere ettiğin şeydir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "ogDescription": "Bir yönetici bana ekibinin kültürünü anlatıyordu: dürüstlük, saygı, sorumluluk. Duvarda da yazıyordu. Sonra en iyi satışçısının müşteriye yalan söyled…",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kültür, en kötü gününde tolere ettiğin şeydir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "twitterDescription": "Bir yönetici bana ekibinin kültürünü anlatıyordu: dürüstlük, saygı, sorumluluk. Duvarda da yazıyordu. Sonra en iyi satışçısının müşteriye yalan söyled…",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kültür, en kötü gününde tolere ettiğin şeydir",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-006/",
+        "https://ziyasakiryilmaz.com/notlar/not-006/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-006/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-006/",
+        "https://ziyasakiryilmaz.com/notlar/not-006/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Kültür, en kötü gününde tolere ettiğin şeydir",
+          "datePublished": "2026-09-26"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18556
+    },
+    {
+      "route": "/notlar/not-007/",
+      "kind": "note",
+      "title": "Sabah dokuzda ne yapıyorsun? | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Yetmiş bin kişilik bir ekipte kimin büyüyeceğini hedeflerinden anlayamazsın; herkesin hedefi büyüktür. Kimin büyüyeceğini sabah dokuzda ne yaptığından…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-007/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-007/",
+      "ogTitle": "Sabah dokuzda ne yapıyorsun? | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "ogDescription": "Yetmiş bin kişilik bir ekipte kimin büyüyeceğini hedeflerinden anlayamazsın; herkesin hedefi büyüktür. Kimin büyüyeceğini sabah dokuzda ne yaptığından…",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Sabah dokuzda ne yapıyorsun? | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "twitterDescription": "Yetmiş bin kişilik bir ekipte kimin büyüyeceğini hedeflerinden anlayamazsın; herkesin hedefi büyüktür. Kimin büyüyeceğini sabah dokuzda ne yaptığından…",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Sabah dokuzda ne yapıyorsun?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-007/",
+        "https://ziyasakiryilmaz.com/notlar/not-007/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-007/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-007/",
+        "https://ziyasakiryilmaz.com/notlar/not-007/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Sabah dokuzda ne yapıyorsun?",
+          "datePublished": "2026-09-27"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18404
+    },
+    {
+      "route": "/notlar/not-008/",
+      "kind": "note",
+      "title": "Güvenlik görevlisini işten çıkarma | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "İçimizdeki alarm sistemini, amigdalayı, düşman gibi görmeyi öğretiyorlar. Oysa o görevli seni hayatta tuttu; karanlık sokakta, hızlı arabada, kötü niy…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-008/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-008/",
+      "ogTitle": "Güvenlik görevlisini işten çıkarma | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "ogDescription": "İçimizdeki alarm sistemini, amigdalayı, düşman gibi görmeyi öğretiyorlar. Oysa o görevli seni hayatta tuttu; karanlık sokakta, hızlı arabada, kötü niy…",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Güvenlik görevlisini işten çıkarma | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "twitterDescription": "İçimizdeki alarm sistemini, amigdalayı, düşman gibi görmeyi öğretiyorlar. Oysa o görevli seni hayatta tuttu; karanlık sokakta, hızlı arabada, kötü niy…",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Güvenlik görevlisini işten çıkarma",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-008/",
+        "https://ziyasakiryilmaz.com/notlar/not-008/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-008/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-008/",
+        "https://ziyasakiryilmaz.com/notlar/not-008/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Güvenlik görevlisini işten çıkarma",
+          "datePublished": "2026-09-28"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18421
+    },
+    {
+      "route": "/notlar/not-009/",
+      "kind": "note",
+      "title": "Üç saniye sessizlik | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "description": "Satış eğitimlerinde en zor öğrettiğim teknik bir cümle olmaktan çok bir boşluk. Müşteri \"pahalı\" der; satışçı hemen konuşur. Savunur ya da indirir. İk…",
+      "canonical": "https://ziyasakiryilmaz.com/notlar/not-009/",
+      "ogURL": "https://ziyasakiryilmaz.com/notlar/not-009/",
+      "ogTitle": "Üç saniye sessizlik | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "ogDescription": "Satış eğitimlerinde en zor öğrettiğim teknik bir cümle olmaktan çok bir boşluk. Müşteri \"pahalı\" der; satışçı hemen konuşur. Savunur ya da indirir. İk…",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "article",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Üç saniye sessizlik | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "twitterDescription": "Satış eğitimlerinde en zor öğrettiğim teknik bir cümle olmaktan çok bir boşluk. Müşteri \"pahalı\" der; satışçı hemen konuşur. Savunur ya da indirir. İk…",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Üç saniye sessizlik",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "BlogPosting"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/notlar/not-009/",
+        "https://ziyasakiryilmaz.com/notlar/not-009/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/notlar/not-009/#breadcrumb",
+        "https://ziyasakiryilmaz.com/notlar/not-009/",
+        "https://ziyasakiryilmaz.com/notlar/not-009/#article"
+      ],
+      "dates": [
+        {
+          "type": "BlogPosting",
+          "name": "Üç saniye sessizlik",
+          "datePublished": "2026-09-29"
+        }
+      ],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 18353
+    },
+    {
+      "route": "/satis/",
+      "kind": "page",
+      "title": "Satış Nedir? Satışın Mühendislik Rehberi | Satış; Ziya Şakir Yılmaz",
+      "description": "Satış teknikleri, itiraz karşılama, kapanış, B2B satış ve satış psikolojisi. Teoriden değil sahadan: Satış, Türkçe'nin uygulayıcı satış kütüphanesi.",
+      "canonical": "https://ziyasakiryilmaz.com/satis/",
+      "ogURL": "https://ziyasakiryilmaz.com/satis/",
+      "ogTitle": "Satış Nedir? Satışın Mühendislik Rehberi | Satış; Ziya Şakir Yılmaz",
+      "ogDescription": "Satış teknikleri, itiraz karşılama, kapanış, B2B satış ve satış psikolojisi. Teoriden değil sahadan: Satış, Türkçe'nin uygulayıcı satış kütüphanesi.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Satış Nedir? Satışın Mühendislik Rehberi | Satış; Ziya Şakir Yılmaz",
+      "twitterDescription": "Satış teknikleri, itiraz karşılama, kapanış, B2B satış ve satış psikolojisi. Teoriden değil sahadan: Satış, Türkçe'nin uygulayıcı satış kütüphanesi.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Güven kur.Değer yarat.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/satis/",
+        "https://ziyasakiryilmaz.com/satis/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/satis/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/salon-genis.webp",
+          "alt": "Ziya Şakir Yılmaz bir eğitim salonunda katılımcılarla çalışıyor.",
+          "width": "1800",
+          "height": "1013",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 32842
+    },
+    {
+      "route": "/sozluk/",
+      "kind": "page",
+      "title": "Başarı Mühendisliği Sözlüğü: Kafa Yapısı, Satış, Liderlik Kavramları | Ziya Şakir Yılmaz",
+      "description": "Başarı, kafa yapısı, satış ve liderlik kavramlarının net Türkçe tanımları: mindset, growth mindset, zihinsel dayanıklılık, grit, delegasyon ve daha fazlası.",
+      "canonical": "https://ziyasakiryilmaz.com/sozluk/",
+      "ogURL": "https://ziyasakiryilmaz.com/sozluk/",
+      "ogTitle": "Başarı Mühendisliği Sözlüğü: Kafa Yapısı, Satış, Liderlik Kavramları | Ziya Şakir Yılmaz",
+      "ogDescription": "Başarı, kafa yapısı, satış ve liderlik kavramlarının net Türkçe tanımları: mindset, growth mindset, zihinsel dayanıklılık, grit, delegasyon ve daha fazlası.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Başarı Mühendisliği Sözlüğü: Kafa Yapısı, Satış, Liderlik Kavramları | Ziya Şakir Yılmaz",
+      "twitterDescription": "Başarı, kafa yapısı, satış ve liderlik kavramlarının net Türkçe tanımları: mindset, growth mindset, zihinsel dayanıklılık, grit, delegasyon ve daha fazlası.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Başarı mühendisliği sözlüğü",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "FAQPage",
+        "Question",
+        "Answer"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/sozluk/",
+        "https://ziyasakiryilmaz.com/sozluk/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/sozluk/#breadcrumb",
+        "https://ziyasakiryilmaz.com/sozluk/#faq"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 58029
+    },
+    {
+      "route": "/testler/",
+      "kind": "page",
+      "title": "Kurşun Geçirmez Kafa Yapısı Testi | Ziya Şakir Yılmaz",
+      "description": "Kurşun Geçirmez Kafa Yapısı Testi: 20 soru, 5 katman, ücretsiz kişisel öz değerlendirme.",
+      "canonical": "https://ziyasakiryilmaz.com/testler/",
+      "ogURL": "https://ziyasakiryilmaz.com/testler/",
+      "ogTitle": "Kurşun Geçirmez Kafa Yapısı Testi | Ziya Şakir Yılmaz",
+      "ogDescription": "Kurşun Geçirmez Kafa Yapısı Testi: 20 soru, 5 katman, ücretsiz kişisel öz değerlendirme.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurşun Geçirmez Kafa Yapısı Testi | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kurşun Geçirmez Kafa Yapısı Testi: 20 soru, 5 katman, ücretsiz kişisel öz değerlendirme.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kafa yapın kurşun geçirmez mi?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/testler/",
+        "https://ziyasakiryilmaz.com/testler/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/testler/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 24216,
+      "htmlBytes": 16732
+    },
+    {
+      "route": "/testler/kafa-yapisi-testi/",
+      "kind": "test",
+      "title": "Kurşun Geçirmez Kafa Yapısı Testi™; 3 Dakikada Zihinsel Zırh Skorun | Ziya Şakir Yılmaz",
+      "description": "Kafa yapın kurşun geçirmez mi? 20 soru, 5 zırh katmanı, 3 dakika. Ücretsiz Kurşun Geçirmez Kafa Yapısı Testi ile zihinsel dayanıklılık skorunu ve katman profilini öğren.",
+      "canonical": "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi/",
+      "ogURL": "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi/",
+      "ogTitle": "Kurşun Geçirmez Kafa Yapısı Testi™; 3 Dakikada Zihinsel Zırh Skorun | Ziya Şakir Yılmaz",
+      "ogDescription": "Kafa yapın kurşun geçirmez mi? 20 soru, 5 zırh katmanı, 3 dakika. Ücretsiz Kurşun Geçirmez Kafa Yapısı Testi ile zihinsel dayanıklılık skorunu ve katman profilini öğren.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Kurşun Geçirmez Kafa Yapısı Testi™; 3 Dakikada Zihinsel Zırh Skorun | Ziya Şakir Yılmaz",
+      "twitterDescription": "Kafa yapın kurşun geçirmez mi? 20 soru, 5 zırh katmanı, 3 dakika. Ücretsiz Kurşun Geçirmez Kafa Yapısı Testi ile zihinsel dayanıklılık skorunu ve katman profilini öğren.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Kafa yapın kurşun geçirmez mi?",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        "WebPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi/",
+        "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/testler/kafa-yapisi-testi/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/test-engine.js?v=ba795f5eb717",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 6997,
+      "cssGzip": 24216,
+      "htmlBytes": 29733
+    },
+    {
+      "route": "/ziya-sakir-yilmaz/",
+      "kind": "page",
+      "title": "Ziya Şakir Yılmaz Kimdir? | Başarı Mühendisi",
+      "description": "Ziya Şakir Yılmaz: Başarı Mühendisliği™ ve Kurşun Geçirmez Kafa Yapısı™ sistemlerinin kurucusu; yazar, eğitmen, konuşmacı. 600.000'den fazla insana eğitim, 84 ülkede iş ve sahne deneyimi, 5 TEDx konuşması, üç kitap; dördüncüsü ekimde.",
+      "canonical": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+      "ogURL": "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+      "ogTitle": "Ziya Şakir Yılmaz Kimdir? | Başarı Mühendisi",
+      "ogDescription": "Ziya Şakir Yılmaz: Başarı Mühendisliği™ ve Kurşun Geçirmez Kafa Yapısı™ sistemlerinin kurucusu; yazar, eğitmen, konuşmacı. 600.000'den fazla insana eğitim, 84 ülkede iş ve sahne deneyimi, 5 TEDx konuşması, üç kitap; dördüncüsü ekimde.",
+      "ogImage": "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+      "ogType": "website",
+      "ogSiteName": "Ziya Şakir Yılmaz",
+      "twitterTitle": "Ziya Şakir Yılmaz Kimdir? | Başarı Mühendisi",
+      "twitterDescription": "Ziya Şakir Yılmaz: Başarı Mühendisliği™ ve Kurşun Geçirmez Kafa Yapısı™ sistemlerinin kurucusu; yazar, eğitmen, konuşmacı. 600.000'den fazla insana eğitim, 84 ülkede iş ve sahne deneyimi, 5 TEDx konuşması, üç kitap; dördüncüsü ekimde.",
+      "lang": "tr",
+      "h1Count": 1,
+      "h1": "Ziya ŞakirYılmaz.",
+      "mainCount": 1,
+      "schemaTypes": [
+        "WebSite",
+        "Person",
+        [
+          "WebPage",
+          "ProfilePage"
+        ],
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "schemaErrors": [],
+      "schemaURLs": [
+        "https://ziyasakiryilmaz.com/",
+        "https://ziyasakiryilmaz.com/#website",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#person",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#webpage",
+        "https://ziyasakiryilmaz.com/assets/og-default.jpg",
+        "https://ziyasakiryilmaz.com/ziya-sakir-yilmaz/#breadcrumb"
+      ],
+      "dates": [],
+      "headingSkips": [],
+      "images": [
+        {
+          "src": "/assets/kapi-satis2.webp",
+          "alt": "Ziya Şakir Yılmaz’ın portresi.",
+          "width": "900",
+          "height": "1200",
+          "loading": "lazy",
+          "srcset": null,
+          "parent": "photo-crop"
+        }
+      ],
+      "scripts": [
+        "/assets/main.js?v=5254ea0f3baa",
+        "/assets/refinements.js?v=e94da29fa7af",
+        "/assets/editorial-motion.js?v=0132e3890845"
+      ],
+      "styles": [
+        "/assets/style.css?v=c7f380d31063",
+        "/assets/refinements.css?v=96bae6de7e67",
+        "/assets/fonts.css?v=2ec06f32be87",
+        "/assets/editorial.css?v=d5751d63f80b",
+        "/assets/content-depth.css?v=76ce5b771a3e",
+        "/assets/signature-header.css?v=81344840ed9d",
+        "/assets/site-footer.css?v=c8e78d011324"
+      ],
+      "jsGzip": 5051,
+      "cssGzip": 26025,
+      "htmlBytes": 30096
+    }
+  ]
+}

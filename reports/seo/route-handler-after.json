@@ -1,0 +1,702 @@
+{
+  "kind": "actual-GET-handler-Response-validation-NOT-network-or-browser",
+  "at": "2026-10-12T00:46:16.067Z",
+  "status": "PASS",
+  "origin": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site",
+  "canonicalOrigin": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site",
+  "pages": 63,
+  "checks": [
+    "63 published GET Response status 200",
+    "63 single H1/main landmarks",
+    "63 title/description/OG/X/canonical/server JSON-LD",
+    "2 missing/global routes 404",
+    "3 retired tests single 308 then 200",
+    "3 trailing-slash normalizations preserve applicable query",
+    "query canonical removes params",
+    "sitemap exactly all 63 unique canonical URLs",
+    "robots canonical sitemap and assets allowed"
+  ],
+  "rows": [
+    {
+      "path": "/arastirmalar/",
+      "status": 200,
+      "title": "Araştırmalar: Türkiye Kafa Yapısı Araştırması | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/arastirmalar/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 18683
+    },
+    {
+      "path": "/basari/",
+      "status": 200,
+      "title": "Başarı Nedir? Başarının Mühendislik Rehberi | Başarı; Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/basari/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 33557
+    },
+    {
+      "path": "/basari-muhendisligi/",
+      "status": 200,
+      "title": "Başarı Mühendisliği™ Nedir? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/basari-muhendisligi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 29775
+    },
+    {
+      "path": "/bulten/",
+      "status": 200,
+      "title": "Mühendislik Notları | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/bulten/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 18610
+    },
+    {
+      "path": "/buradan-basla/",
+      "status": 200,
+      "title": "Buradan Başla; Site Rehberi | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/buradan-basla/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19020
+    },
+    {
+      "path": "/egitimler/",
+      "status": 200,
+      "title": "Kurumsal Eğitimler: Satış, Liderlik ve Kafa Yapısı | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 31232
+    },
+    {
+      "path": "/hayattan-notlar/",
+      "status": 200,
+      "title": "Hayattan Notlar | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 21753
+    },
+    {
+      "path": "/iletisim/",
+      "status": 200,
+      "title": "İletişim | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/iletisim/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 21445
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Ziya Şakir Yılmaz | Keynote, Eğitim ve Mentorluk",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 36413
+    },
+    {
+      "path": "/kafa-yapisi/",
+      "status": 200,
+      "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi | Kafa Yapısı; Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kafa-yapisi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 32974
+    },
+    {
+      "path": "/kitaplar/",
+      "status": 200,
+      "title": "Kitaplar | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kitaplar/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 29247
+    },
+    {
+      "path": "/konusmaci/",
+      "status": 200,
+      "title": "Konuşmacı: Ziya Şakir Yılmaz'ı Etkinliğinize Davet Edin",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/konusmaci/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 36227
+    },
+    {
+      "path": "/kursun-gecirmez-kafa-yapisi/",
+      "status": 200,
+      "title": "Kurşun Geçirmez Kafa Yapısı™ Nedir? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kursun-gecirmez-kafa-yapisi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 30003
+    },
+    {
+      "path": "/kurumsal/kafa-yapisi-atolyesi/",
+      "status": 200,
+      "title": "Kurşun Geçirmez Kafa Yapısı Kurumsal Atölyesi | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/kafa-yapisi-atolyesi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 32065
+    },
+    {
+      "path": "/kurumsal/liderlik-egitimi/",
+      "status": 200,
+      "title": "Kurumsal Liderlik Eğitimi: Etkiyi Çoğaltmak | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/liderlik-egitimi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 31866
+    },
+    {
+      "path": "/kurumsal/satis-egitimi/",
+      "status": 200,
+      "title": "Kurumsal Satış Eğitimi: Satışın Mühendisliği | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/satis-egitimi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 32301
+    },
+    {
+      "path": "/liderlik/",
+      "status": 200,
+      "title": "Liderlik Nedir? Liderliğin Mühendislik Rehberi | Liderlik; Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/liderlik/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 32658
+    },
+    {
+      "path": "/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "status": 200,
+      "title": "Alışkanlık Kazanmak Kaç Gün Sürer? 66 Gün Gerçeği | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 37061
+    },
+    {
+      "path": "/makaleler/b2b-satis/",
+      "status": 200,
+      "title": "B2B Satış: Kurumsal Satışın Yol Haritası | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/b2b-satis/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42810
+    },
+    {
+      "path": "/makaleler/basari-nedir/",
+      "status": 200,
+      "title": "Başarı Nedir? Ölçülebilir Bir Tanım | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/basari-nedir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38950
+    },
+    {
+      "path": "/makaleler/basari-ogrenilebilir-mi/",
+      "status": 200,
+      "title": "Başarı Öğrenilebilir mi? Kanıtlar Ne Diyor? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/basari-ogrenilebilir-mi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38823
+    },
+    {
+      "path": "/makaleler/delegasyon/",
+      "status": 200,
+      "title": "Delegasyon: Yetki Devrinin Mühendisliği | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/delegasyon/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 40163
+    },
+    {
+      "path": "/makaleler/disiplin-nasil-kazanilir/",
+      "status": 200,
+      "title": "Disiplin Nasıl Kazanılır? Kanıta Dayalı Yöntemler | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/disiplin-nasil-kazanilir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 39069
+    },
+    {
+      "path": "/makaleler/geri-bildirim-nasil-verilir/",
+      "status": 200,
+      "title": "Geri Bildirim Nasıl Verilir? Model ve Örnek Cümleler | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/geri-bildirim-nasil-verilir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 41160
+    },
+    {
+      "path": "/makaleler/growth-mindset-nedir/",
+      "status": 200,
+      "title": "Growth Mindset (Gelişim Zihniyeti) Nedir? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/growth-mindset-nedir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 43454
+    },
+    {
+      "path": "/makaleler/hedef-nasil-belirlenir/",
+      "status": 200,
+      "title": "Hedef Nasıl Belirlenir? SMART'tan Sisteme | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/hedef-nasil-belirlenir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 39245
+    },
+    {
+      "path": "/makaleler/",
+      "status": 200,
+      "title": "Makaleler: 30 Cornerstone Rehber | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 31731
+    },
+    {
+      "path": "/makaleler/itiraz-karsilama/",
+      "status": 200,
+      "title": "Satışta İtiraz Karşılama: Tam Rehber (12 İtiraz, 12 Cevap) | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/itiraz-karsilama/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 44336
+    },
+    {
+      "path": "/makaleler/kafa-yapisi-degisir-mi/",
+      "status": 200,
+      "title": "Kafa Yapısı Değişir mi? Nöroplastisitenin Cevabı | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kafa-yapisi-degisir-mi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42274
+    },
+    {
+      "path": "/makaleler/kafa-yapisi-nasil-degisir/",
+      "status": 200,
+      "title": "Kafa Yapısı Nasıl Değişir? Bilimsel Yol Haritası | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kafa-yapisi-nasil-degisir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 43777
+    },
+    {
+      "path": "/makaleler/kafa-yapisi-nedir/",
+      "status": 200,
+      "title": "Kafa Yapısı Nedir? Mindset'in Türkçesi ve Değişimin Bilimi | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kafa-yapisi-nedir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42525
+    },
+    {
+      "path": "/makaleler/kapanis-teknikleri/",
+      "status": 200,
+      "title": "Satışta Kapanış Teknikleri: 10 Yöntem, Etki ve Risk | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kapanis-teknikleri/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 43730
+    },
+    {
+      "path": "/makaleler/kriz-doneminde-liderlik/",
+      "status": 200,
+      "title": "Kriz Döneminde Liderlik: Belirsizlikte Ekibi Taşımak | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kriz-doneminde-liderlik/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 39232
+    },
+    {
+      "path": "/makaleler/lider-yetistirmek/",
+      "status": 200,
+      "title": "Lider Yetiştirmek: Etkiyi Çoğaltmanın Son Seviyesi | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/lider-yetistirmek/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38161
+    },
+    {
+      "path": "/makaleler/lider-yonetici-farki/",
+      "status": 200,
+      "title": "Lider ve Yönetici Arasındaki Fark: 20 Somut Durum | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/lider-yonetici-farki/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 39055
+    },
+    {
+      "path": "/makaleler/liderlik-nedir/",
+      "status": 200,
+      "title": "Liderlik Nedir? Unvandan Çok Çoğaltma Becerisi | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/liderlik-nedir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38143
+    },
+    {
+      "path": "/makaleler/liderlik-stilleri/",
+      "status": 200,
+      "title": "Liderlik Stilleri: 6 Stil, Hangisi Ne Zaman? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/liderlik-stilleri/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 39024
+    },
+    {
+      "path": "/makaleler/mindset-nedir/",
+      "status": 200,
+      "title": "Mindset Nedir? Türkçe Kapsamlı Rehber | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/mindset-nedir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 45008
+    },
+    {
+      "path": "/makaleler/motivasyon-mu-disiplin-mi/",
+      "status": 200,
+      "title": "Motivasyon mu Disiplin mi? Sistem İkisinden Güçlüdür | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/motivasyon-mu-disiplin-mi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38960
+    },
+    {
+      "path": "/makaleler/nasil-basarili-olunur/",
+      "status": 200,
+      "title": "Nasıl Başarılı Olunur? Sistem Yaklaşımı | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/nasil-basarili-olunur/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38164
+    },
+    {
+      "path": "/makaleler/neden-hedefler-yarim-kalir/",
+      "status": 200,
+      "title": "Neden Hedefler Yarım Kalır? 7 Gerçek Neden | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/neden-hedefler-yarim-kalir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 38285
+    },
+    {
+      "path": "/makaleler/pahali-itirazi/",
+      "status": 200,
+      "title": "'Pahalı' İtirazına 9 Profesyonel Cevap | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/pahali-itirazi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42920
+    },
+    {
+      "path": "/makaleler/reddedilme-korkusu/",
+      "status": 200,
+      "title": "Reddedilme Korkusu: Nedenleri ve Aşma Yolları | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/reddedilme-korkusu/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 43175
+    },
+    {
+      "path": "/makaleler/satis-egitimi-nasil-secilir/",
+      "status": 200,
+      "title": "Satış Eğitimi Nasıl Seçilir? İK ve Yöneticiler için 10 Kriter | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satis-egitimi-nasil-secilir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 44355
+    },
+    {
+      "path": "/makaleler/satis-nedir/",
+      "status": 200,
+      "title": "Satış Nedir? Mühendislik Bakışıyla Satış | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satis-nedir/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42126
+    },
+    {
+      "path": "/makaleler/satis-teknikleri/",
+      "status": 200,
+      "title": "Satış Teknikleri: Sahada Kanıtlanmış 12 Yöntem | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satis-teknikleri/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42218
+    },
+    {
+      "path": "/makaleler/satisci-kafa-yapisi/",
+      "status": 200,
+      "title": "Satışçı Kafa Yapısı: Reddedilmeye Dayanıklı Zihin Nasıl Kurulur? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satisci-kafa-yapisi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 42220
+    },
+    {
+      "path": "/makaleler/zihinsel-dayaniklilik/",
+      "status": 200,
+      "title": "Zihinsel Dayanıklılık Nedir? Nasıl Geliştirilir? | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/zihinsel-dayaniklilik/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 43245
+    },
+    {
+      "path": "/mentorluk/",
+      "status": 200,
+      "title": "Mentorluk; Girişimci ve Yöneticiler için Birebir Çalışma | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/mentorluk/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 23732
+    },
+    {
+      "path": "/notlar/not-001/",
+      "status": 200,
+      "title": "Sakin kalan kazanır; Hayattan Notlar NOT 001 | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-001/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 20227
+    },
+    {
+      "path": "/notlar/not-002/",
+      "status": 200,
+      "title": "Potansiyel kurtarmaz, sistem kurtarır; Hayattan Notlar NOT 002 | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-002/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 20229
+    },
+    {
+      "path": "/notlar/not-003/",
+      "status": 200,
+      "title": "Hazır olmanı bekleme; Hayattan Notlar NOT 003 | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-003/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19917
+    },
+    {
+      "path": "/notlar/not-004/",
+      "status": 200,
+      "title": "Hayır, bir veridir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-004/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19617
+    },
+    {
+      "path": "/notlar/not-005/",
+      "status": 200,
+      "title": "Henüz | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-005/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19474
+    },
+    {
+      "path": "/notlar/not-006/",
+      "status": 200,
+      "title": "Kültür, en kötü gününde tolere ettiğin şeydir | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-006/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19750
+    },
+    {
+      "path": "/notlar/not-007/",
+      "status": 200,
+      "title": "Sabah dokuzda ne yapıyorsun? | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-007/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19598
+    },
+    {
+      "path": "/notlar/not-008/",
+      "status": 200,
+      "title": "Güvenlik görevlisini işten çıkarma | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-008/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19615
+    },
+    {
+      "path": "/notlar/not-009/",
+      "status": 200,
+      "title": "Üç saniye sessizlik | Hayattan Notlar · Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-009/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 19547
+    },
+    {
+      "path": "/satis/",
+      "status": 200,
+      "title": "Satış Nedir? Satışın Mühendislik Rehberi | Satış; Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/satis/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 33489
+    },
+    {
+      "path": "/sozluk/",
+      "status": 200,
+      "title": "Başarı Mühendisliği Sözlüğü: Kafa Yapısı, Satış, Liderlik Kavramları | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/sozluk/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 60599
+    },
+    {
+      "path": "/testler/",
+      "status": 200,
+      "title": "Kurşun Geçirmez Kafa Yapısı Testi | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 17379
+    },
+    {
+      "path": "/testler/kafa-yapisi-testi/",
+      "status": 200,
+      "title": "Kurşun Geçirmez Kafa Yapısı Testi™; 3 Dakikada Zihinsel Zırh Skorun | Ziya Şakir Yılmaz",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 30380
+    },
+    {
+      "path": "/ziya-sakir-yilmaz/",
+      "status": 200,
+      "title": "Ziya Şakir Yılmaz Kimdir? | Başarı Mühendisi",
+      "canonical": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "bodyBytes": 30938
+    }
+  ],
+  "special": [
+    {
+      "path": "/does-not-exist/",
+      "status": 404,
+      "location": null
+    },
+    {
+      "path": "/_global/",
+      "status": 404,
+      "location": null
+    },
+    {
+      "path": "/testler/basari-muhendisligi-skoru/",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/"
+    },
+    {
+      "path": "/testler/satis-yetkinlik-skoru/",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/"
+    },
+    {
+      "path": "/testler/liderlik-yetkinlik-skoru/",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/"
+    },
+    {
+      "path": "/konusmaci",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/konusmaci/"
+    },
+    {
+      "path": "/makaleler/zihinsel-dayaniklilik",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/zihinsel-dayaniklilik/"
+    },
+    {
+      "path": "/iletisim?konu=mentorluk",
+      "status": 308,
+      "location": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/iletisim/?konu=mentorluk"
+    }
+  ],
+  "sitemap": {
+    "status": 200,
+    "locs": [
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/arastirmalar/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/basari-muhendisligi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/basari/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/bulten/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/buradan-basla/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/iletisim/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kafa-yapisi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kitaplar/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/konusmaci/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kursun-gecirmez-kafa-yapisi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/kafa-yapisi-atolyesi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/liderlik-egitimi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/satis-egitimi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/liderlik/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/aliskanlik-kazanmak-kac-gun-surer/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/b2b-satis/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/basari-nedir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/basari-ogrenilebilir-mi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/delegasyon/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/disiplin-nasil-kazanilir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/geri-bildirim-nasil-verilir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/growth-mindset-nedir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/hedef-nasil-belirlenir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/itiraz-karsilama/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kafa-yapisi-degisir-mi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kafa-yapisi-nasil-degisir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kafa-yapisi-nedir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kapanis-teknikleri/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/kriz-doneminde-liderlik/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/lider-yetistirmek/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/lider-yonetici-farki/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/liderlik-nedir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/liderlik-stilleri/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/mindset-nedir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/motivasyon-mu-disiplin-mi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/nasil-basarili-olunur/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/neden-hedefler-yarim-kalir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/pahali-itirazi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/reddedilme-korkusu/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satis-egitimi-nasil-secilir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satis-nedir/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satis-teknikleri/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/satisci-kafa-yapisi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/zihinsel-dayaniklilik/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/mentorluk/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-001/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-002/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-003/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-004/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-005/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-006/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-007/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-008/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/notlar/not-009/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/satis/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/sozluk/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/",
+      "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/"
+    ]
+  },
+  "robots": {
+    "status": 200,
+    "text": "User-agent: *\nDisallow: /admin/\nDisallow: /api/\nSitemap: https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/sitemap.xml\n"
+  }
+}

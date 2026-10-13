@@ -1,0 +1,28 @@
+{
+  "attemptedAt": "2026-10-12T00:38:08.474Z",
+  "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+  "endpoint": "https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed",
+  "strategies": [
+    "mobile",
+    "desktop"
+  ],
+  "categories": [
+    "PERFORMANCE",
+    "ACCESSIBILITY",
+    "BEST_PRACTICES",
+    "SEO"
+  ],
+  "authentication": "No API key or credentials supplied",
+  "status": 429,
+  "errorStatus": "RESOURCE_EXHAUSTED",
+  "reason": "RATE_LIMIT_EXCEEDED",
+  "quotaLimit": "defaultPerDayPerProject",
+  "quotaLimitValue": "0",
+  "validLighthouseReport": false,
+  "scores": null,
+  "limitation": "Google PageSpeed quota rejected both HTTP requests before a Lighthouse analysis could run.",
+  "sourceDocumentation": [
+    "https://developers.google.com/speed/docs/insights/v5/get-started",
+    "https://developers.google.com/speed/docs/insights/rest/v5/pagespeedapi/runpagespeed"
+  ]
+}

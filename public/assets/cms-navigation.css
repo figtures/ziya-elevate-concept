@@ -1,0 +1,23 @@
+/* Only new submenu controls and explicitly changed column counts. Existing visual design is retained. */
+.cms-has-submenu{position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+.cms-submenu-toggle{display:none;align-items:center;justify-content:center;width:30px;height:44px;padding:0;border:0;border-radius:10px;background:transparent;color:inherit;cursor:pointer}
+.cms-navigation-ready .cms-submenu-toggle{display:inline-flex}
+.cms-submenu-toggle svg{width:17px;height:17px;transition:transform .2s ease}
+.cms-submenu-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.cms-submenu-toggle:focus-visible,.cms-submenu a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.cms-submenu{position:absolute;top:100%;left:-18px;z-index:90;min-width:250px;max-width:min(340px,90vw);margin:4px 0 0;padding:14px 18px;list-style:none;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(20,28,36,.97);box-shadow:0 18px 46px rgba(0,0,0,.18);backdrop-filter:blur(18px)}
+.cms-submenu[hidden]{display:none!important}
+body[data-editorial] header.signature-header .nav-links .cms-submenu li{display:block;border:0}
+body[data-editorial] header.signature-header .nav-links .cms-submenu a{display:flex;white-space:normal;line-height:1.45;font-size:1rem;min-height:44px;padding:10px 0;color:#f5f3ec}
+.site-footer .footer-navigation[data-cms-footer-columns="0"]{grid-template-columns:1fr}
+.site-footer .footer-navigation[data-cms-footer-columns="1"]{grid-template-columns:1.3fr 1fr}
+.site-footer .footer-navigation[data-cms-footer-columns="2"]{grid-template-columns:1.3fr 1fr 1fr}
+.site-footer .footer-navigation[data-cms-footer-columns="4"],.site-footer .footer-navigation[data-cms-footer-columns="5"],.site-footer .footer-navigation[data-cms-footer-columns="6"],.site-footer .footer-navigation[data-cms-footer-columns="7"],.site-footer .footer-navigation[data-cms-footer-columns="8"]{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.navigation-editor{display:grid;gap:24px}
+.navigation-editor .cms-nav-children{margin-top:24px;padding:20px;border:1px solid var(--line,#dde3e8);border-radius:16px;background:rgba(120,140,160,.035)}
+.navigation-editor .repeat-head small{margin-left:auto;color:var(--muted,#637183);font-size:12px}
+.navigation-editor .check-field{min-height:38px}
+.navigation-editor [data-navigation-feedback] ul{padding-left:20px}
+@media(max-width:1280px){.cms-has-submenu{justify-content:space-between}.cms-has-submenu>a{flex:1}.cms-submenu-toggle{width:44px;height:52px}.cms-submenu{position:static;flex-basis:100%;min-width:0;max-width:none;width:100%;box-shadow:none;margin:0 0 14px;padding:8px 18px;background:rgba(255,255,255,.035)}body[data-editorial] header.signature-header .nav-links .cms-submenu a{font-size:1.08rem}.site-footer .footer-navigation[data-cms-footer-columns]{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.site-footer .footer-navigation[data-cms-footer-columns]{grid-template-columns:1fr}.navigation-editor .cms-nav-children{padding:12px}}
+@media(prefers-reduced-motion:reduce){.cms-submenu-toggle svg{transition:none}}

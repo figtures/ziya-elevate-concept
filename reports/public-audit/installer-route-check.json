@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-12T00:57:41.314Z",
+  "status": "PASS",
+  "scope": "Actual GET/HEAD route; offline Fetch Response, not live HTTP",
+  "contentBytes": 788880,
+  "sha256": "8e821b6ae6f66f6a54227fb3e33334f8946438add9a21e66b7bb7c80b658a801",
+  "sameAsPreviousStaticInstaller": true,
+  "headers": {
+    "cache-control": "no-store",
+    "content-disposition": "attachment; filename=\"ziya-cms-kurulum.sql\"",
+    "content-type": "text/plain; charset=utf-8",
+    "x-content-type-options": "nosniff",
+    "x-robots-tag": "noindex, nofollow, noarchive"
+  },
+  "staticShadowRemoved": true
+}

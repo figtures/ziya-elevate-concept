@@ -1,0 +1,2940 @@
+{
+  "status": "DRAFT / risk discovery",
+  "scope": "All checkbox controls and heading themes from all 10 fetched child pages; exact source requirements preserved in private audit evidence",
+  "controls": [
+    {
+      "controlId": "GEO01-001",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "Charter, scope, anti-goals ve platform/locale kapsamı imzalı.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-002",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "RACI’de tüm kritik teslimatlar tek owner’lı.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-003",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "SEO bağımlılık matrisi ve production ön koşulları kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-004",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "RFC ve hard-stop listesi onaylı.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-005",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "KPI/measurement contract ve baseline planı hazır.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-006",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "Risk register, incident severity ve escalation aktif.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-007",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "Evidence repository, retention ve erişim testi PASS.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-008",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "GEO-02…10 owner, takvim ve handoff’ları atanmış.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-009",
+      "gate": "GEO01",
+      "theme": "Gate checklist",
+      "requirement": "Security, Privacy, Legal ve Marketing temas noktaları belirli.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-010",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "RACI tablosunda primary, backup ve escalation owner’lar dolu.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-011",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Değişiklik sınıfı ve RFC karar matrisi uygulanmış.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-012",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Açık yüksek risklerin mitigation veya onaylı exception’ı var.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-013",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Süresi geçmiş exception yok.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-014",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Evidence retention, classification ve erişim testi PASS.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-015",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "RTO/RPO hedefleri onaylı ve son rollback tatbikatı PASS.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-016",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Vendor/platform değişiklik review tarihi güncel.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-017",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Reopen tetikleyicileri monitoring ve owner ile kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO01-018",
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate",
+      "requirement": "Bu kayıtların evidence URL’leri GEO-10 manifest’ine bağlanmış.",
+      "status": "BLOCKED",
+      "reason": "SEO dependencies, named owners, signed governance and evidence retention not confirmed",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204"
+    },
+    {
+      "controlId": "GEO02-001",
+      "gate": "GEO02",
+      "theme": "Gate checklist",
+      "requirement": "Canonical marka ve legal ad Legal onaylı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-002",
+      "gate": "GEO02",
+      "theme": "Gate checklist",
+      "requirement": "Her ana entity’nin owner URL’si tek ve indexable.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-003",
+      "gate": "GEO02",
+      "theme": "Gate checklist",
+      "requirement": "NAP ve contact bilgisi tüm kontrollü yüzeylerde eşleşiyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-004",
+      "gate": "GEO02",
+      "theme": "Gate checklist",
+      "requirement": "sameAs yalnızca gerçek, aktif ve doğrulanmış profilleri içeriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-005",
+      "gate": "GEO02",
+      "theme": "Gate checklist",
+      "requirement": "Ürün–marka–kişi ilişkileri veri modeliyle belgeli.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-006",
+      "gate": "GEO02",
+      "theme": "Gate checklist",
+      "requirement": "Dil/bölge varyantlarında temel gerçek çelişkisi yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-007",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Inventory schema-valid, versiyonlu ve makine-okunur.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-008",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Tüm active entity kayıtlarında canonical ID, owner, source ve doğrulama tarihi var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-009",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Parent–child grafında cycle, orphan veya çelişkili ownership yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-010",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Multi-brand/holding/franchise/local senaryoları doğru entity tipleriyle modellenmiş.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-011",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Rebrand/M&A mapping ve effective date kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-012",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Alias, previous name ve deprecated ürünler lifecycle kurallarına uyuyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-013",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "NAP conflict matrisi ve açık correction kayıtları review edildi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-014",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Knowledge Panel yokluğu yanlış biçimde FAIL veya KPI yapılmıyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-015",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Açık SEV-1 entity conflict yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO02-016",
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate",
+      "requirement": "Rollback snapshot’ı ve incident owner erişilebilir.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204"
+    },
+    {
+      "controlId": "GEO03-001",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Registry’de bilinmeyen, owner’sız veya resmi kaynaksız bot yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-002",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Search/training/user-triggered/social bot kararları ayrı kaydedildi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-003",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Googlebot ve Google-Extended ayrımı doğru.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-004",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "OAI-SearchBot, GPTBot ve ChatGPT-User ayrımı doğru.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-005",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Production robots değişikliği Legal + Marketing + Engineering/Security tarafından imzalı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-006",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Hassas alanlar auth ile korunuyor; robots güvenlik mekanizması değil.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-007",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Sitemap/canonical/noindex/robots çelişkisi yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-008",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "WAF/CDN 403/429 drift alarmları aktif.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-009",
+      "gate": "GEO03",
+      "theme": "Gate checklist",
+      "requirement": "Her kritik bot/şablon kombinasyonu kanıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-010",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Bot registry’nin tüm zorunlu alanları dolu ve versioned.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-011",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Her vendor kaynağı hash/tarih/reviewer ile doğrulanmış.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-012",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Search/training/user-triggered/social-preview ayrımı kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-013",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "IP/rDNS doğrulaması ve spoofing negative testleri PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-014",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "robots precedence fixture’ları CI’da PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-015",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "CDN/WAF/robots/origin matrisi kritik bot ve path’lerde PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-016",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "403/429/timeout/spike alarmları baseline ve floor ile tanımlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-017",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Propagation T+15 dk/T+1 saat/T+24 saat kanıtı mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-018",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Vendor change alarmı aktif ve owner’lı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-019",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Emergency rule’larda incident ID, owner ve expiry zorunlu.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO03-020",
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate",
+      "requirement": "Son emergency bot-block tatbikatı veya gerçek olay postmortem’i PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204"
+    },
+    {
+      "controlId": "GEO04-001",
+      "gate": "GEO04",
+      "theme": "Gate checklist",
+      "requirement": "Kritik topic’lerin her birinde owner URL ve answer unit var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-002",
+      "gate": "GEO04",
+      "theme": "Gate checklist",
+      "requirement": "Tüm istatistikler kaynaklı ve tarihlidir.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-003",
+      "gate": "GEO04",
+      "theme": "Gate checklist",
+      "requirement": "Görünür içerik ile schema arasında parity var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-004",
+      "gate": "GEO04",
+      "theme": "Gate checklist",
+      "requirement": "Boilerplate/duplicate/spun içerik yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-005",
+      "gate": "GEO04",
+      "theme": "Gate checklist",
+      "requirement": "Accessibility semantics ve mobile okunabilirlik PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-006",
+      "gate": "GEO04",
+      "theme": "Gate checklist",
+      "requirement": "Legal/YMYL review gereken bloklar imzalı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-007",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Article, product, comparison, FAQ ve research şablonları gerçek bir örnekle dolduruldu.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-008",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Answer-unit sözleşmesi schema validation ve migration testi geçti.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-009",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Chunk bütçeleri ve self-contained kontrolü temsilî sayfalarda doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-010",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Content-lint error sayısı sıfır; warning’lerin owner ve gerekçesi var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-011",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Kritik claim’lerde Tier A kaynak veya onaylı istisna mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-012",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Claim–source locator eşleşmesi örneklem değil, kapsam içindeki tüm kritik iddialarda var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-013",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Lisans, attribution ve yeniden kullanım kontrolleri kanıtlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-014",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "PDF/video/podcast/görsel içeriklerin erişilebilir HTML karşılığı mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-015",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Tüm locale’lerde entity, sayı, tarih, birim ve hukukî ifade parity testi geçti.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-016",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Stale-source ve conflict incident tatbikatı yapıldı; süreler kaydedildi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-017",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "İyi/kötü chunk örnekleri ekip onboarding ve reviewer kalibrasyonunda kullanıldı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO04-018",
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate",
+      "requirement": "Kanıt paketi build ID, kural sürümü, owner, timestamp ve saklama süresiyle arşivlendi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204"
+    },
+    {
+      "controlId": "GEO05-001",
+      "gate": "GEO05",
+      "theme": "Gate checklist",
+      "requirement": "Top intent’lerin %100’ünde owner URL veya açık gap kararı var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-002",
+      "gate": "GEO05",
+      "theme": "Gate checklist",
+      "requirement": "Bir intent için iki owner URL yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-003",
+      "gate": "GEO05",
+      "theme": "Gate checklist",
+      "requirement": "Kaynaksız superlative/karşılaştırma iddiası yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-004",
+      "gate": "GEO05",
+      "theme": "Gate checklist",
+      "requirement": "Locale ve pazar kapsamı açık.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-005",
+      "gate": "GEO05",
+      "theme": "Gate checklist",
+      "requirement": "Prompt-lab seti GEO-09’a versiyonlu devredildi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-006",
+      "gate": "GEO05",
+      "theme": "Gate checklist",
+      "requirement": "Sensitive/YMYL kümelerinin approval path’i tanımlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-007",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Taxonomy sınıfları, modifier ve journey state sürümlü olarak yayımlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-008",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Top intent’lerin impact/confidence/evidence/effort değerleri kanıtla dolduruldu.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-009",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Branded, unbranded, comparison ve negative prompt setleri dengeli.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-010",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Edge-case ve adversarial testler beklenen güvenli davranışla geçti.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-011",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Zero-result ve answer-gap kayıtlarının owner, SLA ve kapanış kanıtı var.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-012",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Her yüksek öncelikli intent için yalnız bir canonical owner URL mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-013",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Çift URL kararları redirect/canonical/internal link/schema testleriyle kapatıldı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-014",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Locale ve pazar farklılıkları yerel veri ve reviewer ile doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-015",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Sezonsallık/trend tetikleyicileri ve stale tarihleri tanımlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-016",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Topic-map changelog append-only ve rollback referanslı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-017",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Doldurulmuş ownership örneği prompt-lab’da temsilî sorularla doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-018",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Türkçe içerikte UTF-8 ve ğ, Ğ, ş, Ş, ı, İ, ö, Ö, ü, Ü, ç, Ç karakter bütünlüğü geçti.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO05-019",
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate",
+      "requirement": "Kanıt paketi build/topic-map sürümü, owner, timestamp ve saklama süresiyle arşivlendi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-001",
+      "gate": "GEO06",
+      "theme": "Gate checklist",
+      "requirement": "Entity ID ve sameAs envanteri GEO-02 ile aynı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-002",
+      "gate": "GEO06",
+      "theme": "Gate checklist",
+      "requirement": "Fiyat, özellik, yazar ve tarih alanlarında DOM parity PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-003",
+      "gate": "GEO06",
+      "theme": "Gate checklist",
+      "requirement": "Kritik şema tipleri parse ve validator PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-004",
+      "gate": "GEO06",
+      "theme": "Gate checklist",
+      "requirement": "llms.txt varsa tüm URL’ler 200/canonical/indexable.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-005",
+      "gate": "GEO06",
+      "theme": "Gate checklist",
+      "requirement": "Sahte rating, review, award veya availability yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-006",
+      "gate": "GEO06",
+      "theme": "Gate checklist",
+      "requirement": "Owner, alarm ve rollback kanıtı kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-007",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "CMS/PIM → DOM → JSON-LD mapping tüm kritik alanlarda dolduruldu.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-008",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Schema tipi karar ağacı ve zorunlu/önerilen/yasak alan politikası uygulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-009",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Global @id registry’de duplicate, conflict veya dangling reference yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-010",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Nested graph deterministik ve tek Organization/entity node’u üretiyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-011",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Contract/template version ve migration/rollback kanıtı mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-012",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Negatif JSON-LD fixture’ları beklenen CI hata kodlarıyla fail ediyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-013",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Validator matrisi kritik template ve locale’lerde PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-014",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Golden-file semantic diff’i onaylı; volatile alan yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-015",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Currency, locale, timezone, availability ve Unicode normalizasyonu PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-016",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Cache, MIME, UTF-8, compression, CDN/origin ve ETag testleri PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-017",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "llms.txt boyut ve link bütçesi içinde; tüm URL’ler doğrudan 200/self-canonical/indexable.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-018",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Generator fallback ve last-known-good tatbikatı tamamlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-019",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Stale llms.txt URL incident senaryosu RTO içinde çözüldü.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-020",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "CI evidence manifest buildId, sürümler, hash, approvals ve rollbackRef içeriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO06-021",
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate",
+      "requirement": "Türkçe çıktılarda ğ, Ğ, ş, Ş, ı, İ, ö, Ö, ü, Ü, ç, Ç karakter bütünlüğü doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204"
+    },
+    {
+      "controlId": "GEO07-001",
+      "gate": "GEO07",
+      "theme": "Gate checklist",
+      "requirement": "Kritik sayfaların owner/reviewer/source alanları dolu.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-002",
+      "gate": "GEO07",
+      "theme": "Gate checklist",
+      "requirement": "dateModified gerçek diff ile kanıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-003",
+      "gate": "GEO07",
+      "theme": "Gate checklist",
+      "requirement": "Kaynak ve fiyat/ürün drift alarmları aktif.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-004",
+      "gate": "GEO07",
+      "theme": "Gate checklist",
+      "requirement": "Corrections ve deprecation akışı belgeli.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-005",
+      "gate": "GEO07",
+      "theme": "Gate checklist",
+      "requirement": "Ghost author, sahte uzman veya kaynaksız istatistik yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-006",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Tüm içerik türleri risk bazlı freshness SLA ve change-event’e bağlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-007",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Kritik claim’lerin source trust score ve gerekçesi kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-008",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Author/reviewer yeterlilik ve credential expiry kontrolleri geçti.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-009",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Reviewer independence ve conflict declaration kanıtı mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-010",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "dateModified semantic diff ile eşleşiyor; otomatik tarih tazeleme yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-011",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Kritik kaynak link-rot ve content-change alarmları aktif.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-012",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Archive/retire/deprecate kararları schema, sitemap, llms.txt ve links ile tutarlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-013",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Emergency correction tatbikatı hedef süre içinde tamamlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-014",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "YMYL içerikler uygun uzman ve Legal/Compliance approval taşıyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-015",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Maddi düzeltmeler görünür correction notice ve change history içeriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-016",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Stale-content dashboard owner, SLA, source health, action ve closure evidence gösteriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-017",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "DOM, JSON-LD, sitemap ve CMS tarih parity’si PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-018",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Türkçe içerikte ğ, Ğ, ş, Ş, ı, İ, ö, Ö, ü, Ü, ç, Ç karakter bütünlüğü doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO07-019",
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate",
+      "requirement": "Evidence paketi revision, contentHash, reviewer, timestamp ve retention ile arşivlendi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204"
+    },
+    {
+      "controlId": "GEO08-001",
+      "gate": "GEO08",
+      "theme": "Gate checklist",
+      "requirement": "En yüksek etkili 10 üçüncü taraf yüzey owner’lı ve güncel.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-002",
+      "gate": "GEO08",
+      "theme": "Gate checklist",
+      "requirement": "Kontrollü profiller GEO-02 ile tutarlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-003",
+      "gate": "GEO08",
+      "theme": "Gate checklist",
+      "requirement": "Sahte review, ücretli gizli mention veya izinsiz logo yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-004",
+      "gate": "GEO08",
+      "theme": "Gate checklist",
+      "requirement": "Düzeltme talepleri kanıt ve SLA ile kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-005",
+      "gate": "GEO08",
+      "theme": "Gate checklist",
+      "requirement": "sameAs listesi yalnız doğrulanmış profilleri içeriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-006",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "LinkedIn, X, Meta, YouTube ve GitHub runbook’larının owner ve backup owner’ı atanmış.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-007",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Beş platformda profil parity checklist’i ve immutable account ID kanıtı mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-008",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Kritik URL’lerin LinkedIn Post Inspector evidence kayıtları PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-009",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Meta ve X preview’ları canonical metadata, image ve locale ile eşleşiyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-010",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Preview cache refresh tatbikatı ve 15 dk/1 saat/24 saat checkpoint’leri kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-011",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Üçüncü taraf correction request’leri kanıt, SLA ve sonuç taşıyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-012",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Tüm partner/müşteri logoları geçerli kapsamlı izin kaydına bağlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-013",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Impersonation SEV-1/2/3 runbook’u ve platform ticket kanıtı test edildi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-014",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Review outreach, teşvik ve disclosure politikaları platform kurallarıyla uyumlu.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-015",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Marka krizi source-of-truth, owner, approval ve propagation akışı tatbik edildi.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-016",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Unowned/abandoned hesaplar statü, risk, recovery veya sameAs removal kararı taşıyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-017",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Kontrollü profiller GEO-02 canonical entity ve GEO-06 sameAs graph’iyle tutarlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-018",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Sahte review, astroturfing, gizli ödeme, toplu şikâyet veya rakip karalama yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-019",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Türkçe içerikte ğ, Ğ, ş, Ş, ı, İ, ö, Ö, ü, Ü, ç, Ç karakter bütünlüğü doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO08-020",
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate",
+      "requirement": "Evidence paketi platform ID, URL, timestamp, screenshot/hash, owner ve retention içeriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204"
+    },
+    {
+      "controlId": "GEO09-001",
+      "gate": "GEO09",
+      "theme": "Gate checklist",
+      "requirement": "Baseline ve güncel prompt run aynı protokolle mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-002",
+      "gate": "GEO09",
+      "theme": "Gate checklist",
+      "requirement": "En az iki model/yüzey ve iki locale (uygunsa) kapsanmış.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-003",
+      "gate": "GEO09",
+      "theme": "Gate checklist",
+      "requirement": "Accuracy evaluator ve örneklem tanımlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-004",
+      "gate": "GEO09",
+      "theme": "Gate checklist",
+      "requirement": "AI referral dashboard bot trafiğini filtreliyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-005",
+      "gate": "GEO09",
+      "theme": "Gate checklist",
+      "requirement": "Incident owner, SLA, iletişim ve rollback runbook’u kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-006",
+      "gate": "GEO09",
+      "theme": "Gate checklist",
+      "requirement": "Son 30 günde açık SEV-1 yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-007",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Evaluator rubric, critical override ve PASS eşikleri sürümlü.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-008",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Accuracy, citation precision/coverage ve unsupported-claim hesapları claim düzeyinde doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-009",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Örneklem güç/hata payı hedefiyle gerekçelendirildi; alt gruplar yeterli n taşıyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-010",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Her prompt için tekrar sayısı ve variance escalation kuralı uygulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-011",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Model, tarih, oturum, locale, region ve browsing metadata’sı eksiksiz.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-012",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Blind çift değerlendirme ve adjudication kayıtları mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-013",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Kappa/ICC eşikleri geçti; critical flag uyuşmazlığı yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-014",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "%95 CI ve cluster yapısı doğru; çoklu karşılaştırma politikası kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-015",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Baseline–release paired karşılaştırması ve guardrail’ler PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-016",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Prompt seti, rubric ve reference sources semver/hash ile immutable.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-017",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Model değişikliklerinde bridge run ve re-baseline kaydı mevcut.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-018",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Run/token/maliyet/rate-limit/human/storage bütçeleri onaylı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-019",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Otomasyon provider ToS/Legal registry’sinde izinli ve güncel.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-020",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Transcript/screenshot retention, deletion ve legal hold akışı çalışıyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-021",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "PII/secret redaction QA’sı geçti; ham hassas veri yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-022",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "AI referral raporu observed/tagged/unknown/bot-excluded ayrımını ve sınırlılıkları gösteriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-023",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "SEV-1/2/3 SLA, owner, escalation, communication ve closure testleri tamamlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-024",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Doldurulmuş prompt-lab kaydı evidence manifest ve retest kararı içeriyor.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO09-025",
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate",
+      "requirement": "Türkçe içerikte ğ, Ğ, ş, Ş, ı, İ, ö, Ö, ü, Ü, ç, Ç karakter bütünlüğü doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204"
+    },
+    {
+      "controlId": "GEO10-001",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "GEO-01…09 PASS ve kanıtları erişilebilir.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-002",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "SEO release bağımlılıkları PASS veya süreli onaylı exception.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-003",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Production smoke testin tüm maddeleri PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-004",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Açık SEV-1, Legal, Privacy, Security veya YMYL riski yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-005",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Search/training/user-triggered/social crawler kararları ayrı doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-006",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Prompt lab baseline ve sampling protokolü kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-007",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Evidence index, retention ve erişim testi PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-008",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Rollback owner/on-call ve geri dönüş süresi doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-009",
+      "gate": "GEO10",
+      "theme": "Gate checklist",
+      "requirement": "Sign-off matrisi tamamlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-010",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Evidence manifest schema, hash, imza, erişim ve retention kontrolleri PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-011",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Her control için zorunlu dosya/URL biçimi ve metadata tamam.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-012",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Sign-off tablosunda gerekli bağımsız roller imzaladı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-013",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Exception register’da expired veya hard-stop exception yok.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-014",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Otomatik release-blocking kontrollerin tamamı PASS.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-015",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Go/no-go kararı release ID ve manifest hash ile kayıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-016",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "RTO/RPO hedefleri onaylı ve güncel tatbikatla kanıtlı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-017",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Partial/failed rollback runbook’u ve on-call doğrulandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-018",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "T+1, T+7 ve T+30 rapor owner’ları ve teslim tarihleri atandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-019",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Reopen trigger’ları monitoring/change-management sistemine bağlandı.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    },
+    {
+      "controlId": "GEO10-020",
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate",
+      "requirement": "Nihai müşteri paketi checksum, redaction ve erişim testinden geçti.",
+      "status": "BLOCKED",
+      "reason": "GEO-01 not PASS; risk discovery only; no production gate assertion",
+      "sourceUrl": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204"
+    }
+  ],
+  "themes": [
+    {
+      "gate": "GEO01",
+      "theme": "Amaç ve tanım"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Program ön koşulları"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Program charter"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "RACI"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "RFC gerektiren kararlar"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Çalışma sırası ve bağımlılıklar"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Zorunlu teslimatlar"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "KPI ve ölçüm sözleşmesi"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Risk register"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Kanıt sözleşmesi"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Incident ve değişiklik yönetimi"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Operasyonel yönetişim şablonları"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Doldurulabilir RACI ve yedek owner tablosu"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "RFC karar matrisi"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Standart RFC şablonu"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Risk register şablonu"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Exception register"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Evidence saklama ve erişim politikası"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Değişiklik sınıfları"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "RTO, RPO ve rollback tatbikatı"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Vendor/platform değişikliğinde playbook’u yeniden açma"
+    },
+    {
+      "gate": "GEO01",
+      "theme": "Genişletilmiş GEO-01 gate"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Ön koşullar"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Canonical entity envanteri"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "sameAs ve üçüncü taraf doğrulama"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Bilgi mimarisi"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Test ve kanıt"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Operasyonel entity veri sözleşmesi"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Makine-okunur entity inventory şeması"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Canonical entity ID formatı"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Parent–child marka ve ürün ilişkileri"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Multi-brand, holding, franchise ve yerel şube senaryoları"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Rebrand, birleşme, satın alma ve isim değişikliği akışı"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Aynı adlı entity’leri ayırma kuralları"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Eski ad, alias ve deprecated ürün yönetimi"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "NAP uyuşmazlığı çözüm matrisi"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Knowledge Panel yokluğunun değerlendirilmesi"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Entity conflict incident ve rollback"
+    },
+    {
+      "gate": "GEO02",
+      "theme": "Genişletilmiş GEO-02 gate"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Ön koşullar"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Bot sınıfları ve bağımsız karar zorunluluğu"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Resmi referanslar"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Politika ve uygulama sözleşmesi"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Test matrisi"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Kanıt paketi"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Operasyonel bot policy ve registry"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Doldurulabilir bot registry tablosu"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Resmî vendor kaynağı ve doğrulama kaydı"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Search, training, user-triggered ve social-preview sınıfları"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "IP ve rDNS doğrulama prosedürü"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "User-agent spoofing testi"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "robots.txt precedence test fixture’ları"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "CDN/WAF ve robots kararları karşılaştırma matrisi"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Operasyon eşikleri: 403, 429, timeout ve crawl spike"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Bot politikası değişikliğinin yayılma süresi"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Vendor user-agent değişikliği alarmı"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Emergency bot-block runbook"
+    },
+    {
+      "gate": "GEO03",
+      "theme": "Genişletilmiş GEO-03 gate"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Ön koşullar"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "İçerik sözleşmesi"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Chunk tasarımı"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Şablon kabul kriterleri"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Test ve kanıt"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Operasyonel citation-ready content sistemi"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Üretime hazır içerik şablonları"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Article şablonu"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Product / service şablonu"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Comparison şablonu"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "FAQ şablonu"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Research şablonu"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Answer-unit veri sözleşmesi"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Minimum ve maksimum chunk ölçütleri"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Otomatik content-lint kuralları"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Kaynak güvenilirliği sınıflandırması"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Birincil ve ikincil kaynak tercih sırası"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Kaynak lisansı ve yeniden kullanım kuralları"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "PDF, video, podcast ve görsel içerik dönüşüm politikası"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Çok dilli içerik ve çeviri doğrulaması"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "İçerik çelişkisi ve stale-source incident süreci"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Tetikleyiciler"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Şiddet ve hedef süre"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Runbook"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "İyi ve kötü chunk örnekleri"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Tanım"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Sayısal iddia"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Karşılaştırma"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Prosedür"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "FAQ"
+    },
+    {
+      "gate": "GEO04",
+      "theme": "Genişletilmiş GEO-04 release gate"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Girdiler"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Topic ownership map"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Uygulama kuralları"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Önceliklendirme"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Test ve kanıt"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Operasyonel intent ve topic ownership sistemi"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Standart intent taxonomy"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Intent önceliklendirme tablosu"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Impact / confidence / effort hesaplama örneği"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Branded, unbranded, comparison ve negative prompt sınıfları"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Branded"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Unbranded"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Comparison / alternative"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Negative / risk / objection"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Edge-case ve adversarial kullanıcı soruları"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Zero-result ve answer-gap yönetimi"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Bir intent için iki URL çıktığında karar matrisi"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Locale ve pazar bazlı intent farklılıkları"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Sezonsallık ve trend değişimi süreci"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Topic-map değişiklik geçmişi"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Gerçek doldurulmuş topic ownership örneği"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Örnek answer contract"
+    },
+    {
+      "gate": "GEO05",
+      "theme": "Genişletilmiş GEO-05 release gate"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Ön koşullar"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Girdiler ve sahiplik"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Uygulama sözleşmesi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "llms.txt politikası"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Test ve kanıt paketi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Üretim düzeyi structured facts ve llms.txt sistemi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "CMS/PIM alanı → görünür DOM → JSON-LD alan eşleme tablosu"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Schema tipi seçim karar ağacı"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Zorunlu, önerilen ve yasak alanlar"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Tekil @id üretme standardı"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Nested entity ve graph birleştirme kuralları"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Schema versioning ve migration sözleşmesi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Hatalı JSON-LD örnekleri ve beklenen CI hataları"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Parse hatası"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Duplicate ve çelişkili @id"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "DOM’da görünmeyen fiyat"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Sahte rating"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Geçersiz para birimi ve availability"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Gizli FAQ"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Validator matrisi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Snapshot / golden-file test örnekleri"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Stabil output testi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Onaylı değişiklik testi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Negatif fixture’lar"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Currency, locale, timezone ve availability normalizasyonu"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Cache, content type, encoding ve compression testleri"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "llms.txt boyut ve link bütçesi"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "llms.txt üretimi başarısız olursa fallback"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Güncel olmayan URL üreten llms.txt incident senaryosu"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Gerçek CI pipeline örneği"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Örnek kanıt manifesti"
+    },
+    {
+      "gate": "GEO06",
+      "theme": "Genişletilmiş GEO-06 release gate"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Provenance modeli"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Freshness SLA"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Uygulama"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Test ve kanıt"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Hard stop ve rollback"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Üretim düzeyi freshness, provenance ve E-E-A-T sistemi"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "İçerik türüne göre ayrıntılı freshness SLA tablosu"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Kaynak güven puanı"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Author / reviewer yeterlilik kriterleri"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Author"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Reviewer"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Reviewer bağımsızlık ve çıkar çatışması politikası"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Otomatik tarih değiştirmeyi yakalayan kontrol"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Kaynak değişikliği ve link-rot alarm eşikleri"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "İçerik arşivleme, emeklilik ve deprecation akışı"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Emergency correction prosedürü"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "YMYL içerik onay matrisi"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Correction notice şablonu"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Düzeltme bildirimi — \\[Kısa konu\\]"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Stale-content dashboard alanları"
+    },
+    {
+      "gate": "GEO07",
+      "theme": "Genişletilmiş GEO-07 release gate"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Yüzey envanteri"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Uygulama kuralları"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Authority graph"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Test ve kanıt"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Üretim düzeyi off-site authority işletim sistemi"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Platform bazlı ayrı runbook’lar"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "LinkedIn Company Page runbook’u"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "X runbook’u"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Meta — Facebook ve Instagram runbook’u"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "YouTube runbook’u"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "GitHub Organization runbook’u"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Platform başına profil parity checklist’i"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "LinkedIn Post Inspector kanıt formatı"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Meta ve X paylaşım önizleme kontrolü"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Ortak kontrol sırası"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Hard-stop’lar"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Preview cache yenileme prosedürü"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Üçüncü taraf yanlış bilgi düzeltme talebi şablonu"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Konu: \\[Marka/entity\\] hakkında doğrulanabilir bilgi düzeltme talebi — \\[kısa konu\\]"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Partner ve müşteri logosu izin kaydı"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Sahte profil ve impersonation incident akışı"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Tespit ve sınıflandırma"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Runbook"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Review platformlarında teşvik ve manipülasyon sınırları"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Marka krizi ve yanlış viral mention prosedürü"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Unowned profile ve abandoned account yönetimi"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Envanter statüleri"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Yönetim akışı"
+    },
+    {
+      "gate": "GEO08",
+      "theme": "Genişletilmiş GEO-08 release gate"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Ölçüm modeli"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Prompt lab protokolü"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Kanıt paketi"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Incident sınıfları"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Rollback"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Handoff"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Üretim düzeyi ölçüm ve prompt-lab sistemi"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Standart evaluator rubric"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Doğruluk, citation ve unsupported-claim puanlama kuralları"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Doğruluk"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Citation"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Unsupported claim"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Minimum örneklem büyüklüğü"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Her prompt için tekrar sayısı"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Model, tarih ve oturum varyansının yönetimi"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Blind veya çift değerlendirici süreci"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Değerlendiriciler arası uyum ölçümü"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Confidence interval ve hata payı"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Baseline–release karşılaştırma yöntemi"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Prompt seti versioning"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Model sürümü değişince baseline yenileme"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Test maliyeti ve rate-limit bütçesi"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Otomasyonun ToS kontrolü"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Transcript ve screenshot saklama süresi"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "PII ve gizli veri redaction politikası"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "AI referral attribution sınırlılıkları"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "SEV-1 / SEV-2 / SEV-3 SLA ve escalation tablosu"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Doldurulmuş örnek prompt-lab kaydı"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Örnek evaluator notu"
+    },
+    {
+      "gate": "GEO09",
+      "theme": "Genişletilmiş GEO-09 release gate"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Amaç ve çıkış kriteri"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Zorunlu release girdileri"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Production smoke test"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Model ve platform bağımlılıkları"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Release kararı"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Nihai evidence index"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Launch sonrası gözlem"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Incident ve rollback"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Gate checklist"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Anti-pattern ve hard stop"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Program çıktısı"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Üretim düzeyi release-control sistemi"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "1. Makine-okunur evidence manifest"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "2. Adım başına zorunlu kanıt dosya ve URL formatı"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "3. Sign-off tablosu"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "4. Exception register"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "5. Otomatik release-blocking kontroller"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "6. Go/no-go toplantı şablonu"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "7. RTO/RPO hedefleri"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "8. Rollback tatbikatı kanıtı"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "9. Partial rollback ve failed rollback senaryoları"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "10. Launch sonrası T+1, T+7 ve T+30 rapor şablonları"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "T+1 gün operasyon raporu"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "T+7 gün doğrulama raporu"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "T+30 gün program raporu"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "11. Programı yeniden açan olayların kesin listesi"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "12. Müşteriye verilecek nihai teslimat paketi şablonu"
+    },
+    {
+      "gate": "GEO10",
+      "theme": "Genişletilmiş final gate"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "hub",
+    "url": "https://app.notion.com/p/3ea1fd693ee08042a6d5d41d947cfd2c?pvs=204",
+    "title": "GEO — Generative Engine Optimization · AI Prompt",
+    "lastEditedAt": "2026-10-10T23:25:18.242Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "9bd8f863c671716bd048da1402a3deff2f2ff9bdc03adafe4180f1e01f909001",
+    "characters": 4706,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-hub.json"
+  },
+  {
+    "id": "geo01",
+    "url": "https://app.notion.com/p/3ea1fd693ee080eaaff1fdc020e1e1d7?pvs=204",
+    "title": "GEO-01 — Program, RACI & RFC Gate",
+    "lastEditedAt": "2026-10-04T10:19:33.247Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "db0d993d41dd8c37ff3dbd8b061d6020bdbe6b72883147879c60b3bea7b1790d",
+    "characters": 19496,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo01.json"
+  },
+  {
+    "id": "geo02",
+    "url": "https://app.notion.com/p/3ea1fd693ee0801eb182cf82c18aca43?pvs=204",
+    "title": "GEO-02 — Entity, Brand & Knowledge Architecture",
+    "lastEditedAt": "2026-10-03T19:26:02.586Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "47e94c2bfbb54bb2e2aa6a4fd36dfe2bfe47fdf7390e15fd547f04f3a6bf26cc",
+    "characters": 16035,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo02.json"
+  },
+  {
+    "id": "geo03",
+    "url": "https://app.notion.com/p/3ea1fd693ee080458f85c39c71f0bcac?pvs=204",
+    "title": "GEO-03 — AI Crawler, robots & Indexability",
+    "lastEditedAt": "2026-10-04T10:19:26.257Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "013764c611efc7f96694dfae6b8596d6a2215693131f13a5e0edb3487f0b5033",
+    "characters": 19249,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo03.json"
+  },
+  {
+    "id": "geo04",
+    "url": "https://app.notion.com/p/3ea1fd693ee08057b923cbb565bdcf1a?pvs=204",
+    "title": "GEO-04 — Citation-Ready Content & Chunk Design",
+    "lastEditedAt": "2026-10-03T19:33:30.812Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "b0343ca046149c22694fb76a98e8058925c395a38f9dd3cefa83c75dfbd347ac",
+    "characters": 21543,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo04.json"
+  },
+  {
+    "id": "geo05",
+    "url": "https://app.notion.com/p/3ea1fd693ee080dc9606d7298594ac0d?pvs=204",
+    "title": "GEO-05 — Query Intent, Answers & Topic Ownership",
+    "lastEditedAt": "2026-10-04T10:19:13.571Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "4798c01910044f4000249c16d668c81f2d9a88495db1f4fa1337f3f0baae7317",
+    "characters": 21310,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo05.json"
+  },
+  {
+    "id": "geo06",
+    "url": "https://app.notion.com/p/3ea1fd693ee0808fb11fc496576c424d?pvs=204",
+    "title": "GEO-06 — Structured Facts, Schema & llms.txt Pipeline",
+    "lastEditedAt": "2026-10-04T10:19:09.549Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "6331d8b5f9045e7d83335b927898cfcb2a21f86ec7b3bf110c0812007ffa6259",
+    "characters": 27608,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo06.json"
+  },
+  {
+    "id": "geo07",
+    "url": "https://app.notion.com/p/3ea1fd693ee080178b05df5343b7ef68?pvs=204",
+    "title": "GEO-07 — Freshness, Provenance & E-E-A-T",
+    "lastEditedAt": "2026-10-04T10:19:04.850Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "aae38c760ee9361e86e9be04bbbaa3c8d3233639f283340cb7050d37317031b7",
+    "characters": 22061,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo07.json"
+  },
+  {
+    "id": "geo08",
+    "url": "https://app.notion.com/p/3ea1fd693ee080fab746cd3813461d25?pvs=204",
+    "title": "GEO-08 — Off-Site Authority & Third-Party Graph",
+    "lastEditedAt": "2026-10-04T10:19:00.835Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "7ea24f4d1e64d3c4362f373f818452175a514a5eb53a32a2c4e79dc3407d6ef7",
+    "characters": 23205,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo08.json"
+  },
+  {
+    "id": "geo09",
+    "url": "https://app.notion.com/p/3ea1fd693ee080808541d6be8d70a648?pvs=204",
+    "title": "GEO-09 — Measurement, Prompt Labs & Incidents",
+    "lastEditedAt": "2026-10-04T10:18:56.577Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "53d7cdcd60e9e5b6947b540f746522e9ea58aecbe01de3bc2129cf29b70e87a2",
+    "characters": 28009,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo09.json"
+  },
+  {
+    "id": "geo10",
+    "url": "https://app.notion.com/p/3ea1fd693ee0805a80c5cb7856eac7a0?pvs=204",
+    "title": "GEO-10 — Launch, Bot Registry & Program Release Gate",
+    "lastEditedAt": "2026-10-04T10:18:15.702Z",
+    "verification": {
+      "state": "unverified"
+    },
+    "sha256": "c9da3e252a979e215b898b1762c4749f887d294dc2c621161967ad104967d83e",
+    "characters": 20651,
+    "truncated": false,
+    "unknown_block_count": 0,
+    "completeClosingPage": true,
+    "snapshot": "notion-geo10.json"
+  }
+]

@@ -1,0 +1,289 @@
+{
+  "startedAt": "2026-10-12T00:50:08.635Z",
+  "completedAt": "2026-10-12T00:50:21.530Z",
+  "origin": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site",
+  "status": "PASS",
+  "scope": "Anonymous HTTP from one executor network; user-agent spoof checks output parity only, not vendor-IP verification",
+  "selectedUrls": 23,
+  "bytes": 3228,
+  "botParity": true,
+  "conditionalPassed": true,
+  "results": [
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/arastirmalar/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/basari-muhendisligi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/basari/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/bulten/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/buradan-basla/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/egitimler/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/hayattan-notlar/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/iletisim/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kafa-yapisi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kitaplar/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/konusmaci/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kursun-gecirmez-kafa-yapisi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/kafa-yapisi-atolyesi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/liderlik-egitimi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/kurumsal/satis-egitimi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/liderlik/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/makaleler/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/mentorluk/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/satis/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/sozluk/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/testler/kafa-yapisi-testi/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    },
+    {
+      "url": "https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site/ziya-sakir-yilmaz/",
+      "status": 200,
+      "checks": [
+        "direct_200",
+        "html",
+        "self_canonical",
+        "no_noindex",
+        "ssr_h1"
+      ],
+      "errors": []
+    }
+  ]
+}

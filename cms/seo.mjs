@@ -1,6 +1,13 @@
 /** Metadata is rebuilt from the final CMS-rendered DOM, never stale template JSON-LD. */
 import socialImages from './social-images.json' with { type: 'json' };
-export const DEFAULT_CANONICAL_ORIGIN = 'https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site';
+import siteConfig from './config.json' with { type: 'json' };
+import { deploymentOrigin } from './domain.mjs';
+export const DEFAULT_CANONICAL_ORIGIN = deploymentOrigin(siteConfig.canonicalOrigin || siteConfig.siteOrigin);
+const LEGACY_ASSET_ORIGINS = new Set([
+  'https://ziyasakiryilmaz.com', 'https://www.ziyasakiryilmaz.com',
+  'https://ziya-sakir-yilmaz-keynote.dev-busraaktas.chatgpt.site',
+  ...(siteConfig.legacyOrigins || []), siteConfig.siteOrigin, siteConfig.canonicalOrigin,
+].filter(Boolean).map(deploymentOrigin));
 const RETIRED_ROUTES = new Set(['/testler/basari-muhendisligi-skoru/', '/testler/satis-yetkinlik-skoru/', '/testler/liderlik-yetkinlik-skoru/']);
 export function canonicalOrigin(value) {
   try { const u = new URL(value); if (u.protocol === 'https:' && !u.username && !u.password) return u.origin; } catch {}
@@ -35,7 +42,7 @@ function imageURL(value, origin) {
   const href = absoluteURL(value, origin);
   if (!href) return '';
   const image = new URL(href);
-  if (['ziyasakiryilmaz.com','www.ziyasakiryilmaz.com'].includes(image.hostname) && image.pathname.startsWith('/assets/')) return origin + image.pathname + image.search;
+  if (LEGACY_ASSET_ORIGINS.has(image.origin) && image.pathname.startsWith('/assets/')) return origin + image.pathname + image.search;
   return href;
 }
 function text(node) {

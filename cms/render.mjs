@@ -1,5 +1,5 @@
 /** Safe, shared DOM renderer. Authored templates are trusted; CMS values are always text/typed attributes. */
-import {applySocialImageMetadata} from './seo.mjs';
+import {applySocialImageMetadata,DEFAULT_CANONICAL_ORIGIN} from './seo.mjs';
 import {applyResponsiveMedia} from './media.mjs';
 import {validateNavigation} from './navigation.mjs';
 import {validateCollection} from './collections.mjs';
@@ -66,7 +66,7 @@ export function applyContent(doc,payload,definition,{global=false}={}){
   doc.title=payload.title||doc.title;
   for(const [selector,value]of [['meta[name="description"]',payload.description],['meta[property="og:title"]',payload.title],['meta[name="twitter:title"]',payload.title],['meta[property="og:description"]',payload.description],['meta[name="twitter:description"]',payload.description],['meta[property="og:image"]',safeURL(payload.ogImage,true)],['meta[name="twitter:image"]',safeURL(payload.ogImage,true)]]){if(value!==undefined)doc.querySelector(selector)?.setAttribute('content',value);}
   applySocialImageMetadata(doc,payload);
-  const canonical='https://ziyasakiryilmaz.com'+payload.route;doc.querySelector('link[rel="canonical"]')?.setAttribute('href',canonical);doc.querySelector('meta[property="og:url"]')?.setAttribute('content',canonical);
+  const canonical=DEFAULT_CANONICAL_ORIGIN+payload.route;doc.querySelector('link[rel="canonical"]')?.setAttribute('href',canonical);doc.querySelector('meta[property="og:url"]')?.setAttribute('content',canonical);
   const h1=doc.querySelector('h1')?.textContent;
   for(const s of doc.querySelectorAll('script[type="application/ld+json"]')){try{const schema=JSON.parse(s.textContent);const walk=x=>{if(!x||typeof x!=='object')return;if(['Article','BlogPosting','WebPage'].includes(x['@type'])){if(x.headline)x.headline=h1;if(x.name)x.name=h1;if(x.description)x.description=payload.description;if(x.url)x.url=canonical;}Object.values(x).forEach(v=>Array.isArray(v)?v.forEach(walk):walk(v));};walk(schema);s.textContent=JSON.stringify(schema).replaceAll('<','\\u003c');}catch{}}
   if(payload.test){const script=[...doc.querySelectorAll('script')].find(s=>s.textContent.includes('window.TEST_DEF ='));if(script)script.textContent='window.TEST_DEF = '+JSON.stringify(payload.test).replaceAll('<','\\u003c')+';';}

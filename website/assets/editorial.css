@@ -113,7 +113,8 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 .ed-dark .ed-photo figcaption{color:#b8c0b4}
 .wide-photo .photo-crop{height:clamp(260px,41vw,550px)}
 .intro-spread{display:grid;grid-template-columns:1.5fr .6fr;gap:80px;align-items:end;margin-bottom:var(--content-gap)}
-.intro-links{display:flex;flex-direction:column;align-items:flex-start}
+.intro-links{display:flex;flex-direction:column;align-items:flex-end;justify-self:end;max-width:100%;text-align:right}
+.intro-links .ed-link{max-width:100%;justify-content:flex-end}
 .topic-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:100px}
 .topic-links>a{display:grid;grid-template-columns:28px 1fr 28px;gap:25px;padding:32px 0;border-top:1px solid #242b231a;color:#252d25;align-items:center}
 .topic-links>a:first-child{padding-top:0;border:0}

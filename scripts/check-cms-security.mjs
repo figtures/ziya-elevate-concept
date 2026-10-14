@@ -11,7 +11,7 @@ await db.exec(`
   create role anon; create role authenticated; create role service_role;
   create schema auth; create schema storage;
   grant usage on schema public,auth,storage to anon,authenticated,service_role;
-  create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz);
+  create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,encrypted_password text);
   create function auth.uid() returns uuid language sql stable as $$
     select (nullif(current_setting('request.jwt.claims',true),'')::jsonb->>'sub')::uuid;
   $$;
@@ -28,7 +28,7 @@ const admin='00000000-0000-0000-0000-000000000002';
 const editor='00000000-0000-0000-0000-000000000003';
 const outsider='00000000-0000-0000-0000-000000000004';
 await db.exec(`
-  insert into auth.users values('${owner}','owner@example.test',now()),('${admin}','admin@example.test',now()),('${editor}','editor@example.test',now()),('${outsider}','other@example.test',now());
+  insert into auth.users(id,email,email_confirmed_at) values('${owner}','owner@example.test',now()),('${admin}','admin@example.test',now()),('${editor}','editor@example.test',now()),('${outsider}','other@example.test',now());
   insert into public.cms_members(user_id,role,email) values('${owner}','owner','owner@example.test'),('${admin}','admin','admin@example.test'),('${editor}','editor','editor@example.test');
   insert into cms_private.cms_templates values('/sample/');
 `);
@@ -189,6 +189,30 @@ if(process.env.CMS_SEED_FILE){
   console.log(`Validated ${docs.length} actual seed documents`);
 }
 await checkAdvancedCMS({db,allow,deny,editor,admin,doc});
+
+// First-login credentials cannot access private content until Auth changes the hash.
+const firstLogin='00000000-0000-0000-0000-000000000099';
+await db.exec(`insert into auth.users(id,email,email_confirmed_at,encrypted_password) values('${firstLogin}','first@example.test',now(),'temporary-hash')`);
+await deny(editor,'select public.cms_register_created_member($1,$2)',[firstLogin,'editor'],'42501');
+await deny(owner,'select public.cms_register_created_member($1,$2)',[firstLogin,'owner'],'22023');
+await allow(owner,'select public.cms_register_created_member($1,$2)',[firstLogin,'admin']);
+assert.equal((await allow(firstLogin,'select must_change_password from public.cms_members where user_id=$1',[firstLogin])).rows[0].must_change_password,true);
+assert.equal((await allow(firstLogin,'select * from public.cms_documents')).rows.length,0);
+assert.equal((await allow(firstLogin,'select * from public.cms_leads')).rows.length,0);
+assert.equal((await allow(firstLogin,'select * from public.cms_media')).rows.length,0);
+await deny(firstLogin,'update public.cms_members set must_change_password=false where user_id=$1',[firstLogin],'42501');
+await deny(firstLogin,'select * from public.cms_save_document($1,$2,$3)',['locked',0,doc],'42501');
+await deny(firstLogin,'select * from public.cms_set_member($1,$2,$3)',[firstLogin,'owner',true],'42501');
+await allow(owner,'select * from public.cms_set_member($1,$2,$3)',[firstLogin,'editor',true]);
+assert.equal((await allow(firstLogin,'select must_change_password from public.cms_members where user_id=$1',[firstLogin])).rows[0].must_change_password,true);
+await db.exec(`update auth.users set email='renamed@example.test',encrypted_password='temporary-hash' where id='${firstLogin}'`);
+assert.equal((await allow(firstLogin,'select must_change_password from public.cms_members where user_id=$1',[firstLogin])).rows[0].must_change_password,true);
+await db.exec(`update auth.users set encrypted_password='new-hash' where id='${firstLogin}'`);
+assert.equal((await allow(firstLogin,'select must_change_password from public.cms_members where user_id=$1',[firstLogin])).rows[0].must_change_password,false);
+assert.equal((await allow(firstLogin,"select cms_private.has_role(array['editor']) as allowed")).rows[0].allowed,true);
+assert.equal((await allow(owner,'select must_change_password from public.cms_members where user_id=$1',[owner])).rows[0].must_change_password,false);
+console.log('PASS first-login database enforcement and Auth password trigger');
+
 await db.close();
 console.log(`PASS ${checks} offline allow/deny checks`);
 

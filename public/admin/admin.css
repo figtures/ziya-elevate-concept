@@ -347,3 +347,5 @@ body.admin {
  .admin .sidebar .brand{padding-bottom:14px}
  .admin .sidebar-foot{padding-top:12px}
 }
+
+.admin .status-banner[hidden]{display:none}

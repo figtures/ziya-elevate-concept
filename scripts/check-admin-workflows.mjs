@@ -33,9 +33,9 @@ function setup(){
  const change=(selector,value,event='input')=>{const el=$(selector);assert.ok(el,'Missing control '+selector);el.value=String(value);el.dispatchEvent(new window.Event(event));return el;};
  const toggle=(selector,checked,event='change')=>{const el=$(selector);assert.ok(el,'Missing checkbox '+selector);el.checked=checked;el.dispatchEvent(new window.Event(event));return el;};
  const click=async selector=>{const el=$(selector);assert.ok(el,'Missing button '+selector);assert.ok(!el.disabled,'Disabled button '+selector);if(el.onclick)await el.onclick({target:el,preventDefault(){}});else el.dispatchEvent(new window.Event('click'));await flush();return el;};
- const submit=async(selector,values)=>{const form=$(selector);assert.ok(form,'Missing form '+selector);for(const [name,value]of Object.entries(values))change(selector+' [name="'+name+'"]',value);form.onsubmit({target:form,preventDefault(){}});await flush();};
+ const submit=async(selector,values)=>{const form=$(selector);assert.ok(form,'Missing form '+selector);for(const [name,value]of Object.entries(values))change(selector+' [name="'+name+'"]',value);await form.onsubmit({target:form,preventDefault(){}});await flush();};
  const textSelector=()=>{const def=context.api.S.catalog[context.api.S.doc.template],input=$$('[data-bind]').find(el=>def.fields.find(f=>f.id===JSON.parse(el.dataset.bind).field)?.label==='Ana başlık');assert.ok(input,'No title text input');return '#'+input.id;};
- return {api:context.api,document,window,$,$$,change,toggle,click,submit,textSelector,confirmations,setConfirm:v=>confirmAnswer=v};
+ return {setFetch:fn=>context.fetch=fn,api:context.api,document,window,$,$$,change,toggle,click,submit,textSelector,confirmations,setConfirm:v=>confirmAnswer=v};
 }
 function fakeClient(initial={}){
  const tables={cms_published:structuredClone(seed.map(d=>({id:d.id,route:d.route,kind:d.kind,title:d.title,robots:d.robots,payload:d}))),cms_documents:structuredClone(seed.map(d=>({id:d.id,route:d.route,kind:d.kind,draft:d,revision:1,published_revision:1,archived:false}))),cms_media:[],cms_versions:[],cms_leads:[],cms_members:[],...initial};
@@ -130,7 +130,7 @@ await check('The original 20-question test supports questions, points, layer cop
  const h=await offline();h.api.navigate('test');await h.click('[data-tab="test"]');const t=h.api.S.doc.test,first=structuredClone(t.questions[0]);h.change('[data-test="questions.0.q"]','Yeni test sorusu');h.change('[data-test="questions.0.o.0.0"]','Yeni yanıt');h.change('[data-test="questions.0.o.0.1"]',4);assert.equal(t.questions[0].o[0][1],4);await h.click('[data-question-move="0|1"]');assert.equal(t.questions[1].q,'Yeni test sorusu');assert.equal(t.questions.length,20);assert.equal(Object.keys(t.layers).length,5);assert.equal(validateDocument(h.api.S.doc,h.api.S.catalog[h.api.S.doc.template]).length,0);h.change('[data-test="verdicts.0.v"]','Yeni sonuç başlığı');assert.equal(t.verdicts[0].v,'Yeni sonuç başlığı');assert.notEqual(first.q,t.questions[1].q);
 });
 await check('Owner/admin/editor permissions match the publishing and team UI',async()=>{
- for(const role of ['owner','admin','editor']){const h=await connected(role);h.api.openEditor('/kitaplar/');assert.equal(h.$('[data-action="save"]').disabled,false);assert.equal(h.$('[data-action="publish"]').disabled,role==='editor');await h.api.teamPage();assert.equal(h.$('[data-action="invite"]').disabled,role!=='owner');if(role==='editor'){await h.api.action('publish');await h.api.action('unarchive');await h.api.action('invite');assert.equal(h.db.calls.filter(c=>c.type==='rpc'||c.type==='function').length,0);}}
+ for(const role of ['owner','admin','editor']){const h=await connected(role);h.api.openEditor('/kitaplar/');assert.equal(h.$('[data-action="save"]').disabled,false);assert.equal(h.$('[data-action="publish"]').disabled,role==='editor');await h.api.teamPage();assert.equal(h.$('[data-action="create-user"]').disabled,role!=='owner');if(role==='editor'){await h.api.action('publish');await h.api.action('unarchive');await h.api.action('create-user');assert.equal(h.db.calls.filter(c=>c.type==='rpc'||c.type==='function').length,0);}}
  const h=await offline();await h.api.action('save');await h.api.action('publish');await h.api.action('password');assert.equal(h.$('#modal'),null);
 });
 await check('Saving a draft sends only save RPC and leaves the published revision intact',async()=>{
@@ -252,6 +252,32 @@ await check('Books open directly on their list and additions work after every bo
 await check('Removing a book updates its reading-guide row and preserves unrelated custom rows',async()=>{
  const h=await connected();h.api.navigate('books');const doc=h.api.S.doc,def=h.api.S.catalog[doc.template],section=doc.sections.find(s=>s.id===h.api.S.section),group=section.groups[0],guide=section.groups[1],guideDef=def.groups.find(g=>g.id===guide.id),custom=structuredClone(guide.items[0]);custom.id='custom-guide';for(const id of guideDef.items.find(i=>i.id===custom.source).fields)if(def.fields.find(f=>f.id===id)?.type==='text')custom.values[id]='Bağımsız rehber';guide.items.push(custom);
  const count=guide.items.length;await h.click(`[data-item-copy="${group.id}|0"]`);await h.click(`[data-item-remove="${group.id}|1"]`);assert.equal(guide.items.length,count,'Removing a duplicate must keep the surviving book guide');await h.click(`[data-item-remove="${group.id}|0"]`);assert.equal(guide.items.length,count-1);assert.ok(guide.items.some(i=>i.id==='custom-guide'));assert.match(h.confirmations.at(-1),/Okuma rehberindeki/);await h.click('[data-action="publish"]');const published=h.db.tables.cms_published.find(r=>r.route==='/kitaplar/').payload;assert.equal(published.sections.find(s=>s.id===section.id).groups.find(g=>g.id===group.id).items.length,3);assert.equal(published.sections.find(s=>s.id===section.id).groups.find(g=>g.id===guide.id).items.length,count-1);
+});
+
+
+await check('User creation sends no email and reveals the generated password only in the result dialog',async()=>{
+ const h=await connected();h.db.client.auth.getSession=async()=>({data:{session:{access_token:'owner-token'}}});let requests=0;
+ h.setFetch(async(url,options)=>{requests++;assert.equal(url,'/api/cms/users');assert.equal(options.headers.Authorization,'Bearer owner-token');assert.deepEqual(JSON.parse(options.body),{email:'new@example.org',role:'admin'});return {ok:true,json:async()=>({ok:true,email:'new@example.org',temporaryPassword:'Zy!4temporary-secret'})};});
+ await h.api.teamPage();await h.api.action('create-user');await h.submit('#create-user-form',{email:'new@example.org',role:'admin'});
+ assert.equal(requests,1);assert.equal(h.$('#created-user-password').value,'Zy!4temporary-secret');assert.ok(!JSON.stringify(h.api.S).includes('temporary-secret'));assert.equal(h.db.calls.filter(c=>c.type==='function').length,0);
+ h.api.closeDialog();assert.equal(h.$('#created-user-password'),null);
+});
+await check('Failed user creation preserves fields and displays a persistent error',async()=>{
+ const h=await connected();h.db.client.auth.getSession=async()=>({data:{session:{access_token:'owner-token'}}});h.setFetch(async()=>({ok:false,json:async()=>({error:'Bu hesap zaten var.'})}));
+ await h.api.teamPage();await h.api.action('create-user');await h.submit('#create-user-form',{email:'existing@example.org',role:'editor'});
+ assert.match(h.$('#create-user-error').textContent,/zaten var/);assert.equal(h.$('#create-user-form input[name="email"]').value,'existing@example.org');assert.equal(h.api.S.busy,false);assert.equal(h.$('#create-user-form [type="submit"]').disabled,false);
+});
+await check('First-login gate blocks navigation and private content loading even on a new session',async()=>{
+ const h=await connected('admin',{cms_members:[{user_id:'owner-id',email:'pending@example.org',role:'admin',active:true,must_change_password:true}]});const before=h.db.calls.length;
+ await h.api.enter();assert.ok(h.$('#first-password-form'));assert.equal(h.api.S.rows.length,0);assert.equal(h.db.calls.slice(before).filter(c=>c.table==='cms_documents'||c.table==='cms_media').length,0);
+ h.api.navigate('pages');assert.ok(h.$('#first-password-form'));assert.equal(h.$('[data-action="save"]'),null);assert.equal(h.$('#modal'),null);
+ await h.submit('#first-password-form',{current:'temporary-pass',password:'temporary-pass',confirm:'temporary-pass'});assert.match(h.$('#first-password-error').textContent,/farklı/);assert.equal(h.db.calls.filter(c=>c.action==='updateUser').length,0);
+});
+await check('Only the server-confirmed password change unlocks the first-login screen',async()=>{
+ const h=await connected('editor',{cms_members:[{user_id:'owner-id',email:'pending@example.org',role:'editor',active:true,must_change_password:true}]});await h.api.enter();
+ h.db.client.auth.updateUser=async()=>({error:{code:'weak_password'}});await h.submit('#first-password-form',{current:'temporary-pass',password:'new-strong-pass',confirm:'new-strong-pass'});assert.ok(h.$('#first-password-form'));assert.equal(h.api.S.member.must_change_password,true);
+ h.db.client.auth.updateUser=async values=>{assert.equal(values.current_password,'temporary-pass');h.db.tables.cms_members[0].must_change_password=false;return {error:null};};
+ await h.submit('#first-password-form',{current:'temporary-pass',password:'new-strong-pass',confirm:'new-strong-pass'});assert.equal(h.$('#first-password-form'),null);assert.equal(h.api.S.member.must_change_password,false);assert.ok(h.api.S.rows.length>0);
 });
 
 console.log(`RESULT ${passed} passed, ${failed} failed (DOM + local stubs; no live Supabase or browser QA)`);

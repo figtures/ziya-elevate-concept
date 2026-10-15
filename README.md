@@ -2,7 +2,6 @@
 
 The approved website HTML now lives in `website/`. A Vinext server renders 63 existing content routes plus three legacy test redirects. The original design, six-section homepage, Turkish copy, footage and interactions are retained. Static files are served from `public/assets/`.
 
-
 ## Supabase administration
 
 `/admin/` is a Turkish CMS for pages, article/note creation, training, books, keynote content, sections and repeaters, menus/footer, metadata, media, the original 20-question test, lead workflow, revision history and owner-managed team roles. Draft saves and publishing are separate, revision conflicts are explicit, archived media retain existing URLs, and only published snapshots reach the public renderer.

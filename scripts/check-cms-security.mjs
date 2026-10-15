@@ -213,6 +213,21 @@ assert.equal((await allow(firstLogin,"select cms_private.has_role(array['editor'
 assert.equal((await allow(owner,'select must_change_password from public.cms_members where user_id=$1',[owner])).rows[0].must_change_password,false);
 console.log('PASS first-login database enforcement and Auth password trigger');
 
+
+const deletionTarget='00000000-0000-0000-0000-000000009999';
+await db.exec(`insert into auth.users(id,email,email_confirmed_at) values('${deletionTarget}','delete@example.test',now());insert into public.cms_members(user_id,email,role) values('${deletionTarget}','delete@example.test','editor');`);
+await deny(editor,'select public.cms_prepare_member_deletion($1,$2)',[deletionTarget,'delete@example.test']);
+await deny(owner,'select public.cms_prepare_member_deletion($1,$2)',[owner,'owner@example.test']);
+await deny(owner,'select public.cms_prepare_member_deletion($1,$2)',[deletionTarget,'wrong@example.test']);
+await assert.rejects(db.exec(`delete from auth.users where id='${deletionTarget}'`));checks++;
+await allow(owner,'select public.cms_prepare_member_deletion($1,$2)',[deletionTarget,'delete@example.test']);
+assert.equal((await asUser(deletionTarget,'select * from public.cms_documents')).rows.length,0);checks++;
+await allow(owner,'select public.cms_set_member($1,$2,$3)',[deletionTarget,'owner',true]);
+await assert.rejects(db.exec(`delete from auth.users where id='${deletionTarget}'`));checks++;
+await allow(owner,'select public.cms_set_member($1,$2,$3)',[deletionTarget,'editor',true]);
+await allow(owner,'select public.cms_prepare_member_deletion($1,$2)',[deletionTarget,'delete@example.test']);
+await db.exec(`delete from auth.users where id='${deletionTarget}'`);
+assert.equal((await db.query(`select * from public.cms_members where user_id='${deletionTarget}'`)).rows.length,0);checks++;
 await db.close();
 console.log(`PASS ${checks} offline allow/deny checks`);
 

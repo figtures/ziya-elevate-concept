@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {createUserHandler} from '../cms/user-management.mjs';
+import {createUserHandler,deleteUserHandler} from '../cms/user-management.mjs';
 const config={enabled:true,url:'https://database.example.test',publishableKey:'public-test-key'};
 function harness(overrides={}){
  const calls=[];const state={member:{role:'owner',active:true,must_change_password:false},...overrides};
@@ -24,3 +24,21 @@ const duplicate=harness({createResult:{data:null,error:{code:'email_exists',mess
 const rollback=harness({grantError:true}),rr=await rollback.request();assert.equal(rr.status,503);assert.equal(rollback.calls.find(x=>x.kind==='delete').id,'created-id');assert.ok(!(await rr.text()).includes('Zy!4'));count++;
 const unconfigured=harness();assert.equal((await unconfigured.request(undefined,undefined,'')).status,503);assert.equal(unconfigured.calls.length,0);count++;
 console.log(`PASS ${count} user-creation route security and response checks; no network or emails`);
+
+const targetId='c9298a2a-15dd-4e0e-8229-527c123b3ef4';
+async function deletion(state={},body={userId:targetId,email:'new@example.org'}){
+ const h=harness(state);let makeClient;
+ // Capture the factory through a fresh harness equivalent so deletion and creation share auth expectations.
+ const calls=[];
+ makeClient=(url,key)=>key==='secret-test-key'?{auth:{admin:{deleteUser:async id=>{calls.push(['delete',id]);return {error:state.deleteError?{}:null};}}}}:{auth:{getUser:async()=>({data:{user:state.invalid?null:{id:state.self?targetId:'owner-id'}},error:null})},from:()=>({select:()=>({eq:()=>({single:async()=>({data:state.member||{role:'owner',active:true,must_change_password:false},error:null})})})}),rpc:async(name,args)=>{calls.push([name,args]);return {error:state.revokeError?{}:null};}};
+ const response=await deleteUserHandler(new Request('https://panel.example.test/api/cms/users',{method:'DELETE',headers:{'content-type':'application/json',authorization:'Bearer owner-token'},body:JSON.stringify(body)}),{config,secret:'secret-test-key',makeClient});
+ return {response,calls};
+}
+for(const [state,status] of [[{invalid:true},401],[{self:true},403],[{member:{role:'admin',active:true}},403],[{member:{role:'owner',active:true,must_change_password:true}},403],[{revokeError:true},409]]){
+ const {response,calls}=await deletion(state);assert.equal(response.status,status);assert.equal(calls.filter(c=>c[0]==='delete').length,0);
+}
+const deleted=await deletion();assert.equal(deleted.response.status,200);assert.equal(deleted.calls[0][0],'cms_prepare_member_deletion');assert.deepEqual(deleted.calls[1],['delete',targetId]);
+assert.equal((await deletion({deleteError:true})).response.status,502);
+const supplied='Zy!4'+'a'.repeat(32),provided=harness();const providedResponse=await provided.request({email:'new@example.org',role:'editor',temporaryPassword:supplied});assert.equal((await providedResponse.json()).temporaryPassword,supplied);assert.equal(provided.calls.find(c=>c.kind==='create').body.password,supplied);
+assert.equal((await harness().request({email:'new@example.org',role:'editor',temporaryPassword:'weak'})).status,400);
+console.log('PASS 9 additional deletion and pre-generated password checks');

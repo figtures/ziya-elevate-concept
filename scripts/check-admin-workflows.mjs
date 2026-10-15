@@ -255,10 +255,10 @@ await check('Removing a book updates its reading-guide row and preserves unrelat
 });
 
 
-await check('User creation sends no email and reveals the generated password only in the result dialog',async()=>{
+await check('User creation previews the generated password and retains it in the result dialog',async()=>{
  const h=await connected();h.db.client.auth.getSession=async()=>({data:{session:{access_token:'owner-token'}}});let requests=0;
- h.setFetch(async(url,options)=>{requests++;assert.equal(url,'/api/cms/users');assert.equal(options.headers.Authorization,'Bearer owner-token');assert.deepEqual(JSON.parse(options.body),{email:'new@example.org',role:'admin'});return {ok:true,json:async()=>({ok:true,email:'new@example.org',temporaryPassword:'Zy!4temporary-secret'})};});
- await h.api.teamPage();await h.api.action('create-user');await h.submit('#create-user-form',{email:'new@example.org',role:'admin'});
+ h.setFetch(async(url,options)=>{requests++;assert.equal(url,'/api/cms/users');assert.equal(options.headers.Authorization,'Bearer owner-token');const body=JSON.parse(options.body);assert.equal(body.email,'new@example.org');assert.equal(body.role,'admin');assert.match(body.temporaryPassword,/^Zy!4[a-f0-9]{32}$/);return {ok:true,json:async()=>({ok:true,email:'new@example.org',temporaryPassword:'Zy!4temporary-secret'})};});
+ await h.api.teamPage();await h.api.action('create-user');assert.match(h.$('[name="temporaryPassword"]').value,/^Zy!4[a-f0-9]{32}$/);await h.submit('#create-user-form',{email:'new@example.org',role:'admin'});
  assert.equal(requests,1);assert.equal(h.$('#created-user-password').value,'Zy!4temporary-secret');assert.ok(!JSON.stringify(h.api.S).includes('temporary-secret'));assert.equal(h.db.calls.filter(c=>c.type==='function').length,0);
  h.api.closeDialog();assert.equal(h.$('#created-user-password'),null);
 });
@@ -266,6 +266,15 @@ await check('Failed user creation preserves fields and displays a persistent err
  const h=await connected();h.db.client.auth.getSession=async()=>({data:{session:{access_token:'owner-token'}}});h.setFetch(async()=>({ok:false,json:async()=>({error:'Bu hesap zaten var.'})}));
  await h.api.teamPage();await h.api.action('create-user');await h.submit('#create-user-form',{email:'existing@example.org',role:'editor'});
  assert.match(h.$('#create-user-error').textContent,/zaten var/);assert.equal(h.$('#create-user-form input[name="email"]').value,'existing@example.org');assert.equal(h.api.S.busy,false);assert.equal(h.$('#create-user-form [type="submit"]').disabled,false);
+});
+await check('Deletion requires the exact email and hides controls for owners',async()=>{
+ const id='c9298a2a-15dd-4e0e-8229-527c123b3ef4';
+ const h=await connected('owner',{cms_members:[{user_id:'owner-id',email:'owner@example.org',role:'owner',active:true},{user_id:id,email:'delete@example.org',role:'editor',active:true}]});
+ h.db.client.auth.getSession=async()=>({data:{session:{access_token:'owner-token'}}});let requests=0;
+ h.setFetch(async(url,options)=>{requests++;assert.equal(options.method,'DELETE');assert.equal(JSON.parse(options.body).userId,id);return {ok:true,json:async()=>({ok:true})};});
+ await h.api.teamPage();assert.equal(h.$('[data-delete-member="owner-id"]'),null);await h.click(`[data-delete-member="${id}"]`);
+ await h.submit('#delete-member-form',{email:'wrong@example.org'});assert.equal(requests,0);assert.match(h.$('#delete-member-error').textContent,/eşleşmiyor/);
+ await h.submit('#delete-member-form',{email:'delete@example.org'});assert.equal(requests,1);assert.equal(h.$('#delete-member-form'),null);
 });
 await check('First-login gate blocks navigation and private content loading even on a new session',async()=>{
  const h=await connected('admin',{cms_members:[{user_id:'owner-id',email:'pending@example.org',role:'admin',active:true,must_change_password:true}]});const before=h.db.calls.length;

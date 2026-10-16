@@ -7,7 +7,7 @@ footer.site.site-footer {
   background: #18201a;
   color: var(--footer-ink);
   padding: clamp(48px, 6vw, 80px) 0 28px;
-  border-top: 1px solid var(--footer-line);
+  border-top: 0;
   font: 400 1rem/1.65 var(--font-b, sans-serif);
 }
 .site-footer *, .site-footer *::before, .site-footer *::after { box-sizing: border-box; }
@@ -30,11 +30,11 @@ footer.site.site-footer {
 .site-footer .footer-programs ul { list-style: none; margin: 0; padding: 0; }
 .site-footer .footer-group li { padding: 0; margin: 0; }
 .site-footer .footer-group li > a { display: block; width: fit-content; min-height: 40px; padding: 7px 0; font-size: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
-.site-footer .footer-programs { display: grid; grid-template-columns: 190px 1fr; align-items: start; gap: 24px; margin-top: 42px; padding: 26px 28px; border: 1px solid var(--footer-line); border-radius: 22px; background: rgba(255, 255, 255, .022); }
+.site-footer .footer-programs { display: grid; grid-template-columns: 190px 1fr; align-items: start; gap: 24px; margin-top: 42px; padding: 26px 28px; border: 0; border-radius: 22px; background: rgba(255, 255, 255, .022); }
 .site-footer .footer-programs h2 { margin: 8px 0 0; }
 .site-footer .footer-programs ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 24px; }
 .site-footer .footer-programs a { display: flex; align-items: center; min-height: 44px; font-size: 1rem; line-height: 1.55; }
-.site-footer .footer-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 28px; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--footer-line); color: var(--footer-muted); font-size: 1rem; line-height: 1.6; }
+.site-footer .footer-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 28px; margin-top: 30px; padding-top: 24px; border-top: 0; color: var(--footer-muted); font-size: 1rem; line-height: 1.6; }
 .site-footer .footer-meta > p { margin: 0; color: inherit; font-size: inherit; }
 .site-footer .footer-social { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .site-footer .footer-social > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1rem; }

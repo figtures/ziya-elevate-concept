@@ -1,5 +1,5 @@
 /* Content depth within the approved editorial layout; no changes to hero/header. */
-.continuation-links{display:flex;align-items:center;flex-wrap:wrap;gap:20px 32px;margin-top:36px;padding-top:20px;border-top:1px solid #29302525}
+.continuation-links{display:flex;align-items:center;flex-wrap:wrap;gap:20px 32px;margin-top:36px;padding-top:20px;border-top:0}
 .continuation-links>span{font:400 0.8125rem var(--font-b);letter-spacing:.06em;color:#616957;margin-right:auto}
 .continuation-links>a{display:inline-flex;align-items:center;gap:8px;font:500 1rem var(--font-b);color:#3f4b36}
 [data-editorial] .continuation-links>a .icon{width:18px;height:18px;flex:none}

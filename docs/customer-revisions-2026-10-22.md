@@ -79,7 +79,7 @@ Belgede 5 numaralı madde bulunmuyor; numaralandırma bilinçli olarak aynen kor
 | Kaynak belgenin tüm paragraflarının okunması | Tamamlandı | DOCX XML metin çıkarımı; 633 indeksine kadar içerik, belge içinde medya/hyperlink yok. |
 | Son tasarım talimatının önceliği | Tanımlandı | Lacivert tasarım korunur; belgeyle çatışan görsel yeniden tasarım maddeleri ayrı işaretlendi. |
 | Metin ve bağlantı kabul kontrolleri | Tamamlandı | `node scripts/check-customer-revisions.mjs`: 23 kabul kontrolü geçti, 0 hata. Açık gerçek malzeme/cihaz koşulları ayrı raporlanıyor. |
-| CMS kayıtları ve yeni alanlar | Kod doğrulandı | `node scripts/check-cms.mjs`: 65 belge; onaylı dokuz ana sayfa bölümü doğru sırada ve tamamı yönetilebilir. `check-admin-dom.mjs`: 192 bölüm editörü geçti. Canlı içerik güncellemesi son yayın kontrolünde. |
+| CMS kayıtları ve yeni alanlar | Canlı backend doğrulandı | 65 belge canlıya tek transaction ile aktarıldı. 65 taslak ve yayındaki payload, repo seed içeriğiyle birebir eşleşiyor; revision/published_revision eşit. Yeni EN sayfası yayında. 192 bölüm editörü ve 5979 düzenlenebilir alan önceki yerel kontrollerde geçti. |
 | Admin iş akışları | Tamamlandı | `check-admin-workflows.mjs`: 52 geçti, 0 hata; 65 belge, 5979 düzenlenebilir alan ve 64 video çalışma alanı. Taslak/yayın ayrımı, yetki, kullanıcı işlemleri, medya, kitaplar, menü/sıralama ve önizleme yerel DOM + Supabase stublarıyla kontrol edildi. Gerçek oturumdaki Storage yükleme testi yerine geçmez. |
 | Form başarılı ve başarısız gönderim akışları | Canlı kayıt doğrulandı | Canlı POST 201; CRM’de gerçek tarih/katılımcı/iletişim alanları doğrulandı. Test kaydı doğrulama sonrası silindi. 37 form kontrolü ve altı önizleme yüzeyi kontrolü geçti; İngilizce 375px formda keynote seçimine göre alanların değişmesi ve yatay taşma olmaması doğrulandı. |
 | Hero video codec/süre/boyut/kare | Kısmi | ffprobe ile H.264, 1080p/720p ve boyutlar geçti; dört temiz sert kesme medya ajanı tarafından incelendi. Süre 3,333 sn; uzun özgün kayıt yok. |
@@ -87,14 +87,18 @@ Belgede 5 numaralı madde bulunmuyor; numaralandırma bilinçli olarak aynen kor
 | Mobil tarayıcı kontrolü | Kısmi | Masaüstü, 375px ve 430px ana sayfa: beş sayaç ilk ekranda ve taşma yok; mobil 720p kaynak seçimi doğrulandı. İngilizce 375px form: keynote koşullu alanları çalışıyor, yatay taşma yok. KGKY 430px: hedef oluşturma, birinci gün işaretleme ve localStorage kaydının yenileme sonrası kalıcılığı doğrulandı. Fiziksel iPhone/Android kaydı yok. |
 | SEO ve dil eşleştirmesi | Tamamlandı | `check-seo.mjs`: 64 ham şablon ve 64 SSR sayfası; altı Service sayfası, TR/EN dil/locale/hreflang, şema referansları, görünür içerik eşleşmesi, kaynak sırası, sitemap ve robots geçti. |
 | Üretim build | Tamamlandı | Üretim build geçti. `check-resources.mjs`: 64 SSR sayfası, güncel CSS paketleri/sırası, kaynak bağları ve önbellek kuralları geçti. |
-| GitHub ve Cloudflare dağıtımı | Bekliyor | Henüz yayımlanmadı; commit ve başarılı terminal deployment sonucu beklenecek. |
-| Canlı yeni sürüm kontrolü | Bekliyor | Cloudflare yeni kodla yayınlandıktan sonra içerik geçişi ve yeni metinler/assets/canonical/robots kontrol edilecek. Mevcut veritabanı sürümü değiştirilmedi. |
+| GitHub ve Cloudflare dağıtımı | Canlı doğrulandı | `12b33f288ae4c61f438a9508a4b156c29e7462c5` için Workers Builds sonucu completed/success. Build `5f458ecd-bf18-45e8-a9b3-79cce506d03b`, Worker sürümü `7b3c1e36-e5d2-4554-8b81-644bae529bd3`. CI/CD otomatik çalışıyor; Cloudflare panel girişi gerekmiyor. |
+| Canlı yeni sürüm kontrolü | Dağıtım ve veritabanı doğrulandı; HTML kabulü sınırlı | CI/CD completed/success; 65 canlı CMS payload seed ile birebir eşleşti, 65 yayımlanan sürüm geçmişi kaydı doğrulandı. Bu ortamdan `/en/speaker/` HTTP isteği Cloudflare 403/error 1010 döndürdü; tarayıcı isteği tamamlanmadı. Bu sonuç ziyaretçilerin de hata gördüğünü kanıtlamaz. Canlı DOM/PDF/SEO çıktısı ayrıca doğrulanmış sayılmaz. |
 
-## Yayın devam noktası
+## Yayın kaydı — 22 Ekim 2026
 
-- Hazır kod commit’i: `6b4a3e8b1b67e18b4ff6dd24fb8256e866e82da5`.
-- Hedef Cloudflare Worker: `ziya-sakir-yilmaz`. Önce yeni kodun başarılı dağıtımı doğrulanmalı.
-- Ardından `supabase/content-revisions/20261022-customer-content.sql` tek transaction olarak uygulanmalı. Dosya, incelenen 64 eski belgenin revision ve JSON içeriğini birebir doğrular; eşzamanlı editör değişikliği varsa bütün işlem durur. Eski sürümler `cms_versions` içinde tutulur. 65 kayıt ve İngilizce konuşmacı sayfası oluşturulur/güncellenir.
-- İçerik geçişi canlı veritabanında rollback ile ön kontrolden geçti; gerçek commit uygulanmadı. Son dosyada satır kilitleri eklenerek eşzamanlı yazma aralığı da kapatıldı; dosyanın tamamı PostgreSQL uyumlu PGlite üzerinde 65 kayıt, rollback ve eşzamanlı editör değişikliği senaryolarında yeniden doğrulandı. Yeni kod gelmeden bu SQL çalıştırılmamalı.
-- Yayından sonra ana sayfa/kitaplar, `/en/speaker/`, PDF, form, canonical/hreflang ve dev noindex yeniden kontrol edilmeli.
-- Bu dosyada malzeme bekleyen maddeler tamamlanmış sayılmaz.
+- Kod: `12b33f288ae4c61f438a9508a4b156c29e7462c5`; Cloudflare Workers Builds completed/success.
+- Otomatik CI/CD doğrulandı; panelden manuel yayın gerekmiyor.
+- Hedef Worker: `ziya-sakir-yilmaz`; sürüm `7b3c1e36-e5d2-4554-8b81-644bae529bd3`.
+- `supabase/content-revisions/20261022-customer-content.sql` canlı veritabanında uygulandı. Öncesinde 64 belgenin incelenen baseline ile aynı olduğu ve yayımlanmamış taslak bulunmadığı doğrulandı.
+- Satır kilitleri ve revision/JSON eşitlik korumalarıyla işlem tek transaction olarak tamamlandı. Eski sürümler korunuyor; yeni İngilizce sayfayla birlikte 65 yayımlanmış kayıt bulunuyor.
+- Sonradan okunan 65 taslak ve 65 yayımlanmış payload repo seed dosyasıyla birebir eşleşti; revision artışları doğrulandı.
+- Bu SQL tek seferliktir; aynı sürümde tekrar çalıştırılmamalı.
+- Malzeme ve fiziksel cihaz bekleyen maddeler hâlâ ayrı ve açık tutulur.
+
+Canlı HTML doğrulamasının erişim sınırı yukarıdaki tabloda kaydedildi. Yerel mobil, form ve SEO kontrollerinin geçmiş sonuçları, canlı tarayıcı kabulü olarak yeniden etiketlenmedi.

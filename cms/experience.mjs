@@ -46,8 +46,17 @@ export function experienceDefaults(doc, payload = {}) {
   if (doc?.querySelector('#talkDialog') && payload.kind !== 'global') {
     result.talk = {title: textAt(doc, '#talkTitle', 'Ziya Şakir Yılmaz · TEDxReset'), closeLabel: attrAt(doc, '.talk-close', 'aria-label', 'Videoyu kapat'), watchLabel: textAt(doc, '#talkDialog > a', 'YouTube’da izle'), href: attrAt(doc, '#talkDialog > a', 'href', 'https://www.youtube.com/watch?v=u-p2y6JH3aA')};
   }
-  if (doc?.querySelector('[data-tedx-hero]') && payload.kind !== 'global') {
-    result.playlist = [...doc.querySelectorAll('[data-hero-clip]')].map((video, i) => ({id: video.dataset.heroClip || `clip-${i + 1}`, src: video.dataset.src || video.getAttribute('src') || '', poster: video.getAttribute('poster') || '/assets/hero-poster.jpg', focal: video.style.objectPosition || 'center'}));
+  if (payload.kind !== 'global') {
+    const hero = doc?.querySelector('[data-tedx-hero],.hero-vid');
+    const clips = hero ? [...hero.querySelectorAll('video')] : [];
+    if (clips.length) result.playlist = clips.map((video, i) => ({
+      id: video.dataset.heroClip || `clip-${i + 1}`,
+      src: video.dataset.src || video.getAttribute('src') || '',
+      poster: video.getAttribute('poster') || '/assets/hero-poster.jpg',
+      focal: video.style.objectPosition || 'center',
+      ...(video.hasAttribute('data-clip-start') || video.hasAttribute('data-start-at') ? {start: Number(video.dataset.clipStart ?? video.dataset.startAt)} : {}),
+      ...(video.hasAttribute('data-clip-end') ? {end: Number(video.dataset.clipEnd)} : {})
+    }));
   }
   if (doc?.querySelector('#contactForm') || payload.route === '/iletisim/') {
     const submitLabel = textAt(doc, '#contactForm [type="submit"]', CONTACT_DEFAULTS.submitLabel);
@@ -91,7 +100,14 @@ export function validateExperience(value) {
     else {
       const ids = new Set();
       for (const item of value.playlist) {
-        if (!object(item) || Object.keys(item).some(k => !['id', 'src', 'poster', 'focal'].includes(k)) || typeof item.id !== 'string' || !/^[a-zA-Z0-9_-]{1,80}$/.test(item.id) || ids.has(item.id) || !mediaLink(item.src) || !mediaLink(item.poster) || typeof item.focal !== 'string' || item.focal.length > 2000 || !focalPattern.test(item.focal)) errors.push('Video listesinde kimlik, adres, kapak veya odak konumu geçersiz.');
+        if (!object(item) || Object.keys(item).some(k => !['id', 'src', 'poster', 'focal', 'start', 'end'].includes(k)) || typeof item.id !== 'string' || !/^[a-zA-Z0-9_-]{1,80}$/.test(item.id) || ids.has(item.id) || !mediaLink(item.src) || !mediaLink(item.poster) || typeof item.focal !== 'string' || item.focal.length > 2000 || !focalPattern.test(item.focal)) errors.push('Video listesinde kimlik, adres, kapak veya odak konumu geçersiz.');
+        if (object(item)) {
+          const start = item.start === undefined ? 0 : item.start;
+          if (typeof start !== 'number' || !Number.isFinite(start) || start < 0 || start > 36000 ||
+              (item.end !== undefined && (typeof item.end !== 'number' || !Number.isFinite(item.end) || item.end <= start || item.end > 36000))) {
+            errors.push('Video başlangıcı 0–36000 saniye arasında, bitişi başlangıçtan sonra olmalı.');
+          }
+        }
         ids.add(item?.id);
       }
     }
@@ -125,18 +141,34 @@ export function applyExperience(doc, payload, globalPayload, {leadsEnabled = fal
     if (t.closeLabel !== undefined) doc.querySelector('.talk-close')?.setAttribute('aria-label', t.closeLabel);
     if (t.href !== undefined) doc.querySelector('#talkDialog > a')?.setAttribute('href', t.href);
   }
-  if (local.playlist && doc.querySelector('[data-tedx-hero]')) {
-    const host = doc.querySelector('[data-tedx-hero]'), original = host.querySelector('[data-hero-clip]');
+  if (local.playlist && doc.querySelector('[data-tedx-hero],.hero-vid')) {
+    const host = doc.querySelector('[data-tedx-hero],.hero-vid'), original = host.querySelector('video');
+    const isTEDx = host.hasAttribute('data-tedx-hero');
+    if (!isTEDx) host.setAttribute('data-video-sequence', '');
     const marker = doc.createComment('video-list'); original?.before(marker);
-    host.querySelectorAll('[data-hero-clip]').forEach(v => v.remove());
-    for (const item of local.playlist) {
+    host.querySelectorAll('video').forEach(v => v.remove());
+    for (const [index, item] of local.playlist.entries()) {
       const video = original ? original.cloneNode(false) : doc.createElement('video');
-      video.removeAttribute('id'); video.removeAttribute('src'); video.removeAttribute('data-cms-node'); video.classList.remove('is-active');
+      for (const attr of ['id', 'src', 'data-cms-node', 'autoplay', 'loop', 'data-start-at', 'data-clip-start', 'data-clip-end']) video.removeAttribute(attr);
+      video.classList.remove('is-active');
+      video.dataset.clipStart = String(item.start ?? 0);
+      if (item.end !== undefined) video.dataset.clipEnd = String(item.end);
+      // Active classes survive motion's restoration of inline transform styles.
+      video.style.removeProperty('visibility');
+      if (!isTEDx && index === 0) video.classList.add('is-active');
       video.dataset.src = item.src; video.dataset.heroClip = item.id; video.setAttribute('data-tedx-fallback', '');
       video.setAttribute('poster', item.poster); video.style.objectPosition = item.focal; video.setAttribute('muted', ''); video.setAttribute('playsinline', ''); video.setAttribute('preload', 'none'); video.setAttribute('aria-hidden', 'true');
       if (marker.parentNode) marker.before(video); else host.insertBefore(video, host.querySelector('#tedxHeroPlayer'));
     }
     marker.remove();
+    if (!isTEDx && !doc.querySelector('[data-video-sequence-styles]')) {
+      const style = doc.createElement('style'); style.setAttribute('data-video-sequence-styles', '');
+      style.textContent = '[data-video-sequence] video[data-hero-clip]{visibility:hidden}[data-video-sequence] video[data-hero-clip].is-active{visibility:visible}';
+      doc.head.append(style);
+    }
+    if (!isTEDx && ![...doc.querySelectorAll('script[src]')].some(el => el.getAttribute('src').split('?')[0] === '/assets/tedx-hero.js')) {
+      const script = doc.createElement('script'); script.src = '/assets/tedx-hero.js'; script.defer = true; doc.body.append(script);
+    }
   }
   if (doc.querySelector('#contactForm') && (exp.contact || leadsEnabled)) {
     const config = experienceDefaults(doc, {...payload, experience: {contact: exp.contact || {}}}).contact; dataJSON(doc, 'cms-contact-content', config);

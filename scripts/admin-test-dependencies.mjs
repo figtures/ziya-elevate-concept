@@ -8,3 +8,5 @@ export {experienceDefaults,applyExperience} from '../cms/experience.mjs';
 export {renderExperienceEditor,wireExperienceEditor} from '../cms/admin-experience.mjs';
 export {composeContent} from '../cms/compose.mjs';
 export {auditContentLinks} from '../cms/link-audit.mjs';
+
+export {wirePageVideoPreview} from '../cms/admin-video-preview.mjs';

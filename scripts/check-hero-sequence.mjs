@@ -3,15 +3,16 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 const code=readFileSync(new URL('../public/assets/tedx-hero.js',import.meta.url),'utf8');
 assert.equal(code,readFileSync(new URL('../website/assets/tedx-hero.js',import.meta.url),'utf8'),'Source and served hero script must match.');
-function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=false}={}){
+function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=false,native=false,trims=[],lateMetadata=false}={}){
  let time=0;const timers=new Set(),observers=[],mutations=[],players=[],scripts=[];
- const element=(dataset={})=>{const handlers={},classes=new Set();return {dataset,paused:true,currentTime:0,attributes:{},loadCount:0,classList:{add:k=>classes.add(k),remove:k=>classes.delete(k),contains:k=>classes.has(k),toggle:(k,on)=>on?classes.add(k):classes.delete(k)},getAttribute(k){return this.attributes[k]??null;},hasAttribute(k){return k in this.attributes;},setAttribute(k,v){this.attributes[k]=v;},load(){this.loadCount++;this.paused=true;this.currentTime=0;},removeAttribute(k){delete this.attributes[k];},addEventListener(k,f){(handlers[k]??=[]).push(f);},emit(k){for(const f of handlers[k]||[])f();},play(){if(this.paused){this.paused=false;this.emit('playing');}return Promise.resolve();},pause(){this.paused=true;}};};
+ const element=(dataset={})=>{const handlers={},classes=new Set();return {dataset,paused:true,currentTime:0,duration:60,readyState:lateMetadata?0:1,seeking:false,style:{},attributes:{},loadCount:0,classList:{add:k=>classes.add(k),remove:k=>classes.delete(k),contains:k=>classes.has(k),toggle:(k,on)=>on?classes.add(k):classes.delete(k)},getAttribute(k){return this.attributes[k]??null;},hasAttribute(k){return k in this.attributes;},setAttribute(k,v){this.attributes[k]=v;},load(){this.loadCount++;this.paused=true;this.currentTime=0;},removeAttribute(k){delete this.attributes[k];},addEventListener(k,f){(handlers[k]??=[]).push(f);},emit(k){for(const f of handlers[k]||[])f();},play(){if(this.paused){this.paused=false;this.emit('playing');}return Promise.resolve();},pause(){this.paused=true;}};};
  const videos=[element({heroClip:'sahne',src:'/assets/sahne.mp4'}),element({heroClip:'uluslararasi',src:'/assets/uluslararasi.mp4'})];
+ trims.forEach((trim,i)=>Object.assign(videos[i].dataset,trim));
  if(legacySource) videos.forEach(v=>{v.setAttribute('src',v.dataset.src);delete v.dataset.src;});
  const use=element(),label=element(),button=element();button.querySelector=s=>s==='use'?use:label;
  const section=element();section.querySelector=()=>button;
- const host=element({videoId:'u-p2y6JH3aA',clipStart:'31',clipEnd:'35'});host.closest=()=>section;host.querySelectorAll=()=>videos;
- const body=element(),dialog=element(),document=element();document.body=body;document.hidden=hidden;document.dispatchEvent=()=>{};document.querySelector=s=>s==='[data-tedx-hero]'?host:s==='dialog[open]'&&dialog.open?dialog:null;document.getElementById=()=>dialog;document.head={append:e=>scripts.push(e)};document.createElement=()=>element();
+ const host=element({videoId:'u-p2y6JH3aA',clipStart:'31',clipEnd:'35'});host.setAttribute(native?'data-video-sequence':'data-tedx-hero','');host.closest=()=>section;host.querySelectorAll=()=>videos;
+ const body=element(),dialog=element(),document=element();document.body=body;document.hidden=hidden;document.dispatchEvent=()=>{};document.querySelector=s=>s==='[data-tedx-hero],[data-video-sequence]'?host:s==='dialog[open]'&&dialog.open?dialog:null;document.getElementById=()=>dialog;document.head={append:e=>scripts.push(e)};document.createElement=()=>element();
  const media=element();media.matches=reduced;
  const YT={PlayerState:{PLAYING:1,ENDED:0},Player:class{constructor(id,config){this.config=config;this.current=31;this.state=2;this.loads=0;this.destroyed=0;players.push(this);}mute(){}getIframe(){return element();}getCurrentTime(){return this.current;}getPlayerState(){return this.state;}playVideo(){if(this.state!==1){this.state=1;this.config.events.onStateChange({data:1});}}pauseVideo(){this.state=2;}loadVideoById(){this.loads++;}destroy(){this.destroyed++;}end(){this.config.events.onStateChange({data:0});}}};
  const context={document,window:apiAvailable?{YT}:{},YT,matchMedia:()=>media,location:{origin:'http://test.local'},performance:{now:()=>time},Event:class{},IntersectionObserver:class{constructor(fn){observers.push(fn);}observe(){}},MutationObserver:class{constructor(fn){mutations.push(fn);}observe(){}},setInterval:fn=>(timers.add(fn),fn),clearInterval:fn=>timers.delete(fn)};
@@ -24,7 +25,7 @@ function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=fals
  f.player.current=34.9;f.tick();assert.equal(f.host.dataset.playback,'intro');
  f.player.current=35;f.tick();assert.equal(f.host.dataset.clip,'sahne');assert.equal(f.host.dataset.introComplete,'played');
  assert.equal(f.videos[0].preload,'auto');assert.equal(f.videos[0].getAttribute('src'),'/assets/sahne.mp4');assert.equal(f.videos[1].preload,'none','Inactive clip must not compete for an early metadata download.');assert.ok(!f.videos[1].hasAttribute('src'));
- assert.equal(f.player.destroyed,1,'The finished iframe must be released after the first native frame.');assert.equal(f.timers.size,0);
+ assert.equal(f.player.destroyed,1,'The finished iframe must be released after the first native frame.');assert.equal(f.timers.size,1,'Only the native trim boundary watcher remains.');
  f.player.end();assert.equal(f.host.dataset.clip,'sahne');
  for(let i=0;i<4;i++){f.videos[0].emit('ended');assert.equal(f.host.dataset.clip,'uluslararasi');assert.equal(f.videos[0].preload,'none');assert.equal(f.videos[0].getAttribute('src'),'/assets/sahne.mp4','Completed clip keeps its source and buffer.');assert.equal(f.videos[1].preload,'auto');assert.equal(f.videos[1].getAttribute('src'),'/assets/uluslararasi.mp4');f.videos[1].emit('ended');assert.equal(f.host.dataset.clip,'sahne');assert.equal(f.videos[1].preload,'none');assert.equal(f.videos[0].loadCount,1,'A completed clip must reuse its buffer without load() on every rotation.');assert.equal(f.videos[1].loadCount,1,'Second clip is attached once, then reused.');}
  assert.equal(f.player.loads,0,'The opening TEDx must never reload.');
@@ -60,6 +61,27 @@ function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=fals
  const f=fixture({legacySource:true});assert.ok(f.videos.every(v=>!v.hasAttribute('src')&&v.preload==='none'),'Legacy templates are normalized without downloading inactive clips.');f.ready();f.player.current=35;f.tick();assert.equal(f.videos[0].getAttribute('src'),'/assets/sahne.mp4');
 }
 {
- const f=fixture();f.ready();f.videos[0].emit('error');f.videos[1].emit('error');f.player.current=35;f.tick();assert.ok(f.videos.every(v=>v.paused&&!v.hasAttribute('src')));assert.equal(f.player.destroyed,1,'A failed native playlist still releases the third-party player.');
+ const f=fixture();f.ready();f.videos[0].emit('error');f.videos[1].emit('error');f.player.current=35;f.tick();assert.ok(f.videos.every(v=>v.paused&&!v.hasAttribute('src')));assert.equal(f.player.destroyed,1,'A failed native playlist still releases the third-party player.');assert.equal(f.timers.size,0,'No trim timer survives an entirely failed playlist.');
+}
+{
+ const f=fixture({native:true,trims:[{clipStart:'8.25',clipEnd:'10.5'},{clipStart:'20',clipEnd:'23'}]});
+ assert.equal(f.players.length,0,'Subpage sequences never create a YouTube player.');
+ assert.equal(f.videos[0].currentTime,8.25);assert.equal(f.videos[0].classList.contains('is-active'),true);assert.equal(f.videos[1].classList.contains('is-active'),false);
+ f.videos[0].currentTime=10.49;f.tick();assert.equal(f.host.dataset.clip,'sahne');
+ f.videos[0].currentTime=10.5;f.tick();assert.equal(f.host.dataset.clip,'uluslararasi');assert.equal(f.videos[1].currentTime,20);
+ f.videos[1].currentTime=23;f.videos[1].emit('timeupdate');assert.equal(f.host.dataset.clip,'sahne');assert.equal(f.videos[0].currentTime,8.25,'Every lap restarts at selected trim start.');
+ f.videos[0].currentTime=9;f.button.emit('click');assert.equal(f.timers.size,0);f.button.emit('click');assert.equal(f.videos[0].currentTime,9,'Manual pause preserves an in-range playhead.');
+ f.hidden(true);assert.equal(f.timers.size,0);f.hidden(false);assert.equal(f.videos[0].paused,false);
+}
+{
+ const f=fixture({native:true,lateMetadata:true,trims:[{clipStart:'7',clipEnd:'12'}]});
+ assert.equal(f.videos[0].paused,true,'No frame may play before metadata and trim seek.');
+ f.videos[0].readyState=1;f.videos[0].emit('loadedmetadata');assert.equal(f.videos[0].currentTime,7);assert.equal(f.videos[0].paused,false);
+}
+{
+ const f=fixture({native:true,reduced:true});assert.equal(f.players.length,0);assert.equal(f.timers.size,0);assert(f.videos.every(v=>v.paused));f.button.emit('click');assert.equal(f.videos[0].paused,false);
+}
+{
+ const f=fixture({native:true,trims:[{clipStart:'80',clipEnd:'90'}]});assert.equal(f.host.dataset.clip,'uluslararasi','A trim starting beyond actual media duration is skipped.');
 }
 console.log('PASS: intro once, two-clip rotation, deferred unplayed sources, completed media buffer reuse, preserved resume positions, accessible control labels, iframe release, API deferral/errors, late events, pause/resume, viewport/menu/dialog/tab, reduced motion, stalled intro, native errors/rejections.');

@@ -1,4 +1,5 @@
 import {experienceDefaults} from './experience.mjs';
+import {renderVideoEditor,wireVideoEditor} from './admin-video.mjs';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const titles = {floating: 'Sabit iletişim düğmesi', playback: 'Video oynatma kontrolleri', talk: 'Konuşma penceresi', contact: 'İletişim formu ve WhatsApp', playlist: 'Açılıştan sonra oynatılan videolar', testUI: 'Test ekranları ve indirilen rapor'};
 const labels = {
@@ -13,29 +14,36 @@ function input(group, key, value, disabled) {
   const body = String(value).length > 90 || /(?:Text|Note|Disclaimer|Tip|Suffix)$/.test(key) ? `<textarea ${attr} maxlength="2000" rows="3">${esc(value)}</textarea>` : `<input ${attr} maxlength="2000" type="text" value="${esc(value)}" ${key === 'phone' ? 'inputmode="numeric" pattern="[0-9]{7,15}"' : ''}>`;
   return `<div class="field"><label for="${id}">${label}</label>${body}${key === 'phone' ? '<p class="help">Ülke koduyla, boşluk veya + olmadan. Örnek: 905321234567</p>' : ''}</div>`;
 }
-export function renderExperienceEditor({payload, doc, canEdit = true}) {
+export function renderExperienceEditor({payload, doc, canEdit = true, canUpload = true, media=[]}) {
   const defaults = experienceDefaults(doc, payload), disabled = !canEdit;
-  return `<div data-experience-editor>${Object.entries(defaults).map(([group, data]) => {
-    if (group === 'playlist') return `<section class="panel"><div class="panel-head"><div><h2>${titles[group]}</h2><p>TEDx açılışı ilk ziyarette bir kez oynar. Ardından bu liste sırayla döner.</p></div><button type="button" class="button small" data-playlist-action="add" ${disabled || data.length >= 12 ? 'disabled' : ''}>Video ekle</button></div><div class="panel-body">${data.map((item, i) => `<article class="repeat-item"><div class="repeat-head"><b>Video ${i + 1}</b><div class="actions"><button type="button" class="button quiet small" aria-label="Video ${i + 1} sırasını yükselt" data-playlist-action="up" data-index="${i}" ${disabled || i === 0 ? 'disabled' : ''}>Yukarı</button><button type="button" class="button quiet small" aria-label="Video ${i + 1} sırasını düşür" data-playlist-action="down" data-index="${i}" ${disabled || i === data.length - 1 ? 'disabled' : ''}>Aşağı</button><button type="button" class="button quiet small" data-playlist-action="remove" data-index="${i}" ${disabled || data.length <= 1 ? 'disabled' : ''}>Kaldır</button></div></div><div class="repeat-body field-grid">${[['src','Video adresi'],['poster','Kapak görseli'],['focal','Görüntü odak konumu']].map(([key,label]) => `<div class="field"><label for="playlist-${i}-${key}">${label}</label><input id="playlist-${i}-${key}" data-playlist-index="${i}" data-playlist-key="${key}" maxlength="2000" value="${esc(item[key])}" ${disabled ? 'disabled' : ''}>${key !== 'focal' ? `<button type="button" class="button quiet small" data-playlist-media="${key}" data-index="${i}" ${disabled ? 'disabled' : ''}>Medya arşivinden seç</button>` : '<p class="help">Örnek: center, center 35%, 38% center</p>'}</div>`).join('')}</div></article>`).join('')}</div></section>`;
+  return `<div data-experience-editor>${Object.entries(defaults).sort(([a],[b])=>(a==='playlist'?-1:b==='playlist'?1:0)).map(([group, data]) => {
+    if (group === 'playlist') return renderOpeningEditor(doc,payload,disabled) + renderVideoEditor({clips:data,canEdit,canUpload,media});
     return `<section class="panel"><div class="panel-head"><h2>${titles[group]}</h2></div><div class="panel-body"><div class="field-grid">${Object.entries(data).map(([key, value]) => input(group, key, value, disabled)).join('')}</div></div></section>`;
   }).join('') || '<div class="empty-state">Bu sayfanın metin, görsel ve bağlantıları İçerik sekmesindeki bölümlerden yönetiliyor.</div>'}</div>`;
 }
-export function wireExperienceEditor(root, {payload, doc, onChange, rerender, pickMedia, canEdit = true}) {
-  if (!canEdit) return;
+function renderOpeningEditor(doc,payload,disabled) {
+  const host=doc?.querySelector('[data-tedx-hero]');if(!host)return '';
+  const node=host.getAttribute('data-cms-node');if(!node)return '';
+  return `<details class="panel"><summary class="panel-head"><div><h2>İlk açılış · TEDxReset</h2><p>Sayfa açıldığında bu kısa bölüm bir kez oynar. Ardından aşağıdaki klipler sırayla devam eder.</p></div></summary><div class="panel-body"><div class="field-grid">${[['data-clip-start','Başlangıç saniyesi'],['data-clip-end','Bitiş saniyesi']].map(([key,label])=>`<div class="field"><label for="opening-${key}">${label}</label><input id="opening-${key}" type="number" min="0" max="36000" step="0.1" data-opening-node="${esc(node)}" data-opening-attr="${key}" value="${esc(host.getAttribute(key))}" ${disabled?'disabled':''}></div>`).join('')}</div><button type="button" class="button quiet small" data-preview-opening>TEDx açılışını önizle</button><div data-opening-preview></div><p class="help" data-opening-error role="status"></p></div></details>`;
+}
+export function wireExperienceEditor(root, {payload, doc, onChange, rerender, pickMedia, uploadMedia, notify, getMedia=()=>[], canEdit = true, canUpload=true}) {
   const current = () => experienceDefaults(doc, payload);
   const ensure = group => {payload.experience ||= {}; if (!payload.experience[group]) payload.experience[group] = structuredClone(current()[group]); return payload.experience[group];};
-  root.querySelectorAll('[data-experience-key]').forEach(el => el.addEventListener('input', () => {ensure(el.dataset.experienceGroup)[el.dataset.experienceKey] = el.type === 'checkbox' ? el.checked : el.value; onChange?.();}));
-  root.querySelectorAll('[data-playlist-key]').forEach(el => el.addEventListener('input', () => {ensure('playlist')[Number(el.dataset.playlistIndex)][el.dataset.playlistKey] = el.value; onChange?.();}));
-  root.querySelectorAll('[data-playlist-action]').forEach(el => el.addEventListener('click', () => {
-    const list = ensure('playlist'), i = Number(el.dataset.index), action = el.dataset.playlistAction;
-    if (action === 'add' && list.length < 12) list.push({...list.at(-1), id: 'clip-' + crypto.randomUUID()});
-    if (action === 'remove' && list.length > 1) list.splice(i, 1);
-    const to = action === 'up' ? i - 1 : action === 'down' ? i + 1 : -1;
-    if (to >= 0 && to < list.length) {const [item] = list.splice(i, 1); list.splice(to, 0, item);}
-    onChange?.(); rerender?.();
-  }));
-  root.querySelectorAll('[data-playlist-media]').forEach(el => el.addEventListener('click', () => {
-    const key = el.dataset.playlistMedia, index = Number(el.dataset.index);
-    pickMedia?.({type: key === 'src' ? 'video' : 'image', value: current().playlist[index][key], onSelect: value => {ensure('playlist')[index][key] = typeof value === 'string' ? value : value.url; onChange?.(); rerender?.();}});
-  }));
+  root.querySelectorAll('[data-experience-key]').forEach(el => el.addEventListener('input', () => {if(!canEdit)return;ensure(el.dataset.experienceGroup)[el.dataset.experienceKey] = el.type === 'checkbox' ? el.checked : el.value; onChange?.();}));
+  const updateOpening=el=>{
+    if(!canEdit)return;
+    const key=el.dataset.openingNode+':@'+el.dataset.openingAttr;
+    payload.values[key]=el.value;
+    for(const section of payload.sections||[]){delete section.values?.[key];for(const group of section.groups||[])for(const item of group.items||[])delete item.values?.[key];}
+    doc.querySelector('[data-tedx-hero]')?.setAttribute(el.dataset.openingAttr,el.value);
+    root.querySelector('[data-opening-preview]')?.replaceChildren();onChange?.();
+  };
+  root.querySelectorAll('[data-opening-attr]').forEach(el=>el.addEventListener('input',()=>updateOpening(el)));
+  root.querySelector('[data-preview-opening]')?.addEventListener('click',()=>{
+    const host=doc.querySelector('[data-tedx-hero]'),id=host.dataset.videoId,start=Number(host.dataset.clipStart),end=Number(host.dataset.clipEnd),error=root.querySelector('[data-opening-error]');
+    if(!/^[-\w]{11}$/.test(id)||!Number.isFinite(start)||!Number.isFinite(end)||start<0||end<=start||end>36000){error.textContent='Bitiş saniyesi başlangıçtan büyük olmalı; 0–36000 aralığında değer girin.';return;}
+    error.textContent='';const frame=root.ownerDocument.createElement('iframe');frame.title='TEDx açılışı önizlemesi';frame.src=`https://www.youtube-nocookie.com/embed/${id}?start=${Math.floor(start)}&end=${Math.ceil(end)}&rel=0&playsinline=1`;frame.setAttribute('allow','fullscreen; encrypted-media');frame.style.cssText='width:100%;aspect-ratio:16/9;border:0;border-radius:16px;margin-top:16px';root.querySelector('[data-opening-preview]').replaceChildren(frame);
+  });
+  const cleanup= root.querySelector('[data-video-editor]') ? wireVideoEditor(root,{getClips:()=>current().playlist,onChange:clips=>{payload.experience||={};payload.experience.playlist=clips;onChange?.();},pickMedia,uploadMedia,notify,getMedia,canEdit,canUpload}) : null;
+  return ()=>{cleanup?.();root.querySelector('[data-opening-preview]')?.replaceChildren();};
 }

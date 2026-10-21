@@ -18,6 +18,12 @@ async function check(name,fn){try{await fn();passed++;console.log('PASS '+name);
 const flush=async()=>{for(let i=0;i<20;i++)await Promise.resolve();};
 function setup(){
  const {window,document}=parseHTML('<!doctype html><html><head></head><body><div id="app"></div><div id="toasts"></div></body></html>');
+ // LinkeDOM represents <video> as HTMLElement. Only model the native media
+ // events used by the editor; decoding, CORS and visual playback need browser QA.
+ const mediaCalls=[];
+ window.HTMLElement.prototype.pause=function(){if(this.localName==='video'){const wasPlaying=this.paused===false;this.paused=true;mediaCalls.push({action:'pause',source:this.src});if(wasPlaying)this.dispatchEvent(new window.Event('pause'));}};
+ window.HTMLElement.prototype.load=function(){if(this.localName==='video'){this.currentTime=0;this.duration=NaN;this.readyState=0;mediaCalls.push({action:'load',source:this.src});}};
+ window.HTMLElement.prototype.play=function(){if(this.localName==='video'){this.paused=false;mediaCalls.push({action:'play',source:this.src});this.dispatchEvent(new window.Event('play'));}return Promise.resolve();};
  Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){const option=this.querySelector('option[selected]')||this.querySelector('option');return option?(option.getAttribute('value')??option.textContent):'';},set(value){for(const option of this.querySelectorAll('option')){if((option.getAttribute('value')??option.textContent)===String(value))option.setAttribute('selected','');else option.removeAttribute('selected');}}});
  const confirmations=[];let confirmAnswer=true;
  class FormDataShim {constructor(form){this.form=form;}get(name){const el=this.form.querySelector('[name="'+name+'"]');return el?.value??null;}}
@@ -32,10 +38,11 @@ function setup(){
  const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
  const change=(selector,value,event='input')=>{const el=$(selector);assert.ok(el,'Missing control '+selector);el.value=String(value);el.dispatchEvent(new window.Event(event));return el;};
  const toggle=(selector,checked,event='change')=>{const el=$(selector);assert.ok(el,'Missing checkbox '+selector);el.checked=checked;el.dispatchEvent(new window.Event(event));return el;};
- const click=async selector=>{const el=$(selector);assert.ok(el,'Missing button '+selector);assert.ok(!el.disabled,'Disabled button '+selector);if(el.onclick)await el.onclick({target:el,preventDefault(){}});else el.dispatchEvent(new window.Event('click'));await flush();return el;};
+ const click=async selector=>{const el=$(selector);assert.ok(el,'Missing button '+selector);assert.ok(!el.disabled,'Disabled button '+selector);if(el.onclick)await el.onclick({target:el,preventDefault(){}});else el.dispatchEvent(new window.Event('click',{bubbles:true}));await flush();return el;};
  const submit=async(selector,values)=>{const form=$(selector);assert.ok(form,'Missing form '+selector);for(const [name,value]of Object.entries(values))change(selector+' [name="'+name+'"]',value);await form.onsubmit({target:form,preventDefault(){}});await flush();};
  const textSelector=()=>{const def=context.api.S.catalog[context.api.S.doc.template],input=$$('[data-bind]').find(el=>def.fields.find(f=>f.id===JSON.parse(el.dataset.bind).field)?.label==='Ana başlık');assert.ok(input,'No title text input');return '#'+input.id;};
- return {setFetch:fn=>context.fetch=fn,api:context.api,document,window,$,$$,change,toggle,click,submit,textSelector,confirmations,setConfirm:v=>confirmAnswer=v};
+ const loadVideo=(seconds=120)=>{const video=$('[data-video-player]');assert.ok(video);video.duration=seconds;video.readyState=2;video.videoWidth=1920;video.videoHeight=1080;video.dispatchEvent(new window.Event('loadedmetadata'));return video;};
+ return {setFetch:fn=>context.fetch=fn,api:context.api,document,window,$,$$,change,toggle,click,submit,textSelector,confirmations,mediaCalls,loadVideo,setConfirm:v=>confirmAnswer=v};
 }
 function fakeClient(initial={}){
  const tables={cms_published:structuredClone(seed.map(d=>({id:d.id,route:d.route,kind:d.kind,title:d.title,robots:d.robots,payload:d}))),cms_documents:structuredClone(seed.map(d=>({id:d.id,route:d.route,kind:d.kind,draft:d,revision:1,published_revision:1,archived:false}))),cms_media:[],cms_versions:[],cms_leads:[],cms_members:[],...initial};
@@ -176,7 +183,18 @@ await check('Dirty navigation confirmation can cancel leaving the active draft',
  const h=await offline();h.api.openEditor('/kitaplar/');h.change(h.textSelector(),'Kaydedilmemiş');h.setConfirm(false);h.api.navigate('pages');assert.equal(h.api.S.doc.id,'/kitaplar/');h.setConfirm(true);h.api.navigate('pages');assert.equal(h.api.S.doc,null);assert.equal(h.api.S.dirty,false);
 });
 
-const previewDocument=async h=>{await h.api.preview();const frame=h.$('#modal iframe');assert.ok(frame,'Preview failed: '+h.$('#toasts').textContent);const document=new DOMParser().parseFromString(frame.srcdoc,'text/html');h.api.closeDialog();return document;};
+const previewDocument=async h=>{
+ await h.api.preview();const frame=h.$('#modal iframe');assert.ok(frame,'Preview failed: '+h.$('#toasts').textContent);
+ assert.equal(frame.getAttribute('sandbox'),'allow-same-origin','Preview must not enable iframe script execution');
+ const document=new DOMParser().parseFromString(frame.srcdoc,'text/html');
+ assert.equal(document.querySelector('script,iframe,form'),null,'Preview cannot execute scripts, embeds or forms');
+ for(const node of document.querySelectorAll('*'))assert.equal([...node.attributes].some(attr=>attr.name.startsWith('on')),false,'Preview cannot retain inline event handlers');
+ for(const control of document.querySelectorAll('a,button,input,select,textarea')){
+  assert.equal(control.getAttribute('tabindex'),'-1');assert.equal(control.style.pointerEvents,'none');
+  if(control.tagName!=='A')assert.ok(control.hasAttribute('disabled'),'Preview controls must remain disabled');
+ }
+ h.api.closeDialog();return document;
+};
 const navAction=(action,path)=>`[data-navigation-action="${action}"][data-navigation-path="${path}"]`;
 const collectionAction=(action,category,item)=>`[data-collection-action="${action}"][data-category="${category}"]${item===undefined?'':`[data-item="${item}"]`}`;
 const renderedTemplate=payload=>{const doc=new DOMParser().parseFromString(templates[payload.template],'text/html');applyContent(doc,payload,catalog[payload.template],{global:payload.kind==='global'});return doc;};
@@ -184,6 +202,84 @@ await check('Opening advanced editors derives defaults without changing or dirty
  for(const [route,tab] of [['_global','navigation'],['/makaleler/','collection'],['/hayattan-notlar/','collection'],['/','experience'],['/iletisim/','experience'],['/testler/kafa-yapisi-testi/','experience']]){
   const h=await offline();h.api.openEditor(route);const before=structuredClone(h.api.S.doc),originals=structuredClone(h.api.S.seed);await h.click(`[data-tab="${tab}"]`);assert.ok(h.$('#advanced-editor'),'Missing advanced editor '+route+' '+h.$('#app').textContent.slice(-300));assert.equal(h.api.S.dirty,false,route);assert.deepEqual(h.api.S.doc,before,route);assert.deepEqual(h.api.S.seed,originals,route);
  }
+});
+await check('Every video hero exposes its video workspace without changing the draft on entry',async()=>{
+ const h=await offline();let count=0;
+ for(const row of h.api.S.rows.filter(r=>r.kind!=='global')){
+  const doc=renderedTemplate(row.draft),defaults=dependencies.experienceDefaults(doc,row.draft);
+  if(!defaults.playlist?.length)continue;
+  h.api.openEditor(row.id);const before=structuredClone(h.api.S.doc);
+  assert.ok(h.$('[data-tab="experience"]'),'Video tab must be reachable on '+row.route);
+  await h.click('[data-tab="experience"]');
+  assert.ok(h.$('[data-video-editor]'),'Video workspace must mount on '+row.route);
+  assert.deepEqual(h.api.S.doc,before,'Opening must preserve '+row.route);
+  assert.equal(h.api.S.dirty,false);count++;
+ }
+ assert.ok(count>1,'Both the home and subpage heroes must be supported');
+ console.log('INFO '+count+' hero video workspaces reachable');
+});
+await check('TEDx intro ranges remain a separate one-time opening and invalid ranges cannot be previewed or saved',async()=>{
+ const h=await connected();h.api.openEditor('/');await h.click('[data-tab="experience"]');
+ const published=structuredClone(h.db.tables.cms_published.find(r=>r.route==='/').payload);
+ const start=h.$('[data-opening-attr="data-clip-start"]'),end=h.$('[data-opening-attr="data-clip-end"]');
+ assert.ok(start&&end,'Opening has named start and end controls');
+ h.change('[data-opening-attr="data-clip-start"]',35);h.change('[data-opening-attr="data-clip-end"]',31);
+ await h.click('[data-preview-opening]');assert.equal(h.$('[data-opening-preview] iframe'),null);
+ assert.match(h.$('[data-opening-error]').textContent,/başlangıçtan/);
+ const calls=h.db.calls.filter(c=>c.type==='rpc').length;await h.click('[data-action="save"]');
+ assert.equal(h.db.calls.filter(c=>c.type==='rpc').length,calls,'Invalid opening cannot reach the save RPC');
+ h.change('[data-opening-attr="data-clip-start"]',31);h.change('[data-opening-attr="data-clip-end"]',35);
+ await h.click('[data-preview-opening]');const frame=h.$('[data-opening-preview] iframe');assert.ok(frame);
+ const url=new URL(frame.src);assert.equal(url.hostname,'www.youtube-nocookie.com');assert.equal(url.searchParams.get('start'),'31');assert.equal(url.searchParams.get('end'),'35');
+ await h.click('[data-action="save"]');assert.deepEqual(h.db.tables.cms_published.find(r=>r.route==='/').payload,published,'Opening preview and draft save cannot publish');
+});
+await check('Video studio adds, trims, selects covers, reorders and removes clips while publication stays explicit',async()=>{
+ const h=await connected();h.api.openEditor('/liderlik/');await h.click('[data-tab="experience"]');
+ const published=structuredClone(h.db.tables.cms_published.find(r=>r.route==='/liderlik/').payload);
+ const initial=dependencies.experienceDefaults(h.api.S.advancedDefaults.document,h.api.S.doc).playlist;
+ await h.click('[data-video-action="add-library"]');assert.ok(h.$('#picker-grid video'));assert.equal(h.$$('#picker-grid img').length,0);
+ const chosen=h.$('[data-select-media]').dataset.selectMedia;await h.click('[data-select-media]');
+ assert.equal(h.api.S.doc.experience.playlist.length,initial.length+1);const addedId=h.api.S.doc.experience.playlist.at(-1).id;
+ assert.equal(h.api.S.doc.experience.playlist.at(-1).src,chosen);assert.equal(h.$('#modal'),null);
+ h.loadVideo(120);h.change('[data-video-end]',7.5,'change');h.change('[data-video-start]',3.25,'change');h.change('[data-video-focal]','left center','change');
+ await h.click('[data-video-action="cover-library"]');assert.equal(h.$$('#picker-grid video').length,0);const poster=h.$('[data-select-media]').dataset.selectMedia;await h.click('[data-select-media]');
+ let added=h.api.S.doc.experience.playlist.find(c=>c.id===addedId);assert.equal(added.start,3.25);assert.equal(added.end,7.5);assert.equal(added.poster,poster);assert.equal(added.focal,'left center');
+ await h.click(`[data-video-move="${initial.length}|-1"]`);assert.equal(h.api.S.doc.experience.playlist[initial.length-1].id,addedId);
+ const removedId=h.api.S.doc.experience.playlist.at(-1).id;await h.click(`[data-video-remove="${initial.length}"]`);assert.equal(h.api.S.doc.experience.playlist.some(c=>c.id===removedId),false);assert.equal(h.api.S.doc.experience.playlist.length,initial.length);
+ assert.equal(h.db.calls.some(c=>c.type==='query'&&c.table==='cms_media'&&c.mode==='update'),false,'Removing from a playlist must not archive shared media');
+ const clips=structuredClone(h.api.S.doc.experience.playlist);await h.click('[data-action="save"]');
+ assert.deepEqual(h.db.tables.cms_documents.find(r=>r.route==='/liderlik/').draft.experience.playlist,clips);
+ assert.deepEqual(h.db.tables.cms_published.find(r=>r.route==='/liderlik/').payload,published);
+ await h.click('[data-action="publish"]');assert.deepEqual(h.db.tables.cms_published.find(r=>r.route==='/liderlik/').payload.experience.playlist,clips);
+});
+await check('Video range errors preserve the last valid model and cleared end means natural video end',async()=>{
+ const h=await connected();h.api.openEditor('/liderlik/');await h.click('[data-tab="experience"]');h.loadVideo(10);
+ h.change('[data-video-end]',7,'change');h.change('[data-video-start]',3,'change');const valid=structuredClone(h.api.S.doc.experience.playlist);
+ for(const [selector,value] of [['[data-video-end]',2],['[data-video-end]',11],['[data-video-start]',-1],['[data-video-start]',12]]){
+  h.change(selector,value,'change');assert.deepEqual(h.api.S.doc.experience.playlist,valid);assert.equal(h.$('[data-video-message]').dataset.tone,'error');
+ }
+ h.change('[data-video-end]','','change');assert.equal(Object.hasOwn(h.api.S.doc.experience.playlist[0],'end'),false);assert.equal(h.api.S.doc.experience.playlist[0].start,3);
+ await h.click('[data-video-action="reset-trim"]');assert.equal(h.api.S.doc.experience.playlist[0].start,0);assert.equal(Object.hasOwn(h.api.S.doc.experience.playlist[0],'end'),false);
+});
+await check('Ordered video preview advances at trim boundaries, stops without looping and makes no publish calls',async()=>{
+ const h=await connected();h.api.openEditor('/liderlik/');h.api.S.doc.experience={playlist:[
+  {id:'first',src:'/assets/first.mp4',poster:'/assets/hero-poster.jpg',focal:'center',start:3,end:5},
+  {id:'second',src:'/assets/second.mp4',poster:'/assets/hero-poster.jpg',focal:'left center',start:8,end:10}
+ ]};await h.click('[data-tab="experience"]');h.toggle('[data-video-loop]',false);
+ const original=structuredClone(h.api.S.doc),calls=h.db.calls.filter(c=>c.type==='rpc').length;
+ await h.click('[data-video-action="preview-all"]');let video=h.loadVideo(20);assert.equal(video.currentTime,3);assert.equal(video.paused,false);
+ video.currentTime=5;video.dispatchEvent(new h.window.Event('timeupdate'));await flush();assert.equal(video.src,'/assets/second.mp4');h.loadVideo(20);assert.equal(video.currentTime,8);
+ video.currentTime=10;video.dispatchEvent(new h.window.Event('timeupdate'));await flush();assert.equal(video.paused,true);assert.match(h.$('[data-video-message]').textContent,/tamamlandı/);
+ assert.deepEqual(h.api.S.doc,original);assert.equal(h.db.calls.filter(c=>c.type==='rpc').length,calls);
+ await h.click('[data-tab="content"]');assert.equal(video.paused,true);assert.equal(video.getAttribute('src'),null,'Leaving the editor must release its playback source');
+});
+await check('Picker upload keeps the current video draft and adds the uploaded media without publishing',async()=>{
+ const h=await connected();h.api.openEditor('/liderlik/');await h.click('[data-tab="experience"]');
+ const doc=h.api.S.doc,published=structuredClone(h.db.tables.cms_published.find(r=>r.route==='/liderlik/').payload),before=dependencies.experienceDefaults(h.api.S.advancedDefaults.document,doc).playlist.length;
+ await h.click('[data-video-action="add-library"]');const file={name:'Sahne.mp4',type:'video/mp4',size:1024,lastModified:1};
+ const input=h.$('#picker-upload');assert.ok(input,'Picker exposes upload alongside the archive');await input.onchange({target:{files:[file]}});await flush();
+ assert.equal(h.api.S.doc,doc);assert.ok(h.$('[data-video-editor]'));assert.equal(h.api.S.doc.experience.playlist.length,before+1);assert.equal(h.api.S.doc.experience.playlist.at(-1).src,h.db.tables.cms_media[0].url);
+ assert.equal(h.db.calls.filter(c=>c.type==='upload').length,1);assert.equal(h.db.calls.some(c=>c.type==='rpc'),false);assert.deepEqual(h.db.tables.cms_published.find(r=>r.route==='/liderlik/').payload,published);assert.equal(h.api.S.busy,false);
 });
 await check('Menu editor adds links, selects pages, reorders, nests, hides and safely renders new tabs',async()=>{
  const h=await connected();h.api.navigate('global');await h.click('[data-tab="navigation"]');const defaults=structuredClone(h.api.S.advancedDefaults.navigation),count=defaults.primary.length;
@@ -226,7 +322,11 @@ await check('Page preview uses published global navigation; global preview uses 
  const h1=catalog[homeRow.draft.template].fields.find(f=>f.label==='Ana başlık');liveHome.payload.values[h1.id]='Yayındaki ana sayfa';homeRow.draft.values[h1.id]='Taslak ana sayfa';await h.api.refreshRows();
  h.api.openEditor('/kitaplar/');let preview=await previewDocument(h);assert.equal(preview.querySelector('.nav-links a').textContent,'Yayındaki menü');assert.equal(preview.body.textContent.includes('Taslak menü'),false);
  h.api.navigate('global');preview=await previewDocument(h);assert.equal(preview.querySelector('.nav-links a').textContent,'Taslak menü');assert.ok(preview.querySelector('h1').textContent.includes('Yayındaki ana sayfa'));assert.equal(preview.querySelector('h1').textContent.includes('Taslak ana sayfa'),false);
- const draft=h.api.S.doc,visitorDoc=new DOMParser().parseFromString(templates[liveHome.payload.template],'text/html'),shared=new DOMParser().parseFromString(templates[draft.template],'text/html');composeContent(visitorDoc,liveHome.payload,catalog[liveHome.payload.template],{sharedDocument:shared,sharedPayload:draft,sharedDefinition:catalog._global,canonicalOrigin:'https://example.org'});assert.equal(preview.querySelector('header.site').outerHTML,visitorDoc.querySelector('header.site').outerHTML,'Preview and visitor pipeline navigation must match');
+ const draft=h.api.S.doc,visitorDoc=new DOMParser().parseFromString(templates[liveHome.payload.template],'text/html'),shared=new DOMParser().parseFromString(templates[draft.template],'text/html');composeContent(visitorDoc,liveHome.payload,catalog[liveHome.payload.template],{sharedDocument:shared,sharedPayload:draft,sharedDefinition:catalog._global,canonicalOrigin:'https://example.org'});
+ const navigationState=document=>[...document.querySelectorAll('header.site a')].map(link=>({text:link.textContent,href:link.getAttribute('href'),target:link.getAttribute('target'),rel:link.getAttribute('rel'),current:link.getAttribute('aria-current'),expanded:link.getAttribute('aria-expanded'),className:link.className}));
+ assert.deepEqual(navigationState(preview),navigationState(visitorDoc),'Preview and visitor pipeline must retain identical navigation content, targets and current state');
+ const previewButtons=[...preview.querySelectorAll('header.site button')];assert.ok(previewButtons.length);
+ assert.ok(previewButtons.every(button=>button.hasAttribute('disabled')&&button.getAttribute('tabindex')==='-1'),'Header controls are intentionally disabled only in preview');
 });
 await check('Repeaters keep hidden content editable and support actual drag ordering with preview parity',async()=>{
  const h=await offline();h.api.openEditor('/kitaplar/');const section=h.api.S.doc.sections.find(s=>s.groups.length),group=section.groups[0];h.api.S.section=section.id;h.api.editor();const itemField=`[data-reorder-item="${group.id}|0"] [data-bind]`,field=h.$(itemField),binding=JSON.parse(field.dataset.bind);assert.equal(binding.scope,'item');h.change(itemField,'Gizli kitap başlığı');const hiddenId=group.items[0].id;h.toggle(`[data-item-visible="${group.id}|0"]`,false);assert.equal(group.items[0].hidden,true);assert.ok(h.$(`[data-reorder-item="${group.id}|0"]`),'Hidden item must stay editable');let preview=await previewDocument(h);assert.equal(preview.body.textContent.includes('Gizli kitap başlığı'),false);

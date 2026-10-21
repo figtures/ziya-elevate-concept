@@ -1,21 +1,29 @@
-/* TEDx is a one-time introduction. Only the other original demo clips repeat. */
+/* CMS video sequences: trimmed native clips; the home TEDx introduction plays once. */
 (() => {
   'use strict';
-  const host = document.querySelector('[data-tedx-hero]');
+  const host = document.querySelector('[data-tedx-hero],[data-video-sequence]');
   if (!host) return;
   const section = host.closest('section');
   const videos = [...host.querySelectorAll('[data-hero-clip]')];
+  if (!videos.length || !section) return;
+  const hasIntro = host.hasAttribute('data-tedx-hero');
   const button = section.querySelector('.video-toggle');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const intro = {videoId:host.dataset.videoId,startSeconds:Number(host.dataset.clipStart),endSeconds:Number(host.dataset.clipEnd)};
-  let player, ready = false, playerDestroyed = false, introFinished = false, visible = true;
+  let player, ready = false, playerDestroyed = false, introFinished = !hasIntro, visible = true;
   let manualPause = reduced.matches, active = 0, wasWanted = false;
   let lastProgress = performance.now(), lastTime = -1;
-  let apiRequested = false, ticker;
+  let apiRequested = false, ticker, nativeTicker;
+  const needsSeek = new Set(videos);
   const unavailable = new Set();
   // Published HTML keeps these URLs in data-src so even metadata range requests
   // cannot compete with the opening image, fonts and four-second TEDx clip.
   const sources = videos.map(video => video.dataset.src || video.getAttribute('src'));
+  const trimStart = video => Math.max(0, Number(video.dataset.clipStart) || 0);
+  const trimEnd = video => {
+    const selected = Number(video.dataset.clipEnd);
+    return Math.min(selected > 0 ? selected : Infinity, Number.isFinite(video.duration) ? video.duration : Infinity);
+  };
   const wanted = () => visible && !manualPause && !document.hidden && !document.querySelector('dialog[open]') && !document.body.classList.contains('menu-open');
   const releaseIntro = () => {
     ready = false;
@@ -27,10 +35,12 @@
     if (video.hasAttribute('src')) {video.removeAttribute('src');video.load();}
   };
   const label = () => {
+    if (!button) return;
     const playing = wanted();
     const text = playing ? (button.dataset.pauseLabel ?? 'Videoyu duraklat') : (button.dataset.playLabel ?? 'Videoyu oynat');
-    button.querySelector('use').setAttribute('href', '/assets/icons.svg#' + (playing ? 'pause' : 'play'));
-    button.querySelector('.control-label').textContent = text;
+    button.querySelector('use')?.setAttribute('href', '/assets/icons.svg#' + (playing ? 'pause' : 'play'));
+    const controlLabel = button.querySelector('.control-label');
+    if (controlLabel) controlLabel.textContent = text;
     button.setAttribute('aria-label', text);
   };
   const sync = () => {
@@ -53,12 +63,30 @@
         if (!video.hasAttribute('src') && sources[index]) {
           video.setAttribute('src', sources[index]);video.load();
         }
+        // Wait for metadata before seeking so frame zero is never flashed when
+        // the selected segment starts later in the file.
+        if (video.readyState < 1 || unavailable.has(index)) return;
+        if (needsSeek.has(video)) {
+          const start = trimStart(video);
+          if (start >= trimEnd(video)) {failClip(index); return;}
+          needsSeek.delete(video);
+          if (Math.abs(video.currentTime - start) > .01) video.currentTime = start;
+        }
+        if (video.seeking || !video.paused) return;
         video.play().catch(error => {
-          if (error.name !== 'AbortError' && index === active && wanted()) {manualPause = true;releaseIntro();sync();}
+          if (error.name !== 'AbortError' && index === active && wanted()) {
+            if (error.name === 'NotSupportedError') failClip(index);
+            else {manualPause = true;releaseIntro();sync();}
+          }
         });
       }
       else video.pause();
     });
+    if (wanted() && introFinished && !nativeTicker) nativeTicker = setInterval(() => {
+      const video = videos[active];
+      if (!needsSeek.has(video) && !video.seeking && !video.paused && video.currentTime >= trimEnd(video)) nextClip();
+    }, 40);
+    else if ((!wanted() || !introFinished) && nativeTicker) {clearInterval(nativeTicker);nativeTicker = undefined;}
     label();
   };
   const showNative = index => {
@@ -81,9 +109,14 @@
     if (!introFinished) return;
     const next = videos.findIndex((_, offset) => !unavailable.has((active + offset + 1) % videos.length));
     if (next < 0) {manualPause = true;releaseIntro();videos.forEach(releaseNative);sync();return;}
+    videos[active].pause();
     active = (active + next + 1) % videos.length;
-    videos[active].currentTime = 0;
+    needsSeek.add(videos[active]);
     sync();
+  };
+  const failClip = index => {
+    unavailable.add(index);releaseNative(videos[index]);
+    if (introFinished && index === active) nextClip();
   };
   const finishIntro = reason => {
     // This latch is never reset by scroll, pause, menu, modal or player events.
@@ -100,11 +133,16 @@
     video.muted = true;video.defaultMuted = true;video.loop = false;
     video.removeAttribute('autoplay');
     releaseNative(video);
+    video.addEventListener('loadedmetadata', () => {if (introFinished && index === active) sync();});
+    video.addEventListener('seeked', () => {if (introFinished && index === active) sync();});
     video.addEventListener('playing', () => showNative(index));
-    video.addEventListener('ended', () => {if (introFinished && index === active) nextClip();});
-    video.addEventListener('error', () => {unavailable.add(index);releaseNative(video);if (introFinished && index === active) nextClip();});
+    video.addEventListener('timeupdate', () => {
+      if (introFinished && index === active && wanted() && !video.paused && !needsSeek.has(video) && !video.seeking && video.currentTime >= trimEnd(video)) nextClip();
+    });
+    video.addEventListener('ended', () => {if (introFinished && index === active && !needsSeek.has(video)) nextClip();});
+    video.addEventListener('error', () => failClip(index));
   });
-  button.addEventListener('click', () => {manualPause = !manualPause;sync();});
+  button?.addEventListener('click', () => {manualPause = !manualPause;sync();});
   new IntersectionObserver(entries => {
     visible = entries[0].isIntersecting;
     section.dataset.cinematicVisible = String(visible);

@@ -218,9 +218,31 @@ await check('Every video hero exposes its video workspace without changing the d
  assert.ok(count>1,'Both the home and subpage heroes must be supported');
  console.log('INFO '+count+' hero video workspaces reachable');
 });
-await check('TEDx intro ranges remain a separate one-time opening and invalid ranges cannot be previewed or saved',async()=>{
+await check('The current native home composition exposes its clip studio without legacy TEDx opening controls',async()=>{
+ const h=await connected();h.api.openEditor('/');const before=structuredClone(h.api.S.doc);
+ await h.click('[data-tab="experience"]');
+ assert.equal(h.$('[data-opening-attr]'),null,'The revised native hero must not show an unused YouTube opening editor');
+ assert.ok(h.$('[data-video-editor]'),'The composed home video stays editable');
+ const clips=dependencies.experienceDefaults(h.api.S.advancedDefaults.document,h.api.S.doc).playlist;
+ assert.equal(clips.length,1);assert.equal(clips[0].src,'/assets/hero-stage-clean-1080.mp4');
+ assert.deepEqual(h.api.S.doc,before,'Opening video management does not rewrite a draft');
+});
+await check('Legacy TEDx opening ranges retain preview validation and cannot publish through a draft save',async()=>{
  const h=await connected();h.api.openEditor('/');await h.click('[data-tab="experience"]');
  const published=structuredClone(h.db.tables.cms_published.find(r=>r.route==='/').payload);
+ // The approved home now has a native composition. Exercise retained legacy
+ // editing support with an isolated template/catalog fixture, not live content.
+ const host=h.api.S.advancedDefaults.document.querySelector('.hero-vid');
+ host.setAttribute('data-tedx-hero','');host.removeAttribute('data-video-sequence');
+ host.setAttribute('data-video-id','u-p2y6JH3aA');
+ const node=host.getAttribute('data-cms-node'),section=h.api.S.doc.sections[0].source;
+ assert.ok(node,'Legacy fixture uses an existing catalog node');
+ for(const [attribute,value] of [['data-clip-start','31'],['data-clip-end','35']]){
+  host.setAttribute(attribute,value);const id=node+':@'+attribute;
+  h.api.S.catalog['/'].fields.push({id,node,target:'@'+attribute,label:attribute,type:'number',section});
+  h.api.S.doc.values[id]=value;
+ }
+ h.api.editor();
  const start=h.$('[data-opening-attr="data-clip-start"]'),end=h.$('[data-opening-attr="data-clip-end"]');
  assert.ok(start&&end,'Opening has named start and end controls');
  h.change('[data-opening-attr="data-clip-start"]',35);h.change('[data-opening-attr="data-clip-end"]',31);

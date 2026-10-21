@@ -25,11 +25,11 @@
       header.classList.toggle("menu-expanded", open);
       document.body.classList.toggle("menu-open", open);
       hamb.setAttribute("aria-expanded", String(open));
-      hamb.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
+      hamb.setAttribute("aria-label", open ? (document.documentElement.lang === "en" ? "Close navigation" : "Menüyü kapat") : (document.documentElement.lang === "en" ? "Open navigation" : "Menüyü aç"));
       hamb.querySelector("use")?.setAttribute("href", "/assets/icons.svg#" + (open ? "x" : "menu"));
       navigation.inert = mobile.matches && !open;
       if (backdrop) backdrop.hidden = !open;
-      if (toggleLabel) toggleLabel.textContent = open ? "Kapat" : "Menü";
+      if (toggleLabel) toggleLabel.textContent = open ? (document.documentElement.lang === "en" ? "Close" : "Kapat") : (document.documentElement.lang === "en" ? "Menu" : "Menü");
       if (open && !backgroundState.size) {
         Array.from(document.body.children).forEach(function(el){
           if (el === header || /^(SCRIPT|STYLE|LINK)$/.test(el.tagName)) return;

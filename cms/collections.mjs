@@ -101,3 +101,84 @@ export function applyCollection(document, collection, entries, route) {
   for (const list of lists) {headingFor(list)?.remove();list.remove();}
   marker.replaceWith(...rendered);
 }
+
+/** Read the existing book repeater, so its editor remains the single source of
+ * truth for the book archive and homepage. The caller supplies published data
+ * for visitors; this function does not fetch or promote draft values. */
+export function derivePublishedBooks(payload, definition) {
+  if (!payload || payload.template !== '/kitaplar/' || !definition) return [];
+  const definitions = new Map((definition.groups || []).filter(group => group.label === 'Kitaplar').map(group => [group.id, group]));
+  const result = [];
+  for (const section of payload.sections || []) {
+    if (section.hidden === true) continue;
+    for (const group of section.groups || []) {
+      const groupDefinition = definitions.get(group.id);
+      if (!groupDefinition || groupDefinition.section !== section.source) continue;
+      for (const item of group.items || []) {
+        if (item.hidden === true) continue;
+        const source = groupDefinition.items.find(candidate => candidate.id === item.source);
+        if (!source) continue;
+        const fields = definition.fields.filter(field => source.fields.includes(field.id));
+        const value = field => field ? (item.values?.[field.id] ?? section.values?.[field.id] ?? payload.values?.[field.id] ?? field.defaultValue ?? '') : '';
+        const titleField = fields.find(field => /başlı[kğ]/iu.test(field.label));
+        const imageField = fields.find(field => field.type === 'image' && field.target === '@src');
+        const linkField = fields.find(field => field.type === 'url' && field.target === '@href');
+        const altField = fields.find(field => field.node === imageField?.node && field.target === '@alt');
+        const focalField = fields.find(field => field.node === imageField?.node && field.target === 'focal');
+        const title = clean(value(titleField));
+        if (!title) continue;
+        const url = input => {
+          const text = String(input || '').trim();
+          if (text.startsWith('/') && !text.startsWith('//') && !/[\\\u0000-\u0020]/u.test(text)) return text;
+          try { if (new URL(text).protocol === 'https:') return text; } catch {}
+          return '';
+        };
+        const focal = String(value(focalField));
+        result.push({
+          id: String(section.id) + ':' + String(item.id), title,
+          cover: url(value(imageField)), alt: clean(value(altField)) || title + ' kitap kapağı',
+          href: url(value(linkField)),
+          focal: /^(?:center|left|right|top|bottom|\d+(?:\.\d+)?%)(?:\s+(?:center|left|right|top|bottom|\d+(?:\.\d+)?%))?$/u.test(focal) ? focal : '',
+        });
+      }
+    }
+  }
+  return result;
+}
+
+/** Populate the existing homepage shelf without introducing a second editable
+ * book list. Explicit null means the archive is unpublished, while undefined
+ * lets pre-integration/offline callers retain their authored fallback. */
+export function applyHomeBooks(document, booksPayload, definition) {
+  if (booksPayload === undefined) return;
+  const shelves = [...document.querySelectorAll('.ed-home-books .home-book-shelf, .ed-home-books .home-book-grid')];
+  if (!shelves.length) return;
+  const books = derivePublishedBooks(booksPayload, definition);
+  for (const shelf of shelves) {
+    const section = shelf.closest('.ed-home-books');
+    if (!books.length) { section?.remove(); continue; }
+    const nodes = books.map(book => {
+      const card = document.createElement('a');
+      card.setAttribute('data-motion-item', '');
+      card.setAttribute('data-book-id', book.id);
+      if (book.href) {
+        card.setAttribute('href', book.href);
+        if (book.href.startsWith('https:')) card.setAttribute('rel', 'noopener noreferrer');
+      }
+      if (book.cover) {
+        const cover = document.createElement('div'); cover.className = 'home-book-cover';
+        const image = document.createElement('img');
+        image.setAttribute('src', book.cover); image.setAttribute('alt', book.alt);
+        image.setAttribute('loading', 'lazy'); image.setAttribute('decoding', 'async');
+        if (book.focal) image.style.objectPosition = book.focal;
+        cover.append(image); card.append(cover);
+      }
+      const title = document.createElement('h3'); title.textContent = book.title; card.append(title);
+      return card;
+    });
+    shelf.replaceChildren(...nodes);
+    for (const note of section?.querySelectorAll('.depth-note') || []) {
+      if (/^\s*\d+\s*KİTAP\b/u.test(note.textContent)) note.textContent = note.textContent.replace(/^\s*\d+(?=\s*KİTAP\b)/u, String(books.length));
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/* New approved copy uses the existing navy editorial components and spacing. */
+.homepage #birlikte-calisalim{scroll-margin-top:110px}
+.homepage .intent-kind{display:block;font:600 .6875rem/1.5 var(--font-b);letter-spacing:.12em;text-transform:uppercase;color:#e0d7c5;margin-bottom:4px}
+.homepage .topic-links .topic-question{font-size:.9375rem;line-height:1.6;margin-top:7px}
+.homepage .ed-lived-story .bio-spread{align-items:start}
+.homepage .ed-lived-story .lived-chapter{margin-top:32px}
+.homepage .ed-lived-story .lived-chapter p{margin-top:12px}
+.homepage .home-book-shelf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin-top:var(--content-gap)}
+.homepage .home-book-shelf>a{display:block;color:inherit;min-width:0}
+.homepage .home-book-cover{height:clamp(240px,24vw,340px);display:flex;align-items:center;justify-content:center}
+.homepage .home-book-cover img{display:block;width:100%;height:100%;object-fit:contain;animation:none;transform:none}
+.homepage .home-book-shelf h3{font-size:clamp(1.0625rem,1.5vw,1.3125rem);line-height:1.45;letter-spacing:-.025em;margin-top:22px}
+@media(min-width:761px){.homepage .ed-lived-story .bio-spread>.ed-photo{position:sticky;top:120px}}
+@media(max-width:760px){
+ .homepage .home-book-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}
+ .homepage .home-book-cover{height:clamp(190px,51vw,290px)}
+ .homepage .home-book-shelf h3{margin-top:16px}
+ .homepage .ed-lived-story .bio-spread>.ed-photo{position:static}
+}

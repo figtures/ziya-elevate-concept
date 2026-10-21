@@ -59,7 +59,7 @@
     dialog.addEventListener('close', () => {document.getElementById('talkPlayer').replaceChildren();videos.forEach(update);});
   }
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {document.querySelector('.nav-links')?.classList.remove('open');document.querySelector('.hamb')?.setAttribute('aria-expanded', 'false');document.querySelector('.hamb')?.setAttribute('aria-label', 'Menüyü aç');document.querySelector('.hamb use')?.setAttribute('href','/assets/icons.svg#menu');}
+    if (e.key === 'Escape') {document.querySelector('.nav-links')?.classList.remove('open');document.querySelector('.hamb')?.setAttribute('aria-expanded', 'false');document.querySelector('.hamb')?.setAttribute('aria-label', document.documentElement.lang==='en'?'Open navigation':'Menüyü aç');document.querySelector('.hamb use')?.setAttribute('href','/assets/icons.svg#menu');}
   });
   const form = document.getElementById('contactForm');
   if (form) {
@@ -68,17 +68,28 @@
     const topic = document.getElementById('konu');const query = new URLSearchParams(location.search).get('konu');
     if ([...topic.options].some(o => o.value === query)) topic.value = query;
     if (query === 'tani' || query?.startsWith('kurumsal-')) topic.value = 'kurumsal';
-    const extra = () => {document.getElementById('kurumsalExtra').hidden = !['kurumsal','konusmaci'].includes(topic.value);};
+    const extra = () => {
+      const corporate=['kurumsal','konusmaci'].includes(topic.value),keynote=topic.value==='konusmaci';
+      for(const [id,show] of [['kurumsalExtra',corporate],['keynoteExtra',keynote]]){
+        const group=document.getElementById(id);if(!group)continue;group.hidden=!show;
+        group.querySelectorAll('input,select').forEach(input=>{input.disabled=!show;});
+      }
+      const company=document.getElementById('firma');if(company)company.required=corporate;
+    };
     topic.addEventListener('change', extra);extra();
     form.addEventListener('submit', e => {
       e.preventDefault();if (!form.reportValidity()) return;
-      const val = id => document.getElementById(id).value.trim();
+      const val = id => document.getElementById(id)?.value.trim()||'';
       const lines = [content.greeting ?? 'Merhaba Ziya Bey,', '', topic.selectedOptions[0].text, '', 'Ad Soyad: '+val('ad'), 'E-posta: '+val('ep')];
       if (!document.getElementById('kurumsalExtra').hidden) {if (val('firma')) lines.push('Firma: '+val('firma'));if (val('ekip')) lines.push('Ekip: '+val('ekip'));}
+      if(val('telefon'))lines.push('Telefon: '+val('telefon'));if(val('sehir'))lines.push('Şehir: '+val('sehir'));
+      if(topic.value==='konusmaci'){if(val('etkinlik-tarihi'))lines.push('Etkinlik tarihi: '+val('etkinlik-tarihi'));const people=document.getElementById('katilimci-sayisi');if(people?.value)lines.push('Katılımcı sayısı: '+people.selectedOptions[0].text);}
       lines.push('',val('mesaj'));const message = lines.join('\n');
       document.getElementById('preparedMessage').textContent = message;
       document.getElementById('sendWhatsApp').href = 'https://wa.me/'+phone+'?text='+encodeURIComponent(message);
-      const preview = document.getElementById('contactPreview');preview.hidden = false;preview.scrollIntoView({behavior:'smooth',block:'center'});
+      const preview = document.getElementById('contactPreview');
+      const en=form.dataset.language==='en';preview.querySelector('h3').textContent=en?'Your message is ready.':'Mesajınız hazır.';preview.querySelector('p').textContent=en?'Your inquiry has not been sent yet. Review and send it on WhatsApp.':'Talebiniz henüz gönderilmedi. WhatsApp’ta kontrol edip gönderin.';
+      preview.hidden = false;preview.scrollIntoView({behavior:'smooth',block:'center'});
     });
   }
 })();

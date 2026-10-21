@@ -5,7 +5,7 @@ export const DISCOVERY_VERSION = '1.0.0';
 export const DISCOVERY_GROUPS = [
   ['Başlangıç ve biyografi', ['/', '/buradan-basla/', '/ziya-sakir-yilmaz/']],
   ['Çalışma alanları', ['/basari/', '/basari-muhendisligi/', '/kafa-yapisi/', '/kursun-gecirmez-kafa-yapisi/', '/satis/', '/liderlik/']],
-  ['Keynote, eğitim ve mentorluk', ['/konusmaci/', '/egitimler/', '/kurumsal/kafa-yapisi-atolyesi/', '/kurumsal/satis-egitimi/', '/kurumsal/liderlik-egitimi/', '/mentorluk/']],
+  ['Keynote, eğitim ve mentorluk', ['/konusmaci/', '/en/speaker/', '/egitimler/', '/kurumsal/kafa-yapisi-atolyesi/', '/kurumsal/satis-egitimi/', '/kurumsal/liderlik-egitimi/', '/mentorluk/']],
   ['Kitaplar ve yazılar', ['/kitaplar/', '/makaleler/', '/hayattan-notlar/', '/sozluk/', '/arastirmalar/', '/bulten/']],
   ['Test ve iletişim', ['/testler/kafa-yapisi-testi/', '/iletisim/']],
 ];

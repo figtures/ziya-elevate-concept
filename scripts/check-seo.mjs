@@ -61,7 +61,12 @@ function dom(payload,seo=true){
 }
 function check(doc,payload){
  const url=origin+payload.route;
- assert.equal(doc.documentElement.lang,'tr',payload.route);
+ const language=payload.route.startsWith('/en/')?'en':'tr';
+ assert.equal(doc.documentElement.lang,language,payload.route);
+ assert.equal(doc.querySelector('meta[property="og:locale"]').content,language==='en'?'en_US':'tr_TR',payload.route);
+ const alternates=[...doc.querySelectorAll('link[rel="alternate"][hreflang]')];
+ if(['/konusmaci/','/en/speaker/'].includes(payload.route))assert.deepEqual(alternates.map(a=>[a.getAttribute('hreflang'),a.getAttribute('href')]),[['tr',origin+'/konusmaci/'],['en',origin+'/en/speaker/'],['x-default',origin+'/konusmaci/']],'Speaker language pair must be reciprocal and complete');
+ else assert.equal(alternates.length,0,'Untranslated pages must not invent hreflang targets');
  assert.equal(doc.title,payload.title,payload.route);
  for(const [selector,value]of [['meta[name="description"]',payload.description],['link[rel="canonical"]',url],['meta[property="og:url"]',url],['meta[property="og:title"]',payload.title],['meta[name="twitter:title"]',payload.title],['meta[property="og:description"]',payload.description],['meta[name="twitter:description"]',payload.description]]){
   assert.equal(doc.querySelectorAll(selector).length,1,selector+' '+payload.route);
@@ -76,6 +81,7 @@ function check(doc,payload){
  assert.equal(doc.querySelectorAll('script[type="application/ld+json"]').length,1);
  assert.equal(doc.querySelector('meta[name="robots"]').content,'index, follow, max-image-preview:large');
  const g=graph(doc),page=entity(doc,'WebPage'),person=entity(doc,'Person');
+ assert.equal(page.inLanguage,language);assert.deepEqual(entity(doc,'WebSite').inLanguage,['tr','en']);
  assert.equal(page.url,url);assert.equal(page['@id'],url+'#webpage');
  assert.equal(person.url,origin+'/ziya-sakir-yilmaz/');
  for(const key of ['birthDate','alumniOf','memberOf','author','knowsAbout'])assert.equal(person[key],undefined,key+' must not copy unsupported template claims');
@@ -137,16 +143,22 @@ const bookDOM=dom(books,false);const titles=[...bookDOM.querySelectorAll('.book-
 const bookItems=entity(bookDOM,'ItemList').itemListElement;assert.equal(bookItems.length,5);assert.equal(bookItems.find(n=>n.item.name==='İlk 72 Saat').item.author[1].name,'Emre Topçu');assert.deepEqual(bookItems.map(n=>n.item.name),titles.map(n=>n.textContent));assert.equal(bookDOM.querySelector('h2 script'),null);
 const speaker=seed.find(p=>p.route==='/konusmaci/'),talkDOM=dom(speaker,false);const talkArchive=talkDOM.querySelector('.talk-archive');talkArchive.prepend(talkArchive.lastElementChild);talkArchive.firstElementChild.querySelector('h3').textContent='Güncel konuşma';talkArchive.firstElementChild.href='https://www.youtube.com/watch?v=aaaaaaaaaaa';applySEO(talkDOM,speaker,origin);
 const talkItems=entity(talkDOM,'ItemList').itemListElement;assert.equal(talkItems.length,4);assert.equal(talkItems[0].item.name,'Güncel konuşma');assert.equal(talkItems[0].item.url,'https://www.youtube.com/watch?v=aaaaaaaaaaa');assert(!entity(talkDOM,'VideoObject'));
-// The five actual services describe the visible page and actual enquiry channel only.
-let services=0;
+// The six language-specific service pages describe the visible page and actual enquiry channel only.
+const serviceRoutes=[];
 for(const p of seed.filter(p=>p.kind==='page')){
- const d=dom(p),service=entity(d,'Service');if(!service)continue;services++;
+ const d=dom(p),service=entity(d,'Service');if(!service)continue;serviceRoutes.push(p.route);
  const heading=d.querySelector('h1').cloneNode(true);heading.querySelectorAll('br').forEach(n=>n.replaceWith(' '));assert.equal(service.name,heading.textContent.replace(/\s+/g,' ').trim());
  assert.equal(service.provider['@id'],origin+'/ziya-sakir-yilmaz/#person');assert.equal(service.mainEntityOfPage['@id'],origin+p.route+'#webpage');
- assert.equal(new URL(service.availableChannel.serviceUrl).pathname,'/iletisim/');
+ assert(service.availableChannel,'A published service must expose its actual enquiry channel');
+ const channel=new URL(service.availableChannel.serviceUrl);
+ assert.equal(channel.origin,origin,'Enquiry channel stays on this website');
+ if(p.route==='/en/speaker/'){
+  assert.equal(channel.pathname,p.route);assert.equal(channel.hash,'#inquiry');
+  assert(d.getElementById('inquiry')?.querySelector('form#contactForm'),'English service points to the real embedded inquiry form');
+ }else assert.equal(channel.pathname,'/iletisim/');
  for(const key of ['offers','aggregateRating','areaServed','review'])assert.equal(service[key],undefined);
 }
-assert.equal(services,5);
+assert.deepEqual(serviceRoutes.sort(),['/konusmaci/','/en/speaker/','/mentorluk/','/kurumsal/satis-egitimi/','/kurumsal/liderlik-egitimi/','/kurumsal/kafa-yapisi-atolyesi/'].sort(),'All six service pages expose coherent Service schema');
 const programDOM=dom(seed.find(p=>p.route==='/egitimler/')),programs=entity(programDOM,'ItemList');assert.equal(programs.numberOfItems,3);assert(programs.itemListElement.every(x=>x.item['@type']==='Service'));lintGraph(programDOM);
 // Archive schema uses all final DOM groups, excludes hidden/unsafe/removed links, and preserves the displayed order.
 for(const route of ['/makaleler/','/hayattan-notlar/']){
@@ -238,4 +250,4 @@ mode='http-error';await assert.rejects(remote.publishedIndex(),/yüklenemedi/);m
 const sitemap=await bundle('app/sitemap.xml/route.ts',{fetch:async()=>Response.json(seed.map(({route,kind,title})=>({route,kind,title})))}).GET(),xml=await sitemap.text();
 assert.equal(sitemap.status,200);assert.equal((xml.match(/<loc>/g)||[]).length,checked);assert(!/admin|_global|testler\/(?:basari-muhendisligi|satis-yetkinlik|liderlik-yetkinlik)-skoru/.test(xml));assert(xml.includes('<loc>'+origin+'/</loc>'));for(const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g))assert.equal(new URL(m[1]).origin,origin);
 const robots=await bundle('app/robots.txt/route.ts').GET(),robotsText=await robots.text();assert(robotsText.includes('Sitemap: '+origin+'/sitemap.xml'));assert(robotsText.includes('Disallow: /admin/'));assert(robotsText.includes('Disallow: /api/'));
-console.log(`PASS: ${checked} raw templates and ${checked} final SSR pages: unique metadata, coherent schema graph references/properties, visible author/date/FAQ parity, 5 services, 3 programs, final SSR archive synchronization and AEO citation order, 1203-row pagination with empty/error boundaries, book/talk reordering, malicious URL and JSON-LD injection safety, canonical media remapping, sitemap and robots. Global excluded.`);
+console.log(`PASS: ${checked} raw templates and ${checked} final SSR pages: unique metadata, coherent schema graph references/properties, visible author/date/FAQ parity, 6 service pages, TR/EN locale and reciprocal hreflang, 3 programs, final SSR archive synchronization and AEO citation order, 1203-row pagination with empty/error boundaries, book/talk reordering, malicious URL and JSON-LD injection safety, canonical media remapping, sitemap and robots. Global excluded.`);

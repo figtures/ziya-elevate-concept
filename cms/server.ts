@@ -5,6 +5,7 @@ import seed from './seed.json';
 import config from './config.json';
 import { composeContent } from './compose.mjs';
 import { applyCollection } from './collections.mjs';
+import { currentContentPayload } from './content-revisions.mjs';
 import { versionedAsset } from './resources.mjs';
 export { config, catalog, seed, templates };
 // Allow the first cross-region connection to complete while keeping failures bounded.
@@ -13,15 +14,15 @@ export async function published(route:string){
  if(!config.enabled)return seed.find(p=>p.route===route)||null;
  const response=await fetch(config.url+'/rest/v1/cms_published?route=eq.'+encodeURIComponent(route)+'&select=payload',{headers:{apikey:config.publishableKey},signal:AbortSignal.timeout(CONTENT_REQUEST_TIMEOUT_MS),cache:'no-store'});
  if(!response.ok)throw new Error('İçerik kaynağına ulaşılamadı.');
- const rows=await response.json();return rows[0]?.payload||null;
+ const rows=await response.json();return currentContentPayload(rows[0]?.payload||null,seed);
 }
-export function render(payload:any,globalPayload:any,entries?:any[]){
+export function render(payload:any,globalPayload:any,entries?:any[],booksPayload?:any){
  const template=(templates as any)[payload.template];const definition=(catalog as any)[payload.template];
  if(!template||!definition)return null;
  const {document}=parseHTML(template);
  const sharedDocument=globalPayload?parseHTML((templates as any)._global).document:undefined;
- composeContent(document,payload,definition,{sharedDocument,sharedPayload:globalPayload,sharedDefinition:(catalog as any)._global,entries,canonicalOrigin:config.canonicalOrigin,leadsEnabled:config.enabled&&config.leadsEnabled});
- if(config.enabled&&config.leadsEnabled&&payload.template==='/iletisim/'){
+ composeContent(document,payload,definition,{sharedDocument,sharedPayload:globalPayload,sharedDefinition:(catalog as any)._global,entries,booksPayload,booksDefinition:(catalog as any)['/kitaplar/'],canonicalOrigin:config.canonicalOrigin,leadsEnabled:config.enabled&&config.leadsEnabled});
+ if(config.enabled&&config.leadsEnabled&&document.querySelector('#contactForm')){
   const script=document.createElement('script');script.src=versionedAsset('/assets/cms-contact.js');script.setAttribute('data-endpoint',config.url+'/functions/v1/submit-lead');script.setAttribute('data-key',config.publishableKey);document.body.append(script);
  }
  return document.toString();

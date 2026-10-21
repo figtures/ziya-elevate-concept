@@ -18,7 +18,13 @@
   const unavailable = new Set();
   // Published HTML keeps these URLs in data-src so even metadata range requests
   // cannot compete with the opening image, fonts and four-second TEDx clip.
-  const sources = videos.map(video => video.dataset.src || video.getAttribute('src'));
+  // The default edited film has a separate native-720p mobile delivery.
+  // Keep arbitrary CMS uploads unchanged; only map this known paired asset.
+  const mobileDelivery = matchMedia('(max-width: 760px)').matches;
+  const sources = videos.map(video => {
+    const source = video.dataset.src || video.getAttribute('src');
+    return mobileDelivery && source ? source.replace(/^\/assets\/hero-stage-clean-1080\.mp4(?=$|\?)/, '/assets/hero-stage-clean-720.mp4') : source;
+  });
   const trimStart = video => Math.max(0, Number(video.dataset.clipStart) || 0);
   const trimEnd = video => {
     const selected = Number(video.dataset.clipEnd);

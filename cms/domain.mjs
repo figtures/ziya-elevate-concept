@@ -14,12 +14,18 @@ export function deploymentOrigin(value) {
   return url.origin;
 }
 
+export function isDevelopmentOrigin(value) {
+  return /(?:^|\.)(?:workers\.dev|pages\.dev|chatgpt\.site)$/.test(new URL(value).hostname);
+}
+
 export function resolveDeploymentConfig(config, override) {
-  const primary = deploymentOrigin(override === undefined ? config.canonicalOrigin || config.siteOrigin : override);
+  const primary = deploymentOrigin(override === undefined ? config.siteOrigin || config.canonicalOrigin : override);
+  // SITE_URL may be a preview host. Only a production-domain override may change canonical identity.
+  const canonical = override !== undefined && !isDevelopmentOrigin(primary) ? primary : deploymentOrigin(config.canonicalOrigin || primary);
   const legacyOrigins = [...new Set([
     ...(config.legacyOrigins || []), config.siteOrigin, config.canonicalOrigin,
   ].filter(Boolean).map(deploymentOrigin))];
-  return { ...config, siteOrigin: primary, canonicalOrigin: primary, legacyOrigins };
+  return { ...config, siteOrigin: primary, canonicalOrigin: canonical, legacyOrigins };
 }
 
 export function domainRedirect(request, config) {
@@ -38,5 +44,5 @@ export function domainRedirect(request, config) {
 }
 
 export function isPreviewOrigin(request, config) {
-  return new URL(request.url).origin !== deploymentOrigin(config.canonicalOrigin || config.siteOrigin);
+  return isDevelopmentOrigin(request.url) || new URL(request.url).origin !== deploymentOrigin(config.canonicalOrigin || config.siteOrigin);
 }

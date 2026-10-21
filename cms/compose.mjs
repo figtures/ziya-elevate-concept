@@ -1,13 +1,14 @@
 // One content pipeline for visitor HTML and the admin's draft preview.
 import {applyContent} from './render.mjs';
 import {applyNavigation} from './navigation.mjs';
-import {applyCollection} from './collections.mjs';
+import {applyCollection,applyHomeBooks} from './collections.mjs';
 import {applyExperience} from './experience.mjs';
 import {applyAEO} from './aeo.mjs';
 import {applySEO} from './seo.mjs';
 import {applyResources} from './resources.mjs';
+import {applySpeakerLocale} from './speaker-locale.mjs';
 
-export function composeContent(document,payload,definition,{sharedDocument,sharedPayload,sharedDefinition,entries,canonicalOrigin,leadsEnabled=false}={}){
+export function composeContent(document,payload,definition,{sharedDocument,sharedPayload,sharedDefinition,entries,booksPayload,booksDefinition,canonicalOrigin,leadsEnabled=false}={}){
  applyContent(document,payload,definition);
  if(sharedDocument&&sharedPayload&&sharedDefinition){
   applyContent(sharedDocument,sharedPayload,sharedDefinition,{global:true});
@@ -20,6 +21,7 @@ export function composeContent(document,payload,definition,{sharedDocument,share
    const node=sharedDocument.querySelector(selector);if(node&&!document.querySelector(selector))(node.tagName==='LINK'?document.head:document.body).append(node.cloneNode(true));
   }
  }
+ applySpeakerLocale(document,payload);
  for(const a of document.querySelectorAll('header.site a')){
   const href=a.getAttribute('href')||'';a.removeAttribute('aria-current');a.classList.remove('active');
   if(href===payload.route){a.setAttribute('aria-current','page');a.classList.add('active');}
@@ -29,6 +31,7 @@ export function composeContent(document,payload,definition,{sharedDocument,share
  // Compose the homepage proof points over the film after CMS bindings resolve.
  // Keep the authored section IDs stable so existing edits and visibility survive.
  if(payload.route==='/'){
+  applyHomeBooks(document,booksPayload,booksDefinition);
   const hero=document.querySelector('.editorial-home-hero');
   const proof=document.querySelector('#rakamlarla');
   if(hero&&proof){hero.classList.add('hero-with-proof');hero.append(proof);}

@@ -3,10 +3,11 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 const code=readFileSync(new URL('../public/assets/tedx-hero.js',import.meta.url),'utf8');
 assert.equal(code,readFileSync(new URL('../website/assets/tedx-hero.js',import.meta.url),'utf8'),'Source and served hero script must match.');
-function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=false,native=false,trims=[],lateMetadata=false}={}){
+function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=false,native=false,trims=[],lateMetadata=false,mobile=false,sources=[]}={}){
  let time=0;const timers=new Set(),observers=[],mutations=[],players=[],scripts=[];
  const element=(dataset={})=>{const handlers={},classes=new Set();return {dataset,paused:true,currentTime:0,duration:60,readyState:lateMetadata?0:1,seeking:false,style:{},attributes:{},loadCount:0,classList:{add:k=>classes.add(k),remove:k=>classes.delete(k),contains:k=>classes.has(k),toggle:(k,on)=>on?classes.add(k):classes.delete(k)},getAttribute(k){return this.attributes[k]??null;},hasAttribute(k){return k in this.attributes;},setAttribute(k,v){this.attributes[k]=v;},load(){this.loadCount++;this.paused=true;this.currentTime=0;},removeAttribute(k){delete this.attributes[k];},addEventListener(k,f){(handlers[k]??=[]).push(f);},emit(k){for(const f of handlers[k]||[])f();},play(){if(this.paused){this.paused=false;this.emit('playing');}return Promise.resolve();},pause(){this.paused=true;}};};
  const videos=[element({heroClip:'sahne',src:'/assets/sahne.mp4'}),element({heroClip:'uluslararasi',src:'/assets/uluslararasi.mp4'})];
+ sources.forEach((source,i)=>videos[i].dataset.src=source);
  trims.forEach((trim,i)=>Object.assign(videos[i].dataset,trim));
  if(legacySource) videos.forEach(v=>{v.setAttribute('src',v.dataset.src);delete v.dataset.src;});
  const use=element(),label=element(),button=element();button.querySelector=s=>s==='use'?use:label;
@@ -15,7 +16,7 @@ function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=fals
  const body=element(),dialog=element(),document=element();document.body=body;document.hidden=hidden;document.dispatchEvent=()=>{};document.querySelector=s=>s==='[data-tedx-hero],[data-video-sequence]'?host:s==='dialog[open]'&&dialog.open?dialog:null;document.getElementById=()=>dialog;document.head={append:e=>scripts.push(e)};document.createElement=()=>element();
  const media=element();media.matches=reduced;
  const YT={PlayerState:{PLAYING:1,ENDED:0},Player:class{constructor(id,config){this.config=config;this.current=31;this.state=2;this.loads=0;this.destroyed=0;players.push(this);}mute(){}getIframe(){return element();}getCurrentTime(){return this.current;}getPlayerState(){return this.state;}playVideo(){if(this.state!==1){this.state=1;this.config.events.onStateChange({data:1});}}pauseVideo(){this.state=2;}loadVideoById(){this.loads++;}destroy(){this.destroyed++;}end(){this.config.events.onStateChange({data:0});}}};
- const context={document,window:apiAvailable?{YT}:{},YT,matchMedia:()=>media,location:{origin:'http://test.local'},performance:{now:()=>time},Event:class{},IntersectionObserver:class{constructor(fn){observers.push(fn);}observe(){}},MutationObserver:class{constructor(fn){mutations.push(fn);}observe(){}},setInterval:fn=>(timers.add(fn),fn),clearInterval:fn=>timers.delete(fn)};
+ const context={document,window:apiAvailable?{YT}:{},YT,matchMedia:query=>query.includes("max-width")?{matches:mobile}:media,location:{origin:'http://test.local'},performance:{now:()=>time},Event:class{},IntersectionObserver:class{constructor(fn){observers.push(fn);}observe(){}},MutationObserver:class{constructor(fn){mutations.push(fn);}observe(){}},setInterval:fn=>(timers.add(fn),fn),clearInterval:fn=>timers.delete(fn)};
  vm.runInNewContext(code,context);
  return {videos,host,button,label,document,body,timers,players,scripts,get player(){return players[0];},ready(){const player=players[0];player.config.events.onReady({target:player});},apiReady(){context.window.YT=YT;context.window.onYouTubeIframeAPIReady?.();},tick(ms=100){time+=ms;for(const fn of [...timers])fn();},visible(value){observers[0]([{isIntersecting:value}]);},menu(value){body.classList.toggle('menu-open',value);mutations[0]();},dialog(value){dialog.open=value;mutations[1]();},hidden(value){document.hidden=value;document.emit('visibilitychange');},motion(value){media.matches=value;media.emit('change');}};
 }
@@ -83,5 +84,15 @@ function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=fals
 }
 {
  const f=fixture({native:true,trims:[{clipStart:'80',clipEnd:'90'}]});assert.equal(f.host.dataset.clip,'uluslararasi','A trim starting beyond actual media duration is skipped.');
+}
+{
+ const sources=['/assets/hero-stage-clean-1080.mp4','https://example.com/custom.mp4'];
+ const mobile=fixture({native:true,mobile:true,sources});
+ assert.equal(mobile.videos[0].getAttribute('src'),'/assets/hero-stage-clean-720.mp4','Mobile must request only the smaller paired film.');
+ mobile.videos[0].emit('ended');
+ assert.equal(mobile.videos[1].getAttribute('src'),sources[1],'CMS custom clips must not be replaced by the default paired film.');
+ const desktop=fixture({native:true,mobile:false,sources});
+ assert.equal(desktop.videos[0].getAttribute('src'),sources[0]);
+ assert.equal(desktop.players.length,0,'The new native hero has no external autoplay iframe.');
 }
 console.log('PASS: intro once, two-clip rotation, deferred unplayed sources, completed media buffer reuse, preserved resume positions, accessible control labels, iframe release, API deferral/errors, late events, pause/resume, viewport/menu/dialog/tab, reduced motion, stalled intro, native errors/rejections.');

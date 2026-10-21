@@ -10,6 +10,7 @@ import {renderExperienceEditor,wireExperienceEditor} from './admin-experience.mj
 import {composeContent} from './compose.mjs';
 import {auditContentLinks} from './link-audit.mjs';
 import {wirePageVideoPreview} from './admin-video-preview.mjs';
+import {currentContentPayload} from './content-revisions.mjs';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clone=x=>structuredClone(x), stamp=x=>x?new Date(x).toLocaleString('tr-TR',{dateStyle:'short',timeStyle:'short'}):'—';
@@ -179,7 +180,7 @@ function historyEditor(){return `<section class="panel"><div class="panel-head">
 async function loadHistory(){if(S.offline)return;const documentId=S.row.id;let data;try{data=await readAll(()=>client.from('cms_versions').select('id,revision,action,created_at').eq('document_id',documentId).order('created_at',{ascending:false}).order('id'));}catch(error){toast(error.message,true);return;}if(S.row?.id!==documentId||!$('#history-body'))return;$('#history-body').innerHTML=data.map(v=>`<div class="member-row"><div><b>Sürüm ${v.revision}</b><p>${esc(v.action)} · ${stamp(v.created_at)}</p></div><button data-restore="${v.id}" class="button quiet small">Taslak olarak geri al</button></div>`).join('')||'<div class="empty-state">Henüz kayıt yok.</div>';$$('[data-restore]').forEach(b=>b.onclick=async()=>{if(!confirm('Seçili sürüm yeni taslak olarak geri alınsın mı?'))return;await run(async()=>{await rpc('cms_restore_document',{p_id:S.row.id,p_version:b.dataset.restore,p_expected:S.row.revision});await refreshRows();openEditor(S.row.id);toast('Önceki sürüm taslak olarak geri alındı.');});});}
 async function rpc(name,args){const {data,error}=await client.rpc(name,args);if(error)throw error;return Array.isArray(data)?data[0]:data;}
 async function readAll(query,pageSize=250){const rows=[];for(let from=0;;from+=pageSize){const {data,error}=await query().range(from,from+pageSize-1);if(error)throw error;rows.push(...(data||[]));if(!data||data.length<pageSize)return rows;}}
-async function refreshRows(){S.rows=await readAll(()=>client.from('cms_documents').select('*').order('updated_at',{ascending:false}).order('id'));}
+async function refreshRows(){const rows=await readAll(()=>client.from('cms_documents').select('*').order('updated_at',{ascending:false}).order('id'));S.rows=await Promise.all(rows.map(async row=>({...row,draft:await currentContentPayload(row.draft,S.seed)})));}
 async function run(fn){
  if(S.busy)return;S.busy=true;syncInteraction();const state=$('#save-state');if(state)state.textContent='İşlem sürüyor…';
  try{return await fn();}catch(e){toast(['PT409','40001'].includes(e.code)?'İçerik başka bir kullanıcı tarafından güncellendi. Yeniden yükleyip değişikliklerinizi karşılaştırın.':e.message||'İşlem tamamlanamadı.',true);}
@@ -234,15 +235,16 @@ function modal(title,body,wire){if($('#modal'))closeDialog();$('#app')?.querySel
 function closeDialog(){dialogCleanup?.();dialogCleanup=null;$('#modal')?.querySelectorAll('video').forEach(v=>v.pause?.());$('#modal')?.remove();document.body.style.overflow='';syncInteraction();dialogReturn?.focus();}
 async function preview(){return run(async()=>{
  const draft=clone(S.doc),isGlobal=draft.kind==='global';
- const publicPayload=async route=>{if(S.offline)return S.seed.find(p=>p.route===route);const rows=await readAll(()=>client.from('cms_published').select('payload').eq('route',route));return rows[0]?.payload;};
+ const publicPayload=async route=>{if(S.offline)return S.seed.find(p=>p.route===route);const rows=await readAll(()=>client.from('cms_published').select('payload').eq('route',route));return currentContentPayload(rows[0]?.payload,S.seed);};
  const payload=isGlobal?await publicPayload('/'):draft;if(!payload)throw Error('Ana sayfanın yayındaki sürümü bulunamadı.');
  const sharedPayload=isGlobal?draft:await publicPayload('/_global/');
+ const booksPayload=payload.route==='/'?(await publicPayload('/kitaplar/'))||null:undefined;
  const [document,sharedDocument]=await Promise.all([templateDocument(payload,{apply:false}),sharedPayload?templateDocument(sharedPayload,{apply:false}):null]);
  let entries;
  if(['/makaleler/','/hayattan-notlar/'].includes(payload.route)){
   const kind=payload.route==='/makaleler/'?'article':'note';entries=S.offline?S.seed.filter(d=>d.kind===kind).map(d=>({route:d.route,kind:d.kind,title:d.title})):await readAll(()=>client.from('cms_published').select('route,kind,title:payload->>title,robots:payload->>robots').eq('kind',kind).order('route'));
  }
- composeContent(document,payload,S.catalog[payload.template],{sharedDocument,sharedPayload,sharedDefinition:S.catalog._global,entries,canonicalOrigin:S.config.canonicalOrigin||location.origin,leadsEnabled:S.config.enabled&&S.config.leadsEnabled});
+ composeContent(document,payload,S.catalog[payload.template],{sharedDocument,sharedPayload,sharedDefinition:S.catalog._global,entries,booksPayload,booksDefinition:S.catalog['/kitaplar/'],canonicalOrigin:S.config.canonicalOrigin||location.origin,leadsEnabled:S.config.enabled&&S.config.leadsEnabled});
  document.querySelectorAll('script,iframe,form').forEach(x=>x.remove());for(const el of document.querySelectorAll('*'))for(const attr of [...el.attributes])if(attr.name.startsWith('on'))el.removeAttribute(attr.name);
  const base=document.createElement('base');base.href=location.origin+'/';document.head.prepend(base);document.body.inert=false;for(const el of document.querySelectorAll('a,button,input,select,textarea')){el.setAttribute('tabindex','-1');el.style.pointerEvents='none';if(el.tagName!=='A')el.setAttribute('disabled','');}
  const style=document.createElement('style');style.textContent='[data-motion-item],.reveal{opacity:1!important;transform:none!important}body{overflow:auto!important}';document.head.append(style);

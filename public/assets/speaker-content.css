@@ -1,0 +1,5 @@
+/* Layout for the newly added speaker resources; established page styling is preserved. */
+.speaker-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.speaker-stage-proof .continuation-links{margin-top:28px;padding-top:0;gap:16px 24px}
+.speaker-stage-proof .continuation-links>a{font-size:.875rem}
+@media(max-width:600px){.speaker-actions{gap:12px}.speaker-actions>.ed-link{flex-basis:100%}.speaker-stage-proof .continuation-links{gap:14px 20px}}

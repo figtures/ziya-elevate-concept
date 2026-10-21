@@ -1,0 +1,63 @@
+{
+  "source": "/assets/hero-loop-v5.mp4",
+  "sourceSize": [
+    1280,
+    720
+  ],
+  "sourceFPS": 24,
+  "sourceSha256": "f0d52f5ce300393523fd6937dd14aec507ce6cdaa500545ebe83a07ab12e1e36",
+  "editing": "hard cuts; original timing; no selfie, generated footage, interpolation, freeze frames or dissolves",
+  "clips": [
+    {
+      "label": "TEDx geniş plan",
+      "startFrame": 6,
+      "endFrame": 27,
+      "duration": 0.875
+    },
+    {
+      "label": "Büyük salon",
+      "startFrame": 36,
+      "endFrame": 57,
+      "duration": 0.875
+    },
+    {
+      "label": "Seyirci",
+      "startFrame": 204,
+      "endFrame": 225,
+      "duration": 0.875
+    },
+    {
+      "label": "Ziya sahnede orta plan",
+      "startFrame": 172,
+      "endFrame": 189,
+      "duration": 0.7083333333333334
+    }
+  ],
+  "duration": 3.3333333333333335,
+  "outputs": [
+    {
+      "src": "/assets/hero-stage-clean-1080.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1027470,
+      "codec": "h264",
+      "sha256": "424d8e6717e87ebd69a68bf138781af22834f42480d9ffb527dadd2ae310547b"
+    },
+    {
+      "src": "/assets/hero-stage-clean-720.mp4",
+      "width": 1280,
+      "height": 720,
+      "bytes": 466176,
+      "codec": "h264",
+      "sha256": "ccbc534c9c48e54af3ccfa9cfd3b45189f2c6841876383d5d78fbcf6b0c23eb4"
+    }
+  ],
+  "poster": "/assets/hero-stage-clean.avif",
+  "posterSource": "/assets/tedx-oan-sahne-genis.jpg",
+  "limitations": [
+    "1080p delivery is scaled from native720p.",
+    "Four2.5–3second shots require the longer original recordings.",
+    "Available original media has no audio.90second showreel requires original stage footage with sound.",
+    "Only actual existing photos were used. Native2400px stage photos and three highresolution portrait originals are not supplied."
+  ]
+}

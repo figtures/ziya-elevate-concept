@@ -13,10 +13,17 @@ export const EXPERIENCE_FIELDS = {
 };
 export const CONTACT_DEFAULTS = {
   phone: '905326467755', submitLabel: 'Talebimi gönder', sendingLabel: 'Gönderiliyor…',
-  successTitle: 'Talebiniz alındı.', successText: 'Ekibimiz ilettiğiniz e-posta üzerinden sizinle iletişime geçebilir. Dilerseniz WhatsApp üzerinden de devam edebilirsiniz.',
+  successTitle: 'Talebiniz alındı.', successText: 'Teşekkürler. Talebiniz bize ulaştı. En geç 48 saat içinde sizinle iletişime geçeceğiz.',
   errorTitle: 'Talep kaydedilemedi.', errorText: 'Tekrar deneyebilir veya WhatsApp üzerinden gönderebilirsiniz.',
   retryLabel: 'Tekrar dene', againLabel: 'Yeni talep gönder', minMessageText: 'Lütfen talebinizi en az 10 karakterle açıklayın.',
   greeting: 'Merhaba Ziya Bey,', privacyText: 'Form ile gönderdiğiniz bilgiler talebinizi yanıtlamak amacıyla güvenli biçimde kaydedilir. Ayrıntılar için KVKK Aydınlatma Metni’ni inceleyebilirsiniz.', whatsappLabel: 'WhatsApp’ta devam et'
+};
+export const EN_CONTACT_DEFAULTS = {
+  phone: CONTACT_DEFAULTS.phone, submitLabel: 'Send inquiry', sendingLabel: 'Sending…',
+  successTitle: 'Your inquiry has been received.', successText: 'Thank you. We have received your inquiry and will contact you within 48 hours.',
+  errorTitle: 'Your inquiry could not be saved.', errorText: 'Please try again or continue on WhatsApp.',
+  retryLabel: 'Try again', againLabel: 'Send a new inquiry', minMessageText: 'Please describe your inquiry in at least 10 characters.',
+  greeting: 'Hello Ziya,', privacyText: 'Your information is securely recorded so we can respond to your inquiry.', whatsappLabel: 'Continue on WhatsApp'
 };
 export const TEST_UI_DEFAULTS = {
   previousLabel: 'Önceki soru', scoreLabel: 'Zihinsel Zırh Skorun',
@@ -59,11 +66,12 @@ export function experienceDefaults(doc, payload = {}) {
     }));
   }
   if (doc?.querySelector('#contactForm') || payload.route === '/iletisim/') {
-    const submitLabel = textAt(doc, '#contactForm [type="submit"]', CONTACT_DEFAULTS.submitLabel);
-    const privacyText = textAt(doc, '.contact-form-wrap > .hero-note', CONTACT_DEFAULTS.privacyText);
-    result.contact = {...CONTACT_DEFAULTS, whatsappLabel: textAt(doc, '#sendWhatsApp', CONTACT_DEFAULTS.whatsappLabel),
-      submitLabel: submitLabel === 'WhatsApp mesajını hazırla' ? CONTACT_DEFAULTS.submitLabel : submitLabel,
-      privacyText: privacyText === 'Form mesajını hazırlar; gönderimi WhatsApp’ta sen tamamlarsın. Bilgilerin bu sayfada kaydedilmez.' ? CONTACT_DEFAULTS.privacyText : privacyText};
+    const defaults = doc?.querySelector('#contactForm')?.dataset.language === 'en' || payload.route === '/en/speaker/' ? EN_CONTACT_DEFAULTS : CONTACT_DEFAULTS;
+    const submitLabel = textAt(doc, '#contactForm [type="submit"]', defaults.submitLabel);
+    const privacyText = textAt(doc, '.contact-form-wrap > .hero-note', defaults.privacyText);
+    result.contact = {...defaults, whatsappLabel: textAt(doc, '#sendWhatsApp', defaults.whatsappLabel),
+      submitLabel: submitLabel === 'WhatsApp mesajını hazırla' ? defaults.submitLabel : submitLabel,
+      privacyText: privacyText === 'Form mesajını hazırlar; gönderimi WhatsApp’ta sen tamamlarsın. Bilgilerin bu sayfada kaydedilmez.' ? defaults.privacyText : privacyText};
   }
   if (doc?.querySelector('#quiz') || payload.kind === 'test') {
     result.testUI = {...TEST_UI_DEFAULTS};

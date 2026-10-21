@@ -212,7 +212,7 @@ function writingList(doc, origin, url, route) {
   return listEntity(url,'writing',text(doc.querySelector('h1')),entries);
 }
 function serviceEntity(doc, payload, origin, url, personID) {
-  if (!['/konusmaci/','/mentorluk/','/kurumsal/satis-egitimi/','/kurumsal/liderlik-egitimi/','/kurumsal/kafa-yapisi-atolyesi/'].includes(payload.template)) return null;
+  if (!['/konusmaci/','/en/speaker/','/mentorluk/','/kurumsal/satis-egitimi/','/kurumsal/liderlik-egitimi/','/kurumsal/kafa-yapisi-atolyesi/'].includes(payload.template)) return null;
   const hero = doc.querySelector('.page-hero');
   if (!visible(hero)) return null;
   const name = text(hero.querySelector('h1')), serviceType = text(hero.querySelector('.eyebrow'));
@@ -220,7 +220,21 @@ function serviceEntity(doc, payload, origin, url, personID) {
   const service = {'@type':'Service','@id':url + '#service',url,name,serviceType,provider:{'@id':personID},mainEntityOfPage:{'@id':url + '#webpage'}};
   const description = text(hero.querySelector('.lead'));
   if (description) service.description = description;
-  const contact = [...hero.querySelectorAll('.hero-action a[href]')].filter(visible).map(a => absoluteURL(a.getAttribute('href'),origin)).find(href => href && new URL(href).origin === origin && new URL(href).pathname === '/iletisim/');
+  const contact = [...hero.querySelectorAll('.hero-action a[href]')].filter(visible).map(a => {
+    const raw = a.getAttribute('href');
+    // Fragment links are resolved against this page, never the root of the site.
+    return raw.startsWith('#') ? absoluteURL(url + raw, origin) : absoluteURL(raw, origin);
+  }).find(href => {
+    if (!href) return false;
+    const target = new URL(href);
+    if (target.origin !== origin) return false;
+    if (target.pathname === '/iletisim/') return true;
+    if (target.pathname !== payload.route || !target.hash) return false;
+    let id; try { id = decodeURIComponent(target.hash.slice(1)); } catch { return false; }
+    const section = doc.getElementById(id);
+    const form = section?.matches('form#contactForm') ? section : section?.querySelector('#contactForm');
+    return visible(form);
+  });
   if (contact) service.availableChannel = {'@type':'ServiceChannel',serviceUrl:contact};
   return service;
 }
@@ -257,13 +271,20 @@ export function applySEO(doc, payload, configuredOrigin = DEFAULT_CANONICAL_ORIG
   const brand = text(doc.querySelector('.ed-wordmark > span')) || text(doc.querySelector('.footer-wordmark > span')) || 'Ziya Şakir Yılmaz';
   const { image } = applySocialImageMetadata(doc, payload, origin);
   const isArticle = ['article','note'].includes(payload.kind);
-  doc.documentElement.setAttribute('lang','tr');
+  const language = route.startsWith('/en/') ? 'en' : 'tr';
+  doc.documentElement.setAttribute('lang',language);
   upsert(doc, 'title', 'title', {}, title);
   meta(doc,'description',description);
   // Keep pages crawlable so crawlers can actually read an editor's noindex instruction.
   applyRobotsPolicy(doc, payload);
   upsert(doc, 'link[rel="canonical"]', 'link', {rel:'canonical',href:url});
-  for (const [key, value] of Object.entries({title,description,url,type:isArticle?'article':'website',site_name:brand,locale:'tr_TR'})) meta(doc,'og:'+key,value,true);
+  for (const [key, value] of Object.entries({title,description,url,type:isArticle?'article':'website',site_name:brand,locale:language === 'en' ? 'en_US' : 'tr_TR'})) meta(doc,'og:'+key,value,true);
+  doc.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(n => n.remove());
+  if (['/konusmaci/','/en/speaker/'].includes(route)) {
+    for (const [lang,path] of [['tr','/konusmaci/'],['en','/en/speaker/'],['x-default','/konusmaci/']]) {
+      upsert(doc, `link[rel="alternate"][hreflang="${lang}"]`, 'link', {rel:'alternate',hreflang:lang,href:origin+path});
+    }
+  }
   for (const [key, value] of Object.entries({title,description,card:image?'summary_large_image':'summary'})) meta(doc,'twitter:'+key,value);
   // Replaced/duplicated sections and new routes must not inherit detached template entities.
   doc.querySelectorAll('script[type="application/ld+json"]').forEach(n => n.remove());
@@ -280,15 +301,15 @@ export function applySEO(doc, payload, configuredOrigin = DEFAULT_CANONICAL_ORIG
       if (bio) person.description = bio;
     }
   }
-  const website = {'@type':'WebSite','@id':origin + '/#website',url:origin + '/',name:brand,inLanguage:'tr',publisher:{'@id':personID}};
-  const webpage = {'@type':route === '/ziya-sakir-yilmaz/' ? ['WebPage','ProfilePage'] : 'WebPage','@id':url + '#webpage',url,name,description,inLanguage:'tr',isPartOf:{'@id':website['@id']}};
+  const website = {'@type':'WebSite','@id':origin + '/#website',url:origin + '/',name:brand,inLanguage:['tr','en'],publisher:{'@id':personID}};
+  const webpage = {'@type':route === '/ziya-sakir-yilmaz/' ? ['WebPage','ProfilePage'] : 'WebPage','@id':url + '#webpage',url,name,description,inLanguage:language,isPartOf:{'@id':website['@id']}};
   if (route === '/ziya-sakir-yilmaz/') webpage.mainEntity = {'@id':personID};
   if (image) webpage.primaryImageOfPage = {'@type':'ImageObject',url:image};
   const graph = [website,person,webpage], breadcrumb = breadcrumbs(doc,route,name,origin);
   if (breadcrumb) { graph.push(breadcrumb); webpage.breadcrumb = {'@id':breadcrumb['@id']}; }
   if (isArticle) {
     const author = visibleAuthor(doc,origin,brand,personID);
-    const article = {'@type':payload.kind === 'note' ? 'BlogPosting' : 'Article','@id':url + '#article',url,headline:name,description,inLanguage:'tr',mainEntityOfPage:{'@id':webpage['@id']},publisher:{'@id':personID},...visibleDates(doc,payload.kind)};
+    const article = {'@type':payload.kind === 'note' ? 'BlogPosting' : 'Article','@id':url + '#article',url,headline:name,description,inLanguage:language,mainEntityOfPage:{'@id':webpage['@id']},publisher:{'@id':personID},...visibleDates(doc,payload.kind)};
     if (author) article.author = author;
     const citations = visibleCitations(doc,origin);
     if (citations.length) article.citation = citations;

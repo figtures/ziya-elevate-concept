@@ -39,7 +39,10 @@ for(const payload of seed.filter(p=>p.kind!=='global')){
 const {document}=parseHTML('<html><head></head><body><video data-hero-clip="sahne" src="https://media.example.org/custom.mp4"></video></body></html>');
 applyResources(document);assert.equal(document.querySelector('video').getAttribute('data-src'),'https://media.example.org/custom.mp4');
 const home=parseHTML(templates['/']).document;
-assert.equal(home.querySelectorAll('video[data-hero-clip][src]').length,2,'Authored CMS templates retain src bindings');
+const authoredHome=parseHTML(readFileSync('website/index.html','utf8')).document;
+const authoredSources=[...authoredHome.querySelectorAll('video[data-hero-clip][src]')].map(v=>v.getAttribute('src'));
+assert(authoredSources.length>0,'The approved home video composition must retain an editable source');
+assert.deepEqual([...home.querySelectorAll('video[data-hero-clip][src]')].map(v=>v.getAttribute('src')),authoredSources,'Every authored clip source must retain its CMS binding, in order');
 assert(readFileSync('app/[[...slug]]/route.ts','utf8').includes("'Cache-Control':'no-cache'"),'Public content remains revalidatable');
 assert(readFileSync('app/admin/kurulum.sql/route.ts','utf8').includes('no-store'),'Private installer must not become cacheable');
 console.log(`PASS: ${count} rendered pages, current CSS bundles/cascade, visible accessible labels, deferred media, CMS src bindings, idempotence and cache policy separation.`);

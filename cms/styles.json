@@ -26,8 +26,23 @@
     "sourceBytes": 116545,
     "bytes": 106443
   },
-  "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/tedx-hero.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\"]": {
-    "href": "/assets/bundles/site-86b0586d025f5221.css",
+  "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/speaker-content.css\"]": {
+    "href": "/assets/bundles/site-df90606486d71425.css",
+    "inputs": [
+      "/assets/style.css",
+      "/assets/refinements.css",
+      "/assets/fonts.css",
+      "/assets/editorial.css",
+      "/assets/content-depth.css",
+      "/assets/signature-header.css",
+      "/assets/site-footer.css",
+      "/assets/speaker-content.css"
+    ],
+    "sourceBytes": 117013,
+    "bytes": 106815
+  },
+  "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/tedx-hero.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/home-content.css\"]": {
+    "href": "/assets/bundles/site-1dde36ca4f8619a2.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -36,9 +51,25 @@
       "/assets/editorial.css",
       "/assets/content-depth.css",
       "/assets/signature-header.css",
-      "/assets/site-footer.css"
+      "/assets/site-footer.css",
+      "/assets/home-content.css"
     ],
-    "sourceBytes": 117247,
-    "bytes": 107041
+    "sourceBytes": 118749,
+    "bytes": 108439
+  },
+  "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/habit-plan.css\"]": {
+    "href": "/assets/bundles/site-d9eb4473f71608dc.css",
+    "inputs": [
+      "/assets/style.css",
+      "/assets/refinements.css",
+      "/assets/fonts.css",
+      "/assets/editorial.css",
+      "/assets/content-depth.css",
+      "/assets/signature-header.css",
+      "/assets/site-footer.css",
+      "/assets/habit-plan.css"
+    ],
+    "sourceBytes": 118027,
+    "bytes": 107697
   }
 }

@@ -1,0 +1,17 @@
+/* Scoped controls only; the existing navy/cream page composition is unchanged. */
+[data-habit-plan] { max-width: 52rem; }
+[data-habit-plan] form { display: grid; gap: 1rem; }
+[data-habit-plan] form p { margin: 0; }
+[data-habit-plan] form label { display: inline-block; margin-bottom: .5rem; }
+[data-habit-plan] input[type="text"],
+[data-habit-plan] input[type="date"] { box-sizing: border-box; width: 100%; max-width: 44rem; padding: .9rem 1rem; border: 1px solid currentColor; border-radius: var(--radius-control, 12px); background: transparent; color: inherit; font: inherit; }
+[data-habit-plan] form .ed-button { justify-self: start; }
+[data-habit-plan] progress { display: block; width: 100%; height: .7rem; margin-block: 1rem 1.5rem; accent-color: var(--brand-ink, #111c33); }
+[data-habit-plan] input[type="checkbox"] { width: 1.25rem; height: 1.25rem; margin-right: .4rem; accent-color: var(--brand-ink, #111c33); vertical-align: middle; }
+[data-habit-plan] [data-plan-weeks] label { display: flex; align-items: center; gap: .4rem; padding-block: .35rem; cursor: pointer; }
+[data-habit-plan] [data-plan-weeks] input { flex: 0 0 auto; }
+[data-habit-plan] [data-plan-weeks] p { margin-block: .4rem; }
+[data-habit-plan] [data-plan-weeks] summary { font-size: 1rem; }
+[data-habit-plan] [data-plan-status]:empty { display: none; }
+[data-habit-plan] [hidden] { display: none !important; }
+[data-habit-plan] :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }

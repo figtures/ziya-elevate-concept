@@ -37,7 +37,7 @@ Commit the updated `cms/config.json` and let Cloudflare rebuild `main`. Attach t
 
 Explicit aliases redirect GET/HEAD requests to the canonical domain with HTTP 308, preserving path and query. HTTP requests to a configured primary or alias also redirect to HTTPS. Other deployment hosts receive `X-Robots-Tag: noindex` and a disallow-all robots response to prevent duplicate indexing. Preview hosts keep the production canonical address; if an admin must sign in on a preview host, add that exact origin to `allowedOrigins` before applying domain setup.
 
-`SITE_URL` is an optional **build-time** override consumed before the admin and Worker bundles are built. Normally leave it unset and use the committed domain config. An override does not synchronize Supabase or attach DNS; a stale override will take precedence over committed config. The `SUPABASE_SERVICE_ROLE_KEY` runtime secret is required for user creation. Never put the Supabase management token in frontend or Cloudflare runtime variables.
+`SITE_URL` is an optional **build-time** override consumed before the admin and Worker bundles are built. Normally leave it unset and use the committed domain config. An override does not synchronize Supabase or attach DNS. A production-domain override takes precedence over committed config; workers.dev, pages.dev and chatgpt.site preview overrides retain the committed production canonical and remain noindex. The `SUPABASE_SERVICE_ROLE_KEY` runtime secret is required for user creation. Never put the Supabase management token in frontend or Cloudflare runtime variables.
 
 Run `npm run domain:check` for domain/SEO and mocked setup checks. These checks do not modify production services.
 

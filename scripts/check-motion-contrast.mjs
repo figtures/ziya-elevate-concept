@@ -1,13 +1,24 @@
-/* Deterministic regression checks for the Lighthouse contrast failures.
-   These validate palette math and scroll behavior, not a new browser audit. */
+/* Deterministic palette and opaque motion-type checks.
+   Engine/lifecycle contracts live in check-motion-chapters.mjs; this is not a Lighthouse or browser audit. */
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { runInNewContext } from 'node:vm';
-import { parseHTML } from 'linkedom';
 import postcss from 'postcss';
 
 const asset = name => readFileSync(new URL(`../website/assets/${name}`, import.meta.url), 'utf8');
 const css = postcss.parse(asset('editorial.css') + '\n' + asset('content-depth.css'));
+const variables = new Map();
+css.walkRules(rule => {
+  if (rule.parent.type !== 'root' || !rule.selectors.includes(':root')) return;
+  rule.walkDecls(/^--/, decl => variables.set(decl.prop, decl.value));
+});
+function resolve(value, stack = []) {
+  return value.replace(/var\(\s*(--[\w-]+)\s*(?:,\s*([^()]*))?\)/g, (_, name, fallback) => {
+    assert.ok(!stack.includes(name), `Cyclic CSS variable: ${[...stack, name].join(' -> ')}`);
+    const next = variables.get(name) ?? fallback;
+    assert.notEqual(next, undefined, `Unknown CSS variable: ${name}`);
+    return resolve(next, [...stack, name]);
+  });
+}
 function prop(selector, name) {
   let value;
   css.walkRules(rule => {
@@ -15,7 +26,7 @@ function prop(selector, name) {
     rule.walkDecls(name, decl => { value = decl.value; });
   });
   assert.ok(value, `Missing ${selector} ${name}`);
-  return value;
+  return resolve(value);
 }
 const rgb = hex => {
   assert.match(hex, /^#[a-f\d]{6}$/i);
@@ -55,49 +66,58 @@ contrast('Detail link labels', prop('.depth-body a', 'color'), paper, +prop('.de
 contrast('Reading categories', prop('.reading-link', 'color'), prop('.ed-reading', 'background'), +prop('.reading-selection .reading-link>span.cat', 'opacity'));
 assert.equal(prop('.motion-ready [data-motion-item]', 'opacity'), '1', 'Text-containing motion wrappers must stay fully opaque');
 
-const { document } = parseHTML('<html><body><section class="hero" data-motion-section><h1 id="hero" data-motion-item>Opening</h1></section><section id="content" data-motion-section><div id="copy" data-motion-item>Readable copy <span id="nested" data-motion-item>Nested</span></div><article id="reading" class="reading-chapter" data-motion-item>Long read</article><div id="tall" data-motion-item>Tall block</div></section></body></html>');
-const geometry = { hero: [0, 800], content: [900, 1500], copy: [1200, 200], nested: [1200, 20], reading: [1550, 500], tall: [2100, 1200] };
-for (const [id, [y, h]] of Object.entries(geometry)) {
-  const el = document.getElementById(id);
-  Object.defineProperties(el, { offsetTop: { value: y }, offsetHeight: { value: h }, offsetParent: { value: null } });
+// Each moving glass stop remains opaque and readable in every shine position.
+// Test all stops, not only the initial color, against both cream surfaces.
+function gradient(selector) {
+  let value;
+  css.walkRules(rule => {
+    if (!rule.selectors.includes(selector)) return;
+    rule.walkDecls('background-image', decl => { value = resolve(decl.value); });
+  });
+  assert.ok(value, `Missing glass gradient: ${selector}`);
+  assert.doesNotMatch(value, /var\(|transparent|rgba?\(/, 'Glass type must use resolved opaque colors');
+  const colors = [...value.matchAll(/#[a-f\d]+\b/gi)].map(match => match[0]);
+  assert.ok(colors.length >= 2, 'Glass type has a defined reflection palette');
+  colors.forEach(color => assert.match(color, /^#[a-f\d]{6}$/i, 'Every stop is fully opaque'));
+  return [...new Set(colors)];
 }
-Object.defineProperty(document.documentElement, 'scrollHeight', { value: 3600 });
-let pending;
-const events = {};
-const reduced = { matches: false, addEventListener(name, fn) { events[`reduced-${name}`] = fn; } };
-const env = {
-  document, innerHeight: 800, scrollY: 0,
-  matchMedia: () => reduced,
-  requestAnimationFrame: fn => { pending = fn; return 1; },
-  addEventListener: (name, fn) => { events[name] = fn; },
-};
-env.window = env;
-runInNewContext(asset('editorial-motion.js'), env);
-function flush(y) {
-  env.scrollY = y;
-  events.scroll();
-  assert.ok(pending, 'Scroll requests an animation frame');
-  const fn = pending; pending = null; fn();
-  for (const item of document.querySelectorAll('[data-motion-item]')) {
-    assert.equal(item.style.getPropertyValue('--item-opacity') || '', '', 'Motion must not fade text at any scroll position');
-    assert.equal(item.style.opacity || '', '', 'Motion must not set inline opacity');
+for (const background of [paper, prop('.ed-reading', 'background')]) {
+  for (const color of gradient('.motion-title-glass .motion-letter')) {
+    contrast(`Glass ${color} on ${background}`, color, background);
   }
-  return parseFloat(document.getElementById('copy').style.getPropertyValue('--item-y'));
 }
-const positions = [flush(0), flush(600), flush(1000), flush(1700), flush(600)];
-assert.ok(positions[0] > positions[1] && positions[1] > positions[2] && positions[2] > positions[3], 'Text motion continues as the section crosses the viewport');
-assert.equal(positions[1], positions[4], 'Reverse scrolling restores the same position');
-assert.equal(document.getElementById('hero').style.getPropertyValue('--item-y') || '', '', 'Hero copy has no delayed entrance');
-assert.equal(document.getElementById('nested').style.getPropertyValue('--item-y') || '', '', 'Nested motion is not multiplied');
-assert.equal(document.getElementById('reading').style.getPropertyValue('--item-y'), '0px', 'Long reading content stays stable');
-assert.equal(document.getElementById('tall').style.getPropertyValue('--item-y'), '0px', 'Viewport-tall content stays stable');
-assert.notEqual(document.getElementById('content').style.getPropertyValue('--photo-y'), '0px', 'Photo parallax remains active');
-reduced.matches = true;
-events['reduced-change']();
-flush(600);
-for (const id of ['copy', 'reading', 'tall']) assert.equal(document.getElementById(id).style.getPropertyValue('--item-y'), '0px');
-for (const section of document.querySelectorAll('[data-motion-section]')) {
-  assert.equal(section.style.getPropertyValue('--media-y'), '0px');
-  assert.equal(section.style.getPropertyValue('--photo-y'), '0px');
+// The decorative reflection lightens navy by at most its maximum RGBA alpha.
+let surface;
+css.walkRules(rule => {
+  if (rule.selectors.includes('.motion-surface:before')) rule.walkDecls('background', decl => { surface = decl.value; });
+});
+assert.ok(surface, 'Navy reflection surface is defined');
+const reflection = surface.match(/rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)/);
+assert.ok(reflection, 'Reflection alpha is included in the contrast calculation');
+const peak = rgb(dark).map((channel, index) => Math.round(channel * (1 - +reflection[4]) + +reflection[index + 1] * +reflection[4]));
+const reflectedDark = '#' + peak.map(channel => channel.toString(16).padStart(2, '0')).join('');
+for (const selector of ['.ed-dark .motion-title-glass .motion-letter', '.ed-closing .motion-title-glass .motion-letter']) {
+  for (const color of gradient(selector)) {
+    contrast(`${selector} ${color}`, color, dark);
+    contrast(`Peak reflection ${color}`, color, reflectedDark);
+  }
 }
-console.log(`${checks.length} WCAG palette checks passed (minimum ${Math.min(...checks.map(c => c.ratio)).toFixed(2)}:1); scroll, reverse, nested, hero, reading and reduced-motion checks passed.`);
+contrast('Navy paragraph on peak reflection', prop('[data-editorial] .ed-dark .ed-description', 'color'), reflectedDark);
+
+// Transparent fill is progressive enhancement only; preference/print fallbacks
+// must expose an ordinary text color even when the image gradient is removed.
+for (const state of ['prefers-reduced-motion:reduce', 'forced-colors:active', 'print']) {
+  let readable = false;
+  css.walkAtRules('media', media => {
+    if (!media.params.includes(state)) return;
+    media.walkRules(rule => {
+      if (!rule.selectors.includes('.motion-title-glass .motion-letter')) return;
+      const declarations = new Map(rule.nodes.filter(node => node.type === 'decl').map(node => [node.prop, node.value]));
+      if (declarations.get('background') === 'none' && ['inherit', 'CanvasText'].includes(declarations.get('color'))) readable = true;
+    });
+  });
+  assert.ok(readable, `${state}: glass words retain a readable fallback`);
+}
+assert.equal(prop('.motion-letter', 'color'), 'inherit', 'Without enhanced gradients, letters inherit their normal color');
+assert.equal(prop('[data-editorial] .reveal', 'opacity'), '1', 'Legacy reveal classes never hide the new choreography');
+console.log(`PASS: ${checks.length} WCAG palette checks (minimum ${Math.min(...checks.map(c => c.ratio)).toFixed(2)}:1); CSS variables, opaque glass stops, navy reflection peak and readable preference/print fallbacks. Runtime contracts are checked separately.`);

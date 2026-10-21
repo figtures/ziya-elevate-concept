@@ -11,13 +11,13 @@ body[data-editorial] header.signature-header:before,
 body[data-editorial] header.signature-header.scrolled:before,
 body[data-editorial] header.signature-header.menu-expanded:before{
  content:'';position:absolute;inset:0;z-index:-1;border-radius:0;border:0;pointer-events:none;
- background:linear-gradient(180deg,#0d172bcf,#0d172b85 70%,#0d172b00);box-shadow:none;
+ background:linear-gradient(180deg,#111c33cf,#111c3385 70%,#111c3300);box-shadow:none;
  backdrop-filter:none;-webkit-backdrop-filter:none;transition:background .3s,box-shadow .3s;
 }
 body[data-editorial] header.signature-header.scrolled:before,
 body[data-editorial] header.signature-header.menu-expanded:before{
- background:#0d172bee;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
- box-shadow:0 1px 0 #ffffff12,0 12px 32px -24px #0d172b88;
+ background:#111c33ee;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+ box-shadow:0 1px 0 #ffffff12,0 12px 32px -24px #111c3388;
 }
 body[data-editorial] header.signature-header .nav{
  height:100%;max-width:1328px;width:100%;padding:0 48px;gap:30px;min-width:0;
@@ -79,7 +79,7 @@ body[data-editorial] header.signature-header :is(.mobile-nav-title,.mobile-nav-f
  body[data-editorial] header.signature-header .nav-cta{margin-left:auto}
  body[data-editorial] header.signature-header .hamb{display:flex}
  body[data-editorial] header.signature-header .menu-backdrop:not([hidden]){
-  display:block;position:fixed;inset:0;width:100%;height:100%;border:0;padding:0;background:#0d172be6;
+  display:block;position:fixed;inset:0;width:100%;height:100%;border:0;padding:0;background:#111c33e6;
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:-2;cursor:default;
  }
  body[data-editorial] header.signature-header .main-navigation,

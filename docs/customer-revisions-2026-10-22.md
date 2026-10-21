@@ -88,4 +88,13 @@ Belgede 5 numaralı madde bulunmuyor; numaralandırma bilinçli olarak aynen kor
 | SEO ve dil eşleştirmesi | Tamamlandı | `check-seo.mjs`: 64 ham şablon ve 64 SSR sayfası; altı Service sayfası, TR/EN dil/locale/hreflang, şema referansları, görünür içerik eşleşmesi, kaynak sırası, sitemap ve robots geçti. |
 | Üretim build | Tamamlandı | Üretim build geçti. `check-resources.mjs`: 64 SSR sayfası, güncel CSS paketleri/sırası, kaynak bağları ve önbellek kuralları geçti. |
 | GitHub ve Cloudflare dağıtımı | Bekliyor | Henüz yayımlanmadı; commit ve başarılı terminal deployment sonucu beklenecek. |
-| Canlı yeni sürüm kontrolü | Bekliyor | Yeni metinler/assets/canonical/robots. |
+| Canlı yeni sürüm kontrolü | Bekliyor | Cloudflare yeni kodla yayınlandıktan sonra içerik geçişi ve yeni metinler/assets/canonical/robots kontrol edilecek. Mevcut veritabanı sürümü değiştirilmedi. |
+
+## Yayın devam noktası
+
+- Hazır kod commit’i: `6b4a3e8b1b67e18b4ff6dd24fb8256e866e82da5`.
+- Hedef Cloudflare Worker: `ziya-sakir-yilmaz`. Önce yeni kodun başarılı dağıtımı doğrulanmalı.
+- Ardından `supabase/content-revisions/20261022-customer-content.sql` tek transaction olarak uygulanmalı. Dosya, incelenen 64 eski belgenin revision ve JSON içeriğini birebir doğrular; eşzamanlı editör değişikliği varsa bütün işlem durur. Eski sürümler `cms_versions` içinde tutulur. 65 kayıt ve İngilizce konuşmacı sayfası oluşturulur/güncellenir.
+- İçerik geçişi canlı veritabanında rollback ile ön kontrolden geçti; gerçek commit uygulanmadı. Son dosyada satır kilitleri eklenerek eşzamanlı yazma aralığı da kapatıldı; dosyanın tamamı PostgreSQL uyumlu PGlite üzerinde 65 kayıt, rollback ve eşzamanlı editör değişikliği senaryolarında yeniden doğrulandı. Yeni kod gelmeden bu SQL çalıştırılmamalı.
+- Yayından sonra ana sayfa/kitaplar, `/en/speaker/`, PDF, form, canonical/hreflang ve dev noindex yeniden kontrol edilmeli.
+- Bu dosyada malzeme bekleyen maddeler tamamlanmış sayılmaz.

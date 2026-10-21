@@ -293,7 +293,9 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 /* Opaque glass tones retain contrast in every reflection position. */
 .motion-title{perspective:800px;overflow:visible}
 .motion-word{display:inline-block;white-space:nowrap}
-.motion-letter{display:inline-block;transform-origin:50% 75%;backface-visibility:hidden;color:inherit}
+/* Extend the gradient paint box for Turkish accents and descenders.
+   Matching negative margins preserve the authored line height and word spacing. */
+.motion-letter{display:inline-block;padding:.2em .08em;margin:-.2em -.08em;transform-origin:50% 75%;backface-visibility:hidden;color:inherit}
 @supports ((background-clip:text) or (-webkit-background-clip:text)){
  .motion-letter{background-image:linear-gradient(115deg,var(--brand-ink) 0%,var(--brand-copy) 24%,var(--brand-muted) 43%,var(--brand-ink) 62%,var(--brand-copy) 82%,var(--brand-ink) 100%);background-size:240% 100%;background-position:var(--title-shine,0%) 50%;background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 1px 0 #ffffff0d}
  .ed-dark .motion-letter,.ed-closing .motion-letter{background-image:linear-gradient(115deg,#f2f2e8 0%,var(--brand-on-dark) 24%,var(--brand-on-dark) 43%,#f2f2e8 62%,var(--brand-on-dark) 82%,#f2f2e8 100%);text-shadow:0 1px 0 #ffffff0a}

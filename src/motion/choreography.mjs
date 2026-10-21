@@ -83,7 +83,9 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
 
       // Editorial chapters enter with a generous vertical sweep, then hold still
       // while being read. Their authored heights/margins never change.
-      if (!reading) sections.filter(el=>el.matches('.ed-section')).forEach((section,index)=>{
+      // Proof points belong to the opening frame. Only their numbers count up;
+      // the strip must never enter, scale or drift with editorial chapters.
+      if (!reading) sections.filter(el=>el.matches('.ed-section:not(.ed-proof)')).forEach((section,index)=>{
         const wrap = section.querySelector(':scope > .wrap');
         const interactive = section.querySelector(protectedArea);
         if (wrap && !interactive) {

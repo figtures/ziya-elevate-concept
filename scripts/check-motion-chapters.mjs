@@ -129,6 +129,26 @@ check('Nested rows, forms, tests and prose do not receive compounded travel',()=
   const reading=fixture(sample.replace('body data-editorial','body data-editorial data-reading="article"'));
   assert.equal(reading.document.querySelectorAll('.motion-title,.motion-panel,.motion-row').length,0,'Long-form pages keep reading flow');
 });
+check('Homepage counters stay anchored inside the hero on desktop and mobile',()=>{
+  const home=parseHTML(read('website/index.html')).document;
+  const hero=home.querySelector('.editorial-home-hero'),proof=home.querySelector('#rakamlarla');
+  hero.classList.add('hero-with-proof');hero.append(proof); // Same relocation as the CMS composer.
+  const counterMarkup=[...proof.querySelectorAll('[data-counter]')].map(el=>el.outerHTML);
+  assert.equal(counterMarkup.length,5);
+  for(const mobile of [false,true]) {
+    const f=fixture(home.toString(),{mobile});
+    const rendered=f.document.querySelector('#rakamlarla');
+    assert.ok(!rendered.classList.contains('motion-panel'),'Proof points are not scroll chapters');
+    assert.ok(!f.observers.some(entry=>entry.element===rendered),'Proof points have no chapter observer');
+    assert.ok(!f.subscriptions.some(entry=>entry.options?.target===rendered),'Proof points own no scroll timeline');
+    for(const element of transformed(f)) {
+      assert.ok(element!==rendered&&!rendered.contains(element)&&!element.contains(rendered),'Neither counters nor their ancestors slide');
+    }
+    assert.ok(!f.document.querySelector('.home-hero-inner').contains(rendered),'Counters remain outside the moving hero copy');
+    assert.deepEqual([...rendered.querySelectorAll('[data-counter]')].map(el=>el.outerHTML),counterMarkup,'Counter content and attributes remain intact');
+    f.dispose();
+  }
+});
 check('Reduced motion and breakpoint changes clean up and rebuild without duplicate splitting',()=>{
   const f=fixture(sample);const count=f.document.querySelectorAll('.motion-letter').length;
   const old=[...f.animations],oldScroll=[...f.subscriptions],oldViews=[...f.observers];

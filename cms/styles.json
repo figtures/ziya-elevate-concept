@@ -13,7 +13,7 @@
     "bytes": 93628
   },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\"]": {
-    "href": "/assets/bundles/site-96ad7631271c1cb8.css",
+    "href": "/assets/bundles/site-e6048af3c2d71c8f.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -23,11 +23,11 @@
       "/assets/signature-header.css",
       "/assets/site-footer.css"
     ],
-    "sourceBytes": 113382,
-    "bytes": 103472
+    "sourceBytes": 116545,
+    "bytes": 106443
   },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/tedx-hero.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\"]": {
-    "href": "/assets/bundles/site-02e76cc3c43c8b7f.css",
+    "href": "/assets/bundles/site-86b0586d025f5221.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -38,7 +38,7 @@
       "/assets/signature-header.css",
       "/assets/site-footer.css"
     ],
-    "sourceBytes": 114084,
-    "bytes": 104070
+    "sourceBytes": 117247,
+    "bytes": 107041
   }
 }

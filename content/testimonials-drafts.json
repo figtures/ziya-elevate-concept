@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "eyebrow": "Deneyimler",
+  "title": "Sahneden kalan izler",
+  "description": "",
+  "items": [
+    {"id":"selcen-faydasicok","name":"Selcen Faydasıçok","role":"","company":"","avatar":"","quote":"Başarıyı günlük davranışlara dönüştüren, üzerinde düşünmeye değer bir yaklaşım.","status":"draft","enabled":true,"approvedAt":""},
+    {"id":"turgay-yilmaz","name":"Turgay Yılmaz","role":"","company":"","avatar":"","quote":"Deneyimle beslenen anlatımı, iş hayatında sorduğumuz sorulara yeni bir bakış sunuyor.","status":"draft","enabled":true,"approvedAt":""},
+    {"id":"murat-zorluoglu","name":"Murat Zorluoğlu","role":"","company":"","avatar":"","quote":"Sorumluluk almak ve kararlılıkla ilerlemek üzerine güçlü bir düşünme daveti.","status":"draft","enabled":true,"approvedAt":""},
+    {"id":"hulya-mutlu","name":"Hülya Mutlu","role":"","company":"","avatar":"","quote":"Bilgiyi hayata taşımanın önemini anlaşılır ve insana dokunan bir dille anlatıyor.","status":"draft","enabled":true,"approvedAt":""},
+    {"id":"serkan-oktar","name":"Serkan Oktar","role":"","company":"","avatar":"","quote":"Sahadan gelen örnekler, ekiplerin kendi çalışma biçimlerini sorgulamasına alan açıyor.","status":"draft","enabled":true,"approvedAt":""},
+    {"id":"umit-unker","name":"Ümit Ünker","role":"","company":"","avatar":"","quote":"Satışı, insanı anlamak ve doğru soruları sormak üzerinden ele alan bir yaklaşım.","status":"draft","enabled":true,"approvedAt":""},
+    {"id":"nilay-birdal","name":"Nilay Birdal","role":"","company":"","avatar":"","quote":"İlham veren fikirleri, üzerinde çalışılabilecek somut adımlarla buluşturuyor.","status":"draft","enabled":true,"approvedAt":""}
+  ]
+}

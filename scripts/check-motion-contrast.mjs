@@ -66,25 +66,19 @@ contrast('Detail link labels', prop('.depth-body a', 'color'), paper, +prop('.de
 contrast('Reading categories', prop('.reading-link', 'color'), prop('.ed-reading', 'background'), +prop('.reading-selection .reading-link>span.cat', 'opacity'));
 assert.equal(prop('.motion-ready [data-motion-item]', 'opacity'), '1', 'Text-containing motion wrappers must stay fully opaque');
 
-// Each moving glass stop remains opaque and readable in every shine position.
-// Test all stops, not only the initial color, against both cream surfaces.
-function gradient(selector) {
-  let value;
-  css.walkRules(rule => {
-    if (!rule.selectors.includes(selector)) return;
-    rule.walkDecls('background-image', decl => { value = resolve(decl.value); });
+// Moving letters use the ordinary contextual text color. No transparent fill or
+// gradient may make individual glyphs fade as the scroll position changes.
+assert.equal(prop('.motion-title-glass .motion-letter', 'background'), 'none');
+assert.equal(prop('.motion-title-glass .motion-letter', 'color'), 'inherit');
+assert.equal(prop('.motion-title-glass .motion-letter', 'text-shadow'), 'none');
+css.walkRules(rule => {
+  if (!rule.selectors.some(selector => selector.includes('.motion-title-glass .motion-letter'))) return;
+  rule.walkDecls(decl => {
+    assert.doesNotMatch(decl.value, /gradient\(|transparent/, 'Animated heading letters stay solid in every media state');
   });
-  assert.ok(value, `Missing glass gradient: ${selector}`);
-  assert.doesNotMatch(value, /var\(|transparent|rgba?\(/, 'Glass type must use resolved opaque colors');
-  const colors = [...value.matchAll(/#[a-f\d]+\b/gi)].map(match => match[0]);
-  assert.ok(colors.length >= 2, 'Glass type has a defined reflection palette');
-  colors.forEach(color => assert.match(color, /^#[a-f\d]{6}$/i, 'Every stop is fully opaque'));
-  return [...new Set(colors)];
-}
+});
 for (const background of [paper, prop('.ed-reading', 'background')]) {
-  for (const color of gradient('.motion-title-glass .motion-letter')) {
-    contrast(`Glass ${color} on ${background}`, color, background);
-  }
+  contrast(`Solid heading on ${background}`, ink, background);
 }
 // The decorative reflection lightens navy by at most its maximum RGBA alpha.
 let surface;
@@ -96,16 +90,15 @@ const reflection = surface.match(/rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+
 assert.ok(reflection, 'Reflection alpha is included in the contrast calculation');
 const peak = rgb(dark).map((channel, index) => Math.round(channel * (1 - +reflection[4]) + +reflection[index + 1] * +reflection[4]));
 const reflectedDark = '#' + peak.map(channel => channel.toString(16).padStart(2, '0')).join('');
-for (const selector of ['.ed-dark .motion-title-glass .motion-letter', '.ed-closing .motion-title-glass .motion-letter']) {
-  for (const color of gradient(selector)) {
-    contrast(`${selector} ${color}`, color, dark);
-    contrast(`Peak reflection ${color}`, color, reflectedDark);
-  }
+for (const selector of ['[data-editorial] .ed-dark', '[data-editorial] .ed-closing']) {
+  const color = prop(selector, 'color');
+  contrast(`${selector} solid heading`, color, dark);
+  contrast(`${selector} heading on peak reflection`, color, reflectedDark);
 }
 contrast('Navy paragraph on peak reflection', prop('[data-editorial] .ed-dark .ed-description', 'color'), reflectedDark);
 
-// Transparent fill is progressive enhancement only; preference/print fallbacks
-// must expose an ordinary text color even when the image gradient is removed.
+// Preference and print styles keep the same ordinary text color; forced-color
+// mode follows the user's system palette.
 for (const state of ['prefers-reduced-motion:reduce', 'forced-colors:active', 'print']) {
   let readable = false;
   css.walkAtRules('media', media => {
@@ -116,8 +109,8 @@ for (const state of ['prefers-reduced-motion:reduce', 'forced-colors:active', 'p
       if (declarations.get('background') === 'none' && ['inherit', 'CanvasText'].includes(declarations.get('color'))) readable = true;
     });
   });
-  assert.ok(readable, `${state}: glass words retain a readable fallback`);
+  assert.ok(readable, `${state}: animated words retain a readable fallback`);
 }
-assert.equal(prop('.motion-letter', 'color'), 'inherit', 'Without enhanced gradients, letters inherit their normal color');
+assert.equal(prop('.motion-letter', 'color'), 'inherit', 'Animated letters inherit their normal color');
 assert.equal(prop('[data-editorial] .reveal', 'opacity'), '1', 'Legacy reveal classes never hide the new choreography');
-console.log(`PASS: ${checks.length} WCAG palette checks (minimum ${Math.min(...checks.map(c => c.ratio)).toFixed(2)}:1); CSS variables, opaque glass stops, navy reflection peak and readable preference/print fallbacks. Runtime contracts are checked separately.`);
+console.log(`PASS: ${checks.length} WCAG palette checks (minimum ${Math.min(...checks.map(c => c.ratio)).toFixed(2)}:1); CSS variables, solid animated headings, navy reflection peak and readable preference/print fallbacks. Runtime contracts are checked separately.`);

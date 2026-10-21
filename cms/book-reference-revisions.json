@@ -1,0 +1,26 @@
+{
+  "/": {
+    "baseline": "f11d0b66963002810d02ba69b933dd2a2346ad23633cb5e7f1a5f3895170f7fd",
+    "values": {
+      "42099b4a-280:@src": "/assets/kitap-basari-studio-v1.webp",
+      "42099b4a-284:@src": "/assets/kitap-sir-studio-v1.webp",
+      "42099b4a-288:@src": "/assets/kitap-72-studio-v1.webp",
+      "42099b4a-292:@src": "/assets/kitap-kursun-studio-v1.webp"
+    }
+  },
+  "/kitaplar/": {
+    "baseline": "4c5d49c5803812deaeb8e8d78630e8c998848f8c6378f0e251f4319e815986ca",
+    "values": {
+      "96c86e3b-106:@src": "/assets/kitap-kursun-studio-v1.webp",
+      "96c86e3b-117:@src": "/assets/kitap-basari-studio-v1.webp",
+      "96c86e3b-128:@src": "/assets/kitap-sir-studio-v1.webp",
+      "96c86e3b-139:@src": "/assets/kitap-72-studio-v1.webp"
+    }
+  },
+  "/basari-muhendisligi/": {
+    "baseline": "ac6868d08f9fa7517489695d0e2a53012a0721c49b3cc8a16c07c74ad00bf8db",
+    "values": {
+      "eea7dbba-157:@src": "/assets/kitap-basari-studio-v1.webp"
+    }
+  }
+}

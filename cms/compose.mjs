@@ -7,6 +7,8 @@ import {applyAEO} from './aeo.mjs';
 import {applySEO} from './seo.mjs';
 import {applyResources} from './resources.mjs';
 import {applySpeakerLocale} from './speaker-locale.mjs';
+import {applyReferences} from './references.mjs';
+import {applyTestimonials} from './testimonials.mjs';
 
 export function composeContent(document,payload,definition,{sharedDocument,sharedPayload,sharedDefinition,entries,booksPayload,booksDefinition,canonicalOrigin,leadsEnabled=false}={}){
  applyContent(document,payload,definition);
@@ -35,6 +37,8 @@ export function composeContent(document,payload,definition,{sharedDocument,share
   const hero=document.querySelector('.editorial-home-hero');
   const proof=document.querySelector('#rakamlarla');
   if(hero&&proof){hero.classList.add('hero-with-proof');hero.append(proof);}
+  applyReferences(document,payload);
+  applyTestimonials(document,payload);
  }
  const sections=[...document.querySelectorAll('body > section')];
  if(sections.length){const main=document.createElement('main');main.id='main-content';sections[0].before(main);main.append(...sections);}

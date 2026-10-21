@@ -105,6 +105,12 @@ home=html.fromstring((root/'website/index.html').read_text());home.xpath('//titl
 testdoc=html.fromstring((root/'website/testler/kafa-yapisi-testi/index.html').read_text());js=next(x.text for x in testdoc.xpath('//script') if x.text and 'window.TEST_DEF =' in x.text)
 test=json.loads(subprocess.check_output(['node','-e','const vm=require("node:vm");const fs=require("node:fs");const s={window:{}};vm.runInNewContext(fs.readFileSync(0,"utf8"),s,{timeout:1000});process.stdout.write(JSON.stringify(s.window.TEST_DEF));'],input=js,text=True))
 next(x for x in seeds if x['kind']=='test')['test']=test
+# Custom homepage models do not participate in positional field bindings.
+# Draft testimonial copy is private and is never included in the public seed.
+reference_logos=json.loads((root/'content/reference-logos.json').read_text())
+home_seed=next(x for x in seeds if x['id']=='/')
+home_seed['references']={'enabled':True,'eyebrow':'Markalar, kurumlar ve sahneler','title':'Referanslar','duration':65,'logos':[{**{k:logo[k] for k in ['id','name','src','width','height']},'url':'','enabled':True} for logo in reference_logos]}
+home_seed['testimonials']={'enabled':True,'eyebrow':'Deneyimler','title':'Sahneden kalan izler','description':'','items':[]}
 (root/'cms/catalog.json').write_text(json.dumps(catalog,ensure_ascii=False));(root/'cms/templates.json').write_text(json.dumps(templates,ensure_ascii=False));(root/'cms/seed.json').write_text(json.dumps(seeds,ensure_ascii=False))
 media={}
 for p in (root/'website').rglob('*.html'):
@@ -116,5 +122,7 @@ for p in (root/'website').rglob('*.html'):
    if u not in media:media[u]={'url':u,'alt':'Video kapak görseli','mime':'image/'+('jpeg' if extension in ['jpg','jpeg'] else extension),'source':'site'}
 for url,details in social_images.items():
  media[url]={'url':url,'alt':details['alt'],'mime':details['type'],'width':details['width'],'height':details['height'],'source':'site'}
+for logo in reference_logos:
+ media[logo['src']]={'url':logo['src'],'alt':logo['name'],'mime':'image/svg+xml' if logo['src'].endswith('.svg') else 'image/webp','width':logo['width'],'height':logo['height'],'source':'site'}
 (root/'cms/media-seed.json').write_text(json.dumps(list(media.values()),ensure_ascii=False))
 print(f'{len(seeds)-1} pages + shared navigation; {sum(len(c["fields"]) for c in catalog.values())} editable fields, {sum(len(c["groups"]) for c in catalog.values())} repeaters; original 20-question test preserved.')

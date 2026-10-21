@@ -22,8 +22,8 @@ const global=seed.find(p=>p.kind==='global');
 for(const payload of seed.filter(p=>p.kind!=='global')){
   const {document}=parseHTML(module.exports.render(payload,global));
   const links=[...document.querySelectorAll('link[rel="stylesheet"]')];
-  assert.equal(links.length,1,payload.route+' should have one stylesheet');
-  assert(existsSync('public'+links[0].getAttribute('href')));
+  assert.equal(links.filter(l=>!l.hasAttribute('data-island-style')).length,1,payload.route+' should have one main stylesheet');
+  for(const link of links)assert(existsSync('public'+link.getAttribute('href').split('?')[0]));
   for(const link of document.querySelectorAll('.ed-wordmark,.footer-wordmark'))assert.equal(link.getAttribute('aria-label'),null,'Brand uses its complete visible accessible name');
   for(const control of document.querySelectorAll('.video-toggle'))assert.equal(control.getAttribute('aria-label'),control.querySelector('.control-label')?.textContent);
   for(const video of document.querySelectorAll('video[data-hero-clip]')){

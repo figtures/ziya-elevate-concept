@@ -295,16 +295,13 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 .motion-surface{position:relative;isolation:isolate}
 .motion-surface:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at var(--glass-position,-55%) 20%,rgba(218,207,178,.085),transparent 48%)}
 
-/* Opaque glass tones retain contrast in every reflection position. */
+/* Solid editorial type stays clear while its scroll choreography continues. */
 .motion-title{perspective:1000px;overflow:visible}
 .motion-word{display:inline-block;white-space:nowrap}
-/* Extend the gradient paint box for Turkish accents and descenders.
+/* Leave room for Turkish accents and descenders during letter transforms.
    Matching negative margins preserve the authored line height and word spacing. */
 .motion-letter{display:inline-block;padding:.2em .08em;margin:-.2em -.08em;transform-origin:50% 75%;backface-visibility:hidden;color:inherit}
-@supports ((background-clip:text) or (-webkit-background-clip:text)){
- .motion-title-glass .motion-letter{background-image:linear-gradient(115deg,var(--brand-ink) 0%,var(--brand-copy) 24%,var(--brand-muted) 43%,var(--brand-ink) 62%,var(--brand-copy) 82%,var(--brand-ink) 100%);background-size:240% 100%;background-position:var(--title-shine,0%) 50%;background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 1px 0 #ffffff0d}
- .ed-dark .motion-title-glass .motion-letter,.ed-closing .motion-title-glass .motion-letter{background-image:linear-gradient(115deg,#f2f2e8 0%,var(--brand-on-dark) 24%,#e4d5b2 43%,#f2f2e8 62%,var(--brand-on-dark) 82%,#f2f2e8 100%);text-shadow:0 1px 0 #ffffff0a}
-}
+.motion-title-glass .motion-letter{background:none;color:inherit;text-shadow:none}
 .motion-panel:focus-within .motion-letter{transform:none!important}
 @media(prefers-reduced-motion:reduce){
  .motion-ready .motion-panel>.wrap,.motion-letter,.motion-word{transform:none!important;will-change:auto!important}

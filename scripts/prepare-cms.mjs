@@ -5,6 +5,7 @@ import {seedSQL} from '../cms/installation.mjs';
 import './build-icons.mjs';
 import './build-styles.mjs';
 await import('./build-motion.mjs');
+await import('./build-references.mjs');
 await import('./build-asset-versions.mjs');
 await build({entryPoints:['cms/admin.mjs'],bundle:true,format:'esm',target:['es2022'],minify:true,outfile:'public/admin/admin.js'});
 const keys={};for(const type of ['js','css'])keys[type]=createHash('sha256').update(await readFile('public/admin/admin.'+type)).digest('hex').slice(0,12);

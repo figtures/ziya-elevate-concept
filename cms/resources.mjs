@@ -4,7 +4,7 @@ export const versionedAsset=path=>versions[path]?path+'?v='+versions[path]:path;
 
 // Run after CMS fields have been applied so saved media bindings remain stable.
 export function applyResources(document){
-  const links=[...document.querySelectorAll('link[rel="stylesheet"]')].filter(l=>!(l.getAttribute('href')||'').startsWith('/assets/cms-navigation.css'));
+  const links=[...document.querySelectorAll('link[rel="stylesheet"]')].filter(l=>!l.hasAttribute('data-island-style')&&!(l.getAttribute('href')||'').startsWith('/assets/cms-navigation.css'));
   const key=JSON.stringify(links.map(l=>(l.getAttribute('href')||'').split('?')[0]));
   const bundle=styles[key];
   if(bundle&&links.length){

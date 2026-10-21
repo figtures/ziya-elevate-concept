@@ -1,0 +1,250 @@
+[
+  {
+    "id": "antalya-buyuksehir-belediyesi",
+    "name": "Antalya Büyükşehir Belediyesi",
+    "src": "/assets/references/antalya-buyuksehir-belediyesi.webp",
+    "width": 600,
+    "height": 203,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image1.png"
+  },
+  {
+    "id": "banvit",
+    "name": "Banvit",
+    "src": "/assets/references/banvit.webp",
+    "width": 790,
+    "height": 500,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image2.png"
+  },
+  {
+    "id": "bavet",
+    "name": "baVET",
+    "src": "/assets/references/bavet.webp",
+    "width": 305,
+    "height": 139,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image3.png"
+  },
+  {
+    "id": "bilgeadam-teknoloji",
+    "name": "BilgeAdam Teknoloji",
+    "src": "/assets/references/bilgeadam-teknoloji.webp",
+    "width": 537,
+    "height": 90,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image4.png"
+  },
+  {
+    "id": "boehringer-ingelheim",
+    "name": "Boehringer Ingelheim",
+    "src": "/assets/references/boehringer-ingelheim.webp",
+    "width": 1076,
+    "height": 330,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image5.png"
+  },
+  {
+    "id": "gentas",
+    "name": "Gentaş",
+    "src": "/assets/references/gentas.webp",
+    "width": 732,
+    "height": 192,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image6.jpg"
+  },
+  {
+    "id": "hastavuk",
+    "name": "HasTavuk",
+    "src": "/assets/references/hastavuk.webp",
+    "width": 395,
+    "height": 126,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image7.jpg"
+  },
+  {
+    "id": "ipm",
+    "name": "IPM",
+    "src": "/assets/references/ipm.webp",
+    "width": 196,
+    "height": 114,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image8.png"
+  },
+  {
+    "id": "kalder",
+    "name": "KalDer",
+    "src": "/assets/references/kalder.webp",
+    "width": 393,
+    "height": 500,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image9.png"
+  },
+  {
+    "id": "kalekim",
+    "name": "Kalekim",
+    "src": "/assets/references/kalekim.webp",
+    "width": 532,
+    "height": 95,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image10.png"
+  },
+  {
+    "id": "korozo",
+    "name": "Korozo",
+    "src": "/assets/references/korozo.webp",
+    "width": 215,
+    "height": 132,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image11.png"
+  },
+  {
+    "id": "burgan-bank",
+    "name": "Burgan Bank",
+    "src": "/assets/references/burgan-bank.webp",
+    "width": 1200,
+    "height": 427,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image12.jpg"
+  },
+  {
+    "id": "eczacibasi",
+    "name": "Eczacıbaşı",
+    "src": "/assets/references/eczacibasi.webp",
+    "width": 1200,
+    "height": 297,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image13.png"
+  },
+  {
+    "id": "egeplast",
+    "name": "Egeplast",
+    "src": "/assets/references/egeplast.webp",
+    "width": 243,
+    "height": 91,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image14.png"
+  },
+  {
+    "id": "fenerium",
+    "name": "Fenerium",
+    "src": "/assets/references/fenerium.webp",
+    "width": 640,
+    "height": 67,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image15.png"
+  },
+  {
+    "id": "coldwell-banker",
+    "name": "Coldwell Banker",
+    "src": "/assets/references/coldwell-banker.svg",
+    "width": 230.1,
+    "height": 30.41,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image16.svg"
+  },
+  {
+    "id": "mng-kargo",
+    "name": "MNG Kargo",
+    "src": "/assets/references/mng-kargo.webp",
+    "width": 1200,
+    "height": 240,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image17.png"
+  },
+  {
+    "id": "occlutech",
+    "name": "Occlutech",
+    "src": "/assets/references/occlutech.webp",
+    "width": 495,
+    "height": 123,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image18.jpg"
+  },
+  {
+    "id": "polifarma",
+    "name": "Polifarma",
+    "src": "/assets/references/polifarma.webp",
+    "width": 1200,
+    "height": 220,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image19.jpg"
+  },
+  {
+    "id": "qnb-finansbank",
+    "name": "QNB Finansbank",
+    "src": "/assets/references/qnb-finansbank.webp",
+    "width": 794,
+    "height": 255,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image20.png"
+  },
+  {
+    "id": "stfa",
+    "name": "STFA",
+    "src": "/assets/references/stfa.webp",
+    "width": 202,
+    "height": 38,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image21.png"
+  },
+  {
+    "id": "remax",
+    "name": "RE/MAX",
+    "src": "/assets/references/remax.webp",
+    "width": 582,
+    "height": 117,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image22.png"
+  },
+  {
+    "id": "tam-finans",
+    "name": "Tam Finans",
+    "src": "/assets/references/tam-finans.webp",
+    "width": 1200,
+    "height": 249,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image23.png"
+  },
+  {
+    "id": "sagel",
+    "name": "SAGEL – Sağlıkta Geleceğin Liderleri Platformu",
+    "src": "/assets/references/sagel.webp",
+    "width": 600,
+    "height": 150,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image24.png"
+  },
+  {
+    "id": "global-hr-summit",
+    "name": "Global HR Summit",
+    "src": "/assets/references/global-hr-summit.webp",
+    "width": 1200,
+    "height": 480,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image25.png"
+  },
+  {
+    "id": "era-real-estate",
+    "name": "ERA Real Estate",
+    "src": "/assets/references/era-real-estate.webp",
+    "width": 413,
+    "height": 500,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image26.png"
+  },
+  {
+    "id": "tedx-reset",
+    "name": "TEDxReset",
+    "src": "/assets/references/tedx-reset.webp",
+    "width": 297,
+    "height": 191,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image27.jpeg"
+  },
+  {
+    "id": "hascelik",
+    "name": "Hasçelik",
+    "src": "/assets/references/hascelik.webp",
+    "width": 1200,
+    "height": 194,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image28.jpeg"
+  },
+  {
+    "id": "gaia",
+    "name": "GAIA Kadın Sanayi Platformu",
+    "src": "/assets/references/gaia.webp",
+    "width": 686,
+    "height": 109,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image29.png"
+  },
+  {
+    "id": "global-marketing-summit",
+    "name": "Global Marketing Summit",
+    "src": "/assets/references/global-marketing-summit.webp",
+    "width": 600,
+    "height": 248,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image30.png"
+  },
+  {
+    "id": "advantech",
+    "name": "Advantech",
+    "src": "/assets/references/advantech.webp",
+    "width": 1200,
+    "height": 383,
+    "originalSource": "Referanslar logo WEB(1).pptx#ppt/media/image31.png"
+  }
+]

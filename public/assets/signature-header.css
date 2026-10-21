@@ -1,8 +1,8 @@
-/* The navigation shares the page's charcoal, warm white and quiet type system. */
+/* The navigation shares the page's navy, warm white and quiet type system. */
 body[data-editorial] header.signature-header,
 body[data-editorial] header.signature-header.scrolled,
 body[data-editorial] header.signature-header.menu-expanded{
- --header-ink:#f5f3ee;--header-muted:#c4c8bf;
+ --header-ink:#f5f3ee;--header-muted:var(--brand-on-dark);
  position:fixed;inset:0 0 auto;height:96px;padding:0;color:var(--header-ink);
  background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
  transform:none;animation:none;z-index:100;
@@ -11,13 +11,13 @@ body[data-editorial] header.signature-header:before,
 body[data-editorial] header.signature-header.scrolled:before,
 body[data-editorial] header.signature-header.menu-expanded:before{
  content:'';position:absolute;inset:0;z-index:-1;border-radius:0;border:0;pointer-events:none;
- background:linear-gradient(180deg,#111712cf,#11171285 70%,#11171200);box-shadow:none;
+ background:linear-gradient(180deg,#0d172bcf,#0d172b85 70%,#0d172b00);box-shadow:none;
  backdrop-filter:none;-webkit-backdrop-filter:none;transition:background .3s,box-shadow .3s;
 }
 body[data-editorial] header.signature-header.scrolled:before,
 body[data-editorial] header.signature-header.menu-expanded:before{
- background:#18201aee;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
- box-shadow:0 1px 0 #ffffff12,0 12px 32px -24px #0a110d88;
+ background:#0d172bee;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+ box-shadow:0 1px 0 #ffffff12,0 12px 32px -24px #0d172b88;
 }
 body[data-editorial] header.signature-header .nav{
  height:100%;max-width:1328px;width:100%;padding:0 48px;gap:30px;min-width:0;
@@ -38,7 +38,7 @@ body[data-editorial] header.signature-header .nav-links{
 }
 body[data-editorial] header.signature-header .nav-links li{border:0;margin:0;padding:0}
 body[data-editorial] header.signature-header .nav-links a{
- position:relative;display:flex;align-items:center;min-height:48px;padding:10px 0;color:#e2e4dc;
+ position:relative;display:flex;align-items:center;min-height:48px;padding:10px 0;color:#eeece5;
  font:500 1rem/1.4 var(--font-b);letter-spacing:-.025em;border:0;border-radius:0;white-space:nowrap;
  background:transparent;transition:color .2s;
 }
@@ -55,7 +55,7 @@ body[data-editorial] header.signature-header .nav-cta{display:flex;align-items:c
 body[data-editorial] header.signature-header .header-invite,
 body[data-editorial] header.signature-header .menu-invite{
  display:flex;align-items:center;justify-content:center;gap:14px;min-height:50px;width:auto;
- padding:12px 18px;border:1px solid #eee9dc;border-radius:14px;background:#eee9dc;color:#252920;
+ padding:12px 18px;border:1px solid #eee9dc;border-radius:14px;background:#eee9dc;color:var(--brand-ink);
  font:600 1.0625rem/1.4 var(--font-h);letter-spacing:-.025em;white-space:nowrap;box-shadow:none;
  transition:background .2s,border-color .2s;
 }
@@ -79,20 +79,20 @@ body[data-editorial] header.signature-header :is(.mobile-nav-title,.mobile-nav-f
  body[data-editorial] header.signature-header .nav-cta{margin-left:auto}
  body[data-editorial] header.signature-header .hamb{display:flex}
  body[data-editorial] header.signature-header .menu-backdrop:not([hidden]){
-  display:block;position:fixed;inset:0;width:100%;height:100%;border:0;padding:0;background:#09100be6;
+  display:block;position:fixed;inset:0;width:100%;height:100%;border:0;padding:0;background:#0d172be6;
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:-2;cursor:default;
  }
  body[data-editorial] header.signature-header .main-navigation,
  body[data-editorial] header.signature-header .main-navigation.open{
   position:fixed;inset:100px 24px max(24px,env(safe-area-inset-bottom));height:auto;max-height:none;
   display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:24px 8%;align-content:start;
-  margin:0;padding:36px 40px;background:#202a22;border:1px solid #ffffff10;border-radius:24px;
+  margin:0;padding:36px 40px;background:var(--brand-navy);border:1px solid #ffffff10;border-radius:24px;
   color:var(--header-ink);overflow-y:auto;overscroll-behavior:contain;z-index:1;
   opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;
   transition:opacity .25s,transform .25s,visibility .25s;
  }
  body[data-editorial] header.signature-header .main-navigation.open{opacity:1;visibility:visible;transform:none;pointer-events:auto}
- body[data-editorial] header.signature-header .mobile-nav-title{display:block;grid-column:1/-1;margin:0;padding:0;letter-spacing:.12em;font:500 .75rem/1.5 var(--font-b);color:#b7c0ae}
+ body[data-editorial] header.signature-header .mobile-nav-title{display:block;grid-column:1/-1;margin:0;padding:0;letter-spacing:.12em;font:500 .75rem/1.5 var(--font-b);color:var(--brand-on-dark)}
  body[data-editorial] header.signature-header .nav-links{flex-direction:column;align-items:stretch;gap:0;width:100%}
  body[data-editorial] header.signature-header .nav-links a{
   min-height:66px;padding:14px 0;white-space:normal;border-bottom:1px solid #ffffff13;
@@ -104,12 +104,12 @@ body[data-editorial] header.signature-header :is(.mobile-nav-title,.mobile-nav-f
   display:flex;flex-direction:column;align-items:stretch;align-self:center;gap:26px;margin:0;padding:0;
   border:0;border-radius:0;background:none;
  }
- body[data-editorial] header.signature-header .mobile-nav-footer p{font:450 1.25rem/1.6 var(--font-h);color:#d0d6c8;margin:0}
+ body[data-editorial] header.signature-header .mobile-nav-footer p{font:450 1.25rem/1.6 var(--font-h);color:var(--brand-on-dark);margin:0}
  body[data-editorial] header.signature-header .menu-invite{justify-content:space-between;min-height:54px}
  body[data-editorial] header.signature-header .menu-audience{display:flex;flex-wrap:wrap;gap:12px 24px;padding-bottom:20px;border-bottom:1px solid #ffffff1a}
  body[data-editorial] header.signature-header .menu-audience a{font:550 1rem/1.5 var(--font-b);color:#eeeade;padding:6px 0}
  body[data-editorial] header.signature-header .menu-secondary{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
- body[data-editorial] header.signature-header .menu-secondary a{font:450 1rem/1.5 var(--font-b);color:#c5cebd;text-decoration:none;padding:5px 0}
+ body[data-editorial] header.signature-header .menu-secondary a{font:450 1rem/1.5 var(--font-b);color:var(--brand-on-dark);text-decoration:none;padding:5px 0}
  body[data-editorial] header.signature-header :is(.menu-audience,.menu-secondary) a:hover{color:#fffefa}
 }
 @media(max-width:700px){

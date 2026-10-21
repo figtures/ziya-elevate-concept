@@ -1,10 +1,10 @@
 /* Shared content navigation. Keep the page's approved editorial palette and scale. */
 [data-editorial] footer.site.site-footer,
 footer.site.site-footer {
-  --footer-ink: #f1f2e9;
-  --footer-muted: #c1cabc;
-  --footer-line: rgba(225, 233, 215, .13);
-  background: #18201a;
+  --footer-ink: #f5f3ee;
+  --footer-muted: var(--brand-on-dark);
+  --footer-line: rgba(238, 236, 229, .13);
+  background: var(--brand-navy-deep);
   color: var(--footer-ink);
   padding: clamp(48px, 6vw, 80px) 0 28px;
   border-top: 0;

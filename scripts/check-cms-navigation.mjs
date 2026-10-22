@@ -12,7 +12,11 @@ const payload=structuredClone(seed.find(page=>page.kind==='global'));
 const render=()=>{const {document}=parseHTML(templates[payload.template]);applyContent(document,payload,catalog[payload.template],{global:true});return document;};
 const doc=render(),initial=deriveNavigation(doc),originalPrimary=[...doc.querySelectorAll('body > header .nav-links a')].map(a=>[a.textContent,a.getAttribute('href')]);
 assert.deepEqual(validateNavigation(initial),[]);
-assert.equal(initial.primary.length,7);assert.equal(initial.mobileSecondary.length,4);assert.equal(initial.audience.length,2);assert.equal(initial.footer.length,4);assert.equal(initial.social.length,3);
+assert.equal(initial.primary.length,7);assert.equal(initial.mobileSecondary.length,4);assert.equal(initial.audience.length,2);assert.equal(initial.footer.length,4);
+assert.deepEqual(initial.social.map(item=>[item.label,item.href]),[
+ ['LinkedIn','https://tr.linkedin.com/in/ziyayilmaz'],['Instagram','https://www.instagram.com/ziyasakir/'],
+ ['YouTube','https://www.youtube.com/@ZiyaSakirYlmaz'],['Kitapyurdu','https://www.kitapyurdu.com/yazar/ziya-sakir-yilmaz/203025.html']
+],'All authored social and bookshop links remain manageable');
 applyNavigation(doc,initial);
 assert.deepEqual([...doc.querySelectorAll('body > header .nav-links a')].map(a=>[a.textContent,a.getAttribute('href')]),originalPrimary,'Default structure preserves authored labels and URLs');
 assert.equal(doc.querySelector('.footer-navigation').children.length,4,'Default footer keeps brand and three groups');
@@ -33,7 +37,8 @@ assert.equal(changed.querySelector('.cms-submenu a').getAttribute('href'),'/maka
 const external=changed.querySelector('.nav-links a[href="https://example.com/"]');assert.equal(external.target,'_blank');assert.equal(external.getAttribute('rel'),'noopener noreferrer');
 assert.equal(changed.querySelector('.nav-links img'),null,'Injected label is literal text');
 assert.equal(changed.querySelector('.nav-links').textContent.includes('<img src=x onerror=alert(1)>'),true);
-assert.equal(changed.querySelectorAll('.menu-secondary a').length,3);assert.equal(changed.querySelectorAll('.footer-social a').length,2);
+assert.equal(changed.querySelectorAll('.menu-secondary a').length,3);assert.equal(changed.querySelectorAll('.footer-social a').length,initial.social.length-1);
+assert.equal(changed.querySelector(`.footer-social a[href="${initial.social[0].href}"]`),null,'Hidden social link is removed');
 assert.equal(changed.querySelector('.menu-audience a').textContent,nav.audience[0].label);
 assert.equal(changed.querySelector('.footer-group h2').textContent,'Özel seçki');
 assert.equal(changed.querySelector('.footer-group a').textContent,nav.footer[2].items[0].label);

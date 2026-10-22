@@ -5,6 +5,7 @@ import {seedSQL} from '../cms/installation.mjs';
 import './build-icons.mjs';
 import './build-styles.mjs';
 await import('./build-motion.mjs');
+await import('./build-interactions.mjs');
 await import('./build-references.mjs');
 await import('./build-asset-versions.mjs');
 await build({entryPoints:['cms/admin.mjs'],bundle:true,format:'esm',target:['es2022'],minify:true,outfile:'public/admin/admin.js'});

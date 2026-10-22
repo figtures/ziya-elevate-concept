@@ -22,6 +22,15 @@ const global=seed.find(p=>p.kind==='global');
 for(const payload of seed.filter(p=>p.kind!=='global')){
   const {document}=parseHTML(module.exports.render(payload,global));
   const links=[...document.querySelectorAll('link[rel="stylesheet"]')];
+  const scripts=[...document.querySelectorAll('script[src]')];
+  const motion=scripts.find(s=>s.hasAttribute('data-interaction-motion'));
+  assert(motion?.hasAttribute('defer'),payload.route+' must defer the shared disclosure runtime');
+  assert.equal(scripts.filter(s=>s.hasAttribute('data-interaction-motion')).length,1);
+  for(const script of scripts.filter(s=>/\/(?:main|refinements|cms-navigation)\.js(?:\?|$)/.test(s.getAttribute('src')))){
+    assert(script.hasAttribute('defer'),payload.route+' must preserve runtime execution order');
+    assert(scripts.indexOf(motion)<scripts.indexOf(script),payload.route+' must install motion before its consumers');
+  }
+  assert.equal(links.filter(l=>l.hasAttribute('data-interaction-motion')).length,1);
   assert.equal(links.filter(l=>!l.hasAttribute('data-island-style')).length,1,payload.route+' should have one main stylesheet');
   for(const link of links)assert(existsSync('public'+link.getAttribute('href').split('?')[0]));
   for(const link of document.querySelectorAll('.ed-wordmark,.footer-wordmark'))assert.equal(link.getAttribute('aria-label'),null,'Brand uses its complete visible accessible name');

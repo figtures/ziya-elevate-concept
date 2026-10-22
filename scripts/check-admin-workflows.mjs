@@ -42,7 +42,7 @@ function setup(){
  const submit=async(selector,values)=>{const form=$(selector);assert.ok(form,'Missing form '+selector);for(const [name,value]of Object.entries(values))change(selector+' [name="'+name+'"]',value);await form.onsubmit({target:form,preventDefault(){}});await flush();};
  const textSelector=()=>{const def=context.api.S.catalog[context.api.S.doc.template],input=$$('[data-bind]').find(el=>def.fields.find(f=>f.id===JSON.parse(el.dataset.bind).field)?.label==='Ana başlık');assert.ok(input,'No title text input');return '#'+input.id;};
  const loadVideo=(seconds=120)=>{const video=$('[data-video-player]');assert.ok(video);video.duration=seconds;video.readyState=2;video.videoWidth=1920;video.videoHeight=1080;video.dispatchEvent(new window.Event('loadedmetadata'));return video;};
- return {setFetch:fn=>context.fetch=fn,api:context.api,document,window,$,$$,change,toggle,click,submit,textSelector,confirmations,mediaCalls,loadVideo,setConfirm:v=>confirmAnswer=v};
+ return {setMatchMedia:fn=>context.matchMedia=fn,setFetch:fn=>context.fetch=fn,api:context.api,document,window,$,$$,change,toggle,click,submit,textSelector,confirmations,mediaCalls,loadVideo,setConfirm:v=>confirmAnswer=v};
 }
 function fakeClient(initial={}){
  const tables={cms_published:structuredClone(seed.map(d=>({id:d.id,route:d.route,kind:d.kind,title:d.title,robots:d.robots,payload:d}))),cms_documents:structuredClone(seed.map(d=>({id:d.id,route:d.route,kind:d.kind,draft:d,revision:1,published_revision:1,archived:false}))),cms_media:[],cms_versions:[],cms_leads:[],cms_members:[],...initial};
@@ -409,6 +409,48 @@ await check('Only the server-confirmed password change unlocks the first-login s
  h.db.client.auth.updateUser=async()=>({error:{code:'weak_password'}});await h.submit('#first-password-form',{current:'temporary-pass',password:'new-strong-pass',confirm:'new-strong-pass'});assert.ok(h.$('#first-password-form'));assert.equal(h.api.S.member.must_change_password,true);
  h.db.client.auth.updateUser=async values=>{assert.equal(values.current_password,'temporary-pass');h.db.tables.cms_members[0].must_change_password=false;return {error:null};};
  await h.submit('#first-password-form',{current:'temporary-pass',password:'new-strong-pass',confirm:'new-strong-pass'});assert.equal(h.$('#first-password-form'),null);assert.equal(h.api.S.member.must_change_password,false);assert.ok(h.api.S.rows.length>0);
+});
+
+// Control only lifecycle completion, not visual timing or browser rendering.
+function controlledMotion(h){
+ const prototype=h.window.HTMLElement.prototype,previous=prototype.animate,animations=[];
+ prototype.animate=function(keyframes,options){
+  let resolve,reject,active=true;
+  const animation={element:this,keyframes,options,finished:new Promise((done,fail)=>{resolve=done;reject=fail;}),finish(){if(active){active=false;resolve();}},cancel(){if(active){active=false;reject(new Error('Animation cancelled'));}}};
+  animations.push(animation);return animation;
+ };
+ return {animations,async finish(){for(const animation of animations)animation.finish();await flush();},restore(){for(const animation of animations)animation.cancel();if(previous)prototype.animate=previous;else delete prototype.animate;}};
+}
+await check('Animated dialog exit preserves inert and scroll lock until completion',async()=>{
+ const h=await offline(),motion=controlledMotion(h);
+ try{
+  await h.api.action('new');const overlay=h.$('#modal');assert.ok(overlay);await motion.finish();
+  const closing=h.api.closeDialog();assert.equal(h.$('#modal'),overlay);assert.equal(overlay.inert,true);assert.equal(h.$('#app').inert,true);assert.equal(h.document.body.style.overflow,'hidden');
+  assert.equal(overlay.getAttribute('data-motion-state'),'closing');await motion.finish();await closing;
+  assert.equal(h.$('#modal'),null);assert.equal(h.$('#app').inert,false);assert.equal(h.document.body.style.overflow,'');
+ }finally{motion.restore();}
+});
+await check('Replacing a closing dialog cancels stale exits without unlocking the new dialog',async()=>{
+ const h=await offline(),motion=controlledMotion(h);
+ try{
+  await h.api.action('new');const first=h.$('#modal');await motion.finish();const closing=h.api.closeDialog();
+  await h.api.action('new');const replacement=h.$('#modal');assert.ok(replacement);assert.notEqual(replacement,first);assert.equal(first.isConnected,false);
+  await motion.finish();await closing;assert.equal(h.$('#modal'),replacement);assert.equal(h.$('#app').inert,true);assert.equal(h.document.body.style.overflow,'hidden');
+  const finalClose=h.api.closeDialog();await motion.finish();await finalClose;assert.equal(h.$('#modal'),null);
+ }finally{motion.restore();}
+});
+await check('First-login gate removes an animated private dialog immediately',async()=>{
+ const h=await connected('admin',{cms_members:[{user_id:'owner-id',email:'pending@example.org',role:'admin',active:true,must_change_password:true}]}),motion=controlledMotion(h);
+ try{
+  await h.api.action('new');assert.ok(h.$('#modal'));await h.api.enter();assert.equal(h.$('#modal'),null);assert.ok(h.$('#first-password-form'));assert.equal(h.document.body.style.overflow,'');
+  await motion.finish();assert.equal(h.$('#modal'),null);assert.ok(h.$('#first-password-form'));assert.equal(h.$('#app').inert,false);
+ }finally{motion.restore();}
+});
+await check('Closed mobile navigation becomes interactive when resized to desktop',async()=>{
+ const h=await offline();let mobile=true;h.setMatchMedia(query=>({matches:query.includes('max-width')&&mobile,addEventListener(){},removeEventListener(){}}));
+ h.api.navigate('pages');assert.equal(h.$('.sidebar').inert,true);mobile=false;h.window.dispatchEvent(new h.window.Event('resize'));assert.equal(h.$('.sidebar').inert,false);
+ mobile=true;h.window.dispatchEvent(new h.window.Event('resize'));assert.equal(h.$('.sidebar').inert,true);h.api.setMenu(true);assert.equal(h.$('.sidebar').inert,false);assert.equal(h.$('.workspace').inert,true);
+ mobile=false;h.window.dispatchEvent(new h.window.Event('resize'));assert.equal(h.$('.sidebar').inert,false);assert.equal(h.$('.workspace').inert,false);assert.equal(h.$('.shell').classList.contains('nav-open'),false);assert.equal(h.document.body.style.overflow,'');
 });
 
 console.log(`RESULT ${passed} passed, ${failed} failed (DOM + local stubs; no live Supabase or browser QA)`);

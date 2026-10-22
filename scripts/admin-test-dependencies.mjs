@@ -15,3 +15,5 @@ export {currentContentPayload} from '../cms/content-revisions.mjs';
 export {applyTestimonials} from '../cms/testimonials.mjs';
 export {renderTestimonialsEditor,wireTestimonialsEditor} from '../cms/admin-testimonials.mjs';
 export {renderReferencesEditor,wireReferencesEditor} from '../cms/admin-references.mjs';
+
+export {enhanceDetails,animateVisibility,setDetailsOpen} from '../src/interactions/disclosure-motion.mjs';

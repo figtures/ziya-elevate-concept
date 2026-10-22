@@ -19,16 +19,30 @@
     var backdrop = header.querySelector("[data-close-menu]");
     var toggleLabel = hamb.querySelector(".menu-toggle-label");
     var backgroundState = new Map();
-    function setMenu(open, restoreFocus){
+    var menuCloseTimer = 0;
+    var menuTransition = 0;
+    var menuMotion = matchMedia("(prefers-reduced-motion: reduce)");
+    function releaseMenu(){
+      header.classList.remove("menu-expanded");
+      document.body.classList.remove("menu-open");
+      backgroundState.forEach(function(wasInert, el){el.inert = wasInert;});
+      backgroundState.clear();
+    }
+    function setMenu(open, restoreFocus, instant){
+      clearTimeout(menuCloseTimer);
+      var transition = ++menuTransition;
+      var wasVisible = header.classList.contains("menu-expanded");
       open = open && mobile.matches;
       navigation.classList.toggle("open", open);
-      header.classList.toggle("menu-expanded", open);
-      document.body.classList.toggle("menu-open", open);
+      if (open) {header.classList.add("menu-expanded");document.body.classList.add("menu-open");}
       hamb.setAttribute("aria-expanded", String(open));
       hamb.setAttribute("aria-label", open ? (document.documentElement.lang === "en" ? "Close navigation" : "Menüyü kapat") : (document.documentElement.lang === "en" ? "Open navigation" : "Menüyü aç"));
       hamb.querySelector("use")?.setAttribute("href", "/assets/icons.svg#" + (open ? "x" : "menu"));
       navigation.inert = mobile.matches && !open;
-      if (backdrop) backdrop.hidden = !open;
+      if (backdrop) {
+        if (window.ZiyaMotion) window.ZiyaMotion.animateVisibility(backdrop,open,{kind:'backdrop',instant:!!instant||!mobile.matches});
+        else backdrop.hidden = !open;
+      }
       if (toggleLabel) toggleLabel.textContent = open ? (document.documentElement.lang === "en" ? "Close" : "Kapat") : (document.documentElement.lang === "en" ? "Menu" : "Menü");
       if (open && !backgroundState.size) {
         Array.from(document.body.children).forEach(function(el){
@@ -37,8 +51,11 @@
           el.inert = true;
         });
       } else if (!open) {
-        backgroundState.forEach(function(wasInert, el){el.inert = wasInert;});
-        backgroundState.clear();
+        // Keep the dimmed page locked until the panel's exit has finished.
+        // A new open invalidates this callback, so rapid toggles never unlock it.
+        var delay = !instant && mobile.matches && wasVisible && !menuMotion.matches ? 240 : 0;
+        if (delay) menuCloseTimer=setTimeout(function(){if(transition===menuTransition)releaseMenu();},delay);
+        else releaseMenu();
       }
       if (restoreFocus) hamb.focus();
     }
@@ -61,8 +78,9 @@
         else if (!e.shiftKey && document.activeElement === last) {e.preventDefault();first.focus();}
       }
     });
-    mobile.addEventListener("change", function(){setMenu(false, false);});
-    setMenu(false, false);
+    mobile.addEventListener("change", function(){setMenu(false, false, true);});
+    menuMotion.addEventListener("change",function(){if(menuMotion.matches&&hamb.getAttribute("aria-expanded")!=="true")setMenu(false,false,true);});
+    setMenu(false, false, true);
   }
 
   /* Scroll reveal */

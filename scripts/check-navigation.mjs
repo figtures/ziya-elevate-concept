@@ -7,6 +7,7 @@ import {buildSync,transformSync} from 'esbuild';
 const read=path=>fs.readFileSync(path,'utf8');
 const source=parseHTML(read('content/v12/index.html')).document;
 const expected=[...source.querySelectorAll('header .nav-links a')].map(a=>[a.textContent.trim(),'/'+a.getAttribute('href').replace(/^\/+|\/+$/g,'')+'/']);
+const expectedEnglish=[['Success','/basari/'],['Mindset','/kafa-yapisi/'],['Sales','/satis/'],['Leadership','/liderlik/'],['Training','/egitimler/'],['Speaker','/en/speaker/'],['About Ziya','/ziya-sakir-yilmaz/']];
 const pages=fs.readdirSync('website',{recursive:true}).filter(x=>x.endsWith('index.html')).map(file=>({route:'/'+file.replace(/index.html$/,''),document:parseHTML(read('website/'+file)).document})).filter(x=>x.document.querySelector('header.site'));
 const routes=new Map(pages.map(x=>[x.route,x.document]));
 function links(document,selector){return new Set([...document.querySelectorAll(selector)].map(a=>(a.getAttribute('href')||'').split(/[?#]/)[0]));}
@@ -16,7 +17,7 @@ function checkReachable(document,documents){
  assert.deepEqual([...documents.keys()].filter(route=>!reached.has(route)),[],'Public content must be reachable through navigation and its listing page.');
 }
 for(const {route,document} of pages){
- assert.deepEqual([...document.querySelectorAll('header .nav-links a')].map(a=>[a.textContent.trim(),a.getAttribute('href')]),expected,'Reference navigation drift: '+route);
+ assert.deepEqual([...document.querySelectorAll('header .nav-links a')].map(a=>[a.textContent.trim(),a.getAttribute('href')]),route==='/en/speaker/'?expectedEnglish:expected,'Reference navigation drift: '+route);
  checkReachable(document,routes);
  assert.equal(document.querySelectorAll('footer').length,1);
  assert.equal(document.querySelectorAll('footer details,footer [data-footer-directory]').length,0,'Footer must not contain content archives.');
@@ -47,4 +48,4 @@ for(const [route,kind,newRoute,removed] of [
  assert.equal(document.querySelector(`footer a[href="${newRoute}"]`),null);
  assert.equal(document.querySelectorAll('footer details').length,0);
 }
-console.log(`PASS: ${pages.length}/63 routes reachable through menu/footer → listing → detail; source menu unchanged; no footer article archives; new/unpublished articles and notes synchronize on listing pages.`);
+console.log(`PASS: all ${pages.length} routes reachable through menu/footer → listing → detail; Turkish source and English localized navigation retained; no footer article archives; new/unpublished articles and notes synchronize on listing pages.`);

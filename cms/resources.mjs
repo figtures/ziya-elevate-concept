@@ -19,6 +19,16 @@ export function applyResources(document){
   for(const link of document.querySelectorAll('link[rel="preconnect"]')){
     if(/^https:\/\/i\.ytimg\.com\/?$/.test(link.getAttribute('href')||''))link.remove();
   }
+  // Install before the existing deferred interaction scripts, preserving the
+  // trusted template and every positional CMS binding.
+  if(!document.querySelector('script[data-interaction-motion]')){
+    const script=document.createElement('script');script.setAttribute('src','/assets/interaction-motion.js');script.setAttribute('defer','');script.setAttribute('data-interaction-motion','');
+    const first=document.querySelector('script[src]');if(first)first.before(script);else document.head.append(script);
+  }
+  for(const script of document.querySelectorAll('script[src]'))if((script.getAttribute('src')||'').split('?')[0]==='/assets/main.js')script.setAttribute('defer','');
+  if(!document.querySelector('link[data-interaction-motion]')){
+    const style=document.createElement('link');style.setAttribute('rel','stylesheet');style.setAttribute('href','/assets/interaction-motion.css');style.setAttribute('data-interaction-motion','');style.setAttribute('data-island-style','');document.head.append(style);
+  }
   for(const el of document.querySelectorAll('script[src],link[rel="stylesheet"][href]')){
     const attr=el.tagName==='SCRIPT'?'src':'href';const path=(el.getAttribute(attr)||'').split('?')[0];
     if(versions[path])el.setAttribute(attr,versionedAsset(path));

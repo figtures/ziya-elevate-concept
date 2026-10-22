@@ -1,6 +1,6 @@
 {
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\"]": {
-    "href": "/assets/bundles/site-b01f15777d4efa76.css",
+    "href": "/assets/bundles/site-7fe5b41f754f5f04.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -9,11 +9,11 @@
       "/assets/signature-header.css",
       "/assets/site-footer.css"
     ],
-    "sourceBytes": 102485,
-    "bytes": 93004
+    "sourceBytes": 102640,
+    "bytes": 93159
   },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\"]": {
-    "href": "/assets/bundles/site-93ab332342a895b0.css",
+    "href": "/assets/bundles/site-33c262f3a1597955.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -23,11 +23,11 @@
       "/assets/signature-header.css",
       "/assets/site-footer.css"
     ],
-    "sourceBytes": 116798,
-    "bytes": 106510
+    "sourceBytes": 116953,
+    "bytes": 106665
   },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/speaker-content.css\"]": {
-    "href": "/assets/bundles/site-6fb5f3f28a3b6616.css",
+    "href": "/assets/bundles/site-948f9eebd9242ca7.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -38,11 +38,11 @@
       "/assets/site-footer.css",
       "/assets/speaker-content.css"
     ],
-    "sourceBytes": 117266,
-    "bytes": 106882
+    "sourceBytes": 117421,
+    "bytes": 107037
   },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/tedx-hero.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/home-content.css\"]": {
-    "href": "/assets/bundles/site-5e19b1d260dc8afd.css",
+    "href": "/assets/bundles/site-5d7643f4380f90c3.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -54,11 +54,11 @@
       "/assets/site-footer.css",
       "/assets/home-content.css"
     ],
-    "sourceBytes": 119002,
-    "bytes": 108506
+    "sourceBytes": 119157,
+    "bytes": 108661
   },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/habit-plan.css\"]": {
-    "href": "/assets/bundles/site-fb32591cdf849bd8.css",
+    "href": "/assets/bundles/site-c48c4a7ae51c0951.css",
     "inputs": [
       "/assets/style.css",
       "/assets/refinements.css",
@@ -69,7 +69,7 @@
       "/assets/site-footer.css",
       "/assets/habit-plan.css"
     ],
-    "sourceBytes": 118280,
-    "bytes": 107764
+    "sourceBytes": 118435,
+    "bytes": 107919
   }
 }

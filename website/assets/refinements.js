@@ -48,14 +48,17 @@
   if (dialog) {
     document.querySelectorAll('[data-talk]').forEach(button => button.addEventListener('click', () => {
       const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + button.dataset.talk + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + button.dataset.talk + '?autoplay=1&rel=0&enablejsapi=1';
       iframe.title = document.getElementById('talkTitle')?.textContent || 'Ziya Şakir Yılmaz · TEDxReset konuşması';
       iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';iframe.allowFullscreen = true;
       document.getElementById('talkPlayer').replaceChildren(iframe);
-      dialog.showModal();videos.forEach(update);
+      if(window.ZiyaMotion)window.ZiyaMotion.openDialog(dialog);else dialog.showModal();videos.forEach(update);
     }));
-    dialog.querySelector('.talk-close').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', e => {if (e.target === dialog) dialog.close();});
+    const closeTalk=()=>window.ZiyaMotion?window.ZiyaMotion.closeDialog(dialog):dialog.close();
+    dialog.querySelector('.talk-close').addEventListener('click', closeTalk);
+    dialog.addEventListener('click', e => {if (e.target === dialog) closeTalk();});
+    // Pause audio immediately while retaining the film frame through the fade.
+    dialog.addEventListener('ziya:dialog-closing',()=>document.querySelector('#talkPlayer iframe')?.contentWindow?.postMessage(JSON.stringify({event:'command',func:'pauseVideo',args:[]}),'https://www.youtube-nocookie.com'));
     dialog.addEventListener('close', () => {document.getElementById('talkPlayer').replaceChildren();videos.forEach(update);});
   }
   document.addEventListener('keydown', e => {
@@ -68,20 +71,23 @@
     const topic = document.getElementById('konu');const query = new URLSearchParams(location.search).get('konu');
     if ([...topic.options].some(o => o.value === query)) topic.value = query;
     if (query === 'tani' || query?.startsWith('kurumsal-')) topic.value = 'kurumsal';
+    let extraReady=false;
     const extra = () => {
       const corporate=['kurumsal','konusmaci'].includes(topic.value),keynote=topic.value==='konusmaci';
       for(const [id,show] of [['kurumsalExtra',corporate],['keynoteExtra',keynote]]){
-        const group=document.getElementById(id);if(!group)continue;group.hidden=!show;
+        const group=document.getElementById(id);if(!group)continue;
+        if(window.ZiyaMotion)window.ZiyaMotion.animateVisibility(group,show,{kind:'collapse',instant:!extraReady});else group.hidden=!show;
         group.querySelectorAll('input,select').forEach(input=>{input.disabled=!show;});
       }
       const company=document.getElementById('firma');if(company)company.required=corporate;
+      extraReady=true;
     };
     topic.addEventListener('change', extra);extra();
     form.addEventListener('submit', e => {
       e.preventDefault();if (!form.reportValidity()) return;
       const val = id => document.getElementById(id)?.value.trim()||'';
       const lines = [content.greeting ?? 'Merhaba Ziya Bey,', '', topic.selectedOptions[0].text, '', 'Ad Soyad: '+val('ad'), 'E-posta: '+val('ep')];
-      if (!document.getElementById('kurumsalExtra').hidden) {if (val('firma')) lines.push('Firma: '+val('firma'));if (val('ekip')) lines.push('Ekip: '+val('ekip'));}
+      if (['kurumsal','konusmaci'].includes(topic.value)) {if (val('firma')) lines.push('Firma: '+val('firma'));if (val('ekip')) lines.push('Ekip: '+val('ekip'));}
       if(val('telefon'))lines.push('Telefon: '+val('telefon'));if(val('sehir'))lines.push('Şehir: '+val('sehir'));
       if(topic.value==='konusmaci'){if(val('etkinlik-tarihi'))lines.push('Etkinlik tarihi: '+val('etkinlik-tarihi'));const people=document.getElementById('katilimci-sayisi');if(people?.value)lines.push('Katılımcı sayısı: '+people.selectedOptions[0].text);}
       lines.push('',val('mesaj'));const message = lines.join('\n');

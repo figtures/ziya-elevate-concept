@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "../vendor/shadcn-tailwind-4.13.0.css";
 
 @utility scrollbar-thin {
   scrollbar-width: thin;
@@ -134,4 +133,103 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Shared Radix entry/exit rhythm. Presence keeps closing surfaces mounted until
+   their exit animation finishes, so focus restoration still follows Radix. */
+:root {
+  --ui-motion-open: 340ms;
+  --ui-motion-close: 240ms;
+  --ui-motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --ui-motion-exit-ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+:is(
+  [data-slot="dialog-content"], [data-slot="alert-dialog-content"],
+  [data-slot="dialog-overlay"], [data-slot="alert-dialog-overlay"],
+  [data-slot="dropdown-menu-content"], [data-slot="dropdown-menu-sub-content"],
+  [data-slot="context-menu-content"], [data-slot="context-menu-sub-content"],
+  [data-slot="popover-content"], [data-slot="select-content"],
+  [data-slot="hover-card-content"], [data-slot="sheet-content"],
+  [data-slot="sheet-overlay"], [data-slot="navigation-menu-content"],
+  [data-slot="navigation-menu-viewport"], [data-slot="navigation-menu-indicator"],
+  [data-slot="accordion-content"], [data-slot="collapsible-content"]
+) {
+  animation-duration: var(--ui-motion-open);
+  animation-timing-function: var(--ui-motion-ease);
+  animation-fill-mode: both;
+}
+
+:is(
+  [data-slot="dialog-content"], [data-slot="alert-dialog-content"],
+  [data-slot="dialog-overlay"], [data-slot="alert-dialog-overlay"],
+  [data-slot="dropdown-menu-content"], [data-slot="dropdown-menu-sub-content"],
+  [data-slot="context-menu-content"], [data-slot="context-menu-sub-content"],
+  [data-slot="popover-content"], [data-slot="select-content"],
+  [data-slot="hover-card-content"], [data-slot="sheet-content"],
+  [data-slot="sheet-overlay"], [data-slot="navigation-menu-content"],
+  [data-slot="navigation-menu-viewport"], [data-slot="accordion-content"],
+  [data-slot="collapsible-content"]
+)[data-state="closed"],
+[data-slot="navigation-menu-content"][data-motion^="to-"],
+[data-slot="navigation-menu-indicator"][data-state="hidden"] {
+  animation-duration: var(--ui-motion-close);
+  animation-timing-function: var(--ui-motion-exit-ease);
+}
+
+[data-slot="navigation-menu-viewport"] {
+  transition-property: width, height;
+  transition-duration: var(--ui-motion-open);
+  transition-timing-function: var(--ui-motion-ease);
+}
+
+:is([data-slot="accordion-trigger"], [data-slot="navigation-menu-trigger"]) > svg {
+  transition-duration: var(--ui-motion-open);
+  transition-timing-function: var(--ui-motion-ease);
+}
+
+[data-slot="collapsible-content"][data-state="open"] {
+  animation-name: ui-collapsible-open;
+}
+[data-slot="collapsible-content"][data-state="closed"] {
+  animation-name: ui-collapsible-close;
+}
+@keyframes ui-collapsible-open {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-collapsible-content-height); opacity: 1; }
+}
+@keyframes ui-collapsible-close {
+  from { height: var(--radix-collapsible-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+/* Release measured accordion heights after entry so later content can grow. */
+:is([data-slot="accordion-content"], [data-slot="collapsible-content"])[data-state="open"] {
+  animation-fill-mode: backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ui-motion-open: 1ms;
+    --ui-motion-close: 1ms;
+  }
+  :is(
+    [data-slot="dialog-content"], [data-slot="alert-dialog-content"],
+    [data-slot="dialog-overlay"], [data-slot="alert-dialog-overlay"],
+    [data-slot="dropdown-menu-content"], [data-slot="dropdown-menu-sub-content"],
+    [data-slot="context-menu-content"], [data-slot="context-menu-sub-content"],
+    [data-slot="popover-content"], [data-slot="select-content"],
+    [data-slot="hover-card-content"], [data-slot="sheet-content"],
+    [data-slot="sheet-overlay"], [data-slot="navigation-menu-content"],
+    [data-slot="navigation-menu-viewport"], [data-slot="navigation-menu-indicator"],
+    [data-slot="accordion-content"], [data-slot="collapsible-content"]
+  ) {
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    transition-duration: 0ms;
+  }
+  :is([data-slot="accordion-trigger"], [data-slot="navigation-menu-trigger"]) > svg {
+    transition-duration: 0ms;
+  }
 }

@@ -10,8 +10,15 @@
 .homepage .home-book-cover{height:clamp(240px,24vw,340px);display:flex;align-items:center;justify-content:center}
 .homepage .home-book-cover img{display:block;width:100%;height:100%;object-fit:contain;animation:none;transform:none}
 .homepage .home-book-shelf h3{font-size:clamp(1.0625rem,1.5vw,1.3125rem);line-height:1.45;letter-spacing:-.025em;margin-top:22px}
+.homepage .home-books-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px 48px}
+.homepage .home-books-heading>.ed-heading{min-width:0}
+.homepage .home-books-heading>.ed-link{flex:none;margin:0;padding:12px 0;min-height:48px;white-space:nowrap}
+.homepage .home-books-heading .depth-note{margin:20px 0 0;font-size:.875rem;line-height:1.5;color:var(--brand-muted)}
 @media(min-width:761px){.homepage .ed-lived-story .bio-spread>.ed-photo{position:sticky;top:120px}}
 @media(max-width:760px){
+ .homepage .home-books-heading{align-items:flex-start;gap:20px;flex-direction:column}
+ .homepage .home-books-heading>.ed-link{align-self:flex-end}
+ .homepage .home-books-heading .depth-note{margin-top:16px}
  .homepage .home-book-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}
  .homepage .home-book-cover{height:clamp(190px,51vw,290px)}
  .homepage .home-book-shelf h3{margin-top:16px}

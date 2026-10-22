@@ -35,7 +35,10 @@ export function applyTestimonials(document,payload,{preview=false}={}){
  const config=normalizeTestimonials(payload.testimonials);
  const items=preview?config.items:publicTestimonials(config).items;
  if((!config.enabled&&!preview)||!items.length)return document;
- const anchor=document.querySelector('#alanlar');if(!anchor)return document;
+ // A CMS-hidden working-areas section is removed from the composed document.
+ // Keep testimonials reachable in that case without inserting into the hero.
+ const areas=document.querySelector('#alanlar'),story=document.querySelector('#once-yasadim');
+ const fallback=document.querySelector('.film-feature')?.closest('section')||document.querySelector('#kitaplar,.ed-closing,body > footer');
  const el=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value)node.textContent=value;return node;};
  const section=el('section','ed-section ed-testimonials');section.id='deneyimler';section.setAttribute('data-testimonials-section','');section.setAttribute('data-motion-section','');section.setAttribute('aria-labelledby','deneyimler-baslik');
  const wrap=el('div','wrap'),head=el('div','ed-heading');head.setAttribute('data-motion-item','');
@@ -49,7 +52,11 @@ export function applyTestimonials(document,payload,{preview=false}={}){
   if(item.avatar){const image=el('img','testimonial-avatar');image.setAttribute('src',item.avatar);image.setAttribute('alt','');image.setAttribute('loading','lazy');image.setAttribute('decoding','async');image.setAttribute('width','56');image.setAttribute('height','56');author.append(image);}
   const byline=el('div','testimonial-byline');byline.append(el('strong','',item.name||'Ad soyad'));if(item.role||item.company)byline.append(el('span','',[item.role,item.company].filter(Boolean).join(' · ')));author.append(byline);card.append(author);grid.append(card);
  }
- wrap.append(grid);section.append(wrap);anchor.before(section);
+ wrap.append(grid);section.append(wrap);
+ if(areas){section.setAttribute('data-testimonials-placement','before-areas');areas.before(section);}
+ else if(story){section.setAttribute('data-testimonials-placement','after-story');story.after(section);}
+ else if(fallback){section.setAttribute('data-testimonials-placement','before-next-section');fallback.before(section);}
+ else{const hero=document.querySelector('.editorial-home-hero');section.setAttribute('data-testimonials-placement','after-hero');if(hero)hero.after(section);else(document.querySelector('main')||document.body).append(section);}
  if(!document.querySelector('link[data-testimonials-styles]')){const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/testimonials.css';css.setAttribute('data-testimonials-styles','');css.setAttribute('data-island-style','');document.head.append(css);}
  return document;
 }

@@ -90,7 +90,10 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
         const interactive = section.querySelector(protectedArea);
         if (wrap && !interactive) {
           section.classList.add('motion-panel');
-          const distance = mobile?68:138;
+          // The compact logo band and its next chapter form a single opening
+          // sequence. Full chapter travel would visually double their gutter.
+          const compactJoin = section.matches('.ed-references') || section.previousElementSibling?.matches('.ed-references');
+          const distance = compactJoin?(mobile?24:46):(mobile?68:138);
           track(wrap,{transform:[`translate3d(0,${distance}px,0) scale(${mobile?.97:.945})`,'translate3d(0,0,0) scale(1)']},
             {target:section,offset:['start 1','start .24'],ease:'linear'});
           track(wrap,{translate:['0px 0px',`0px ${mobile?-18:-42}px`]},

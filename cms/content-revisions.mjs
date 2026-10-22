@@ -2,6 +2,7 @@
 // reviewed. An editor's concurrent changes never get replaced by this adapter.
 import revisions from './content-revisions.json' with {type:'json'};
 import assetRevisions from './book-reference-revisions.json' with {type:'json'};
+import {currentBookPhotography} from './book-photography.mjs';
 
 export function canonicalJSON(value){
  if(Array.isArray(value))return '['+value.map(canonicalJSON).join(',')+']';
@@ -20,9 +21,9 @@ export async function currentContentPayload(payload,seeds){
    const home=seeds.find(item=>item.id==='/');
    next.references=home.references;next.testimonials=home.testimonials;
   }
-  return next;
+  return currentBookPhotography(next);
  }
- if(!payload||!revisions[payload.id])return payload;
- if(await contentFingerprint(payload)!==revisions[payload.id])return payload;
- return seeds.find(item=>item.id===payload.id)||payload;
+ if(!payload||!revisions[payload.id])return currentBookPhotography(payload);
+ if(await contentFingerprint(payload)!==revisions[payload.id])return currentBookPhotography(payload);
+ return currentBookPhotography(seeds.find(item=>item.id===payload.id)||payload);
 }

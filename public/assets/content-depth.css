@@ -168,7 +168,7 @@
 
 /* Photographed book scenes carry their own perspective, surface and lighting.
    Apply only to the approved studio assets; future flat covers keep their editor style. */
-[data-editorial] .book-cover:has(>img[src*="-studio-v1.webp"]:not([hidden])){padding:0;min-height:0;background:transparent;box-shadow:none;overflow:hidden}
-[data-editorial] .book-cover>img[src*="-studio-v1.webp"]:not([hidden]){display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:var(--radius-lg);box-shadow:none;filter:none;transform:none}
-[data-editorial] .home-book-cover:has(>img[src*="-studio-v1.webp"]:not([hidden])){height:auto;aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden}
-[data-editorial] .home-book-cover>img[src*="-studio-v1.webp"]:not([hidden]){width:100%;height:100%;object-fit:contain;box-shadow:none;filter:none;transform:none}
+[data-editorial] .book-cover:has(>img[src*="-studio-v"]:not([hidden])){padding:0;min-height:0;background:transparent;box-shadow:none;overflow:hidden}
+[data-editorial] .book-cover>img[src*="-studio-v"]:not([hidden]){display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:var(--radius-lg);box-shadow:none;filter:none;transform:none}
+[data-editorial] .home-book-cover:has(>img[src*="-studio-v"]:not([hidden])){height:auto;aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden}
+[data-editorial] .home-book-cover>img[src*="-studio-v"]:not([hidden]){width:100%;height:100%;object-fit:contain;box-shadow:none;filter:none;transform:none}

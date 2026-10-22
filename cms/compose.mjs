@@ -9,6 +9,7 @@ import {applyResources} from './resources.mjs';
 import {applySpeakerLocale} from './speaker-locale.mjs';
 import {applyReferences} from './references.mjs';
 import {applyTestimonials} from './testimonials.mjs';
+import {applyHomeLayout} from './home-layout.mjs';
 
 export function composeContent(document,payload,definition,{sharedDocument,sharedPayload,sharedDefinition,entries,booksPayload,booksDefinition,canonicalOrigin,leadsEnabled=false}={}){
  applyContent(document,payload,definition);
@@ -34,6 +35,7 @@ export function composeContent(document,payload,definition,{sharedDocument,share
  // Keep the authored section IDs stable so existing edits and visibility survive.
  if(payload.route==='/'){
   applyHomeBooks(document,booksPayload,booksDefinition);
+  applyHomeLayout(document,payload.route);
   const hero=document.querySelector('.editorial-home-hero');
   const proof=document.querySelector('#rakamlarla');
   if(hero&&proof){hero.classList.add('hero-with-proof');hero.append(proof);}

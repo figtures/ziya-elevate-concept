@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "generatedAt": "2026-10-22",
+  "purpose": "Different editorial compositions for the existing four-book collection. Kurşun Geçirmez Kafa Yapısı retains the original user mockup.",
+  "nativeDimensions": {
+    "width": 1448,
+    "height": 1086
+  },
+  "format": "webp",
+  "quality": 91,
+  "images": [
+    {
+      "id": "basari",
+      "prompt": "Use case: product-mockup. Asset: premium Turkish author's website book photography. Create one landscape 4:3 photoreal editorial product photograph at the highest native resolution. Preserve the supplied real book cover exactly as printed art: exact Turkish typography, colors, title, author identity and portrait if present. No invented cover artwork, no changes to face, no added text outside book, no logos outside cover, no watermark, no floating objects. A coherent quiet palette of warm ivory, pale stone and subtle navy; natural window light, soft realistic shadows, tactile paper, restrained styling. All book edges remain inside frame and title is readable. Reference image is the exact front cover of BAŞARI MÜHENDİSLİĞİ by ZİYA ŞAKİR YILMAZ. Photograph TWO identical physical copies stacked horizontally, the upper copy rotated slightly clockwise relative to lower, front cover facing up toward a three-quarter overhead camera at about 45 degrees. Place the stack on a low broad matte navy rectangular stone plinth with softly rounded edges, against an ivory plaster backdrop. The stack occupies 72% width and about 75% height. This is a sculptural horizontal stack, NOT a standing front-on book. Keep the original smiling author's face exactly recognizable as cover print; not a new portrait. Soft daylight from upper left, no foliage, no pots. Luxurious real bookshop editorial photography, Burgundy cover remains vivid and exact."
+    },
+    {
+      "id": "sir",
+      "prompt": "Use case: product-mockup. Asset: premium Turkish author's website book photography. Create one landscape 4:3 photoreal editorial product photograph at the highest native resolution. Preserve the supplied real book cover exactly as printed art: exact Turkish typography, colors, title, author identity and portrait if present. No invented cover artwork, no changes to face, no added text outside book, no logos outside cover, no watermark, no floating objects. A coherent quiet palette of warm ivory, pale stone and subtle navy; natural window light, soft realistic shadows, tactile paper, restrained styling. All book edges remain inside frame and title is readable. Reference is the exact front cover of Size Bir Sır Vereyim Mi? by ZİYA ŞAKİR YILMAZ. One physical paperback rests upright and tilts gently backward against a very low pale limestone bookend, on a warm natural light-oak shelf in a reading alcove. Camera slightly from RIGHT so the white page block is subtly visible on the right and the cover is readable. Book occupies 80% image height, centered. Background off-white textured wall with a broad oval patch of diffused daylight. A small fold of cream linen in extreme far left background, no plants, no marble tabletop, no stairs. Warm, tactile and inviting, no decorative clutter. Cover retains red title, white brick background, wooden shelves inside head silhouette and black drawings."
+    },
+    {
+      "id": "72",
+      "prompt": "Use case: product-mockup. Asset: premium Turkish author's website book photography. Create one landscape 4:3 photoreal editorial product photograph at the highest native resolution. Preserve the supplied real book cover exactly as printed art: exact Turkish typography, colors, title, author identity and portrait if present. No invented cover artwork, no changes to face, no added text outside book, no logos outside cover, no watermark, no floating objects. A coherent quiet palette of warm ivory, pale stone and subtle navy; natural window light, soft realistic shadows, tactile paper, restrained styling. All book edges remain inside frame and title is readable. Reference is the exact front cover of İLK 72 SAAT by Emre Topçu & Ziya Şakir Yılmaz. Photograph one CLOSED physical paperback laid flat on a pale sand-colored desk mat, with true overhead flat-lay camera. Rotate book about 14 degrees counterclockwise. Book occupies about 79% image height with all corners visible. A single narrow brushed brass pencil sits to the right, parallel to the book, and a sliver of navy linen enters only the upper-right corner. Minimal calm negative space, afternoon daylight creates one soft directional shadow. NOT a standing book, no plants, no marble, no duplicate stacks. Exact cover keeps the black circular title crosshair, hourglass/coins artwork on left, white field, subtitle and author line; preserve correct Turkish text."
+    }
+  ]
+}

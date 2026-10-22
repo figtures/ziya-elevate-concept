@@ -19,9 +19,11 @@
 .reference-slider-toggle:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 @media(max-width:640px){[data-reference-slider]{min-height:146px}.reference-slider-track{padding:14px 0}.reference-slider-logo{width:128px;flex-basis:128px;height:68px}.reference-slider-logo img{max-width:120px;max-height:56px}.reference-slider-window{border-radius:12px}[data-reference-slider]>ul{gap:48px;padding:14px 0}[data-reference-slider]>ul>li{width:128px;flex-basis:128px;min-height:68px}}
 @media(prefers-reduced-motion:reduce){[data-reference-slider]{min-height:0}[data-reference-slider]>ul{flex-wrap:wrap;justify-content:center}.reference-slider-toggle{transition:none}.reference-slider-track{overflow:visible!important}.reference-slider-window{overflow:visible}}
-[data-editorial] .ed-references{--reference-surface:var(--bg,#f5f3ee);padding-block:52px;background:var(--reference-surface);color:var(--brand-ink,#111c33)}
+[data-editorial] .ed-references{--reference-surface:var(--bg,#f5f3ee);padding-block:44px 20px;background:var(--reference-surface);color:var(--brand-ink,#111c33)}
+/* These same-surface chapters share one interval, including inside SSR's main. */
+body[data-editorial].homepage .ed-references+.ed-section{padding-top:clamp(24px,3vw,40px)}
 [data-editorial] .ed-references .reference-heading{max-width:760px;margin-bottom:22px}
 [data-editorial] .ed-references .reference-heading .eyebrow{margin:0 0 10px;font-size:12px;letter-spacing:.14em}
 [data-editorial] .ed-references .reference-heading h2{margin:0;font-size:clamp(28px,3vw,38px);line-height:1.22;letter-spacing:-.035em;color:inherit;background:none;-webkit-text-fill-color:currentColor}
 [data-editorial] .ed-references .reference-slider-logo img,[data-editorial] .ed-references [data-reference-slider]>ul img{mix-blend-mode:multiply}
-@media(max-width:640px){[data-editorial] .ed-references{padding-block:36px}[data-editorial] .ed-references .reference-heading{margin-bottom:16px}}
+@media(max-width:640px){[data-editorial] .ed-references{padding-block:32px 12px}[data-editorial] .ed-references .reference-heading{margin-bottom:16px}}

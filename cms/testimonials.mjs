@@ -45,18 +45,21 @@ export function applyTestimonials(document,payload,{preview=false}={}){
  if(config.eyebrow)head.append(el('p','eyebrow',config.eyebrow));const title=el('h2','',config.title||'Deneyimler');title.id='deneyimler-baslik';head.append(title);
  if(config.description)head.append(el('p','ed-description',config.description));wrap.append(head);
  if(preview&&!config.enabled)wrap.append(el('p','testimonial-draft-note','Önizleme: Bu bölüm yayında gizli.'));
- const grid=el('div','testimonial-list');
+ const carousel=el('div','testimonial-carousel');carousel.setAttribute('data-testimonials-carousel','');carousel.setAttribute('aria-label',config.title||'Deneyimler');
+ const grid=el('div','testimonial-list');grid.setAttribute('data-testimonial-source','');
  for(const item of items){const card=el('figure','testimonial-card');card.setAttribute('data-motion-item','');
+  card.setAttribute('data-testimonial-id',item.id);if(!item.enabled||!config.enabled)card.setAttribute('data-testimonial-hidden','');
   if(preview&&(item.status!=='approved'||!item.enabled)){card.setAttribute('data-testimonial-draft','');card.append(el('p','testimonial-draft-note',item.status!=='approved'?'METİN ÖNERİSİ · KİŞİ ONAYI BEKLENİYOR':'ÖNİZLEME · YAYINDA GİZLİ'));}
   card.append(el('blockquote','',item.quote||'Yorum metni henüz eklenmedi.'));const author=el('figcaption','testimonial-author');
   if(item.avatar){const image=el('img','testimonial-avatar');image.setAttribute('src',item.avatar);image.setAttribute('alt','');image.setAttribute('loading','lazy');image.setAttribute('decoding','async');image.setAttribute('width','56');image.setAttribute('height','56');author.append(image);}
   const byline=el('div','testimonial-byline');byline.append(el('strong','',item.name||'Ad soyad'));if(item.role||item.company)byline.append(el('span','',[item.role,item.company].filter(Boolean).join(' · ')));author.append(byline);card.append(author);grid.append(card);
  }
- wrap.append(grid);section.append(wrap);
+ carousel.append(grid);wrap.append(carousel);section.append(wrap);
  if(areas){section.setAttribute('data-testimonials-placement','before-areas');areas.before(section);}
  else if(story){section.setAttribute('data-testimonials-placement','after-story');story.after(section);}
  else if(fallback){section.setAttribute('data-testimonials-placement','before-next-section');fallback.before(section);}
  else{const hero=document.querySelector('.editorial-home-hero');section.setAttribute('data-testimonials-placement','after-hero');if(hero)hero.after(section);else(document.querySelector('main')||document.body).append(section);}
  if(!document.querySelector('link[data-testimonials-styles]')){const css=document.createElement('link');css.rel='stylesheet';css.href='/assets/testimonials.css';css.setAttribute('data-testimonials-styles','');css.setAttribute('data-island-style','');document.head.append(css);}
+ if(!document.querySelector('script[data-testimonials-script]')){const script=document.createElement('script');script.setAttribute('src','/assets/testimonial-slider.js');script.setAttribute('defer','');script.setAttribute('data-testimonials-script','');document.body.append(script);}
  return document;
 }

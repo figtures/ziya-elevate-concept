@@ -2,8 +2,8 @@
 
 import { cn } from '@/lib/utils';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { useCallback, useId, useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
+import { ChevronLeft, ChevronRight, Pause, Play, Quote } from 'lucide-react';
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
 
 export type StaggerTestimonial = {
   id: string;
@@ -35,6 +35,11 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
   const [activeId, setActiveId] = useState(items[0]?.id ?? '');
   const [containerWidth, setContainerWidth] = useState(720);
   const [tallestCard, setTallestCard] = useState(350);
+  const [autoplayPaused, setAutoplayPaused] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [focusWithin, setFocusWithin] = useState(false);
+  const [inView, setInView] = useState(false);
+  const [pageVisible, setPageVisible] = useState(true);
   const viewport = useRef<HTMLDivElement>(null);
   const cards = useRef(new Map<string, HTMLElement>());
   const statusId = useId();
@@ -81,6 +86,37 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
     setActiveId(items[(active + direction + items.length) % items.length].id);
   }, [active, items]);
 
+  useEffect(() => {
+    const element = viewport.current;
+    if (!element) return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setInView(true);
+      return;
+    }
+    setInView(false);
+    const observer = new IntersectionObserver(([entry]) => {
+      setInView(entry.isIntersecting && entry.intersectionRatio >= 0.15);
+    }, { threshold: 0.15 });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [hasItems]);
+
+  useEffect(() => {
+    const updateVisibility = () => setPageVisible(document.visibilityState !== 'hidden');
+    updateVisibility();
+    document.addEventListener('visibilitychange', updateVisibility);
+    return () => document.removeEventListener('visibilitychange', updateVisibility);
+  }, []);
+
+  const autoplayRunning = items.length > 1 && !reducedMotion && !autoplayPaused
+    && !hovered && !focusWithin && inView && pageVisible;
+
+  useEffect(() => {
+    if (!autoplayRunning) return;
+    const timer = window.setTimeout(() => move(1), 2000);
+    return () => window.clearTimeout(timer);
+  }, [autoplayRunning, move]);
+
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -93,7 +129,13 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
 
   return <div ref={viewport} className={cn('stagger-testimonials', className)}
     role="region" aria-roledescription="yorum galerisi" aria-label="Deneyimler"
-    tabIndex={0} onKeyDown={onKeyDown} data-reduced-motion={reducedMotion ? 'true' : undefined}>
+    tabIndex={0} onKeyDown={onKeyDown} data-reduced-motion={reducedMotion ? 'true' : undefined}
+    data-autoplay={autoplayRunning ? 'running' : 'paused'}
+    onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
+    onFocusCapture={() => setFocusWithin(true)}
+    onBlurCapture={event => {
+      if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setFocusWithin(false);
+    }}>
     <div className="stagger-testimonials-stage" style={{ height: tallestCard + (narrow ? 64 : 80) }}>
       {items.map((item, index) => {
         const position = relativePosition(index, active, items.length);
@@ -133,7 +175,7 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
         aria-label="Önceki yorum" aria-describedby={statusId}>
         <ChevronLeft size={22} strokeWidth={1.8} aria-hidden="true" />
       </button>
-      <span id={statusId} className="stagger-testimonials-counter" aria-live="polite" aria-atomic="true">
+      <span id={statusId} className="stagger-testimonials-counter" aria-live={autoplayRunning ? 'off' : 'polite'} aria-atomic="true">
         <span className="stagger-testimonials-sr-only">Yorum </span>
         <strong>{String(active + 1).padStart(2, '0')}</strong><span aria-hidden="true"> / </span>
         <span className="stagger-testimonials-sr-only"> / </span>{String(items.length).padStart(2, '0')}
@@ -142,6 +184,12 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
         aria-label="Sonraki yorum" aria-describedby={statusId}>
         <ChevronRight size={22} strokeWidth={1.8} aria-hidden="true" />
       </button>
+      {items.length > 1 && !reducedMotion && <button type="button"
+        onClick={() => setAutoplayPaused(paused => !paused)}
+        aria-label={autoplayPaused ? 'Otomatik geçişi başlat' : 'Otomatik geçişi duraklat'}>
+        {autoplayPaused ? <Play size={18} strokeWidth={1.8} aria-hidden="true" /> :
+          <Pause size={18} strokeWidth={1.8} aria-hidden="true" />}
+      </button>}
     </div>
   </div>;
 }

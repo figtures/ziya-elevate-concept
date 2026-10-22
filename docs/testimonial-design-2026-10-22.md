@@ -4,6 +4,7 @@ The uploaded stagger-card example is adapted in `components/ui/stagger-testimoni
 
 - Section background: `#111c33`; active card: warm ivory; adjacent cards: translucent navy. Rounded corners replace the example's clipped corners.
 - Previous/next controls, scoped arrow keys, stable CMS identities, reduced-motion support and measured card height support short and long comments.
+- Cards advance every 2 seconds while visible. Hover, keyboard focus, a hidden tab or an off-screen section pauses the timer; a pause/play control allows longer reading. Reduced-motion preferences disable autoplay. Automatic changes do not trigger live announcements.
 - Actual CMS photos are optional; missing photos use initials. No stock portraits or example company endorsements are imported.
 - Public HTML supplies only approved comments to the React island. Without JavaScript, the complete readable grid remains available.
 - The admin's inline preview uses the same interactive component and retains its selected card while text changes. The full-page iframe keeps its existing script restrictions and uses the static fallback.

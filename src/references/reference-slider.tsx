@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { LogosSlider, type ReferenceLogo } from '@/components/ui/logos-slider';
 import './reference-slider.css';
+import {parseMediaFrame,serializeMediaFrame} from '../../cms/media-framing.mjs';
 
 function safeUrl(value: string | null, image = false): string | undefined {
   if (!value) return;
@@ -19,7 +20,9 @@ function mountReferenceSliders() {
       const image = safeUrl(img.getAttribute('src'), true);
       const description = (img.getAttribute('alt') || '').trim();
       if (!image || !description) return [];
+      const frame = parseMediaFrame(img.getAttribute('data-media-frame'), image);
       return [{ id: `reference-${index}`, image, description,
+        frame: frame ? serializeMediaFrame(frame) : undefined,
         width: Number(img.getAttribute('width')) || undefined,
         height: Number(img.getAttribute('height')) || undefined,
         href: safeUrl(img.closest('a')?.getAttribute('href') || null) }];

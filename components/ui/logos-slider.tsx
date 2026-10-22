@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import {applyMediaFrame,parseMediaFrame} from '../../cms/media-framing.mjs';
 import { Pause, Play } from 'lucide-react';
 import { useReducedMotion } from 'framer-motion';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 
-export type ReferenceLogo = { id: string; image: string; description: string; width?: number; height?: number; href?: string };
+export type ReferenceLogo = { id: string; image: string; description: string; width?: number; height?: number; href?: string; frame?: string };
 export type LogosSliderProps = { logos: ReferenceLogo[]; label?: string; duration?: number; gap?: number };
 
 export function LogosSlider({ logos, label = 'Referanslar', duration, gap = 48 }: LogosSliderProps) {
@@ -17,8 +18,12 @@ export function LogosSlider({ logos, label = 'Referanslar', duration, gap = 48 }
     <div className="reference-slider-window">
       <InfiniteSlider className="reference-slider-track" duration={duration || Math.max(30, logos.length * 4)} gap={gap} paused={paused}>
         {logos.map((logo) => {
-          const img = <img src={logo.image} alt={logo.description} width={logo.width} height={logo.height}
-            loading="lazy" decoding="async" />;
+          const frame = parseMediaFrame(logo.frame, logo.image);
+          const image = <img src={logo.image} alt={logo.description} width={logo.width} height={logo.height}
+            loading="lazy" decoding="async"
+            style={frame ? { width: '100%', height: '100%', maxWidth: 'none', maxHeight: 'none' } : undefined}
+            ref={element => { if (element && frame) applyMediaFrame(element, frame); }} />;
+          const img = frame ? <span className="reference-framed-logo" data-media-frame-clip>{image}</span> : image;
           return <div key={logo.id} className="reference-slider-logo">
             {logo.href ? <a href={logo.href} aria-label={logo.description}>{img}</a> : img}
           </div>;

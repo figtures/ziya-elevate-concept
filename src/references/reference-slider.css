@@ -27,3 +27,6 @@ body[data-editorial].homepage .ed-references+.ed-section{padding-top:clamp(24px,
 [data-editorial] .ed-references .reference-heading h2{margin:0;font-size:clamp(28px,3vw,38px);line-height:1.22;letter-spacing:-.035em;color:inherit;background:none;-webkit-text-fill-color:currentColor}
 [data-editorial] .ed-references .reference-slider-logo img,[data-editorial] .ed-references [data-reference-slider]>ul img{mix-blend-mode:multiply}
 @media(max-width:640px){[data-editorial] .ed-references{padding-block:32px 12px}[data-editorial] .ed-references .reference-heading{margin-bottom:16px}}
+
+.reference-framed-logo{display:block;flex:none;width:146px;height:66px;overflow:hidden}
+@media(max-width:760px){.reference-framed-logo{width:120px;height:56px}}

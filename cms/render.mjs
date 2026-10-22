@@ -6,6 +6,7 @@ import {validateCollection} from './collections.mjs';
 import {validateExperience} from './experience.mjs';
 import {validateTestimonials} from './testimonials.mjs';
 import {validateReferences} from './references.mjs';
+import {applyFieldMediaFrames,validateDocumentMediaFrames} from './media-framing.mjs';
 export function safeURL(value, media = false) {
   const s=String(value||'').trim();
   if (s.startsWith('/') && !s.startsWith('//') && !/[\\\u0000-\u0020]/.test(s)) return s;
@@ -39,7 +40,7 @@ export function setField(root,field,value){
   if(e.tagName==='A'&&key==='href'&&/^https:/.test(val))e.setAttribute('rel','noopener noreferrer');
  }
 }
-function applyValues(root,definition,values){for(const f of definition.fields){if(Object.hasOwn(values||{},f.id))setField(root,f,values[f.id]);}}
+function applyValues(root,definition,values){for(const f of definition.fields){if(Object.hasOwn(values||{},f.id))setField(root,f,values[f.id]);}applyFieldMediaFrames(root,definition,values);}
 function uniquify(root,prefix){const map=new Map();[...(root.hasAttribute?.('id')?[root]:[]),...root.querySelectorAll('[id]')].forEach(n=>{map.set(n.id,prefix+'-'+n.id);n.id=prefix+'-'+n.id;});for(const n of root.querySelectorAll('[href],[aria-controls],[aria-labelledby]'))for(const attr of ['href','aria-controls','aria-labelledby']){const v=n.getAttribute(attr);if(v?.startsWith('#')&&map.has(v.slice(1)))n.setAttribute(attr,'#'+map.get(v.slice(1)));else if(map.has(v))n.setAttribute(attr,map.get(v));}}
 export function applyContent(doc,payload,definition,{global=false}={}){
  applyValues(doc,definition,payload.values);
@@ -83,6 +84,7 @@ export function validateDocument(payload,definition){
  if(payload.experience!==undefined)errors.push(...validateExperience(payload.experience));
  if(payload.testimonials!==undefined)errors.push(...validateTestimonials(payload.testimonials,payload.route));
  if(payload.references!==undefined){if(payload.route!=='/')errors.push('Referanslar yalnız ana sayfada düzenlenebilir.');errors.push(...validateReferences(payload.references));}
+ errors.push(...validateDocumentMediaFrames(payload,definition));
  for(const section of payload.sections||[])for(const group of section.groups||[])for(const item of group.items||[])if(item.hidden!==undefined&&typeof item.hidden!=='boolean')errors.push('Madde görünürlüğü geçersiz.');
  if(payload.ogImageAlt!==undefined&&(typeof payload.ogImageAlt!=='string'||payload.ogImageAlt.length>420))errors.push('Paylaşım görselinin açıklaması en fazla 420 karakter olmalı.');
  if(!/^\/(?:[a-z0-9_-]+\/)*$/.test(payload.route))errors.push('Adres küçük harf, rakam ve tirelerden oluşmalı; / ile bitmeli.');

@@ -1,4 +1,5 @@
 import {navigationURL} from './navigation.mjs';
+import {parseMediaFrame,applyMediaFrame} from './media-framing.mjs';
 
 const text=(value,min,max)=>typeof value==='string'&&value.trim().length>=min&&value.length<=max;
 const object=value=>value&&typeof value==='object'&&!Array.isArray(value);
@@ -42,7 +43,8 @@ export function applyReferences(doc,payload){
  const list=el('ul','reference-logos');list.setAttribute('aria-label',model.title);
  for(const logo of logos){
   const li=el('li','reference-logo');const img=el('img');img.setAttribute('src',logo.src);img.setAttribute('alt',logo.name);img.setAttribute('width',String(Math.round(logo.width)));img.setAttribute('height',String(Math.round(logo.height)));img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
-  if(logo.url){const a=el('a');a.setAttribute('href',logo.url);if(logo.url.startsWith('https:'))a.setAttribute('rel','noopener noreferrer');a.append(img);li.append(a);}else li.append(img);
+  const frame=parseMediaFrame(payload.values?.['media-frame:reference:'+logo.id],logo.src);let content=img;if(frame){content=el('span','reference-framed-logo');content.setAttribute('data-media-frame-clip','');content.append(img);img.style.cssText='display:block;width:100%;height:100%;max-width:none;max-height:none';applyMediaFrame(img,frame);}
+  if(logo.url){const a=el('a');a.setAttribute('href',logo.url);if(logo.url.startsWith('https:'))a.setAttribute('rel','noopener noreferrer');a.append(content);li.append(a);}else li.append(content);
   list.append(li);
  }
  slider.append(list);wrap.append(slider);section.append(wrap);hero.after(section);

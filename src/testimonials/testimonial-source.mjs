@@ -1,3 +1,4 @@
+import {parseMediaFrame,serializeMediaFrame} from '../../cms/media-framing.mjs';
 /** Read only the rendered, already-filtered CMS cards; never fetch draft data. */
 export function readTestimonialItems(host) {
  const source=host.querySelector('[data-testimonial-source]');
@@ -5,10 +6,12 @@ export function readTestimonialItems(host) {
  return [...source.querySelectorAll(':scope > figure')].map((card,index)=>{
   const image=card.querySelector('img');let avatar='';
   if(image){const value=image.getAttribute('src')||'';if(value.startsWith('/')&&!value.startsWith('//')||/^https:\/\//i.test(value))avatar=value;}
+  const frame=parseMediaFrame(image?.getAttribute('data-media-frame'),avatar);
   return {id:card.getAttribute('data-testimonial-id')||'testimonial-'+index,
    name:card.querySelector('figcaption strong')?.textContent?.trim()||'Ad soyad',
    quote:card.querySelector('blockquote')?.textContent?.trim()||'',
-   role:card.querySelector('figcaption span')?.textContent?.trim()||'',avatar,
+   role:card.querySelector('figcaption span:not([data-media-frame-clip])')?.textContent?.trim()||'',avatar,
+   ...(frame?{avatarFrame:serializeMediaFrame(frame)}:{}),
    draft:card.hasAttribute('data-testimonial-draft'),hidden:card.hasAttribute('data-testimonial-hidden')};
  });
 }

@@ -1,4 +1,5 @@
 import {safeURL} from './render.mjs';
+import {parseMediaFrame,applyMediaFrame} from './media-framing.mjs';
 
 export const TESTIMONIAL_DEFAULTS={enabled:true,eyebrow:'Deneyimler',title:'Sahneden kalan izler',description:'',items:[]};
 const text=(value,max)=>typeof value==='string'?value.trim().slice(0,max):'';
@@ -51,7 +52,7 @@ export function applyTestimonials(document,payload,{preview=false}={}){
   card.setAttribute('data-testimonial-id',item.id);if(!item.enabled||!config.enabled)card.setAttribute('data-testimonial-hidden','');
   if(preview&&(item.status!=='approved'||!item.enabled)){card.setAttribute('data-testimonial-draft','');card.append(el('p','testimonial-draft-note',item.status!=='approved'?'METİN ÖNERİSİ · KİŞİ ONAYI BEKLENİYOR':'ÖNİZLEME · YAYINDA GİZLİ'));}
   card.append(el('blockquote','',item.quote||'Yorum metni henüz eklenmedi.'));const author=el('figcaption','testimonial-author');
-  if(item.avatar){const image=el('img','testimonial-avatar');image.setAttribute('src',item.avatar);image.setAttribute('alt','');image.setAttribute('loading','lazy');image.setAttribute('decoding','async');image.setAttribute('width','56');image.setAttribute('height','56');author.append(image);}
+  if(item.avatar){const image=el('img','testimonial-avatar');image.setAttribute('src',item.avatar);image.setAttribute('alt','');image.setAttribute('loading','lazy');image.setAttribute('decoding','async');image.setAttribute('width','56');image.setAttribute('height','56');const frame=parseMediaFrame(payload.values?.['media-frame:avatar:'+item.id],item.avatar);if(frame){const clip=el('span');clip.setAttribute('data-media-frame-clip','');clip.style.cssText='display:block;width:56px;height:56px;flex:none;overflow:hidden;border-radius:50%';clip.append(image);author.append(clip);applyMediaFrame(image,frame);}else author.append(image);}
   const byline=el('div','testimonial-byline');byline.append(el('strong','',item.name||'Ad soyad'));if(item.role||item.company)byline.append(el('span','',[item.role,item.company].filter(Boolean).join(' · ')));author.append(byline);card.append(author);grid.append(card);
  }
  carousel.append(grid);wrap.append(carousel);section.append(wrap);

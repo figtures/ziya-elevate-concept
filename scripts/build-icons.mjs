@@ -6,7 +6,7 @@ import {createRequire} from 'node:module';
 import {dirname,join} from 'node:path';
 import {ArrowUpRight,ArrowRight,ArrowLeft,ArrowDown,ArrowUp,BookOpen,Check,
  ChevronDown,ChevronUp,Clock3,Download,Files,House,Image,LogOut,Mail,Menu,
- MessageCircle,Mouse,Pause,Play,Plus,ScanFace,Search,Settings,Trash2,Users,X} from 'lucide-react';
+ MessageCircle,Mouse,Pause,Play,Plus,ScanFace,Search,Settings,Trash2,Users,X,Monitor,Smartphone,RotateCcw,Crop} from 'lucide-react';
 
 const icons={
  'arrow-up-right':ArrowUpRight,'arrow-right':ArrowRight,'arrow-left':ArrowLeft,
@@ -14,7 +14,7 @@ const icons={
  'chevron-down':ChevronDown,'chevron-up':ChevronUp,'clock-3':Clock3,download:Download,
  files:Files,house:House,image:Image,'log-out':LogOut,mail:Mail,menu:Menu,
  'message-circle':MessageCircle,mouse:Mouse,pause:Pause,play:Play,plus:Plus,
- 'trash-2':Trash2,'scan-face':ScanFace,search:Search,settings:Settings,users:Users,x:X
+ monitor:Monitor,smartphone:Smartphone,'rotate-ccw':RotateCcw,crop:Crop,'trash-2':Trash2,'scan-face':ScanFace,search:Search,settings:Settings,users:Users,x:X
 };
 const require=createRequire(import.meta.url);
 const packagePath=require.resolve('lucide-react/package.json');

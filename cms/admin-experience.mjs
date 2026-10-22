@@ -1,5 +1,6 @@
 import {experienceDefaults} from './experience.mjs';
 import {renderVideoEditor,wireVideoEditor} from './admin-video.mjs';
+import {parseMediaFrame,serializeMediaFrame,getMediaFrameSpec} from './media-framing.mjs';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const titles = {floating: 'Sabit iletişim düğmesi', playback: 'Video oynatma kontrolleri', talk: 'Konuşma penceresi', contact: 'İletişim formu ve WhatsApp', playlist: 'Açılıştan sonra oynatılan videolar', testUI: 'Test ekranları ve indirilen rapor'};
 const labels = {
@@ -44,6 +45,19 @@ export function wireExperienceEditor(root, {payload, doc, onChange, rerender, pi
     if(!/^[-\w]{11}$/.test(id)||!Number.isFinite(start)||!Number.isFinite(end)||start<0||end<=start||end>36000){error.textContent='Bitiş saniyesi başlangıçtan büyük olmalı; 0–36000 aralığında değer girin.';return;}
     error.textContent='';const frame=root.ownerDocument.createElement('iframe');frame.title='TEDx açılışı önizlemesi';frame.src=`https://www.youtube-nocookie.com/embed/${id}?start=${Math.floor(start)}&end=${Math.ceil(end)}&rel=0&playsinline=1`;frame.setAttribute('allow','fullscreen; encrypted-media');frame.style.cssText='width:100%;aspect-ratio:16/9;border:0;border-radius:16px;margin-top:16px';root.querySelector('[data-opening-preview]').replaceChildren(frame);
   });
-  const cleanup= root.querySelector('[data-video-editor]') ? wireVideoEditor(root,{getClips:()=>current().playlist,onChange:clips=>{payload.experience||={};payload.experience.playlist=clips;onChange?.();},pickMedia,uploadMedia,notify,getMedia,canEdit,canUpload}) : null;
+  const cleanup= root.querySelector('[data-video-editor]') ? wireVideoEditor(root,{
+    getClips:()=>current().playlist,
+    getFrame:clip=>payload.values?.[`media-frame:clip:${clip.id}`],
+    onFrameChange:(clip,frame)=>{
+      if(!canEdit||!clip)return;
+      // Persist template-derived clip identities before attaching a per-clip crop.
+      ensure('playlist');
+      const key=`media-frame:clip:${clip.id}`,value=parseMediaFrame(frame,clip.src);payload.values||={};
+      if(value)payload.values[key]=serializeMediaFrame(value);else delete payload.values[key];
+      onChange?.();
+    },
+    frameSpec:getMediaFrameSpec(doc?.querySelector('[data-tedx-hero] video,.hero-vid video')),
+    onChange:clips=>{payload.experience||={};payload.experience.playlist=clips;onChange?.();},pickMedia,uploadMedia,notify,getMedia,canEdit,canUpload
+  }) : null;
   return ()=>{cleanup?.();root.querySelector('[data-opening-preview]')?.replaceChildren();};
 }

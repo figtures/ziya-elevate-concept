@@ -73,6 +73,7 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
       // An opening scene that recedes as the next chapter arrives.
       sections.filter(el=>el.matches('.hero,.page-hero')).forEach(hero=>{
         hero.querySelectorAll('.hero-vid > video,.hero-vid > picture,.hero-vid > img').forEach(media=>{
+          if (media.hasAttribute('data-media-framed') || media.querySelector('[data-media-framed]')) return;
           track(media,{transform:['translate3d(0,0%,0) scale(1.08)','translate3d(0,9%,0) scale(1.2)']},
             {target:hero,offset:['start start','end start']});
         });
@@ -128,7 +129,7 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
         track(crop,{clipPath:[`inset(${mobile?4:8}% ${mobile?3:7}% round ${mobile?30:52}px)`,'inset(0% 0% round 24px)']},
           {target:crop,offset:['start 1','start .22'],ease:[.22,1,.36,1]});
         const image = crop.querySelector('img');
-        if (image) track(image,{transform:['translate3d(0,4%,0) scale(1.18)','translate3d(0,-4%,0) scale(1.12)']},{target:crop});
+        if (image && !image.hasAttribute('data-media-framed')) track(image,{transform:['translate3d(0,4%,0) scale(1.18)','translate3d(0,-4%,0) scale(1.12)']},{target:crop});
       });
 
       if (!reading) {

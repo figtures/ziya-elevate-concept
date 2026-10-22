@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { applyMediaFrame, parseMediaFrame } from '../../cms/media-framing.mjs';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Pause, Play, Quote } from 'lucide-react';
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
@@ -12,6 +13,7 @@ export type StaggerTestimonial = {
   role?: string;
   company?: string;
   avatar?: string;
+  avatarFrame?: string;
   draft?: boolean;
   hidden?: boolean;
 };
@@ -161,7 +163,10 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
           </p>}
           <blockquote>{item.quote}</blockquote>
           <figcaption className="stagger-testimonial-author">
-            {item.avatar ? <img src={item.avatar} alt="" width="52" height="52" loading="lazy" decoding="async" /> :
+            {item.avatar ? <span data-media-frame-clip style={{ display: 'block', width: narrow ? 46 : 52, height: narrow ? 46 : 52, flex: 'none', overflow: 'hidden', borderRadius: '50%' }}>
+              <img key={item.avatar + (item.avatarFrame || '')} src={item.avatar} alt="" width="52" height="52" loading="lazy" decoding="async" style={{ width: '100%', height: '100%' }}
+                ref={element => { const frame = parseMediaFrame(item.avatarFrame, item.avatar); if (element && frame) applyMediaFrame(element, frame); }} />
+              </span> :
               <span className="stagger-testimonial-initials" aria-hidden="true">{initials(item.name)}</span>}
             <span className="stagger-testimonial-byline"><strong>{item.name}</strong>
               {(item.role || item.company) && <span>{[item.role, item.company].filter(Boolean).join(' · ')}</span>}

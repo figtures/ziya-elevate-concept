@@ -1,5 +1,6 @@
 /** A draft-only video editor. Media uploads never publish a document. */
 import iconNodes from './icon-nodes.json' with {type: 'json'};
+import {parseMediaFrame} from './media-framing.mjs';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const icon = name => `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconNodes[name] || iconNodes.image}</svg>`;
@@ -74,7 +75,7 @@ export function renderVideoEditor({clips = [], canEdit = true, canUpload = canEd
             <div class="video-cover-row"><div class="video-cover-preview" data-video-cover>${mediaURL(first.poster) ? `<img src="${esc(mediaURL(first.poster))}" alt="Seçilen video kapağı">` : icon('image')}</div><div class="video-cover-actions">${action('capture-cover','Bu kareyi JPG kapak yap','image',!canUpload,'primary')}${action('cover-library','Arşivden görsel seç','image',locked,'quiet small')}${action('cover-upload','Kapak yükle','files',!canUpload,'quiet small')}</div></div>
             <p class="help">Videoyu durdurup zaman çubuğundan kare seçin. JPG, medya arşivinize de eklenir.</p>
           </section>
-          <section class="video-inspector-section video-focal-section"><div class="field"><label for="video-focal">Görüntüde hangi alan öne çıksın?</label><select id="video-focal" data-video-focal${disabled(locked)}><option value="center">Ortası</option><option value="left center">Solu</option><option value="right center">Sağı</option><option value="center top">Üstü</option><option value="center bottom">Altı</option><option value="custom">Mevcut özel konum</option></select></div>${action('replace-library','Seçili videoyu değiştir','files',locked,'quiet')}</section>
+          <section class="video-inspector-section video-focal-section"><div class="field"><label for="video-focal">Görüntüde hangi alan öne çıksın?</label><select id="video-focal" data-video-focal${disabled(locked)}><option value="center">Ortası</option><option value="left center">Solu</option><option value="right center">Sağı</option><option value="center top">Üstü</option><option value="center bottom">Altı</option><option value="custom">Özel masaüstü / telefon kadrajı</option></select><p class="help">Kadrajı ayarlarken masaüstü ve telefon için farklı alanlar seçebilirsiniz.</p></div><div class="actions">${action('edit-frame','Kadrajı ayarla','image',locked,'primary')}${action('reset-frame','Özel kadrajı kaldır','rotate-ccw',locked,'quiet')}${action('replace-library','Seçili videoyu değiştir','files',locked,'quiet')}</div></section>
         </div>
       </div>
     </div>
@@ -84,7 +85,7 @@ export function renderVideoEditor({clips = [], canEdit = true, canUpload = canEd
   </section>`;
 }
 
-export function wireVideoEditor(root, {getClips, getMedia = () => [], onChange, pickMedia, uploadMedia, notify, canEdit = true, canUpload = canEdit} = {}) {
+export function wireVideoEditor(root, {getClips, getMedia = () => [], getFrame = () => undefined, onFrameChange, frameSpec, onChange, pickMedia, uploadMedia, notify, canEdit = true, canUpload = canEdit} = {}) {
   const el = root.matches?.('[data-video-editor]') ? root : root.querySelector('[data-video-editor]');
   if (!el) return () => {};
   const q = selector => el.querySelector(selector), video = q('[data-video-player]');
@@ -92,6 +93,8 @@ export function wireVideoEditor(root, {getClips, getMedia = () => [], onChange, 
   const durations = new Map(), cleanups = [];
   const on = (target, type, fn) => {target.addEventListener(type, fn); cleanups.push(() => target.removeEventListener(type, fn));};
   const current = () => clips[selected];
+  const frameFor = clip => clip && parseMediaFrame(getFrame(clip), clip.src);
+  const selectedFrameSpec = frameSpec || {label:'Video açılışı',desktop:{width:1440,height:900},mobile:{width:390,height:780}};
   const duration = () => durations.get(current()?.src);
   const message = (text, bad = false) => {if (disposed) return; q('[data-video-message]').textContent = text; q('[data-video-message]').dataset.tone = bad ? 'error' : 'info';};
   const report = (text, bad = false) => {message(text, bad); notify?.(text, bad);};
@@ -103,12 +106,24 @@ export function wireVideoEditor(root, {getClips, getMedia = () => [], onChange, 
     q('[data-video-trim-summary]').textContent = Number.isFinite(length) ? `Seçilen bölüm: ${formatVideoTime(Math.max(0,length))}` : 'Video sonuna kadar oynatılır.';
     const endInput = q('[data-video-end]'); endInput.placeholder = Number.isFinite(duration()) ? `Video sonu: ${duration().toFixed(1)} sn` : 'Video sonuna kadar';
   };
+  const refreshFraming = () => {
+    const c=current(); if(!c)return;
+    const frame=frameFor(c), viewport=q('[data-video-stage]').dataset.viewport==='mobile'?'mobile':'desktop';
+    const view=frame?.[viewport], size=selectedFrameSpec[viewport];
+    if(size?.width>0&&size?.height>0)q('[data-video-stage]').style.aspectRatio=`${size.width} / ${size.height}`;
+    video.style.objectPosition=view?`${view.x}% ${view.y}%`:c.focal||'center';
+    video.style.transform=view?`scale(${view.zoom})`:'none';
+    video.style.transformOrigin=view?`${view.x}% ${view.y}%`:'center';
+    // External playback and timeline controls remain fixed outside the crop.
+    if(view)video.removeAttribute('controls');else video.setAttribute('controls','');
+    q('[data-video-action="reset-frame"]').disabled=!canEdit||!frame;
+  };
   const refreshInspector = () => {
     const c = current(); if (!c) return;
     q('[data-video-selected-title]').textContent = clipName(c, selected, getMedia());
     q('[data-video-start]').value = String(c.start || 0); q('[data-video-end]').value = c.end === undefined ? '' : String(c.end);
-    const options = [...q('[data-video-focal]').options].map(o => o.value); q('[data-video-focal]').value = options.includes(c.focal) ? c.focal : 'custom';
-    video.style.objectPosition = c.focal || 'center';
+    const options = [...q('[data-video-focal]').options].map(o => o.value); q('[data-video-focal]').value = frameFor(c)?'custom':options.includes(c.focal) ? c.focal : 'custom';
+    refreshFraming();
     q('[data-video-cover]').innerHTML = mediaURL(c.poster) ? `<img src="${esc(mediaURL(c.poster))}" alt="Seçilen video kapağı">` : icon('image');
     video.poster = mediaURL(c.poster); refreshSummary();
   };
@@ -155,8 +170,12 @@ export function wireVideoEditor(root, {getClips, getMedia = () => [], onChange, 
     catch(error){if(!disposed)report(error.message||'Yükleme tamamlanamadı. Yeniden deneyin.',true);}
     finally{uploading=false;if(!disposed){box.hidden=true;el.removeAttribute('aria-busy');controls.forEach(([control,wasDisabled])=>{if(control.isConnected)control.disabled=wasDisabled;});refreshList();updateClock();}}
   };
-  const append = records => {if(disposed||!canEdit)return;const start=clips.length;for(const record of records){if(clips.length>=12)break;const url=mediaURL(typeof record==='string'?record:record.url);if(!url)continue;clips.push({id:'clip-'+crypto.randomUUID(),src:url,poster:'/assets/hero-poster.jpg',focal:'center',start:0});}if(clips.length===start)return;save();select(start);message('Yeni klip eklendi. Şimdi süresini ve kapağını seçebilirsiniz.');};
-  const choose = (type,onSelect) => {if(uploading||!canEdit)return;video.pause();wantPlay=false;pickMedia?.({type,onSelect:(url,record)=>{if(!disposed)onSelect(typeof url==='string'?url:url?.url,record||url);}});};
+  const append = (records,frame) => {if(disposed||!canEdit)return;const start=clips.length;for(const record of records){if(clips.length>=12)break;const url=mediaURL(typeof record==='string'?record:record.url);if(!url)continue;const clip={id:'clip-'+crypto.randomUUID(),src:url,poster:'/assets/hero-poster.jpg',focal:'center',start:0};clips.push(clip);if(frame&&records.length===1)onFrameChange?.(clip,parseMediaFrame(frame,url));}if(clips.length===start)return;save();select(start);message('Yeni klip eklendi. Şimdi süresini, kadrajını ve kapağını seçebilirsiniz.');};
+  const choose = (type,onSelect,options={}) => {if(uploading||!canEdit)return;video.pause();wantPlay=false;pickMedia?.({type,...(type==='video'?{spec:selectedFrameSpec}:{}),...options,onSelect:(url,record,frame)=>{if(!disposed)onSelect(typeof url==='string'?url:url?.url,record||url,frame);}});};
+  const editFrame = () => {
+    const clip=current();if(!clip)return;const id=clip.id,src=clip.src;
+    choose('video',(_url,_record,frame)=>{const target=clips.find(item=>item.id===id&&item.src===src);if(!target)return;onFrameChange?.(target,parseMediaFrame(frame,src));refreshInspector();message('Masaüstü ve telefon kadrajı taslağa işlendi.');},{src,value:getFrame(clip),editOnly:true});
+  };
   const setCover = (url,targetId=current()?.id) => {const target=clips.find(c=>c.id===targetId);if(!target||!mediaURL(url))return;target.poster=mediaURL(url);save();refreshInspector();message('Kapak görseli taslağa işlendi.');};
   const preview = all => {
     const validation=clips.map(c=>validateClipTrim(c.start||0,c.end,durations.get(c.src))).find(Boolean);
@@ -182,19 +201,21 @@ export function wireVideoEditor(root, {getClips, getMedia = () => [], onChange, 
   on(q('[data-video-scrub]'),'input',event=>{mode='inspect';wantPlay=false;video.pause();seek(Number(event.target.value));updateClock();});
   on(q('[data-video-start]'),'change',()=>commitTrim(Number(q('[data-video-start]').value),q('[data-video-end]').value===''?undefined:Number(q('[data-video-end]').value)));
   on(q('[data-video-end]'),'change',()=>commitTrim(Number(q('[data-video-start]').value),q('[data-video-end]').value===''?undefined:Number(q('[data-video-end]').value)));
-  on(q('[data-video-focal]'),'change',event=>{if(!canEdit||event.target.value==='custom')return;current().focal=event.target.value;video.style.objectPosition=current().focal;save();});
-  on(q('[data-video-upload]'),'change',event=>{const files=[...event.target.files];event.target.value='';void upload(files,'video',append);});
+  on(q('[data-video-focal]'),'change',event=>{if(!canEdit||event.target.value==='custom')return;current().focal=event.target.value;onFrameChange?.(current(),undefined);refreshFraming();save();});
+  on(q('[data-video-upload]'),'change',event=>{const files=[...event.target.files];event.target.value='';const previousCount=clips.length;void upload(files,'video',append).then(()=>{if(!disposed&&files.length===1&&clips.length>previousCount)editFrame();});});
   on(q('[data-video-cover-upload]'),'change',event=>{const files=[...event.target.files];event.target.value='';void upload(files,'image',records=>setCover(records[0].url));});
   on(el,'click',async event=>{
-    const viewportButton=event.target.closest('[data-video-viewport]');if(viewportButton){q('[data-video-stage]').dataset.viewport=viewportButton.dataset.videoViewport;for(const b of el.querySelectorAll('[data-video-viewport]'))b.setAttribute('aria-pressed',String(b===viewportButton));return;}
+    const viewportButton=event.target.closest('[data-video-viewport]');if(viewportButton){q('[data-video-stage]').dataset.viewport=viewportButton.dataset.videoViewport;for(const b of el.querySelectorAll('[data-video-viewport]'))b.setAttribute('aria-pressed',String(b===viewportButton));refreshFraming();return;}
     const selectButton=event.target.closest('[data-video-select]');if(selectButton){if(!uploading)select(Number(selectButton.dataset.videoSelect));return;}
     const moveButton=event.target.closest('[data-video-move]');if(moveButton){if(!canEdit||uploading||moveButton.disabled)return;const [i,offset]=moveButton.dataset.videoMove.split('|').map(Number),to=i+offset;if(to<0||to>=clips.length)return;const id=current().id;const [item]=clips.splice(i,1);clips.splice(to,0,item);selected=clips.findIndex(c=>c.id===id);save();message('Klip sırası güncellendi.');return;}
-    const removeButton=event.target.closest('[data-video-remove]');if(removeButton){if(!canEdit||uploading||clips.length<=1)return;const i=Number(removeButton.dataset.videoRemove),id=current().id;clips.splice(i,1);selected=Math.max(0,clips.findIndex(c=>c.id===id));save();select(selected);message('Klip akıştan kaldırıldı. Arşivdeki video korunuyor.');return;}
+    const removeButton=event.target.closest('[data-video-remove]');if(removeButton){if(!canEdit||uploading||clips.length<=1)return;const i=Number(removeButton.dataset.videoRemove),id=current().id;onFrameChange?.(clips[i],undefined);clips.splice(i,1);selected=Math.max(0,clips.findIndex(c=>c.id===id));save();select(selected);message('Klip akıştan kaldırıldı. Arşivdeki video korunuyor.');return;}
     const button=event.target.closest('[data-video-action]');if(!button||button.disabled||uploading)return;
     switch(button.dataset.videoAction){
-      case 'add-library':choose('video',(url,record)=>append([record?.url?record:{url}]));break;
+      case 'add-library':choose('video',(url,record,frame)=>append([record?.url?record:{url}],frame));break;
       case 'add-upload':q('[data-video-upload]').click();break;
-      case 'replace-library':choose('video',url=>{if(!mediaURL(url))return;current().src=mediaURL(url);current().start=0;delete current().end;save();select(selected);message('Video değiştirildi. Süreyi ve kapağı kontrol edin.');});break;
+      case 'replace-library':{const id=current()?.id;choose('video',(url,_record,frame)=>{const target=clips.find(item=>item.id===id);if(!target||!mediaURL(url))return;target.src=mediaURL(url);target.start=0;delete target.end;onFrameChange?.(target,parseMediaFrame(frame,url));save();select(clips.indexOf(target));message('Video değiştirildi. Süreyi, kadrajı ve kapağı kontrol edin.');});break;}
+      case 'edit-frame':editFrame();break;
+      case 'reset-frame':onFrameChange?.(current(),undefined);refreshInspector();message('Özel kadraj kaldırıldı. Varsayılan görüntü konumu kullanılıyor.');break;
       case 'cover-library':choose('image',url=>setCover(url));break;
       case 'cover-upload':q('[data-video-cover-upload]').click();break;
       case 'preview-clip':preview(false);break;

@@ -17,3 +17,7 @@ export {renderTestimonialsEditor,wireTestimonialsEditor} from '../cms/admin-test
 export {renderReferencesEditor,wireReferencesEditor} from '../cms/admin-references.mjs';
 
 export {enhanceDetails,animateVisibility,setDetailsOpen} from '../src/interactions/disclosure-motion.mjs';
+
+export {renderMediaFrameEditor,wireMediaFrameEditor} from '../cms/admin-media-frame.mjs';
+export {parseMediaFrame,serializeMediaFrame,mediaFrameKey,getMediaFrameSpec} from '../cms/media-framing.mjs';
+export {exportSocialImageFrame} from '../cms/admin-media-export.mjs';

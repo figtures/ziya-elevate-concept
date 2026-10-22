@@ -1,4 +1,5 @@
 /** The ordering model belongs to the archive page, so a single publication is atomic. */
+import {mediaFrameKey,parseMediaFrame,applyMediaFrame} from './media-framing.mjs';
 const ARCHIVES = new Map([['/makaleler/', '/makaleler/'], ['/hayattan-notlar/', '/notlar/']]);
 const ID = /^[A-Za-z0-9_-]{1,100}$/;
 const clean = value => String(value || '').replace(/\s+/g, ' ').trim();
@@ -134,11 +135,14 @@ export function derivePublishedBooks(payload, definition) {
           return '';
         };
         const focal = String(value(focalField));
+        const frameKey = imageField ? mediaFrameKey(imageField.id) : '';
+        const frame = parseMediaFrame(item.values?.[frameKey] ?? section.values?.[frameKey] ?? payload.values?.[frameKey], url(value(imageField)));
         result.push({
           id: String(section.id) + ':' + String(item.id), title,
           cover: url(value(imageField)), alt: clean(value(altField)) || title + ' kitap kapağı',
           href: url(value(linkField)),
           focal: /^(?:center|left|right|top|bottom|\d+(?:\.\d+)?%)(?:\s+(?:center|left|right|top|bottom|\d+(?:\.\d+)?%))?$/u.test(focal) ? focal : '',
+          frame,
         });
       }
     }
@@ -171,7 +175,7 @@ export function applyHomeBooks(document, booksPayload, definition) {
         image.setAttribute('src', book.cover); image.setAttribute('alt', book.alt);
         image.setAttribute('loading', 'lazy'); image.setAttribute('decoding', 'async');
         if (book.focal) image.style.objectPosition = book.focal;
-        cover.append(image); card.append(cover);
+        cover.append(image); card.append(cover); if(book.frame)applyMediaFrame(image,book.frame);
       }
       const title = document.createElement('h3'); title.textContent = book.title; card.append(title);
       return card;

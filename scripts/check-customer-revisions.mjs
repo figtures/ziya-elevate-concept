@@ -177,6 +177,7 @@ check('Speaker kit bios have all six requested lengths',()=>{
  for(const lang of ['tr','en'])for(const count of [50,150,300]){
   const bio=kit.bios?.[lang]?.[count];assert(bio,`${lang}${count} biography`);
   assert.equal(bio.trim().split(/\s+/u).length,count,`${lang}${count} word count`);
+  assert(!/\bMBA\b|ODTÜ|Middle East Technical University|\bMETU\b/iu.test(bio),`${lang}${count}: unverified education claims must not reappear in downloadable biographies`);
  }
  assert.equal(kit.photoAssets.length,3);
  for(const filename of kit.photoAssets)assert(existsSync(join(root,'website/assets',filename)),`Real photo ${filename}`);

@@ -1,0 +1,24 @@
+/* The approved navy/cream type, spacing and disclosure tokens are inherited. */
+[data-page="kafa-yapisi"] .v13-mindset-bridge{background:var(--brand-paper,#f4f2eb)}
+.v13-mindset-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:clamp(36px,7vw,100px);align-items:center}
+.v13-mindset-narrative{min-width:0}
+.v13-mindset-story{margin-bottom:clamp(32px,4vw,56px)}
+.v13-mindset-story .ed-description{max-width:58ch;margin-bottom:0}
+.v13-mindset-approach>h2{font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 18px;text-wrap:balance}
+.v13-mindset-approach>p{font-size:1.0625rem;line-height:1.8;margin:0}
+.v13-mindset-approach a,.v13-mindset-story a{text-decoration:underline;text-underline-offset:4px}
+.v13-mindset-words{margin-top:24px}
+.v13-mindset-words .editorial-row{grid-template-columns:105px 1fr;padding:18px 0;gap:18px}
+.v13-mindset-words .editorial-row h3{font-size:1.0625rem;line-height:1.7;letter-spacing:-.01em}
+.v13-mindset-words .editorial-row p{font-size:1rem;line-height:1.75}
+.v13-mindset-visual{margin:0;min-width:0;overflow:hidden;border-radius:var(--radius,24px);align-self:center}
+.v13-mindset-visual img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center}
+[data-page="kafa-yapisi"] .v13-mindset-dimensions{margin-top:0}
+.v13-mindset-dimensions>summary>span{margin:0;font:inherit}
+.v13-mindset-dimensions>.layers-layout{padding-top:28px}
+.v13-mindset-reading>.reading-selection{display:block;padding-top:20px}
+.v13-mindset-reading .ed-heading:empty{display:none}
+.v13-mindset-reading-labels{display:block}
+.v13-mindset-reading-labels>.eyebrow{display:block;font-size:.7rem;line-height:1.5;margin:0 0 4px}
+.v13-mindset-reading-labels>.v13-reading-title{display:block;font:inherit;margin:0;letter-spacing:normal}
+@media(max-width:760px){.v13-mindset-layout{grid-template-columns:1fr;gap:32px}.v13-mindset-visual{width:100%;max-width:520px;justify-self:center}.v13-mindset-words .editorial-row{grid-template-columns:90px 1fr;gap:16px}.v13-mindset-words .editorial-row p{grid-column:auto;margin-top:0}}

@@ -87,6 +87,21 @@
     "sourceBytes": 119731,
     "bytes": 109217
   },
+  "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/v13-mindset-flow.css\"]": {
+    "href": "/assets/bundles/site-f60f1cb95581ae84.css",
+    "inputs": [
+      "/assets/style.css",
+      "/assets/refinements.css",
+      "/assets/fonts.css",
+      "/assets/editorial.css",
+      "/assets/content-depth.css",
+      "/assets/signature-header.css",
+      "/assets/site-footer.css",
+      "/assets/v13-mindset-flow.css"
+    ],
+    "sourceBytes": 119055,
+    "bytes": 108650
+  },
   "[\"/assets/style.css\",\"/assets/refinements.css\",\"/assets/fonts.css\",\"/assets/editorial.css\",\"/assets/content-depth.css\",\"/assets/signature-header.css\",\"/assets/site-footer.css\",\"/assets/habit-plan.css\",\"/assets/v13-signature-pages.css\"]": {
     "href": "/assets/bundles/site-bf7034a4776c6e74.css",
     "inputs": [

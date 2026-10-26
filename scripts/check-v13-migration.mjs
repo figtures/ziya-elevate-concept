@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {parseHTML} from 'linkedom';
 import {applyV13ContentUpdate, V13_MARKER, V13_VERSION} from '../cms/v13/content-update.mjs';
+import {applyMindsetFlowUpdate} from '../cms/v13/mindset-flow-update.mjs';
 import {applyContent} from '../cms/render.mjs';
 import {composeContent} from '../cms/compose.mjs';
 import {deriveNavigation, applyNavigation, validateNavigation} from '../cms/navigation.mjs';
@@ -47,7 +48,7 @@ check('Manifest contains the authoritative routes and every existing page migrat
     assert.deepEqual(input, snapshot, route + ': migration mutated input');
     assert.equal(result.values[V13_MARKER], V13_VERSION, route);
     assert.equal(applyV13ContentUpdate(result), result, route + ': already marked document must be returned unchanged');
-    assert.deepEqual(result.sections.map(section => section.source), revision.after.sections.map(section => section.source), route + ': section order');
+    assert.deepEqual(result.sections.map(section => section.source), applyMindsetFlowUpdate(revision.after).sections.map(section => section.source), route + ': section order');
   }
 });
 
@@ -242,7 +243,7 @@ check('Migrated old seed renders identically to new seed for every existing rout
   for (const [route, revision] of Object.entries(revisions.pages)) {
     if (!revision.before) continue;
     const actual = render(migrated(route), {composed:true}).toString();
-    const expected = render(clone(revision.after), {composed:true}).toString();
+    const expected = render(applyMindsetFlowUpdate(clone(revision.after)), {composed:true}).toString();
     if (route === '_global') {
       // New installations have structured navigation; upgraded legacy sites
       // retain authored field bindings. Their markup may differ, not their menu.

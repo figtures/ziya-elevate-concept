@@ -4,6 +4,7 @@
  */
 import revisions from './revisions.json' with {type:'json'};
 import {testimonialApprovalErrors} from '../testimonials.mjs';
+import {applyMindsetFlowUpdate} from './mindset-flow-update.mjs';
 export const V13_MARKER='v13:applied';
 export const V13_VERSION='2026-10-26';
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
@@ -35,7 +36,7 @@ function reconcileItems(items,before,after){
  return result;
 }
 export function applyV13ContentUpdate(payload){
- if(!payload||payload.values?.[V13_MARKER]===V13_VERSION)return payload;
+ if(!payload||payload.values?.[V13_MARKER]===V13_VERSION)return applyMindsetFlowUpdate(payload);
  const key=payload.kind==='global'?'_global':payload.route;
  const revision=revisions.pages?.[key];
  if(!revision?.before||payload.template!==revision.after.template)return payload;
@@ -100,5 +101,5 @@ export function applyV13ContentUpdate(payload){
   next.testimonials.items=next.testimonials.items.filter(item=>!testimonialApprovalErrors(item).some(e=>e.startsWith('Eski örnek metin')));
  }
  next.values[V13_MARKER]=V13_VERSION;
- return next;
+ return applyMindsetFlowUpdate(next);
 }

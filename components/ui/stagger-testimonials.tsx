@@ -169,7 +169,8 @@ export function StaggerTestimonials({ items, className }: StaggerTestimonialsPro
               </span> :
               <span className="stagger-testimonial-initials" aria-hidden="true">{initials(item.name)}</span>}
             <span className="stagger-testimonial-byline"><strong>{item.name}</strong>
-              {(item.role || item.company) && <span>{[item.role, item.company].filter(Boolean).join(' · ')}</span>}
+              {item.role && <span data-testimonial-role>{item.role}</span>}
+              {item.company && <span data-testimonial-company>{item.company}</span>}
             </span>
           </figcaption>
         </motion.figure>;

@@ -1,0 +1,33 @@
+/* v13 copy and reading-order adjustments. All color and type tokens inherit
+   from the approved navy/cream system; these rules are signature-page only. */
+[data-v13-signature] .v13-hrm-bridge{max-width:70ch;margin:clamp(28px,4vw,48px) 0 0 auto;font-size:1.125rem;line-height:1.8}
+[data-v13-signature] .v13-hrm-statement{max-width:24ch;margin:clamp(36px,5vw,64px) 0 0;font-size:clamp(1.65rem,3.8vw,3.1rem);font-weight:650;line-height:1.22;letter-spacing:-.035em;text-wrap:balance}
+[data-v13-signature] .v13-mirrors{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 26px;padding:0;margin:32px 0;font-size:clamp(1rem,1.7vw,1.2rem);font-weight:650;line-height:1.5}
+[data-v13-signature] .program-duo .v13-pause-line{margin-top:12px;font-size:1rem;font-weight:600}
+[data-v13-signature] .v13-book-principles{max-width:none;margin-top:clamp(38px,5vw,64px)}
+[data-v13-signature] .v13-book-principles>h2.eyebrow{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.5;letter-spacing:.1em;margin:0 0 22px}
+[data-v13-signature] .v13-signature-depth{max-width:870px;margin:clamp(40px,5vw,64px) auto 0;text-align:left}
+[data-v13-signature] .v13-direct-answer{font-size:1.0625rem;line-height:1.85;margin-bottom:28px}
+[data-v13-signature] .v13-direct-answer .v13-answer-label{display:block;margin-bottom:14px}
+[data-v13-signature] .v13-signature-depth .content-detail{margin-top:14px}
+[data-v13-signature] .ed-closing .v13-signature-depth .content-detail>summary{color:inherit;background:color-mix(in srgb,currentColor 5%,transparent)}
+[data-v13-signature] .ed-closing .v13-signature-depth .content-detail>summary:hover,[data-v13-signature] .ed-closing .v13-signature-depth .content-detail[open]>summary{background:color-mix(in srgb,currentColor 9%,transparent)}
+[data-v13-signature] .ed-closing .v13-signature-depth .depth-body{color:var(--brand-on-dark)}
+[data-v13-signature] .ed-closing .v13-signature-depth a{color:inherit;text-decoration:underline;text-underline-offset:4px}
+[data-v13-blueprint] .sales-workbench{align-items:start;gap:clamp(36px,7vw,104px)}
+[data-v13-blueprint] .v13-blueprint-heading{min-width:0}
+[data-v13-blueprint] .v13-blueprint-heading h2{font-size:clamp(1.8rem,3.5vw,3.3rem);line-height:1.14;letter-spacing:-.035em;text-wrap:balance;overflow-wrap:normal}
+[data-v13-blueprint] .v13-blueprint-steps{min-width:0;position:relative;padding-left:28px}
+[data-v13-blueprint] .v13-blueprint-steps::before,[data-v13-blueprint] .v13-blueprint-steps::after{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;border-radius:2px;background:currentColor;pointer-events:none}
+[data-v13-blueprint] .v13-blueprint-steps::before{opacity:.14}
+[data-v13-blueprint] .v13-blueprint-steps::after{opacity:.6;transform:scaleY(var(--v13-blueprint-progress,1));transform-origin:top;transition:none}
+[data-v13-blueprint] [data-v13-blueprint-step]{position:relative;padding:24px 0;min-height:120px;transition:none}
+[data-v13-blueprint] [data-v13-blueprint-step]::before{content:"";position:absolute;left:-31px;top:33px;width:8px;height:8px;border-radius:50%;background:currentColor;opacity:calc(.22 + var(--v13-step-progress,1)*.78);transform:scale(calc(.7 + var(--v13-step-progress,1)*.3));transition:none}
+[data-v13-blueprint] [data-v13-blueprint-step] h3{font-size:1.375rem;line-height:1.4}
+[data-v13-blueprint] [data-v13-blueprint-step] p{font-size:1.0625rem;line-height:1.7}
+[data-v13-blueprint] .v13-blueprint-rail{height:2px;position:relative;margin-top:32px;background:currentColor;opacity:.65;transform:scaleX(var(--v13-blueprint-progress,1));transform-origin:left;transition:none}
+[data-v13-blueprint][data-v13-blueprint-mode="desktop"] [data-v13-blueprint-step]{transform:translateX(calc((1 - var(--v13-step-progress,1))*20px));opacity:calc(.68 + var(--v13-step-progress,1)*.32)}
+@media(min-width:1024px){[data-v13-blueprint][data-v13-blueprint-mode="desktop"] .v13-blueprint-heading{position:sticky;top:140px}}
+@media(max-width:1023px){[data-v13-blueprint] .sales-workbench{grid-template-columns:1fr}[data-v13-blueprint] .v13-blueprint-heading{position:static}[data-v13-blueprint] .v13-blueprint-rail{display:none}[data-v13-blueprint] [data-v13-blueprint-step]{min-height:0;padding:20px 0}}
+@media(max-width:480px){[data-v13-signature] .v13-mirrors{grid-template-columns:1fr;gap:14px}}
+@media(prefers-reduced-motion:reduce){[data-v13-blueprint] *,[data-v13-blueprint] *::before,[data-v13-blueprint] *::after{animation:none!important;transition:none!important;transform:none!important;opacity:1!important}[data-v13-blueprint] .v13-blueprint-heading{position:static!important}}

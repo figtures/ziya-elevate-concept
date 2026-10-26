@@ -14,16 +14,18 @@ export async function published(route:string){
  if(!config.enabled)return seed.find(p=>p.route===route)||null;
  const response=await fetch(config.url+'/rest/v1/cms_published?route=eq.'+encodeURIComponent(route)+'&select=payload',{headers:{apikey:config.publishableKey},signal:AbortSignal.timeout(CONTENT_REQUEST_TIMEOUT_MS),cache:'no-store'});
  if(!response.ok)throw new Error('İçerik kaynağına ulaşılamadı.');
- const rows=await response.json();return currentContentPayload(rows[0]?.payload||null,seed);
+ // Missing public rows include deliberate unpublish/archive actions. Never
+ // infer permission to publish from the authored seed, including new pages.
+ const rows=await response.json();if(!Array.isArray(rows))throw new Error('İçerik yanıtı geçersiz.');return currentContentPayload(rows[0]?.payload||null,seed);
 }
-export function render(payload:any,globalPayload:any,entries?:any[],booksPayload?:any){
+export function render(payload:any,globalPayload:any,entries?:any[],booksPayload?:any,options:{requestOrigin?:string}={}){
  const template=(templates as any)[payload.template];const definition=(catalog as any)[payload.template];
  if(!template||!definition)return null;
  const {document}=parseHTML(template);
  const sharedDocument=globalPayload?parseHTML((templates as any)._global).document:undefined;
- composeContent(document,payload,definition,{sharedDocument,sharedPayload:globalPayload,sharedDefinition:(catalog as any)._global,entries,booksPayload,booksDefinition:(catalog as any)['/kitaplar/'],canonicalOrigin:config.canonicalOrigin,leadsEnabled:config.enabled&&config.leadsEnabled});
+ composeContent(document,payload,definition,{sharedDocument,sharedPayload:globalPayload,sharedDefinition:(catalog as any)._global,entries,booksPayload,booksDefinition:(catalog as any)['/kitaplar/'],canonicalOrigin:config.canonicalOrigin,requestOrigin:options.requestOrigin,leadsEnabled:config.enabled&&config.leadsEnabled});
  if(config.enabled&&config.leadsEnabled&&document.querySelector('#contactForm')){
-  const script=document.createElement('script');script.src=versionedAsset('/assets/cms-contact.js');script.setAttribute('data-endpoint',config.url+'/functions/v1/submit-lead');script.setAttribute('data-key',config.publishableKey);document.body.append(script);
+  const script=document.createElement('script');script.src=versionedAsset('/assets/cms-contact.js');script.setAttribute('data-endpoint',config.url+'/functions/v1/submit-lead');script.setAttribute('data-key',config.publishableKey);document.body.appendChild(script);
  }
  return document.toString();
 }

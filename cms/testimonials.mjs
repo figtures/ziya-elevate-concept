@@ -2,6 +2,33 @@ import {safeURL} from './render.mjs';
 import {parseMediaFrame,applyMediaFrame} from './media-framing.mjs';
 
 export const TESTIMONIAL_DEFAULTS={enabled:true,eyebrow:'Deneyimler',title:'Sahneden kalan izler',description:'',items:[]};
+export const MIN_PUBLIC_TESTIMONIALS=4;
+// Generated proposals are not statements supplied by the named people. Keep
+// this denylist after cleanup so stale CMS copies cannot publish by status alone.
+const proposalKey=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('tr-TR').replace(/[\p{P}\p{S}\s]+/gu,' ').trim();
+const unverifiedProposals=new Set([
+ 'Başarıyı günlük davranışlara dönüştüren, üzerinde düşünmeye değer bir yaklaşım.',
+ 'Deneyimle beslenen anlatımı, iş hayatında sorduğumuz sorulara yeni bir bakış sunuyor.',
+ 'Sorumluluk almak ve kararlılıkla ilerlemek üzerine güçlü bir düşünme daveti.',
+ 'Bilgiyi hayata taşımanın önemini anlaşılır ve insana dokunan bir dille anlatıyor.',
+ 'Sahadan gelen örnekler, ekiplerin kendi çalışma biçimlerini sorgulamasına alan açıyor.',
+ 'Satışı, insanı anlamak ve doğru soruları sormak üzerinden ele alan bir yaklaşım.',
+ 'İlham veren fikirleri, üzerinde çalışılabilecek somut adımlarla buluşturuyor.',
+ 'Potansiyeli ortaya çıkaran şeyin yetenek kadar süreklilik olduğunu hatırlatan, insanı kendi alışkanlıklarını yeniden düşünmeye çağıran bir yaklaşım.',
+ 'Başarıyı soyut bir hedef olmaktan çıkarıp düşünce, davranış ve disiplin arasındaki ilişki üzerinden ele alması çok değerli.',
+ 'Liderliğin unvandan önce sorumluluk almakla başladığını vurgulayan, kararlarımızın başkaları üzerindeki etkisini düşündüren güçlü bir bakış.',
+ 'Bilgiyi hayata geçirmenin değerini sade bir dille anlatıyor; düşünmek ile harekete geçmek arasında güçlü bir bağ kuruyor.',
+ 'Ekiplerin sonuçları kadar birlikte nasıl düşündüklerini ve çalıştıklarını da sorgulamalarına alan açan, gelişimi destekleyen bir yaklaşım.',
+ 'Satışın temelinde dinlemenin, doğru soruları sormanın ve insanı anlamanın bulunduğunu hatırlatan, güven odaklı bir yaklaşım.',
+ 'Büyük hedeflere bakarken bugün atılabilecek küçük adımları unutturmayan, ilhamı günlük kararlarla buluşturan yalın bir anlatım.',
+].map(proposalKey));
+export function testimonialApprovalErrors(item){
+ const errors=[];
+ if(['name','quote','role','company'].some(key=>typeof item?.[key]!=='string'||!item[key].trim()))errors.push('Onaylı yorum için yorum metni, ad soyad, unvan ve kurum zorunlu.');
+ if(unverifiedProposals.has(proposalKey(item?.quote)))errors.push('Eski örnek metin yayınlanamaz. İlgili kişinin doğruladığı gerçek yorumu girin.');
+ return errors;
+}
+export function readyTestimonials(value){return normalizeTestimonials(value).items.filter(item=>item.enabled&&item.status==='approved'&&!testimonialApprovalErrors(item).length);}
 const text=(value,max)=>typeof value==='string'?value.trim().slice(0,max):'';
 export function normalizeTestimonials(value){
  const source=value&&typeof value==='object'?value:{};
@@ -22,12 +49,12 @@ export function validateTestimonials(value,route='/'){
   if(typeof item.id!=='string'||!/^[a-zA-Z0-9_-]{1,100}$/.test(item.id)||ids.has(item.id))errors.push('Yorum kimliği geçersiz veya yineleniyor.');ids.add(item.id);
   for(const [key,max] of [['name',120],['role',160],['company',160],['quote',800],['avatar',2048],['approvedAt',40]])if(item[key]!==undefined&&(typeof item[key]!=='string'||item[key].length>max))errors.push('Yorum alanı geçersiz veya çok uzun.');
   if(!['draft','approved'].includes(item.status)||typeof item.enabled!=='boolean')errors.push('Yorum durumu geçersiz.');
-  if(item.status==='approved'&&(!item.name?.trim()||!item.quote?.trim()))errors.push('Onaylı yorum için ad ve yorum metni zorunlu.');
+  if(item.status==='approved')errors.push(...testimonialApprovalErrors(item));
   if(item.avatar&&!safeURL(item.avatar,true))errors.push('Yorum fotoğrafı için geçerli HTTPS veya site içi adres girin.');
  }
  return [...new Set(errors)];
 }
-export function publicTestimonials(value){const normalized=normalizeTestimonials(value);return {...normalized,items:normalized.enabled?normalized.items.filter(item=>item.enabled&&item.status==='approved'&&item.name&&item.quote):[]};}
+export function publicTestimonials(value){const normalized=normalizeTestimonials(value),ready=readyTestimonials(normalized);return {...normalized,items:normalized.enabled&&ready.length>=MIN_PUBLIC_TESTIMONIALS?ready:[]};}
 
 /** Only approved quotes enter visitor HTML. Drafts are rendered solely in the authenticated preview. */
 export function applyTestimonials(document,payload,{preview=false}={}){
@@ -50,10 +77,10 @@ export function applyTestimonials(document,payload,{preview=false}={}){
  const grid=el('div','testimonial-list');grid.setAttribute('data-testimonial-source','');
  for(const item of items){const card=el('figure','testimonial-card');card.setAttribute('data-motion-item','');
   card.setAttribute('data-testimonial-id',item.id);if(!item.enabled||!config.enabled)card.setAttribute('data-testimonial-hidden','');
-  if(preview&&(item.status!=='approved'||!item.enabled)){card.setAttribute('data-testimonial-draft','');card.append(el('p','testimonial-draft-note',item.status!=='approved'?'METİN ÖNERİSİ · KİŞİ ONAYI BEKLENİYOR':'ÖNİZLEME · YAYINDA GİZLİ'));}
+  if(preview&&(item.status!=='approved'||testimonialApprovalErrors(item).length||!item.enabled)){card.setAttribute('data-testimonial-draft','');card.append(el('p','testimonial-draft-note',item.status!=='approved'||testimonialApprovalErrors(item).length?'TASLAK · GERÇEK YORUM VE KİŞİ ONAYI BEKLENİYOR':'ÖNİZLEME · YAYINDA GİZLİ'));}
   card.append(el('blockquote','',item.quote||'Yorum metni henüz eklenmedi.'));const author=el('figcaption','testimonial-author');
   if(item.avatar){const image=el('img','testimonial-avatar');image.setAttribute('src',item.avatar);image.setAttribute('alt','');image.setAttribute('loading','lazy');image.setAttribute('decoding','async');image.setAttribute('width','56');image.setAttribute('height','56');const frame=parseMediaFrame(payload.values?.['media-frame:avatar:'+item.id],item.avatar);if(frame){const clip=el('span');clip.setAttribute('data-media-frame-clip','');clip.style.cssText='display:block;width:56px;height:56px;flex:none;overflow:hidden;border-radius:50%';clip.append(image);author.append(clip);applyMediaFrame(image,frame);}else author.append(image);}
-  const byline=el('div','testimonial-byline');byline.append(el('strong','',item.name||'Ad soyad'));if(item.role||item.company)byline.append(el('span','',[item.role,item.company].filter(Boolean).join(' · ')));author.append(byline);card.append(author);grid.append(card);
+  const byline=el('div','testimonial-byline');byline.append(el('strong','',item.name||'Ad soyad'));for(const key of ['role','company']){if(!item[key])continue;const line=el('span','testimonial-'+key,item[key]);line.setAttribute('data-testimonial-'+key,'');byline.append(line);}author.append(byline);card.append(author);grid.append(card);
  }
  carousel.append(grid);wrap.append(carousel);section.append(wrap);
  if(areas){section.setAttribute('data-testimonials-placement','before-areas');areas.before(section);}

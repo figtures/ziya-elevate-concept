@@ -1,0 +1,6 @@
+/* Only the three existing training program cards; established palette/layout stay intact. */
+[data-page="egitimler"] .program-catalog .v13-program-facts{display:grid;gap:1.125rem;margin:0;padding:0;min-width:0}
+[data-page="egitimler"] .program-catalog .v13-program-facts>div{display:grid;gap:.375rem;min-width:0}
+[data-page="egitimler"] .program-catalog .v13-program-facts dt{margin:0;color:var(--brand-ink,var(--ink));font-family:var(--font-h,sans-serif);font-size:.8125rem;font-weight:650;line-height:1.5;letter-spacing:.04em}
+[data-page="egitimler"] .program-catalog .v13-program-facts dd{margin:0;color:var(--brand-muted,var(--muted));font-family:var(--font-b,sans-serif);font-size:1.0625rem;line-height:1.65;overflow-wrap:break-word}
+@media(max-width:760px){[data-page="egitimler"] .program-catalog .v13-program-facts{gap:1rem}[data-page="egitimler"] .program-catalog .v13-program-facts dd{font-size:1rem}}

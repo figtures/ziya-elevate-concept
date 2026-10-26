@@ -1,5 +1,6 @@
 /** The ordering model belongs to the archive page, so a single publication is atomic. */
 import {mediaFrameKey,parseMediaFrame,applyMediaFrame} from './media-framing.mjs';
+import {containsDisallowedCenterTerm} from './content-language.mjs';
 const ARCHIVES = new Map([['/makaleler/', '/makaleler/'], ['/hayattan-notlar/', '/notlar/']]);
 const ID = /^[A-Za-z0-9_-]{1,100}$/;
 const clean = value => String(value || '').replace(/\s+/g, ' ').trim();
@@ -35,7 +36,7 @@ export function validateCollection(collection, route) {
   if (collection === undefined) return [];
   const errors = [], fail = message => errors.push(message);
   const object = value => value && typeof value === 'object' && !Array.isArray(value);
-  const text = (value,min,max) => typeof value === 'string' && value.trim().length >= min && value.length <= max && !/[\u0000-\u001f\u007f]/.test(value) && !/\bmerkez(?:i)?\b/iu.test(value);
+  const text = (value,min,max) => typeof value === 'string' && value.trim().length >= min && value.length <= max && !/[\u0000-\u001f\u007f]/.test(value) && !containsDisallowedCenterTerm(value);
   const keys = (value,allowed) => object(value) && Object.keys(value).every(k=>allowed.includes(k));
   if (!isCollectionRoute(route) || !keys(collection,['version','appendNew','excluded','categories']) || collection.version !== 1 || typeof collection.appendNew !== 'boolean' || !Array.isArray(collection.categories) || collection.categories.length < 1 || collection.categories.length > 20 || !Array.isArray(collection.excluded) || collection.excluded.length > 500) return ['Yazı sıralama ayarları geçersiz.'];
   const ids = new Set(), routes = new Set(), excluded = new Set(); let count = 0;

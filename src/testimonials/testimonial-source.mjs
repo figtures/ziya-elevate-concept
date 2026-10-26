@@ -10,7 +10,8 @@ export function readTestimonialItems(host) {
   return {id:card.getAttribute('data-testimonial-id')||'testimonial-'+index,
    name:card.querySelector('figcaption strong')?.textContent?.trim()||'Ad soyad',
    quote:card.querySelector('blockquote')?.textContent?.trim()||'',
-   role:card.querySelector('figcaption span:not([data-media-frame-clip])')?.textContent?.trim()||'',avatar,
+   role:card.querySelector('[data-testimonial-role]')?.textContent?.trim()||'',
+   company:card.querySelector('[data-testimonial-company]')?.textContent?.trim()||'',avatar,
    ...(frame?{avatarFrame:serializeMediaFrame(frame)}:{}),
    draft:card.hasAttribute('data-testimonial-draft'),hidden:card.hasAttribute('data-testimonial-hidden')};
  });

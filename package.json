@@ -15,7 +15,8 @@
     "prebuild": "node scripts/restore-media.mjs && node scripts/configure-build-origin.mjs",
     "predev": "node scripts/restore-media.mjs && node scripts/configure-build-origin.mjs",
     "domain:configure": "node scripts/configure-domain.mjs",
-    "domain:check": "node scripts/check-domain-routing.mjs && node scripts/check-domain-setup.mjs"
+    "domain:check": "node scripts/check-domain-routing.mjs && node scripts/check-domain-setup.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

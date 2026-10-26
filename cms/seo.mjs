@@ -279,15 +279,23 @@ export function applySEO(doc, payload, configuredOrigin = DEFAULT_CANONICAL_ORIG
   applyRobotsPolicy(doc, payload);
   upsert(doc, 'link[rel="canonical"]', 'link', {rel:'canonical',href:url});
   for (const [key, value] of Object.entries({title,description,url,type:isArticle?'article':'website',site_name:brand,locale:language === 'en' ? 'en_US' : 'tr_TR'})) meta(doc,'og:'+key,value,true);
-  doc.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(n => n.remove());
+  const alternates = [...doc.head.querySelectorAll('link[rel="alternate"][hreflang]')];
   if (['/konusmaci/','/en/speaker/'].includes(route)) {
+    // Preserve the existing group's head position while normalising its order.
+    // Re-appending it after later style/script injections would break idempotence.
+    const marker = doc.createComment('seo-language-position');
+    if (alternates.length) alternates[0].before(marker); else doc.head.append(marker);
+    alternates.filter(node => !['tr','en','x-default'].includes(node.getAttribute('hreflang'))).forEach(node => node.remove());
     for (const [lang,path] of [['tr','/konusmaci/'],['en','/en/speaker/'],['x-default','/konusmaci/']]) {
-      upsert(doc, `link[rel="alternate"][hreflang="${lang}"]`, 'link', {rel:'alternate',hreflang:lang,href:origin+path});
+      const alternate = upsert(doc, `link[rel="alternate"][hreflang="${lang}"]`, 'link', {rel:'alternate',hreflang:lang,href:origin+path});
+      marker.before(alternate);
     }
-  }
+    marker.remove();
+  } else alternates.forEach(node => node.remove());
   for (const [key, value] of Object.entries({title,description,card:image?'summary_large_image':'summary'})) meta(doc,'twitter:'+key,value);
   // Replaced/duplicated sections and new routes must not inherit detached template entities.
-  doc.querySelectorAll('script[type="application/ld+json"]').forEach(n => n.remove());
+  const managedSchema = doc.head.querySelector('script[type="application/ld+json"][data-cms-seo]');
+  doc.querySelectorAll('script[type="application/ld+json"]').forEach(node => { if (node !== managedSchema) node.remove(); });
   const personID = origin + '/ziya-sakir-yilmaz/#person';
   const person = {'@type':'Person','@id':personID,name:brand,url:origin + '/ziya-sakir-yilmaz/'};
   const sameAs = [...new Set([...doc.querySelectorAll('.footer-social a[href]')].filter(visible).map(n=>absoluteURL(n.getAttribute('href'),origin)).filter(Boolean))];
@@ -327,8 +335,8 @@ export function applySEO(doc, payload, configuredOrigin = DEFAULT_CANONICAL_ORIG
   if (service) webpage.mainEntity = {'@id':service['@id']};
   if (talks) webpage.mentions = [{'@id':talks['@id']}];
   if (questions) webpage.hasPart = [{'@id':questions['@id']}];
-  const script = doc.createElement('script'); script.type = 'application/ld+json'; script.setAttribute('data-cms-seo','');
+  const script = managedSchema || doc.createElement('script'); script.type = 'application/ld+json'; script.setAttribute('data-cms-seo','');
   script.textContent = JSON.stringify({'@context':'https://schema.org','@graph':graph}).replaceAll('<','\\u003c').replaceAll('\u2028','\\u2028').replaceAll('\u2029','\\u2029');
-  doc.head.append(script);
+  if (!script.parentNode) doc.head.append(script);
   return doc;
 }

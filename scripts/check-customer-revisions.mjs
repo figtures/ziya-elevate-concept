@@ -1,5 +1,5 @@
-/** Acceptance checks for the client's 19 October brief, with the 22 October
- * instruction to preserve the navy design. Run after CMS source regeneration.
+/** Acceptance checks for the client's final 24 October V13 brief, preserving
+ * all still-applicable earlier checks and the approved navy design. Run after CMS source regeneration.
  * This verifies authored source and generated CMS rendering; it does not claim
  * an authenticated live CRM delivery, physical-device recording or approval of
  * a testimonial. Those remain separate entries in the revision checklist. */
@@ -37,9 +37,9 @@ allCopy('',[
  'Bir konuşma biter. Bir yaklaşım kalır.',
  'Başarı, kafa yapısı, satış ve liderlik. Otuz yıllık saha deneyiminde öğrendiklerimi bir konuşmaya, uygulanabilir bir eğitime ve birlikte çalışma disiplinine dönüştürüyorum.',
  'Önce yaşadım', 'Bu fikirler masa başında doğmadı.',
- 'Malatya’nın Kızık köyünde başlayan hayatımda başarı benim için hiçbir zaman hazır verilmiş bir yol olmadı. Gaz lambasının ışığını, küçük bir yerden büyük bir dünyaya bakmayı ve insanın önce kendi sınırlarının dışına çıkması gerektiğini çok erken öğrendim.',
- '12 Ekim 2012 Cuma sabahı Astana’da bir otel odasında uyandım. Bir an hangi ülkede olduğumu hatırlayamadım. Dışarıdan bakıldığında başarılı bir hayatım vardı. Ama o sabah kendime çok daha zor bir soru sordum: Başarı buysa, ben gerçekten istediğim hayatı mı yaşıyorum?',
- '12.12.2012’de 16 yıllık kurumsal hayatımı bıraktım. Sonraki yıllarda girişimcilikten satışa, eğitimden liderliğe uzanan başka bir hayat kurdum. Öğrendiğim en önemli şey şuydu: Hayatı değiştiren şey bilgi değil; bilgiyi bir sisteme dönüştürüp uygulayabilmektir.',
+ 'Malatya’nın Kızık köyünde, kerpiç bir evde, gaz lambasının ışığında büyüdüm. Babam bir öğretmendi. Daha çocukken bana şu cümleyi söyledi: ‘Oğlum, dinle beni. Sen bu köyden çıkabilirsin. Ama bir şartla. Kafanın içindeki köyü de bırakacaksın.’ Beş yaşında bir çocuk böyle bir cümleyi anlayamaz. Ben de anlamadım. Ama o cümle içimde yıllarca bekledi.',
+ 'Tarih 12 Ekim 2012. O yoğun tempo içerisinde bir sabah gözlerimi açtığımda hangi ülkede olduğumu bile hatırlayamadım. Birkaç saniye sürdü. Bana bir saat gibi geldi. Yatağın kenarına oturdum. Dışarıdan bakıldığında her şey yolundaydı; Bayer’de üst düzey yöneticiydim, iyi kazanıyordum, sürekli seyahat ediyordum. Ama o sabah babamın yıllar önce söylediği cümle yeniden yankılandı: ‘Kafanın içindeki köyü de bırakacaksın.’ O otel odasında kendime iki şey söz verdim: Bir milyon insanın kalbine dokunacaktım. Ve babamın adını, bir gün, bir okulun tabelasına kazıyacaktım.',
+ 'İki ay sonra, 12.12.2012’de, 16 yıllık kurumsal hayatımı bıraktım. Ardından gelen 14 yıllık girişimcilik yolculuğunda satıştan liderliğe, eğitimden insan yetiştirmeye kadar öğrendiğim her şeyi sahada yeniden sınadım. Bugün anlattığım sistemlerin ortak noktası şu: Önce yaşadım. Sonra neden çalıştığını söktüm, parçalara ayırdım ve uygulanabilir bir modele dönüştürdüm.',
  'Hangi alanda birlikte çalışalım?',
  'Bireysel gelişimden kurumsal dönüşüme; dört alanda deneyimi sistemleştiriyor, bilgiyi sonuca taşıyorum.',
  'Şans bekleme. Sistem kur.', 'Hedefin yazılı mı, yoksa dilek mi?',
@@ -100,11 +100,11 @@ allCopy('basari-muhendisligi',[
  'İnşa','Günlük hangi davranışlar uygulanacak?', 'Test','Ne çalışıyor, ne çalışmıyor?', 'Bakım','Sonuç nasıl korunacak ve geliştirilecek?'
 ]);
 allCopy('kursun-gecirmez-kafa-yapisi',[
- 'Kurşun Geçirmez Kafa Yapısı', 'Bambu gibi: kökü derin, gövdesi esnek, fırtınada yıkılmayan yeni bir sen.',
- 'En zor rakibin bazen kafanın içindedir.', 'HENÜZ.', 'Bugün olmaması, olmayacağı anlamına gelmez.',
- 'RAĞMEN.', 'Cesaret korkusuzluk değil; korkuya rağmen bir sonraki adımı seçebilmektir.',
- 'MÜMKÜN.', 'İnsan önce zihninde mümkün gördüğü yere yürür.',
- 'Kendine bakmadan kendini değiştiremezsin.', '90 SANİYE.', 'Duygunun ilk dalgasıyla karar verme. Dur. Gör. Sonra seç.',
+ 'Kurşun Geçirmez Kafa Yapısı', 'Kökü derin, gövdesi esnek, fırtınada eğilen ama kırılmayan bir kafa yapısı.',
+ 'En zor rakibin bazen kafanın içindedir.', 'HENÜZ.', 'Bitmedin. Sadece tamamlanmadın.',
+ 'RAĞMEN.', 'Korkunun geçmesini bekleme. Korkuyla birlikte yürü.',
+ 'MÜMKÜN.', 'O kapı açık. Ve sen geçebilirsin.',
+ 'Kendine bakmadan kendini değiştiremezsin.', '90 SANİYE.', 'Duygunun kimyasal dalgası yaklaşık 90 saniyede söner; sonrası senin seçimin.',
  'Bazen en güçlü kelime hayırdır.', 'Bilgi yetmez. Tekrar gerekir.',
  'Kitaptaki kavramlardan türetilen ölçüm boyutları'
 ]);
@@ -119,9 +119,10 @@ allCopy('konusmaci',[
  'İçindeki Sabotajcı’yı fark etmek, HENÜZ–RAĞMEN–MÜMKÜN dilini kullanmak ve zor anlarda uygulayabileceği 90 saniyelik bir dur–gör–seç refleksi.'
 ]);
 allCopy('satis',[
- 'Sahadan bir ders', 'Pahalı bir ders.',
- 'Bir masada 22 üretici vardı. Verilen söz yüzde 5’ti. Önüme gelen sözleşmede yüzde 3 yazıyordu. O gün satışla ilgili yalnız fiyatı değil, güvenin gerçek maliyetini de öğrendim.',
- 'Konuşan değil, teşhis koyan satar.'
+ 'SAHADAN BİR DERS', '440.000 DOLARLIK DERS',
+ 'Bir masada 22 üretici vardı. Bana beş yıl boyunca yüzde 5 komisyon sözü verilmişti. Önüme gelen sözleşmede ise süre iki yıl, komisyon yüzde 3’tü. İmzalamadım. Çünkü satışta güven, fiyat kadar gerçek bir değerdir.',
+ 'Durumu Dubai’de birlikte çalıştığım distribütöre anlattığımda bana tek bir cümle söyledi: ‘Seni aldatanla ben de çalışmam.’ O gün yalnızca bir sözleşmenin değil, güvenin gerçek maliyetini öğrendim.',
+ 'KONUŞAN DEĞİL, TEŞHİS KOYAN SATAR.'
 ]);
 allCopy('liderlik',[
  'Liderin ürünü başka bir liderdir.', 'Lider çoğaltma döngüsü',
@@ -140,10 +141,14 @@ allCopy('mentorluk',[
  'Yılda sınırlı sayıda girişimci ve yöneticiyle çalışıyorum. Uygunluk ilk görüşmede iki taraflı kararlaştırılır.',
  'Mentorluk için başvur'
 ]);
-allCopy('ziya-sakir-yilmaz',['Hedefim, bir milyon insanın hayatında olumlu ve kalıcı bir iz bırakmak.']);
-check('Unapproved dollar figure and old generic CTA labels are not public copy',()=>{
+allCopy('ziya-sakir-yilmaz',['Pusulam tek cümle: bir milyon insanın kalbine dokunmak.']);
+check('Only the V13-authorised sales amount and current CTA labels are public copy',()=>{
  for(const {doc,path} of active){
-  assert(!/440[.,]000|220[.,]000/.test(text(doc.body)),`${relative(root,path)} unapproved dollar amount`);
+  assert(!/220[.,]000/.test(text(doc.body)),`${relative(root,path)} unapproved dollar amount`);
+  if(/440[.,]000/.test(text(doc.body))){
+   assert.equal(relative(join(root,'website'),path),'satis/index.html','V13 authorises 440.000 only on the sales story');
+   includes(doc.body,'440.000 DOLARLIK DERS');
+  }
   for(const node of doc.querySelectorAll('a,button,summary'))assert(!['programı incele','programları incele','konuşmaları keşfet','hikâyenin tamamı'].includes(normalize(text(node))),`${relative(root,path)} old CTA: ${text(node)}`);
  }
 });
@@ -202,18 +207,17 @@ check('CMS publication contains revised templates and the English page',()=>{
  }
 });
 
-for(const [name,width,height,maxBytes] of [['hero-stage-clean-1080.mp4',1920,1080,5_000_000],['hero-stage-clean-720.mp4',1280,720,2_500_000]]){
+for(const [name,width,height,maxBytes] of [['hero-stage-v13-1080.mp4',1920,1080,5_000_000],['hero-stage-v13-720.mp4',1280,720,2_500_000]]){
  check(`Hero media ${name} codec/resolution/size`,()=>{
   const path=join(root,'website/assets',name);assert(existsSync(path),name);assert(statSync(path).size<=maxBytes,`${name} exceeds ${maxBytes} bytes`);
   const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-show_entries','stream=codec_name,width,height:format=duration','-of','json',path],{encoding:'utf8'}));
   assert.equal(probe.streams[0].codec_name,'h264');assert.equal(probe.streams[0].width,width);assert.equal(probe.streams[0].height,height);
-  const duration=Number(probe.format.duration);assert(duration>0&&duration<=12.2,'No oversized loop');
-  if(duration<10)boundaries.push(`${name}: ${duration.toFixed(2)}sn; brief 10–12 sn için yeterli temiz özgün kaynak henüz yok.`);
+  const duration=Number(probe.format.duration);assert(duration>=10&&duration<=12,'V13 hero loop must be 10–12 seconds');
  });
 }
 check('Hero AVIF poster is shipped',()=>assert(existsSync(join(root,'website/assets/hero-stage-clean.avif'))));
-boundaries.push('Onaylı kurum/logo listesi, dört gerçek testimonial ve kitaptaki 6 Ayna adları belge/onay gerektirir.');
-boundaries.push('75–95 sn sesli gerçek showreel, uygun kaynak yoksa yayınlanamaz; kod kontrolü bunu tamamlanmış saymaz.');
+boundaries.push('Dört gerçek testimonial için yorum, ad soyad, unvan ve kurum onayı gerekir; bunlar hazır olmadan bölüm yayımlanmaz.');
+boundaries.push('75–90 sn sesli gerçek showreel, uygun kaynak yoksa yayınlanamaz; kod kontrolü bunu tamamlanmış saymaz.');
 boundaries.push('375/430 tarayıcı kontrolü, fiziksel iPhone Safari/Android Chrome ekran kaydının yerine geçmez.');
 boundaries.push('Canlı form teslimi, canlı CMS içerikleri ve Cloudflare dağıtımı ayrıca doğrulanmalıdır.');
 console.log(`${passes.length} acceptance checks passed; ${failures.length} failed.`);

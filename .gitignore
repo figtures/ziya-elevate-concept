@@ -13,3 +13,6 @@ dist/
 # Losslessly restored from media parts before build/dev
 /public/assets/hero-loop-restored-1440.mp4
 /website/assets/hero-loop-restored-1440.mp4
+
+# Incremental TypeScript cache
+*.tsbuildinfo

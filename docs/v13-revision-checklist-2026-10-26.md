@@ -2,7 +2,7 @@
 
 Kaynak: `Ziya_Sakir_Yilmaz_V13_Tasarimci_Nihai_Brief_TEKRAR.docx` · 24 Ekim 2026. Çalışma kaydı: 26 Ekim 2026. Bu dosya briefin tamamını uygulama ve doğrulama adımlarına dönüştürür. Metinler briefteki yeni ifadelerle birebir eşleştirilir; mevcut tasarım ve korunması istenen alanlar ayrı denetlenir.
 
-**Durum anahtarı:** `Doğrulandı` belirtilen yerel kabul kontrolü geçti; `Kod doğrulandı` otomatik kontrol geçti, ilgili görsel veya canlı ortam koşulu açık; `Medya doğrulandı` dosyanın süre/kare/kimlik kontrolü geçti, tarayıcı ekran kaydı ayrı; `Kaynak bekliyor` müşteri materyali gerekiyor; `Doğrulanamadı` istenen ortamda kontrol henüz yapılamadı; `Kısmen tamamlandı` alt koşulların tümü kapanmadı. Kod kontrolü gerçek tarayıcı, gerçek cihaz ve canlı veritabanı denetimi yerine geçmez.
+**Durum anahtarı:** `Doğrulandı` ilgili satırda belirtilen yerel veya canlı kontrol geçti; `Kod doğrulandı` otomatik kontrol geçti, ilgili görsel veya canlı ortam koşulu açık; `Medya doğrulandı` dosyanın süre/kare/kimlik kontrolü geçti, tarayıcı ekran kaydı ayrı; `Kaynak bekliyor` müşteri materyali gerekiyor; `Doğrulanamadı` istenen ortamda kontrol henüz yapılamadı; `Kısmen tamamlandı` alt koşulların tümü kapanmadı. Kod kontrolü gerçek tarayıcı, gerçek cihaz ve canlı veritabanı denetimi yerine geçmez.
 
 ## Uygulama sırası
 
@@ -86,16 +86,16 @@ Sayaç değerleri: `600.000+ — insana eğitim ve konuşma`; `84 ülke — iş 
 | K25.2 | 25 | KİTAPTAKİ İLKELER alanında beş başlık vardır. | Ben Yasası / Sitem-Sistem / Başarı Ceketinin Üç Düğmesi / Kadar-Keder / Üç Filtre. | Doğrulandı |
 | K25.3 | 25 | EĞİTİM SALONUNDAKİ UYGULAMA MODELİ kitap ilkelerinden sonra gelir. | Keşif / Tasarım / İnşa / Test / Bakım sırası. | Doğrulandı |
 | K25.4 | 25 | Kitap + eğitim CTA’sı kısa cevap/SEO içeriğinden önce gelir. | Bölüm sırası. | Doğrulandı |
-| K26.1 | 26 | Desktop blueprint scroll ilerlemesine bağlı beş aşamayı gösterir. | Scroll progress arttığında KEŞİF→TASARIM→İNŞA→TEST→BAKIM ilerler. | Kod doğrulandı |
-| K26.2 | 26 | Scroll durunca blueprint durur; loop yoktur. | Sabit scroll konumunda zaman geçmesiyle ilerleme değişmez. | Kod doğrulandı |
-| K26.3 | 26 | Mobilde beş aşama normal akışta hafif reveal olur. | Sticky/pinned yok; mobil kaydırma ve okuma kontrolü. | Kod doğrulandı |
+| K26.1 | 26 | Desktop blueprint scroll ilerlemesine bağlı beş aşamayı gösterir. | Canlı Chrome 1440px: scrollY=0 için progress=0; Y=1400 için 0,450669946 (2 complete, 1 active, 2 pending); Y=1770 için progress=1 ve beş aşama complete. Ekran görüntüsü kayıtlı. | Doğrulandı |
+| K26.2 | 26 | Scroll durunca blueprint durur; loop yoktur. | Canlı Chrome: scrollY=1400 sabitken yaklaşık 30 saniye boyunca progress=0,4506699462748398 değişmedi; zaman tabanlı loop gözlenmedi. | Doğrulandı |
+| K26.3 | 26 | Mobilde beş aşama normal akışta hafif reveal olur. | 375px canlı Chrome DOM: mode=mobile, beş aşama complete, konum relative; sticky/pinned yok. Mobil reveal hareketinin görsel kabulü henüz kaydedilmedi. | Kod doğrulandı |
 | K26.4 | 26 | Reduced-motion tamamlanmış statik şema gösterir. | Hareket azaltma açıkken beş aşamanın tamamı görünür ve animasyon yok. | Kod doğrulandı |
 | K27 | 27 | Konuşmacı deneyim paragrafı birebirdir; 13 yıl kalmaz. | 16 yıl, Bayer Country Manager8 yıl,84ülke,90+ülke,14yıl,70.000,600.000,5TEDx,dörtkitap tam metin. | Doğrulandı |
 | K28.1 | 28,40 | Gerçek 75–90 saniyelik çok sahneli showreel yoksa bölüm yayınlanmaz. | Dosya süresi ve gerçek içerik incelemesi; yoksa ziyaretçi HTML’sinde bölüm yok. | Doğrulandı |
 | K28.2 | 28 | Hazır reel varsa belirtilen başlık ve buton kullanılır. | 90 SANİYEDE ZİYA ŞAKİR YILMAZ / SHOWREEL’İ İZLE ▶. | Kaynak bekliyor |
 | K28.3 | 28 | Hazır reel kullanıcı tıklamasıyla tek adımda sesli oynar; otomatik ses yoktur. | Click playback ve autoplay/ses politikası. | Kaynak bekliyor |
-| K29.1 | 29 | Header’ın sağında TR \| EN sabit ve küçük görünür. | 1440/1920/1366desktop görünümü. | Kod doğrulandı |
-| K29.2 | 29 | Mobilde TR \| EN erişimi görünürdür. | 375/430px ve AndroidChrome kontrolü. | Kod doğrulandı |
+| K29.1 | 29 | Header’ın sağında TR \| EN sabit ve küçük görünür. | Canlı Chrome 1440×900, 1920×1080 ve 1366×768: header TR / EN görünür. | Doğrulandı |
+| K29.2 | 29 | Mobilde TR \| EN erişimi görünürdür. | Canlı Chrome 375×812 ve 430×932: header TR / EN görünür. Gerçek Android Chrome kontrolü açık. | Kısmen tamamlandı |
 | K29.3 | 29 | TR Türkçe siteye, EN doğrudan /en/speaker/ adresine gider. | İki bağlantının href’i; İngilizce sayfada Türkçe dönüş bağlantısı. | Doğrulandı |
 | K30.1 | 30 | Üç eğitim programında aynı bilgi sırası kullanılır. | KİMİN İÇİN → HANGİ PROBLEM → FORMAT → SÜRE → GRUP BÜYÜKLÜĞÜ → ÇIKTI → ÖN ÇALIŞMA → SONRASI. | Doğrulandı |
 | K30.2 | 30 | Bilgisi olmayan satır ve placeholder gösterilmez. | Yakında/belirlenecek/boş bilgi satırı yok; mevcut bilgiler korunur. | Doğrulandı |
@@ -106,22 +106,22 @@ Sayaç değerleri: `600.000+ — insana eğitim ve konuşma`; `84 ülke — iş 
 | K34.1 | 34 | Hakkında ana hikâyede dijital etki/Favikon sıralamaları yoktur. | Sıralama kutusunun Hakkında ziyaretçi HTML’sinden çıkarılması. | Doğrulandı |
 | K34.2 | 34 | Dijital etki mevcut Basın/Medya Kiti alanına taşınır. | DİJİTAL ETKİ · TARİHLİ VERİLER başlığı; tarihli mevcutverilerin korunması. | Doğrulandı |
 | K35 | 35 | Yalnız resmî belgede doğrulanan kurum ve program adı yayınlanır. | Resmî belge kaynağı; doğrulanmamış MBA/program iddiası yok. | Kaynak bekliyor |
-| K36.1 | 36 | Workers/dev head noindex,nofollow içerir. | Gerçekhost yanıtında <meta name="robots" content="noindex, nofollow">. | Kod doğrulandı |
-| K36.2 | 36 | Production ziyasakiryilmaz.com indekslenebilir kalır. | Productionhost yanıtında devnoindex kuralı yok; indekslenebilirrobotspolicy. | Kod doğrulandı |
+| K36.1 | 36 | Workers/dev head noindex,nofollow içerir. | Canlı worker’da HTTP X-Robots-Tag ve head meta noindex,nofollow; 15 rota HTTP kontrolü geçti. | Doğrulandı |
+| K36.2 | 36 | Production ziyasakiryilmaz.com indekslenebilir kalır. | Yerel production-host handler testi geçti. ziyasakiryilmaz.com bu ortamdan upstream bağlantı hatası verdi; gerçek host indekslenebilirliği doğrulanmadı. | Kod doğrulandı |
 | K37.1 | 37 | Dört pilların hepsinde tez/hikâye/model ve ana CTA SEO bloklarından önce gelir. | Başarı/KafaYapısı/Satış/Liderlik DOMsırası. | Doğrulandı |
 | K37.2 | 37 | Dört pillarda kısa cevap →DAHA DERİNE İN→FAQ sırası uygulanır. | 8başlık korunur; Bu alandaki sekiz başlık kaldırılır. | Doğrulandı |
-| K37.3 | 37 | Kısa cevap ve8başlık ilk%60’ta görünmez. | Tarayıcıda scrollHeight/öğeoffset oranı ölçümü; DOM sırası tekbaşına yeterli değildir. | Doğrulanamadı |
+| K37.3 | 37 | Kısa cevap ve8başlık ilk%60’ta görünmez. | Kısa cevap başlangıcı / tüm belge yüksekliği: 1440px Başarı %71,66, Kafa Yapısı %54,53, Satış %74,70, Liderlik %74,27; 375px sırasıyla %63,58, %42,32, %65,88, %63,80. Kafa Yapısı ilk %60 şartını iki genişlikte de sağlamıyor; sekiz başlık konumu ayrıca açık. | Kısmen tamamlandı |
 | K38.1 | 38 | Her alt sayfa ilk ana içerik olarak kendi H1/hero alanıyla açılır. | Tüm alt sayfalarda H1 öncesi SEO kutusu/uzun açıklama/tekrarmanifesto yok. | Doğrulandı |
 | K38.2 | 38 | Her alan fark, güven veya birlikte çalışma gerekçesine hizmet eder. | Mevcut alanların editoryal kontrolü; korunmasıistenen alanlar kaldırılamaz. | Doğrulanamadı |
-| K39.1 | 39 | 1440px desktop son QA yapılır. | Ekran görüntüsü, taşma ve akış incelemesi. | Doğrulanamadı |
-| K39.2 | 39 | 1920px desktop son QA yapılır. | Ekran görüntüsü, taşma ve akış incelemesi. | Doğrulanamadı |
-| K39.3 | 39 | 1366px laptop son QA yapılır. | Ekran görüntüsü, taşma ve akış incelemesi. | Doğrulanamadı |
-| K39.4 | 39 | 375px iPhone Safari son QA yapılır. | GerçekSafari/uyguntestkanıtı; yalnızChromiumviewport Safariolduğu anlamına gelmez. | Doğrulanamadı |
-| K39.5 | 39 | 430px iPhone Safari son QA yapılır. | GerçekSafari/uyguntestkanıtı. | Doğrulanamadı |
-| K39.6 | 39 | Android Chrome son QA yapılır. | AndroidChrome/uyguntestkanıtı. | Doğrulanamadı |
-| K39.7 | 39 | Kızık/Astana uzun paragrafları taşmaz. | 375/430/1366/1440/1920px kırılım kontrolü. | Doğrulanamadı |
-| K39.8 | 39 | 440.000 başlığı mobilde dengeli ve kesilmeden görünür. | 375/430px başlık görüntüsü. | Doğrulanamadı |
-| K39.9 | 39 | KGKY üçlü büyük harfleri mobilde kesilmez. | HENÜZ/RAĞMEN/MÜMKÜN375/430px görüntüsü. | Doğrulanamadı |
+| K39.1 | 39 | 1440px desktop son QA yapılır. | Canlı Chrome 1440×900 ana sayfa: scrollWidth=1440; beş sayaç ilk ekranda, proof altı 836; dil seçici görünür. Public smoke kapsamı. | Doğrulandı |
+| K39.2 | 39 | 1920px desktop son QA yapılır. | Canlı Chrome 1920×1080 ana sayfa: scrollWidth=1920; beş sayaç ilk ekranda, proof altı 1016; dil seçici ve uzun paragraflar kontrol edildi. | Doğrulandı |
+| K39.3 | 39 | 1366px laptop son QA yapılır. | Canlı Chrome 1366×768 ana sayfa: scrollWidth=1366; beş sayaç ilk ekranda, proof altı 704; dil seçici ve uzun paragraflar kontrol edildi. | Doğrulandı |
+| K39.4 | 39 | 375px iPhone Safari son QA yapılır. | 375×812 Chrome viewport geçti; gerçek iPhone Safari erişimi/kabulü yapılmadı. | Doğrulanamadı |
+| K39.5 | 39 | 430px iPhone Safari son QA yapılır. | 430×932 Chrome viewport geçti; gerçek iPhone Safari erişimi/kabulü yapılmadı. | Doğrulanamadı |
+| K39.6 | 39 | Android Chrome son QA yapılır. | 375/430 Chrome viewport Android cihaz testi değildir; gerçek Android Chrome kontrolü açık. | Doğrulanamadı |
+| K39.7 | 39 | Kızık/Astana uzun paragrafları taşmaz. | 375/430/1366/1440/1920 Chrome: Kızık/Astana paragraflarında client ve scroll ölçüleri eşit. 1440px için iki paragrafın her biri 660px; kesilme veya taşma yok. | Doğrulandı |
+| K39.8 | 39 | 440.000 başlığı mobilde dengeli ve kesilmeden görünür. | 375/430 Chrome: 440.000 başlığında client ve scroll ölçüleri eşit; 375 ekran görüntüsünde kesilme yok. | Doğrulandı |
+| K39.9 | 39 | KGKY üçlü büyük harfleri mobilde kesilmez. | 375/430 Chrome: HENÜZ/RAĞMEN/MÜMKÜN client ve scroll ölçüleri eşit; 430 ekran görüntüsünde okunaklı. | Doğrulandı |
 | K40 | 40 | Briefteki24teslimkutucuğunun tamamı ayrı kanıtla kapatılır. | Aşağıdaki teslimözeti; eksikvarsaTamamlandıdenmez. | Kısmen tamamlandı |
 | K41 | 41 | 5sn/30sn/60sn/2dk/çıkışta ölçek/fark/sistem/yaşanmışlık/işbirliği mesajları okunur. | İnsan gözüyle senaryolu son okuma; yeni efekt eklemek yerine metin/kanıt/akış kontrolü. | Doğrulanamadı |
 
@@ -134,7 +134,7 @@ Sayaç değerleri: `600.000+ — insana eğitim ve konuşma`; `84 ülke — iş 
 
 ## Doğrulama kaydı · 26 Ekim 2026
 
-90 atomik maddenin durumu: **60 Doğrulandı**, **11 Kod doğrulandı**, **3 Medya doğrulandı**, **3 Kaynak bekliyor**, **12 Doğrulanamadı**, **1 Kısmen tamamlandı**. Brief §40’ın 24 teslim kutucuğundan 21’i yerel kanıtla işaretli; 3’ü gerçek ekran/host kontrolü bekliyor. Yerel test sayısı ile tamamlanmış revize sayısı birbirinin yerine kullanılmaz.
+90 atomik maddenin durumu: **70 Doğrulandı**, **6 Kod doğrulandı**, **3 Medya doğrulandı**, **3 Kaynak bekliyor**, **5 Doğrulanamadı**, **3 Kısmen tamamlandı**. Brief §40’ın 24 teslim kutucuğundan 23’ü belirtilen yerel/canlı kanıtla işaretli; 1’i özel production alan adının gerçek host kontrolünü bekliyor. Test sayısı ile tamamlanmış revize sayısı birbirinin yerine kullanılmaz.
 
 | Kontrol | Sonuç ve kapsam |
 | --- | --- |
@@ -156,7 +156,7 @@ Ek doğrulamalar: `check-admin-workflows.mjs` 56/56; `check-v13-press-publicatio
 
 ## Brief §40 · 24 teslim kutucuğunun eşlemesi
 
-İşaretli kutular yerel kaynak, medya ve render kanıtını gösterir; canlı yayın veya gerçek cihaz kabulü olarak okunmamalıdır.
+İşaretli kutular, belirtilen yerel kaynak/medya/render ve canlı HTTP/Chrome kanıtını gösterir. Chrome viewport kontrolü gerçek Safari/Android cihaz kabulü olarak okunmamalıdır.
 
 - [x] Sayaç bölümüne hiçbir müdahale yapılmadı — K00.4, dört SHA-256.
 - [x] Hero loop 10–12 saniye — K01.2, iki dosyada `ffprobe` 11,000 saniye.
@@ -177,27 +177,58 @@ Ek doğrulamalar: `check-admin-workflows.mjs` 56/56; `check-v13-press-publicatio
 - [x] 8 başlık listeleri “DAHA DERİNE İN” alanına taşındı — K37.2, sekiz başlık korunur.
 - [x] Konuşmacı sayfasında 13 yıl yok; 14 yıl var — K27.
 - [x] Showreel 75–90 saniye veya bölüm hazır değilse yayınlanmıyor — K28.1, bölüm gizli.
-- [ ] Header’da TR | EN var — K29.1–K29.3; render ve bağlantılar geçti, istenen ekranlarda görünürlük açık.
+- [x] Header’da TR | EN var — K29.1–K29.3; üç desktop ve iki mobil Chrome viewport’unda görünür, href’ler doğru. Gerçek Android koşulu K29.2’de açık.
 - [x] Mentorluk tekrar cümlesi silindi — K31.1.
 - [x] Hakkında sayfasında Favikon sıralamaları ana hikâyede yok — K34.1.
-- [ ] Dev domain noindex,nofollow — K36.1; yerel gerçek handler testi geçti, yayımlanan host ayrıca doğrulanacak.
-- [ ] Production domain indexlenebilir — K36.2; yerel gerçek handler testi geçti, yayımlanan host ayrıca doğrulanacak.
+- [x] Dev domain noindex,nofollow — K36.1; canlı worker HTTP header ve HTML meta ile doğrulandı.
+- [ ] Production domain indexlenebilir — K36.2; yerel handler geçti, özel alan adının V13 çıktısı bu ortamdan doğrulanamadı.
+
+## Canlı yayın ve doğrulama kaydı
+
+26 Ekim 2026’da kullanıcı tarafından açılan doğru Supabase projesi `hzmrvyjolrqdsrppajqs` üzerinde üç V13 migration uygulandı ve migration geçmişindeki üç kayıt doğrulandı:
+
+1. `20261026174158_v13_approved_knowledge_labels.sql`
+2. `20261026174711_v13_press_template_registration.sql`
+3. `20261026174847_v13_initial_press_publication.sql`
+
+Son validator `prosrc` MD5 değeri `0bd13a5949f306cedaaf90965360119c`. Önceden bulunan 65 belgenin taslak ve yayın içerik hash’leri aynı kaldı. Yeni toplamlar 66 belge, 66 yayın kaydı ve 210 sürüm kaydı; Basın sayfasının revision değeri 1. Kontrol edilen tablolarda RLS açık; yeni özel yardımcı fonksiyona anon/authenticated erişimi yok. Bu canlı veritabanı kontrolleri, oturum açılmış uygulamada kaydet–yeniden aç akışının yapıldığı anlamına gelmez.
+
+[PR #1](https://github.com/figtures/ziya-elevate-concept/pull/1) ana dala birleştirildi. Yayın commit’i `98aefcc324c8390446e231137c56a421cb7f428b`; Cloudflare production build `0f7fc25c-c49b-4037-af5d-75691b375e16` başarılı; Worker version `3a9a18da-c4e0-4e21-9773-168ff6e4526c`.
+
+Canlı adres: https://ziya-sakir-yilmaz.busratechnology.workers.dev/ . Dağıtım sonrası anonim HTTP/SSR kontrolünde **15 rota üzerinde 101 koşul geçti, 0 hata**. `/basin/` HTTP 200, sitemap 65 public URL, yeni hero dosyaları, pillar metinleri, KGKY metadata, footer ve TR/EN bağlantıları doğrulandı. Ayrıntı: `docs/v13-production-smoke-2026-10-26.md`.
+
+### Canlı Chrome ekran kontrolleri
+
+| Viewport | Yatay taşma | Sayaçlar ilk ekran | Sayaç alanı alt koordinatı | Dil seçici |
+| --- | --- | --- | --- | --- |
+| 1440×900 | Yok; scrollWidth=1440 | Beş sayaç görünür | 836px | TR / EN görünür |
+| 1920×1080 | Yok; scrollWidth=1920 | Beş sayaç görünür | 1016px | TR / EN görünür |
+| 1366×768 | Yok; scrollWidth=1366 | Beş sayaç görünür | 704px | TR / EN görünür |
+| 375×812 | Yok; scrollWidth=375 | Beş sayaç görünür | 768,375px | TR / EN görünür |
+| 430×932 | Yok; scrollWidth=430 | Beş sayaç görünür | 895,094px | TR / EN görünür |
+
+375/430/1366/1440/1920 genişliklerinde Kızık ve Astana paragraflarının client/scroll ölçüleri eşittir; 1440px için her iki paragrafta da 660px ölçülmüştür. Satış başlığı 375/430px’de kesilmiyor; 375px ekran görüntüsü incelendi. KGKY üç büyük sözcük 375/430px’de ölçümden geçti; 430px ekran görüntüsünde okunaklı. Blueprint mobil 375px’de normal relative akışta ve beş aşaması DOM’da tamamlanmış; hafif reveal hareketinin mobil görsel kabulü ayrıca açık. Desktop 1440px’de scrollY=0 için progress=0, Y=1400 için progress=0,450669946 (iki complete, bir active, iki pending), Y=1770 için progress=1 ve beş complete. Y=1400 sabitken yaklaşık 30 saniye boyunca ilerleme değeri değişmedi.
+
+Sekiz canlı ekran görüntüsü `docs/qa/v13/` altında kayıtlıdır: `home-1920.jpg`, `home-1440.jpg`, `home-1366.jpg`, `home-375.jpg`, `home-430.jpg`, `sales-375.jpg`, `kgky-430.jpg`, `blueprint-1440.jpg`. Ana sayfanın 375px ve 1920px görüntülerinde sayaçların nihai değerleri yakalandı; diğer ekranlarda mevcut 1600ms sayım animasyonu sürmekteydi. Bu, başlangıç sürümüyle piksel karşılaştırması değildir. Basın sayfasının yeni kaydı tarayıcı DOM’unda da doğrulandı; bu oturumda alınan konsol hata kaydı boştu.
+
+1440px pillar ölçümünde kısa cevap alanının başlangıç konumu, footer dahil toplam belge yüksekliğine bölündü: Başarı 0,716605369; Kafa Yapısı 0,545298803; Satış 0,746989201; Liderlik 0,742670086. Kafa Yapısı, ilk %60 dışında olma koşulunu bu ölçümde sağlamıyor; K37.3 kapatılmadı. 375px’de aynı sıra ile oranlar 0,635828448; 0,423237939; 0,658799439; 0,638004748 ölçüldü. Kafa Yapısı iki genişlikte de koşulu sağlamıyor. Sekiz başlık alanının konum ölçümü ve KGKY’nin ayrı K24 oranı henüz bu kayıtta doğrulanmış değildir.
 
 ## Teslim özeti ve açık koşullar
 
-Uygulanan içerik ve yerel kod kontrolleri yukarıda kanıtlarıyla kayıtlıdır. Değişiklikler inceleme dalı ve taslak PR üzerinden teslim edilecek; doğru üretim veritabanı doğrulanmadan production dalına merge edilip CI/CD yayını tetiklenmeyecek. Bu dosya yayın commit’i, başarılı dağıtım veya canlı site kabulü iddiası içermez.
+V13 kodu ve gerekli üç veritabanı güncellemesi worker production ortamında yayındadır. Yerel önizlemenin önceki erişim sorunu canlı HTTP ve Chrome kontrolleriyle aşılmıştır. Tamamlanan maddeler yukarıda kapsamlarıyla işaretlidir; bütün 90 madde kapatılmış sayılmaz.
 
 - Dört gerçek/onaylı yorum bulunmadığından yorum bölümü gizlidir; logo şeridi korunur. Gerçek kayıtlar admin panelinde hazırlanıp onaylanınca eşik sağlandığında yayınlanabilir.
-- Uygun 75–90 saniyelik sesli showreel kaynağı olmadığı için bölüm gizlidir. Başlık ve click-to-play kabul koşulları kaynak gelene kadar açık kalır.
-- Resmî eğitim kaydı sağlanmadığı için doğrulanmamış ODTÜ/MBA ve `alumniOf` iddiaları kaldırılmıştır. Doğru kurum/program adının eklenmesi kaynak bekler.
-- Bağlı iki Supabase hesabında da hedef üretim projesi `hzmrvyjolrqdsrppajqs` bulunamadığı için canlı veritabanı migration’ı ve kalıcı admin kayıt testi doğrulanamamıştır. Yerel migration testleri canlı yazma gerçekleştiği anlamına gelmez.
-- Yönetilen önizleme `terminal.local:4173` üzerinde başlatıldı; bağlı Chrome erişiminde gezinme zaman aşımına uğradı. Bu nedenle ekran görüntüsüyle kabul yapılmış sayılmaz. iPhone Safari, Android Chrome, karşılaştırmalı sayaç görüntüleri, beş viewport’taki taşmalar ve bilgi alanlarının gerçek sayfa yüksekliğinde ilk %60 dışında kalması açık kalır.
-- İnsan gözüyle 5 saniye / 30 saniye / 60 saniye / 2 dakika mesaj ve akış değerlendirmesi ayrıca gerekir. Bu nedenle bütün checklist tamamlandı olarak işaretlenmez.
+- Uygun 75–90 saniyelik sesli showreel kaynağı olmadığı için bölüm gizlidir. Başlık ve click-to-play koşulları kaynak gelene kadar açık kalır.
+- Resmî eğitim kaydı sağlanmadığı için doğrulanmamış ODTÜ/MBA ve alumniOf iddiaları kaldırılmıştır. Doğru kurum/program adı kaynak bekler.
+- Gerçek iPhone Safari/Android Chrome ve başlangıç sürümüyle piksel karşılaştırması yapılmadı. Chrome viewport sonuçları bu cihazların yerine geçmez.
+- Production canonical `https://ziyasakiryilmaz.com` korunmaktadır; bu özel alan adına bu ortamdan yapılan istek Envoy upstream bağlantı hatası verdi. Özel alan adının V13 sürümünü sunduğu veya kesintide olduğu kesinleştirilemez. Worker yayını doğrulandı.
+- Oturum açılmış uygulamada canlı admin kaydet–yeniden aç ve gerçek form gönderimi bu turda yapılmadı. Yerel 56 admin iş akışı testi ve canlı SQL doğrulaması ayrı kanıtlardır.
+- Kafa Yapısı kısa cevap alanı ölçülen sayfa yüksekliğinin desktop’ta %54,53, mobilde %42,32’sinde başlıyor; ilk %60 koşulu açık. Diğer bilgi alanlarının ölçümleri, mobil blueprint reveal, reduced-motion’ın gerçek tarayıcı tercihiyle doğrulanması ve insan gözüyle 5sn/30sn/60sn/2dk mesaj/akış değerlendirmesi de açık kalır.
 
-## Yayına alma sırası
+## Kalan kabul sırası
 
-1. Hedef Supabase projesi `hzmrvyjolrqdsrppajqs` için doğru hesap/proje erişimini doğrula. Başka bağlı projeye işlem uygulama.
-2. Hazır üç ek SQL migration’ını sırasıyla uygula: `20261026174158_v13_approved_knowledge_labels.sql` → `20261026174711_v13_press_template_registration.sql` → `20261026174847_v13_initial_press_publication.sql`. İlki yalnız dört onaylı başlığı doğrulayıcıya ekler; ikincisi `/basin/` şablonunu kaydeder; üçüncüsü yalnız henüz bulunmayan Basın sayfasının ilk kaydını/yayınını oluşturur. Mevcut taslak, arşivlenmiş veya yayından kaldırılmış sayfayı yeniden yayınlamaz. Genel seed installer bu adımın yerine kullanılmaz.
-3. Hedef veritabanında migration sonuçlarını, onaylı başlıklı içerik kaydını ve Basın yayın kaydını doğrula; admin önizlemesinden yapılan değişikliğin kaydet/yeniden aç sonrasında korunduğunu kontrol et. Bu koşul kapanmadan CI/CD production yayını tutulur; aksi durumda admin kayıt hatası veya `/basin/` için 404 oluşabilir.
-4. İnceleme dalı/taslak PR kontrolünü tamamla, ardından production dalına merge ile mevcut CI/CD’yi çalıştır. Dağıtılan commit’i kaydet; `/basin/`, güncel metinler, dev/production robots, form ve admin kontrollerini gerçek host üzerinde tekrarla.
-5. Tarayıcı erişimi sağlandığında açık viewport, taşma, sayaç karşılaştırması ve gerçek cihaz kontrollerini tamamla; yalnız kanıtlanan satırları kapat.
+1. Kafa Yapısı kısa cevap alanının desktop %54,53 / mobil %42,32 konumunu briefin ilk %60 koşuluna göre değerlendir; sekiz başlık alanlarını ve KGKY kısa cevap konumunu ölç. Mobil blueprint reveal kontrolünü tamamla.
+2. Uygulamada yetkili oturumla canlı admin kaydet–yeniden aç ve yayın ayrımını doğrula; gerçek form testi için kontrollü kayıt kullan.
+3. Gerçek iPhone Safari ve Android Chrome, reduced-motion ve başlangıç sürümüyle sayaç görüntüsü karşılaştırmasını tamamla.
+4. Özel production alan adının bu Worker’a bağlantısını ve gerçek index politikasını doğrula; canonical yapılandırması DNS/custom-domain bağlantısının kanıtı değildir.
+5. Kaynak bekleyen gerçek yorum, showreel ve resmî eğitim belgesi geldikçe ilgili koşulları tamamla; kalan editoryal akış incelemesini kapat.

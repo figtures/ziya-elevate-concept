@@ -3,6 +3,8 @@
 import revisions from './content-revisions.json' with {type:'json'};
 import assetRevisions from './book-reference-revisions.json' with {type:'json'};
 import {currentBookPhotography} from './book-photography.mjs';
+import {applyV13ContentUpdate} from './v13/content-update.mjs';
+const currentContent=value=>applyV13ContentUpdate(currentBookPhotography(value));
 
 export function canonicalJSON(value){
  if(Array.isArray(value))return '['+value.map(canonicalJSON).join(',')+']';
@@ -21,9 +23,9 @@ export async function currentContentPayload(payload,seeds){
    const home=seeds.find(item=>item.id==='/');
    next.references=home.references;next.testimonials=home.testimonials;
   }
-  return currentBookPhotography(next);
+  return currentContent(next);
  }
- if(!payload||!revisions[payload.id])return currentBookPhotography(payload);
- if(await contentFingerprint(payload)!==revisions[payload.id])return currentBookPhotography(payload);
- return currentBookPhotography(seeds.find(item=>item.id===payload.id)||payload);
+ if(!payload||!revisions[payload.id])return currentContent(payload);
+ if(await contentFingerprint(payload)!==revisions[payload.id])return currentContent(payload);
+ return currentContent(seeds.find(item=>item.id===payload.id)||payload);
 }

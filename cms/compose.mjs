@@ -11,8 +11,17 @@ import {applyReferences} from './references.mjs';
 import {applyTestimonials} from './testimonials.mjs';
 import {applyHomeLayout} from './home-layout.mjs';
 import {applyPlaylistMediaFrames,ensureMediaFrameStyles} from './media-framing.mjs';
+import {applyV13Technical} from './v13/technical.mjs';
 
-export function composeContent(document,payload,definition,{sharedDocument,sharedPayload,sharedDefinition,entries,booksPayload,booksDefinition,canonicalOrigin,leadsEnabled=false}={}){
+/**
+ * @param {any} document
+ * @param {any} payload
+ * @param {any} definition
+ * @param {{sharedDocument?: any, sharedPayload?: any, sharedDefinition?: any,
+ * entries?: any[], booksPayload?: any, booksDefinition?: any, canonicalOrigin?: string,
+ * requestOrigin?: string, leadsEnabled?: boolean}} options
+ */
+export function composeContent(document,payload,definition,{sharedDocument,sharedPayload,sharedDefinition,entries,booksPayload,booksDefinition,canonicalOrigin,requestOrigin,leadsEnabled=false}={}){
  applyContent(document,payload,definition);
  if(sharedDocument&&sharedPayload&&sharedDefinition){
   applyContent(sharedDocument,sharedPayload,sharedDefinition,{global:true});
@@ -48,6 +57,7 @@ export function composeContent(document,payload,definition,{sharedDocument,share
  if(sections.length){const main=document.createElement('main');main.id='main-content';sections[0].before(main);main.append(...sections);}
  if(entries&&['/makaleler/','/hayattan-notlar/'].includes(payload.route))applyCollection(document,payload.collection,entries,payload.route);
  applyAEO(document,payload);applySEO(document,payload,canonicalOrigin);applyResources(document);
+ applyV13Technical(document,payload,{requestOrigin,canonicalOrigin});
  if(document.querySelector('[data-media-framed]'))ensureMediaFrameStyles(document);
  return document;
 }

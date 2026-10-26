@@ -1,5 +1,6 @@
 /** Typed controls for interface content that lives outside the section catalog. */
 import {navigationURL} from './navigation.mjs';
+import {containsDisallowedCenterTerm,CONTENT_LANGUAGE_ERROR} from './content-language.mjs';
 const link = value => typeof value==='string' && value.length<=2000 && !!navigationURL(value);
 const mediaLink = value => link(value) && !/^(?:#|mailto:|tel:)/.test(value);
 const focalPattern = /^(?:center|left|right|top|bottom|\d+(?:\.\d+)?%)(?:\s+(?:center|left|right|top|bottom|\d+(?:\.\d+)?%))?$/;
@@ -120,7 +121,7 @@ export function validateExperience(value) {
       }
     }
   }
-  if (/merkez/i.test(JSON.stringify(value))) errors.push('İçerikte “merkez / merkezi” kullanılamaz.');
+  if (containsDisallowedCenterTerm(value)) errors.push(CONTENT_LANGUAGE_ERROR);
   return [...new Set(errors)];
 }
 const setText = (doc, selector, value) => {if (value !== undefined) {const el = doc.querySelector(selector); if (el) el.textContent = value;}};

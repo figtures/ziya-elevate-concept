@@ -62,9 +62,17 @@ const replaced=render(payload).querySelector(`[data-cms-node="${photoField.node}
 assert.equal(replaced.getAttribute('src'),'/assets/custom-audience.jpg');
 assert.equal(replaced.hasAttribute('srcset'),false);
 
-const poster=doc.querySelector('video[data-hero-clip="uluslararasi"]');
-assert.equal(poster.getAttribute('poster'),registry['/assets/klip-uluslararasi-restored-poster.jpg'].fallback);
+const poster=doc.querySelector('video[data-hero-clip="sahne-akisi"]');
+assert(poster,'The V13 stage film remains available for poster management');
+assert.equal(poster.getAttribute('poster'),'/assets/hero-stage-clean.avif','Authored AVIF cover remains unchanged');
 const posterNode=poster.getAttribute('data-cms-node'),videoSrc=poster.getAttribute('src');
+assert.equal(videoSrc,'/assets/hero-stage-v13-1080.mp4');
+// A registered alternative poster still receives its delivery variant when an
+// editor selects it for the current video, independent of historical clip IDs.
+setField(doc,{node:posterNode,target:'@poster'},'/assets/klip-uluslararasi-restored-poster.jpg');
+applyResponsiveMedia(doc);
+assert.equal(poster.getAttribute('poster'),registry['/assets/klip-uluslararasi-restored-poster.jpg'].fallback);
+assert.equal(poster.getAttribute('src'),videoSrc,'Registered poster delivery cannot replace the selected film');
 setField(doc,{node:posterNode,target:'@poster'},'https://media.example/custom-poster.jpg');
 applyResponsiveMedia(doc);
 assert.equal(poster.getAttribute('poster'),'https://media.example/custom-poster.jpg');

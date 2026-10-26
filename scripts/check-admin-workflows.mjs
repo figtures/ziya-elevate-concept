@@ -88,8 +88,19 @@ await check('Text edits update the draft and preview without changing authored s
 await check('Section order and visibility preserve the required opening video',async()=>{
  const h=await offline();h.api.openEditor('/');const initialSections=h.api.S.doc.sections.length;const hero=h.api.S.doc.sections[0].id;assert.equal(h.$('[data-section-move]'),null);h.api.S.section=h.api.S.doc.sections[2].id;h.api.editor();const moved=h.api.S.section;await h.click('[data-section-move="-1"]');assert.equal(h.api.S.doc.sections[1].id,moved);await h.click('[data-section-move="-1"]');assert.equal(h.api.S.doc.sections[0].id,hero);const visible=h.$('#section-visible');visible.checked=false;visible.dispatchEvent(new h.window.Event('change'));assert.equal(h.api.S.doc.sections[1].hidden,true);await h.click('[data-action="add-section"]');await h.click('[data-add-section]');assert.equal(h.api.S.doc.sections.length,initialSections+1);assert.equal(new Set(h.api.S.doc.sections.map(s=>s.id)).size,initialSections+1);
 });
-await check('Books and menu repeaters support edit, duplicate, reorder and remove',async()=>{
- const h=await offline();for(const route of ['/kitaplar/','_global']){h.api.openEditor(route);h.api.S.section=h.api.S.doc.sections.find(s=>s.groups.length).id;h.api.editor();let section=h.api.S.doc.sections.find(s=>s.id===h.api.S.section),group=section.groups[0];const before=group.items.length;const input=h.$('[data-bind]');h.change('[data-bind]',input.value+' örnek');await h.click('[data-item-copy]');assert.equal(group.items.length,before+1);assert.notEqual(group.items[0].id,group.items[1].id);const duplicated=group.items[1].id;await h.click('[data-item-move="'+group.id+'|1|1"]');assert.equal(group.items[2].id,duplicated);await h.click('[data-item-remove="'+group.id+'|2"]');assert.equal(group.items.length,before);await h.click('[data-item-add]');assert.equal(group.items.length,before+1);}
+await check('Books and legacy menu repeaters support edit, duplicate, reorder and remove',async()=>{
+ const h=await offline();for(const route of ['/kitaplar/','_global']){
+  h.api.openEditor(route);
+  // Current menus use the dedicated navigation editor (covered below). Keep
+  // generic legacy repeater compatibility under an isolated draft fixture.
+  if(route==='_global')delete h.api.S.doc.navigation;
+  h.api.S.section=h.api.S.doc.sections.find(s=>s.groups.length).id;h.api.editor();
+  const section=h.api.S.doc.sections.find(s=>s.id===h.api.S.section),group=section.groups[0],before=group.items.length;
+  const selector=`[data-reorder-item="${group.id}|0"] [data-bind]`,input=h.$(selector),binding=JSON.parse(input.dataset.bind),edited=input.value+' örnek';
+  assert.equal(binding.scope,'item');h.change(selector,edited);assert.equal(group.items[0].values[binding.field],edited);
+  await h.click('[data-item-copy]');assert.equal(group.items.length,before+1);assert.notEqual(group.items[0].id,group.items[1].id);assert.equal(group.items[1].values[binding.field],edited);
+  const duplicated=group.items[1].id;await h.click('[data-item-move="'+group.id+'|1|1"]');assert.equal(group.items[2].id,duplicated);await h.click('[data-item-remove="'+group.id+'|2"]');assert.equal(group.items.length,before);await h.click('[data-item-add]');assert.equal(group.items.length,before+1);
+ }
 });
 await check('Duplicating an edited document resets H1 overrides to the new title',async()=>{
  const h=await offline();h.api.openEditor('/kitaplar/');const f=h.api.S.catalog[h.api.S.doc.template].fields.find(f=>f.label==='Ana başlık');h.api.S.doc.sections.find(s=>s.source===f.section).values[f.id]='Eski özel başlık';await h.click('[data-action="duplicate"]');await h.submit('#new-form',{title:'Yeni Kitap Seçkisi',route:'/kitap-seckisi/'});assert.equal(h.api.S.doc.title,'Yeni Kitap Seçkisi');assert.equal(h.api.S.doc.values[f.id],'Yeni Kitap Seçkisi');assert.equal(h.api.S.doc.sections.find(s=>s.source===f.section).values[f.id],undefined);await h.api.preview();assert.ok(h.$('#modal iframe').srcdoc.includes('Yeni Kitap Seçkisi'));assert.ok(!h.$('#modal iframe').srcdoc.includes('Eski özel başlık'));h.api.closeDialog();await h.click('[data-action="duplicate"]');assert.equal(h.$$('#new-form select option').length,1);await h.submit('#new-form',{title:'İkinci seçki',route:'/ikinci-secki/'});assert.equal(h.api.S.doc.route,'/ikinci-secki/');
@@ -164,7 +175,10 @@ await check('Records beyond old list limits and the API default window stay reac
  const docs=Array.from({length:1101},(_,i)=>({id:'doc-'+i,route:'/sayfa-'+i+'/',kind:'page',draft:structuredClone(seed[0]),revision:1,published_revision:1,archived:false}));
  const leads=Array.from({length:301},(_,i)=>({id:'lead-'+i,name:'Kişi '+i,email:'a'+i+'@example.org',topic:'keynote',status:'new',revision:1,created_at:'2026-10-12T00:00:00Z'}));
  const versions=Array.from({length:301},(_,i)=>({id:'version-'+i,document_id:'doc-0',revision:i+1,action:'save',created_at:'2026-10-12T00:00:00Z'}));
- const h=await connected('owner',{cms_documents:docs,cms_leads:leads,cms_versions:versions});assert.equal(h.api.S.rows.length,1101);h.api.S.view='leads';await h.api.leadsPage();assert.equal(h.api.S.leads.length,301);h.change('#lead-search','a300@example.org');assert.ok(h.$('[data-lead="lead-300"]'));h.api.openEditor('doc-0');h.api.S.tab='history';h.api.editor();await flush();assert.equal(h.$$('[data-restore]').length,301);assert.ok(h.db.calls.some(c=>c.table==='cms_documents'&&c.start===1000));
+ const h=await connected('owner',{cms_documents:docs,cms_leads:leads,cms_versions:versions});
+ const remoteRows=h.api.S.rows.filter(row=>/^doc-\d+$/.test(row.id));assert.equal(remoteRows.length,1101);assert.equal(new Set(remoteRows.map(row=>row.id)).size,1101);assert.ok(remoteRows.some(row=>row.id==='doc-1100'),'The final remote page must remain reachable');
+ const initialDrafts=h.api.S.rows.filter(row=>!/^doc-\d+$/.test(row.id));assert.equal(initialDrafts.length,1);assert.equal(initialDrafts[0].route,'/basin/');assert.equal(initialDrafts[0].revision,0);assert.equal(initialDrafts[0].published_revision,null);assert.equal(h.api.S.rows.length,1102);
+ h.api.S.view='leads';await h.api.leadsPage();assert.equal(h.api.S.leads.length,301);h.change('#lead-search','a300@example.org');assert.ok(h.$('[data-lead="lead-300"]'));h.api.openEditor('doc-0');h.api.S.tab='history';h.api.editor();await flush();assert.equal(h.$$('[data-restore]').length,301);assert.ok(h.db.calls.some(c=>c.table==='cms_documents'&&c.start===1000));
 });
 await check('Restoring a revision creates a draft without publishing',async()=>{
  const payload=structuredClone(seed.find(d=>d.id==='/kitaplar/'));payload.title='Eski sürüm başlığı';const h=await connected('owner',{cms_versions:[{id:'version-1',document_id:'/kitaplar/',revision:1,action:'save',created_at:'2026-10-12T00:00:00Z',payload}]});h.api.openEditor('/kitaplar/');await h.click('[data-tab="history"]');await h.click('[data-restore]');assert.equal(h.api.S.doc.title,'Eski sürüm başlığı');assert.equal(h.api.S.row.revision,2);assert.equal(h.api.S.row.published_revision,1);assert.deepEqual(h.db.calls.filter(c=>c.type==='rpc').map(c=>c.name),['cms_restore_document']);
@@ -229,7 +243,7 @@ await check('The current native home composition exposes its clip studio without
  assert.equal(h.$('[data-opening-attr]'),null,'The revised native hero must not show an unused YouTube opening editor');
  assert.ok(h.$('[data-video-editor]'),'The composed home video stays editable');
  const clips=dependencies.experienceDefaults(h.api.S.advancedDefaults.document,h.api.S.doc).playlist;
- assert.equal(clips.length,1);assert.equal(clips[0].src,'/assets/hero-stage-clean-1080.mp4');
+ assert.equal(clips.length,1);assert.equal(clips[0].src,'/assets/hero-stage-v13-1080.mp4');assert.equal(clips[0].start,0);assert.equal(clips[0].end,11);
  assert.deepEqual(h.api.S.doc,before,'Opening video management does not rewrite a draft');
 });
 await check('Legacy TEDx opening ranges retain preview validation and cannot publish through a draft save',async()=>{
@@ -309,14 +323,14 @@ await check('Picker upload keeps the current video draft and adds the uploaded m
  assert.equal(h.db.calls.filter(c=>c.type==='upload').length,1);assert.equal(h.db.calls.some(c=>c.type==='rpc'),false);assert.deepEqual(h.db.tables.cms_published.find(r=>r.route==='/liderlik/').payload,published);assert.equal(h.api.S.busy,false);
 });
 await check('Menu editor adds links, selects pages, reorders, nests, hides and safely renders new tabs',async()=>{
- const h=await connected();h.api.navigate('global');await h.click('[data-tab="navigation"]');const defaults=structuredClone(h.api.S.advancedDefaults.navigation),count=defaults.primary.length;
+ const h=await connected();const publishedBefore=structuredClone(h.db.tables.cms_published.find(r=>r.kind==='global').payload);h.api.navigate('global');await h.click('[data-tab="navigation"]');const defaults=structuredClone(h.api.S.advancedDefaults.navigation),count=defaults.primary.length;
  await h.click(navAction('add','primary'));assert.equal(h.api.S.doc.navigation.primary.length,count+1);h.change(`[data-navigation-page="primary.${count}"]`,'/kitaplar/','change');await flush();
  assert.equal(h.api.S.doc.navigation.primary[count].href,'/kitaplar/');assert.notEqual(h.api.S.doc.navigation.primary[count].label,'Yeni bağlantı');
  h.change(`[data-navigation-bind="primary.${count}.label"]`,'Editoryal kitaplar');h.toggle(`[data-navigation-bind="primary.${count}.newTab"]`,true);await h.click(navAction('up',`primary.${count}`));const index=count-1;assert.equal(h.api.S.doc.navigation.primary[index].label,'Editoryal kitaplar');
  await h.click(navAction('add',`primary.${index}.children`));h.change(`[data-navigation-page="primary.${index}.children.0"]`,'/makaleler/','change');await flush();h.change(`[data-navigation-bind="primary.${index}.children.0.label"]`,'Seçili yazılar');
  h.toggle('[data-navigation-bind="primary.0.hidden"]',true);const model=structuredClone(h.api.S.doc.navigation);assert.equal(h.api.S.dirty,true);assert.deepEqual(h.api.S.advancedDefaults.navigation,defaults,'Default menu must remain immutable');
  const preview=await previewDocument(h),links=[...preview.querySelectorAll('.nav-links > li > a')];assert.equal(links.length,count);assert.equal(links.some(a=>a.textContent===defaults.primary[0].label),false);const parent=links.find(a=>a.textContent==='Editoryal kitaplar');assert.equal(parent.getAttribute('href'),'/kitaplar/');assert.equal(parent.target,'_blank');assert.match(parent.rel,/noopener/);assert.equal(parent.parentElement.querySelector('.cms-submenu a').textContent,'Seçili yazılar');assert.equal(parent.parentElement.querySelector('.cms-submenu a').getAttribute('href'),'/makaleler/');assert.deepEqual(h.api.S.doc.navigation,model);
- await h.click('[data-action="save"]');const row=h.db.tables.cms_documents.find(r=>r.kind==='global');assert.deepEqual(row.draft.navigation,model);assert.equal(h.db.tables.cms_published.find(r=>r.kind==='global').payload.navigation,undefined,'Save alone cannot affect visitor navigation');await h.click('[data-action="publish"]');assert.deepEqual(h.db.tables.cms_published.find(r=>r.kind==='global').payload.navigation,model);
+ await h.click('[data-action="save"]');const row=h.db.tables.cms_documents.find(r=>r.kind==='global');assert.deepEqual(row.draft.navigation,model);assert.deepEqual(h.db.tables.cms_published.find(r=>r.kind==='global').payload,publishedBefore,'Save alone cannot affect visitor navigation or any published fields');await h.click('[data-action="publish"]');assert.deepEqual(h.db.tables.cms_published.find(r=>r.kind==='global').payload.navigation,model);
 });
 await check('Mobile links and footer groups have independent order, visibility, links and removal',async()=>{
  const h=await offline();h.api.navigate('global');await h.click('[data-tab="navigation"]');const count=h.api.S.advancedDefaults.navigation.footer.length;

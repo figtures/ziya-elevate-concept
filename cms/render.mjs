@@ -7,6 +7,7 @@ import {validateExperience} from './experience.mjs';
 import {validateTestimonials} from './testimonials.mjs';
 import {validateReferences} from './references.mjs';
 import {applyFieldMediaFrames,validateDocumentMediaFrames} from './media-framing.mjs';
+import {containsDisallowedCenterTerm,CONTENT_LANGUAGE_ERROR} from './content-language.mjs';
 export function safeURL(value, media = false) {
   const s=String(value||'').trim();
   if (s.startsWith('/') && !s.startsWith('//') && !/[\\\u0000-\u0020]/.test(s)) return s;
@@ -88,7 +89,7 @@ export function validateDocument(payload,definition){
  for(const section of payload.sections||[])for(const group of section.groups||[])for(const item of group.items||[])if(item.hidden!==undefined&&typeof item.hidden!=='boolean')errors.push('Madde görünürlüğü geçersiz.');
  if(payload.ogImageAlt!==undefined&&(typeof payload.ogImageAlt!=='string'||payload.ogImageAlt.length>420))errors.push('Paylaşım görselinin açıklaması en fazla 420 karakter olmalı.');
  if(!/^\/(?:[a-z0-9_-]+\/)*$/.test(payload.route))errors.push('Adres küçük harf, rakam ve tirelerden oluşmalı; / ile bitmeli.');
- if(/merkez/i.test(JSON.stringify(payload)))errors.push('İçerikte “merkez / merkezi” kullanılamaz.');
+ if(containsDisallowedCenterTerm(payload))errors.push(CONTENT_LANGUAGE_ERROR);
  if(!Array.isArray(payload.sections)||payload.sections.length>40)errors.push('Bölüm yapısı geçersiz.');
  const allValues=[payload.values,...(payload.sections||[]).flatMap(s=>[s.values,...(s.groups||[]).flatMap(g=>(g.items||[]).map(i=>i.values))])];
  for(const values of allValues){for(const f of definition.fields){const value=values?.[f.id];if(value===undefined)continue;if(['url','image','video'].includes(f.type)&&value&&!safeURL(value,f.type!=='url'))errors.push(f.label+': geçerli HTTPS veya site içi adres girin.');if(['@data-talk','@data-video-id'].includes(f.target)&&!/^[-\w]{11}$/.test(String(value)))errors.push(f.label+': 11 karakterli YouTube kimliği girin.');if(f.type==='number'&&(String(value).trim()===''||!Number.isFinite(+value)||+value<0||+value>36000))errors.push(f.label+': 0–36000 arası saniye girin.');if(String(value).length>15000)errors.push(f.label+': en fazla 15000 karakter.');}}

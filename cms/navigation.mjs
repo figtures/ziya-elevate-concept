@@ -1,8 +1,8 @@
 /** Shared navigation model. Values are text and typed links, never HTML. */
+import {containsDisallowedCenterTerm} from './content-language.mjs';
 const MAX_LABEL = 160;
 const ID = /^[a-zA-Z0-9_-]{1,80}$/;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
-const forbidden = /(?:^|[^\p{L}])merkez(?:i)?(?:$|[^\p{L}])/iu;
 
 export function navigationURL(value) {
   if (typeof value !== 'string' || !value || value.length > 2048 || /[\\\u0000-\u0020\u007f<>"`]/.test(value) || /%(?:00|09|0a|0d|5c)/i.test(value)) return '';
@@ -24,7 +24,7 @@ export function validateNavigation(nav) {
     if (typeof id !== 'string' || !ID.test(id) || ids.has(id)) fail('Menü öğelerinin kimlikleri geçerli ve benzersiz olmalı.');
     ids.add(id);
   };
-  const label = text => typeof text === 'string' && text.trim().length > 0 && text.length <= MAX_LABEL && !forbidden.test(text);
+  const label = text => typeof text === 'string' && text.trim().length > 0 && text.length <= MAX_LABEL && !containsDisallowedCenterTerm(text);
   const items = (value, limit, allowChildren = false) => {
     if (!Array.isArray(value) || value.length > limit) { fail(`Menü listesi en fazla ${limit} öğe içerebilir.`); return; }
     for (const item of value) {

@@ -1,0 +1,104 @@
+{
+  "source": "/assets/hero-loop-v5.mp4",
+  "sourceSize": [
+    1280,
+    720
+  ],
+  "sourceFPS": 24,
+  "sourceSha256": "f0d52f5ce300393523fd6937dd14aec507ce6cdaa500545ebe83a07ab12e1e36",
+  "editing": "four shots with three hard cuts; source frames retimed; no generated or interpolated images; no selfie or phone-recorded shot; no endpoint freeze; no audio",
+  "duration": 11,
+  "frames": 264,
+  "fps": 24,
+  "clips": [
+    {
+      "label": "TEDx geniş plan",
+      "startFrame": 6,
+      "endFrame": 27,
+      "sourceDuration": 0.875,
+      "outputStart": 0.0,
+      "outputEnd": 2.75,
+      "duration": 2.75,
+      "outputFrames": 66,
+      "timestampScale": 3.25
+    },
+    {
+      "label": "Büyük salon",
+      "startFrame": 40,
+      "endFrame": 53,
+      "sourceDuration": 0.5416666666666666,
+      "outputStart": 2.75,
+      "outputEnd": 5.5,
+      "duration": 2.75,
+      "outputFrames": 66,
+      "timestampScale": 5.416666666666667
+    },
+    {
+      "label": "Seyirci genel plan",
+      "startFrame": 211,
+      "endFrame": 225,
+      "sourceDuration": 0.5833333333333334,
+      "outputStart": 5.5,
+      "outputEnd": 8.25,
+      "duration": 2.75,
+      "outputFrames": 66,
+      "timestampScale": 5.0
+    },
+    {
+      "label": "Ziya sahnede orta plan",
+      "startFrame": 174,
+      "endFrame": 189,
+      "sourceDuration": 0.625,
+      "outputStart": 8.25,
+      "outputEnd": 11.0,
+      "duration": 2.75,
+      "outputFrames": 66,
+      "timestampScale": 4.642857142857143
+    }
+  ],
+  "outputs": [
+    {
+      "src": "/assets/hero-stage-v13-1080.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 11,
+      "frames": 264,
+      "fps": 24,
+      "bytes": 1553880,
+      "codec": "h264",
+      "sha256": "51ed6b847b676f9ba74b81163d357b4cfb64947fc65a8fe164b71f75b9ff5411"
+    },
+    {
+      "src": "/assets/hero-stage-v13-720.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 11,
+      "frames": 264,
+      "fps": 24,
+      "bytes": 783993,
+      "codec": "h264",
+      "sha256": "1084591c24b95ed233c9209cf1665e390e6fe23b73d5d2aa0ba033b998c2cdf8"
+    }
+  ],
+  "poster": "/assets/hero-stage-clean.avif",
+  "excludedSource": {
+    "src": "/assets/klip-uluslararasi.mp4",
+    "reason": "Entire source is selfie/phone footage."
+  },
+  "limitations": [
+    "The supplied clean shot ranges are 0.542–0.875 seconds. They are retimed to 2.75 seconds; natural-speed 2.5–3 second takes are not available.",
+    "Constant-frame-rate slow motion repeats source frames; no motion interpolation or new visual content is generated.",
+    "1080p delivery is scaled from native 720p, not a native 1080p or 8K camera recording.",
+    "All supplied source videos are silent and at most 11 seconds; a genuine 75–90 second showreel with punchlines and applause requires additional source recordings."
+  ],
+  "verified": {
+    "durationAndFrames": true,
+    "sourceContactsVisuallyInspected": true,
+    "hardCuts": [
+      2.75,
+      5.5,
+      8.25
+    ],
+    "audioStreams": 0
+  }
+}

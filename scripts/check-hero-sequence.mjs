@@ -3,10 +3,10 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 const code=readFileSync(new URL('../public/assets/tedx-hero.js',import.meta.url),'utf8');
 assert.equal(code,readFileSync(new URL('../website/assets/tedx-hero.js',import.meta.url),'utf8'),'Source and served hero script must match.');
-function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=false,native=false,trims=[],lateMetadata=false,mobile=false,sources=[]}={}){
+function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=false,native=false,trims=[],lateMetadata=false,mobile=false,sources=[],videoCount=2}={}){
  let time=0;const timers=new Set(),observers=[],mutations=[],players=[],scripts=[];
  const element=(dataset={})=>{const handlers={},classes=new Set();return {dataset,paused:true,currentTime:0,duration:60,readyState:lateMetadata?0:1,seeking:false,style:{},attributes:{},loadCount:0,classList:{add:k=>classes.add(k),remove:k=>classes.delete(k),contains:k=>classes.has(k),toggle:(k,on)=>on?classes.add(k):classes.delete(k)},getAttribute(k){return this.attributes[k]??null;},hasAttribute(k){return k in this.attributes;},setAttribute(k,v){this.attributes[k]=v;},load(){this.loadCount++;this.paused=true;this.currentTime=0;},removeAttribute(k){delete this.attributes[k];},addEventListener(k,f){(handlers[k]??=[]).push(f);},emit(k){for(const f of handlers[k]||[])f();},play(){if(this.paused){this.paused=false;this.emit('playing');}return Promise.resolve();},pause(){this.paused=true;}};};
- const videos=[element({heroClip:'sahne',src:'/assets/sahne.mp4'}),element({heroClip:'uluslararasi',src:'/assets/uluslararasi.mp4'})];
+ const videos=[element({heroClip:'sahne',src:'/assets/sahne.mp4'}),element({heroClip:'uluslararasi',src:'/assets/uluslararasi.mp4'})].slice(0,videoCount);
  sources.forEach((source,i)=>videos[i].dataset.src=source);
  trims.forEach((trim,i)=>Object.assign(videos[i].dataset,trim));
  if(legacySource) videos.forEach(v=>{v.setAttribute('src',v.dataset.src);delete v.dataset.src;});
@@ -94,5 +94,21 @@ function fixture({reduced=false,hidden=false,apiAvailable=true,legacySource=fals
  const desktop=fixture({native:true,mobile:false,sources});
  assert.equal(desktop.videos[0].getAttribute('src'),sources[0]);
  assert.equal(desktop.players.length,0,'The new native hero has no external autoplay iframe.');
+}
+{
+ const source='/assets/hero-stage-v13-1080.mp4?v=13';
+ const f=fixture({native:true,mobile:true,videoCount:1,sources:[source],trims:[{clipStart:'0',clipEnd:'11'}]});
+ const video=f.videos[0];video.duration=11;
+ assert.equal(video.getAttribute('src'),'/assets/hero-stage-v13-720.mp4?v=13','V13 mobile must request the paired 720p film while preserving version parameters.');
+ assert.equal(video.currentTime,0);assert.equal(video.paused,false);
+ video.currentTime=10.99;f.tick();assert.equal(video.currentTime,10.99,'The complete 11-second V13 montage must play before restarting.');
+ video.currentTime=11;f.tick();assert.equal(video.currentTime,0,'A single compiled montage loops back to its selected start at 11 seconds.');
+ assert.equal(video.loadCount,1,'The next loop must reuse the downloaded video buffer.');
+ assert.equal(video.paused,false);assert.equal(f.host.dataset.clip,'sahne');
+ video.currentTime=11;video.emit('ended');assert.equal(video.currentTime,0,'The native ended event also restarts a single montage.');
+ const desktop=fixture({native:true,videoCount:1,sources:[source],trims:[{clipStart:'0',clipEnd:'11'}]});
+ assert.equal(desktop.videos[0].getAttribute('src'),source,'Desktop retains the 1080p V13 delivery.');
+ const custom=fixture({native:true,mobile:true,videoCount:1,sources:['https://cdn.example.com/assets/hero-stage-v13-1080.mp4']});
+ assert.equal(custom.videos[0].getAttribute('src'),'https://cdn.example.com/assets/hero-stage-v13-1080.mp4','External CMS uploads must not be rewritten by the paired-asset rule.');
 }
 console.log('PASS: intro once, two-clip rotation, deferred unplayed sources, completed media buffer reuse, preserved resume positions, accessible control labels, iframe release, API deferral/errors, late events, pause/resume, viewport/menu/dialog/tab, reduced motion, stalled intro, native errors/rejections.');

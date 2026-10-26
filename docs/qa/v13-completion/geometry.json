@@ -1,0 +1,397 @@
+{
+  "commit": "b03350096eb8ebb74375a4b51686e904cd4e065b",
+  "host": "ziya-sakir-yilmaz.busratechnology.workers.dev",
+  "browser": "desktop Chrome viewport overrides; not physical mobile devices",
+  "method": "Initial closed disclosures except pre-existing 66-day tracker default; element top / document scrollHeight including footer",
+  "mindset": [
+    {
+      "answerRatio": 0.6566505458203392,
+      "answerTop": 3842.718994140625,
+      "bridgeImageLoaded": [
+        {
+          "loaded": false,
+          "naturalWidth": 0
+        }
+      ],
+      "height": 812,
+      "scrollWidth": 375,
+      "topicsRatio": 0.7292301076288021,
+      "topicsTop": 4267.45458984375,
+      "total": 5852,
+      "width": 375
+    },
+    {
+      "answerRatio": 0.6691456547981556,
+      "answerTop": 3845.580078125,
+      "bridgeImageLoaded": [
+        {
+          "loaded": false,
+          "naturalWidth": 0
+        }
+      ],
+      "height": 932,
+      "scrollWidth": 430,
+      "topicsRatio": 0.7383447172165912,
+      "topicsTop": 4243.26708984375,
+      "total": 5747,
+      "width": 430
+    },
+    {
+      "answerRatio": 0.7078982026980875,
+      "answerTop": 3238.63427734375,
+      "bridgeImageLoaded": [
+        {
+          "loaded": true,
+          "naturalWidth": 1448
+        }
+      ],
+      "height": 768,
+      "scrollWidth": 1366,
+      "topicsRatio": 0.8119815146857924,
+      "topicsTop": 3714.8154296875,
+      "total": 4575,
+      "width": 1366
+    },
+    {
+      "answerRatio": 0.7121703997317997,
+      "answerTop": 3335.80615234375,
+      "bridgeImageLoaded": [
+        {
+          "loaded": true,
+          "naturalWidth": 1448
+        }
+      ],
+      "height": 900,
+      "scrollWidth": 1440,
+      "topicsRatio": 0.815569583622438,
+      "topicsTop": 3820.1279296875,
+      "total": 4684,
+      "width": 1440
+    },
+    {
+      "answerRatio": 0.7212915820110939,
+      "answerTop": 3494.65771484375,
+      "bridgeImageLoaded": [
+        {
+          "loaded": true,
+          "naturalWidth": 1448
+        }
+      ],
+      "height": 1080,
+      "scrollWidth": 1920,
+      "topicsRatio": 0.821586969491744,
+      "topicsTop": 3980.5888671875,
+      "total": 4845,
+      "width": 1920
+    }
+  ],
+  "otherPillars": [
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail v13-pillar-answer",
+          "open": false,
+          "ratio": 0.6358284475551805,
+          "summary": "Başarıyı nasıl tanımlıyorum?",
+          "top": 3838.496337890625
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7204380765229005,
+          "summary": "Diğer rehberler",
+          "top": 4349.28466796875
+        },
+        {
+          "cls": "",
+          "open": false,
+          "ratio": 0.8245133202025012,
+          "summary": "Sıradaki rehberler (1)",
+          "top": 4977.5869140625
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.735412304461032,
+          "summary": "DAHA DERİNE İNBaşarı Bilgi Merkezi · 8 başlık",
+          "top": 4439.68408203125
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7540268442262299,
+          "summary": "Sık sorulan sorular",
+          "top": 4552.06005859375
+        }
+      ],
+      "path": "/basari/",
+      "scrollWidth": 375,
+      "total": 6037,
+      "width": 375
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail v13-pillar-answer",
+          "open": false,
+          "ratio": 0.7166053692222888,
+          "summary": "Başarıyı nasıl tanımlıyorum?",
+          "top": 3290.65185546875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7887968269374728,
+          "summary": "Diğer rehberler",
+          "top": 3622.155029296875
+        },
+        {
+          "cls": "",
+          "open": false,
+          "ratio": 0.8876512374612097,
+          "summary": "Sıradaki rehberler (1)",
+          "top": 4076.094482421875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8087168836427483,
+          "summary": "DAHA DERİNE İNBaşarı Bilgi Merkezi · 8 başlık",
+          "top": 3713.6279296875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8335760030181566,
+          "summary": "Sık sorulan sorular",
+          "top": 3827.781005859375
+        }
+      ],
+      "path": "/basari/",
+      "scrollWidth": 1440,
+      "total": 4592,
+      "width": 1440
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail v13-pillar-answer",
+          "open": false,
+          "ratio": 0.6587994390380635,
+          "summary": "Satışa bakışım ve sahadan bir hikâye",
+          "top": 4296.68994140625
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7411618997479684,
+          "summary": "Diğer rehberler",
+          "top": 4833.85791015625
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7550225888099893,
+          "summary": "DAHA DERİNE İNSatış Bilgi Merkezi · 8 başlık",
+          "top": 4924.25732421875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7722528826711514,
+          "summary": "Sık sorulan sorular",
+          "top": 5036.63330078125
+        }
+      ],
+      "path": "/satis/",
+      "scrollWidth": 375,
+      "total": 6522,
+      "width": 375
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail v13-pillar-answer",
+          "open": false,
+          "ratio": 0.7469892010819409,
+          "summary": "Satışa bakışım ve sahadan bir hikâye",
+          "top": 3844.75341796875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8113962206443074,
+          "summary": "Diğer rehberler",
+          "top": 4176.25634765625
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8291683489775598,
+          "summary": "DAHA DERİNE İNSatış Bilgi Merkezi · 8 başlık",
+          "top": 4267.7294921875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8513469618224209,
+          "summary": "Sık sorulan sorular",
+          "top": 4381.8828125
+        }
+      ],
+      "path": "/satis/",
+      "scrollWidth": 1440,
+      "total": 5147,
+      "width": 1440
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail v13-pillar-answer",
+          "open": false,
+          "ratio": 0.6380047479334432,
+          "summary": "Liderliğe bakışım ve yolculuğum",
+          "top": 3921.815185546875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7253917211902148,
+          "summary": "Diğer rehberler",
+          "top": 4458.98291015625
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7400979866957459,
+          "summary": "DAHA DERİNE İNLiderlik Bilgi Merkezi · 8 başlık",
+          "top": 4549.38232421875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7583794209827965,
+          "summary": "Sık sorulan sorular",
+          "top": 4661.75830078125
+        }
+      ],
+      "path": "/liderlik/",
+      "scrollWidth": 375,
+      "total": 6147,
+      "width": 375
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail v13-pillar-answer",
+          "open": false,
+          "ratio": 0.742670085600781,
+          "summary": "Liderliğe bakışım ve yolculuğum",
+          "top": 3756.42529296875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8082104521148428,
+          "summary": "Diğer rehberler",
+          "top": 4087.928466796875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8262952485542705,
+          "summary": "DAHA DERİNE İNLiderlik Bilgi Merkezi · 8 başlık",
+          "top": 4179.4013671875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8488641137801503,
+          "summary": "Sık sorulan sorular",
+          "top": 4293.5546875
+        }
+      ],
+      "path": "/liderlik/",
+      "scrollWidth": 1440,
+      "total": 5058,
+      "width": 1440
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.4630506430868167,
+          "summary": "Yolculuk nasıl ilerliyor?",
+          "top": 3600.21875
+        },
+        {
+          "cls": "content-detail",
+          "open": true,
+          "ratio": 0.5026617765273312,
+          "summary": "66 günlük uygulama takibim",
+          "top": 3908.1953125
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.7990724854300643,
+          "summary": "Neden “kurşun geçirmez”?",
+          "top": 6212.78857421875
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8089527858721864,
+          "summary": "Sık sorulan sorular",
+          "top": 6289.60791015625
+        }
+      ],
+      "path": "/kursun-gecirmez-kafa-yapisi/",
+      "scrollWidth": 375,
+      "total": 7775,
+      "width": 375
+    },
+    {
+      "disclosures": [
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.5738540061633282,
+          "summary": "Yolculuk nasıl ilerliyor?",
+          "top": 3724.3125
+        },
+        {
+          "cls": "content-detail",
+          "open": true,
+          "ratio": 0.5798319530046225,
+          "summary": "66 günlük uygulama takibim",
+          "top": 3763.109375
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8704194855065486,
+          "summary": "Neden “kurşun geçirmez”?",
+          "top": 5649.0224609375
+        },
+        {
+          "cls": "content-detail",
+          "open": false,
+          "ratio": 0.8824753677532743,
+          "summary": "Sık sorulan sorular",
+          "top": 5727.26513671875
+        }
+      ],
+      "path": "/kursun-gecirmez-kafa-yapisi/",
+      "scrollWidth": 1440,
+      "total": 6490,
+      "width": 1440
+    }
+  ],
+  "pdf": {
+    "bytes": 744890,
+    "sha256": "1b37d5ab89e5652537bcd06c53d5efb927d38827e469011e34a75f3c509dd463",
+    "liveMatches": true
+  }
+}

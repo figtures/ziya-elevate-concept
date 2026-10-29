@@ -98,11 +98,11 @@ body[data-editorial] header.site.scrolled:before{inset-block:8px;background:line
 .ed-dark .ed-link,.ed-closing .ed-link{color:#f3f2e7}
 [data-editorial] .ed-section{padding:var(--section-space) 0;overflow:clip}
 /* Same-paper chapters share one interval instead of adding two full gutters. */
-body[data-editorial]>.ed-intro,body[data-editorial]>.ed-catalog,body[data-editorial]>.ed-keynote-film{padding-bottom:var(--section-join-space)}
-body[data-editorial]>.ed-catalog+.ed-training-process,body[data-editorial]>.ed-keynote-film+.ed-talk-topics{padding-top:var(--section-join-space)}
+body[data-editorial] .ed-intro,body[data-editorial] .ed-catalog,body[data-editorial] .ed-keynote-film{padding-bottom:var(--section-join-space)}
+body[data-editorial] .ed-catalog+.ed-training-process,body[data-editorial] .ed-keynote-film+.ed-talk-topics{padding-top:var(--section-join-space)}
 /* Override the imported ID rule that otherwise wins over editorial spacing. */
 body[data-editorial].homepage #alanlar.ed-topics{padding:var(--section-space) 0;padding-top:var(--section-join-space)}
-body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding-block:var(--section-space)}
+body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section):not(.speaker-stage-proof),body[data-editorial]>main>section:not(.hero):not(.page-hero):not(.ed-section):not(.speaker-stage-proof){padding-block:var(--section-space)}
 [data-editorial] .ed-dark,[data-editorial] .ed-closing{background:var(--brand-navy);color:#f2f2e8;--ink:#f2f2e8;--ink-soft:var(--brand-on-dark);--line-soft:#ffffff20;--copper-hi:#d3c4a5}
 [data-editorial] .ed-dark .ed-description,[data-editorial] .ed-closing .ed-description{color:var(--brand-on-dark)}
 .ed-heading+.editorial-rows{margin-top:var(--content-gap)}
@@ -113,6 +113,7 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 .ed-dark .ed-photo figcaption{color:var(--brand-on-dark)}
 .wide-photo .photo-crop{height:clamp(260px,41vw,550px)}
 .intro-spread{display:grid;grid-template-columns:1.5fr .6fr;gap:80px;align-items:end;margin-bottom:var(--content-gap)}
+.ed-section>.wrap>.intro-spread:last-child{margin-bottom:0}
 .intro-links{display:flex;flex-direction:column;align-items:flex-end;justify-self:end;max-width:100%;text-align:right}
 .intro-links .ed-link{max-width:100%;justify-content:flex-end}
 .topic-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:100px}
@@ -140,6 +141,9 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 .closing-grid .intent-list{max-width:500px}
 .closing-grid .intent-list>a{padding:23px 0;font-size:1.125rem}
 .closing-action{display:flex;align-items:center;justify-content:flex-end}
+.closing-grid:has(.contact-form-wrap){align-items:start}
+.closing-grid:has(.contact-form-wrap)>*{min-width:0}
+.closing-action>.contact-form-wrap{width:100%;min-width:0}
 
 /* Editorial rhythms for each subject. */
 .portrait-story{display:grid;grid-template-columns:.8fr 1fr;gap:110px;align-items:center}
@@ -199,7 +203,7 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 .keynote-film .ed-button{margin-top:30px}
 .keynote-topics{margin-top:var(--content-gap)}
 .keynote-topics details{background:none;border:0;border-radius:var(--radius);padding:0;margin-top:12px;box-shadow:none}
-.keynote-topics summary{display:grid;grid-template-columns:45px 1fr 25px;gap:25px;padding:30px 24px;align-items:center;cursor:pointer;list-style:none;background:#18263c06;border-radius:var(--radius);transition:background .25s}
+.keynote-topics summary{display:grid;grid-template-columns:45px minmax(0,1fr) 25px;gap:25px;padding:30px 24px;align-items:center;cursor:pointer;list-style:none;background:#18263c06;border-radius:var(--radius);transition:background .25s}
 .keynote-topics summary:hover,.keynote-topics details[open]>summary{background:#18263c0c}
 .keynote-topics summary::-webkit-details-marker{display:none}
 .keynote-topics summary:after{display:none}
@@ -209,8 +213,9 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
 .topic-detail{padding:16px 70px 35px;max-width:800px}
 .topic-detail>p:not(.eyebrow){margin-top:14px;color:var(--brand-muted);font-size:1.125rem}
 .talk-archive{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:var(--content-gap)}
-.talk-archive a{color:var(--brand-ink)}
-.talk-archive img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-soft)}
+.talk-archive a{color:var(--brand-ink);min-width:0;align-self:start}
+/* Keep intrinsic width/height for loading stability; the card owns its crop. */
+.talk-archive img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-soft)}
 .talk-archive a>span{display:flex;align-items:center;justify-content:space-between;font-size:0.8125rem;letter-spacing:.1em;margin:20px 0 12px;text-transform:uppercase}
 .talk-archive h3{font-size:22px}
 .mentor-spread,.bio-spread{display:grid;grid-template-columns:.7fr 1fr;align-items:center;gap:110px}
@@ -405,7 +410,7 @@ body[data-editorial]>section:not(.hero):not(.page-hero):not(.ed-section){padding
  .program-catalog{margin-top:35px}.program-catalog>article{grid-template-columns:23px 1fr;gap:20px;padding:30px 0}
  .program-catalog>article>div:last-child{grid-column:2}.program-catalog h3{font-size:26px}
  .training-facts{border:0;border-top:0;padding:28px 0 0}
- .keynote-topics{margin-top:35px}.keynote-topics summary{grid-template-columns:24px 1fr 20px;gap:15px;padding:24px 16px}
+ .keynote-topics{margin-top:35px}.keynote-topics summary{grid-template-columns:24px minmax(0,1fr) 20px;gap:15px;padding:24px 16px}
  .keynote-topics summary h3{font-size:23px}.topic-detail{padding:16px 16px 28px}.topic-detail>p:not(.eyebrow){font-size:1.0625rem}
  .talk-archive{grid-template-columns:1fr;gap:40px;margin-top:35px}.talk-archive img{aspect-ratio:16/9}
  .book-editorial-list>article{grid-template-columns:1fr;gap:35px}.book-cover{padding:35px;min-height:320px}.book-cover img{max-height:280px}

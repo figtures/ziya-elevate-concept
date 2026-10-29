@@ -45,7 +45,12 @@ function fixture(html,{mobile=false,reduced=false,failAt=Infinity}={}) {
       return ()=>{entry.disposed++;entry.leave?.();};
     },
   };
-  const dispose=installEditorialMotion(engine,{document,matchMedia:q=>queries.get(q),console:{warn:(...args)=>warnings.push(args)}});
+  const dispose=installEditorialMotion(engine,{document,matchMedia:q=>queries.get(q),
+    getComputedStyle:el=>({
+      paddingBottom:el.style.paddingBottom||(queries.get('(max-width: 760px)').matches?'48px':'80px'),
+      paddingLeft:el.style.paddingLeft||'32px',paddingRight:el.style.paddingRight||'32px',
+    }),
+    console:{warn:(...args)=>warnings.push(args)}});
   const change=(query,value)=>{
     const media=queries.get(query);media.matches=value;[...media.listeners].forEach(fn=>fn());
   };
@@ -110,10 +115,40 @@ check('Chapters, media and text use reversible scroll timelines without hiding t
   }
   const wrap=f.document.querySelector('#first>.wrap');
   const chapter=f.active().find(a=>a.element===wrap);
-  assert.match(chapter.keyframes.transform[0],/138px/);
+  const travel=Number(chapter.keyframes.transform[0].match(/translate3d\(0,([\d.]+)px/)[1]);
+  assert.ok(travel>0&&travel<=80,'Chapter entry stays within its section gutter');
   assert.equal(chapter.keyframes.transform.at(-1),'translate3d(0,0,0) scale(1)');
   assert.ok(f.active().some(a=>a.element.matches('.photo-crop')&&a.keyframes.clipPath));
   assert.ok(f.active().some(a=>a.element.matches('.photo-crop img')&&a.keyframes.transform));
+});
+check('Compounded chapter, row and title travel fits small and zero section gutters',()=>{
+  for(const budget of [0,12,80]) {
+    const html=sample.replace('id="first" class="ed-section"','id="first" style="padding-bottom:'+budget+'px" class="ed-section"');
+    const f=fixture(html),section=f.document.getElementById('first');
+    const chapter=f.active().find(a=>a.element===section.querySelector(':scope>.wrap'));
+    const chapterY=Number(chapter.keyframes.transform[0].match(/translate3d\(0,([\d.]+)px/)[1]);
+    assert.ok(chapterY<=budget);
+    for(const entry of f.active().filter(a=>section.contains(a.element)&&a.element!==chapter.element)) {
+      const transform=entry.keyframes.transform?.[0]||'';
+      const titleY=entry.element.matches('.motion-letter,.motion-word')?Number(transform.match(/translate3d\(0,([\d.]+)px/)?.[1]||0):0;
+      const rowY=entry.element.matches('.motion-row')?Number(entry.keyframes.translate?.[0]?.split(' ')[1]?.replace('px','')||0):0;
+      assert.ok(chapterY+titleY+rowY<=budget,'Readable child stays inside the section paint boundary');
+    }
+    f.dispose();
+  }
+});
+check('Horizontal rows stay inside the narrowest desktop gutter and custom padding',()=>{
+  for(const padding of [0,12,32,48]) {
+    const html=sample.replace('style="color: navy"',`style="padding-left:${padding}px;padding-right:${padding}px"`);
+    const f=fixture(html), section=f.document.getElementById('first');
+    const rows=f.active().filter(a=>section.contains(a.element)&&a.element.matches('.motion-row'));
+    assert.ok(rows.length>0);
+    for(const row of rows) {
+      const travel=Math.abs(parseFloat(row.keyframes.translate[0]));
+      assert.ok(travel<=Math.min(padding,32),'Row stays inside its gutter, including tablet resizes');
+    }
+    f.dispose();
+  }
 });
 check('Nested rows, forms, tests and prose do not receive compounded travel',()=>{
   const f=fixture(sample);const moving=new Set(transformed(f));
@@ -158,7 +193,8 @@ check('Reduced motion and breakpoint changes clean up and rebuild without duplic
   assert.ok(oldViews.every(s=>s.disposed===1));
   assert.equal(f.document.querySelectorAll('.motion-letter').length,count);assertTitles(f);
   const chapter=f.active().find(a=>a.element===f.document.querySelector('#first>.wrap'));
-  assert.match(chapter.keyframes.transform[0],/68px/);
+  const travel=Number(chapter.keyframes.transform[0].match(/translate3d\(0,([\d.]+)px/)[1]);
+  assert.ok(travel>0&&travel<=48,'Mobile chapter entry stays within its section gutter');
   f.reduced(true);
   assert.equal(f.active().length,0);
   assert.ok(f.subscriptions.every(s=>s.disposed===1));

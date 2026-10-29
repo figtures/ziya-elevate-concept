@@ -9,6 +9,12 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
   const compact = win.matchMedia('(max-width: 760px)');
   const reading = doc.body.hasAttribute('data-reading');
   const sections = [...doc.querySelectorAll('[data-motion-section]')];
+  // Transforms do not reserve layout space. Keep compounded chapter/type
+  // travel inside the existing section gutter so the final row is never cut.
+  const travelBudget = (section,mobile) => {
+    const padding = Number.parseFloat(win.getComputedStyle?.(section)?.paddingBottom);
+    return Number.isFinite(padding) ? Math.max(0,padding) : mobile ? 48 : 80;
+  };
   const protectedArea = 'form,.test-shell,.reading-layout,article.prose,.reading-chapter';
   const titleCache = new Map();
   const originalStyles = new Map();
@@ -94,7 +100,7 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
           // The compact logo band and its next chapter form a single opening
           // sequence. Full chapter travel would visually double their gutter.
           const compactJoin = section.matches('.ed-references') || section.previousElementSibling?.matches('.ed-references');
-          const distance = compactJoin?(mobile?24:46):(mobile?68:138);
+          const distance = Math.min(compactJoin?(mobile?24:46):(mobile?68:138),travelBudget(section,mobile)*.6);
           track(wrap,{transform:[`translate3d(0,${distance}px,0) scale(${mobile?.97:.945})`,'translate3d(0,0,0) scale(1)']},
             {target:section,offset:['start 1','start .24'],ease:'linear'});
           track(wrap,{translate:['0px 0px',`0px ${mobile?-18:-42}px`]},
@@ -109,9 +115,17 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
         const candidates = [...section.querySelectorAll('.topic-links > a,.editorial-rows > a,.editorial-rows > article,.editorial-rows > div,.program-duo > article,.book-row,.book-list > article,.training-grid > article,.work-options > a,.leadership-principles > details')]
           .filter(el=>!el.closest(protectedArea));
         const rows = candidates.filter(el=>!candidates.some(parent=>parent!==el&&parent.contains(el)));
+        const inlineStyle = wrap && win.getComputedStyle?.(wrap);
+        const inlineSpace = Math.min(parseFloat(inlineStyle?.paddingLeft)||0,parseFloat(inlineStyle?.paddingRight)||0);
+        // 32px is the smallest gutter above the mobile breakpoint, including
+        // resizes within that range. Rows must not cross the clipped section.
+        const rowX = mobile ? 0 : Math.max(0,Math.min(32,inlineSpace))*(index%2?-1:1);
         rows.forEach((row,i)=>{
           row.classList.add('motion-row');
-          track(row,{translate:[`${mobile?0:(index%2?-72:72)}px ${mobile?48:72}px`,'0px 0px']},
+          // A moving chapter already supplies vertical travel. Adding another
+          // downward sweep to its rows pushed the last item below the section.
+          const rowY = wrap && !interactive ? 0 : Math.min(mobile?48:72,travelBudget(section,mobile));
+          track(row,{translate:[`${rowX}px ${rowY}px`,'0px 0px']},
             {target:row,offset:[`start ${.98-Math.min(i%3,2)*.035}`,'start .46'],ease:[.25,.1,.25,1]});
         });
 
@@ -143,7 +157,9 @@ export function installEditorialMotion({animate, scroll, inView}, win = window) 
           const pieces = detailed?letters:words;
           pieces.forEach((piece,i)=>{
             const delay = i/Math.max(1,pieces.length-1)*(detailed?.23:.16);
-            const distance = detailed?(mobile?30:62):(mobile?32:58);
+            const section = title.closest('.ed-section');
+            const available = section ? travelBudget(section,mobile)*.4 : mobile?30:62;
+            const distance = Math.min(detailed?(mobile?30:62):(mobile?32:58),available);
             const from = `translate3d(0,${distance}px,0) scale(${detailed?1.18:1.04}) rotateX(${detailed?32:12}deg)`;
             track(piece,{transform:[from,from,'translate3d(0,0,0) scale(1) rotateX(0deg)']},
               {target:title,offset:['start .98','start .35'],times:[0,.01+delay,1],ease:[.22,1,.36,1]});

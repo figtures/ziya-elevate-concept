@@ -4,6 +4,8 @@ const labels={
  'Başarı':'Success','Kafa Yapısı':'Mindset','Satış':'Sales','Liderlik':'Leadership',
  'Eğitimler':'Training','Konuşmacı':'Speaker','Ziya':'About Ziya','Birlikte çalışalım':'Work with Ziya',
  'Etkinliğiniz, ekibiniz veya kendi gelişiminiz için.':'For your event, your team or your next step.',
+ 'Etkinliğiniz, ekibiniz veya':'For your event, your team or',
+ 'kendi gelişiminiz için.':'your next step.',
  'Kendim için':'For individuals','Kurumum için':'For organisations','Kitaplar':'Books','Makaleler':'Articles',
  'Mentorluk':'Mentoring','Kendini test et':'Explore your mindset','Menü':'Menu','Ziya hakkında':'About Ziya',
  'Keşfet':'Explore','Başarı Sözlüğü':'Success Glossary','Sistemler':'Approaches',
